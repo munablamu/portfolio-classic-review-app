@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('musics', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable(false);
-            $table->string('opus')->nullable(false);
+            $table->string('opus')->nullable(true);
             $table->foreignId('composer_id')->constrained('composers')->nullable(false);
             $table->timestamps();
         });
