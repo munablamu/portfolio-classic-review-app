@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\MusicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/music/index', [MusicController::class, 'index'])
+    ->name('music');
+Route::post('/music/store', [MusicController::class, 'store'])
+    ->name('music.store');
+Route::get('/music/edit/{id}', [MusicController::class, 'edit'])
+    ->name('music.edit')->where('id', '[0-9]+');
+Route::put('/music/update/{id}', [MusicController::class, 'update'])
+    ->name('music.update')->where('id', '[0-9]+');
+Route::delete('/music/delete/{id}', [MusicController::class, 'delete'])
+    ->name('music.delete')->where('id', '[0-9]+');
 
 Route::get('/', function () {
     return view('welcome');
