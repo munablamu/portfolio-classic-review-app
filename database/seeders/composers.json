@@ -1,0 +1,138 @@
+[
+  {
+    "id" : 1,
+    "name" : "Johann Sebastian Bach"
+  },
+  {
+    "id" : 2,
+    "name" : "Richard Wagner"
+  },
+  {
+    "id" : 3,
+    "name" : "Ludwig van Beethoven"
+  },
+  {
+    "id" : 4,
+    "name" : "Wolfgang Amadeus Mozart"
+  },
+  {
+    "id" : 5,
+    "name" : "George Frideric Handel"
+  },
+  {
+    "id" : 6,
+    "name" : "Igor Stravinsky"
+  },
+  {
+    "id" : 7,
+    "name" : "Pyotr Ilyich Tchaikovsky"
+  },
+  {
+    "id" : 8,
+    "name" : "Giuseppe Verdi"
+  },
+  {
+    "id" : 9,
+    "name" : "Antonín Dvořák"
+  },
+  {
+    "id" : 10,
+    "name" : "Franz Schubert"
+  },
+  {
+    "id" : 11,
+    "name" : "Johannes Brahms"
+  },
+  {
+    "id" : 12,
+    "name" : "Robert Schumann"
+  },
+  {
+    "id" : 13,
+    "name" : "Felix Mendelssohn"
+  },
+  {
+    "id" : 14,
+    "name" : "Modest Mussorgsky"
+  },
+  {
+    "id" : 15,
+    "name" : "Claude Debussy"
+  },
+  {
+    "id" : 16,
+    "name" : "Hector Berlioz"
+  },
+  {
+    "id" : 17,
+    "name" : "Giacomo Puccini"
+  },
+  {
+    "id" : 18,
+    "name" : "Franz Liszt"
+  },
+  {
+    "id" : 19,
+    "name" : "Antonio Vivaldi"
+  },
+  {
+    "id" : 20,
+    "name" : "Richard Strauss"
+  },
+  {
+    "id" : 21,
+    "name" : "Gustav Mahler"
+  },
+  {
+    "id" : 22,
+    "name" : "Jean Sibelius"
+  },
+  {
+    "id" : 23,
+    "name" : "Gabriel Fauré"
+  },
+  {
+    "id" : 24,
+    "name" : "Sergei Rachmaninoff"
+  },
+  {
+    "id" : 25,
+    "name" : "Frédéric Chopin"
+  },
+  {
+    "id" : 26,
+    "name" : "Edvard Grieg"
+  },
+  {
+    "id" : 27,
+    "name" : "Dmitri Shostakovich"
+  },
+  {
+    "id" : 28,
+    "name" : "Aaron Copland"
+  },
+  {
+    "id" : 29,
+    "name" : "Georges Bizet"
+  },
+  {
+    "id" : 30,
+    "name" : "Nikolai Rimsky-Korsakov"
+  },
+  {
+    "id" : 31,
+    "name" : "Giovanni Pierluigi da Palestrina"
+  },
+  {
+    "id" : 32,
+    "name" : "Joseph Haydn"
+  },
+  {
+    "id" : 33,
+    "name" : "Anton Bruckner"
+  },
+  {
+    "id" : 34,
+    "name" : "Béla Bartók"
+  }
+]

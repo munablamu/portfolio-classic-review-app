@@ -13,20 +13,13 @@ class ComposersSeeder extends Seeder
      */
     public function run(): void
     {
-        $composers = ['Johann Sebastian Bach', 'Richard Wagner', 'Ludwig van Beethoven',
-                    'Wolfgang Amadeus Mozart', 'George Frideric Handel', 'Igor Stravinsky',
-                    'Pyotr Ilyich Tchaikovsky', 'Giuseppe Verdi', 'Antonín Dvořák',
-                    'Franz Schubert', 'Johannes Brahms', 'Robert Schumann', 'Felix Mendelssohn',
-                    'Modest Mussorgsky', 'Claude Debussy', 'Hector Berlioz', 'Giacomo Puccini',
-                    'Franz Liszt', 'Antonio Vivaldi', 'Richard Strauss', 'Gustav Mahler',
-                    'Jean Sibelius', 'Gabriel Fauré', 'Sergei Rachmaninoff', 'Frédéric Chopin',
-                    'Edvard Grieg', 'Dmitri Shostakovich', 'Aaron Copland', 'Georges Bizet',
-                    'Nikolai Rimsky-Korsakov', 'Giovanni Pierluigi da Palestrina',
-                    'Joseph Haydn', 'Anton Bruckner', 'Béla Bartók'];
+        // https://classicalmusiconly.com/list/100-greatest-classical-music-works-f164de5b から引用
+        $composers = json_decode(file_get_contents('database/seeders/composers.json'));
 
         foreach ( $composers as $i_composer ) {
+            // TODO 'id' => $i_composer->id ここでこれを指定すると不具合がある？
             DB::table('composers')->insert([
-                'name' => $i_composer,
+                'name' => $i_composer->name,
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);

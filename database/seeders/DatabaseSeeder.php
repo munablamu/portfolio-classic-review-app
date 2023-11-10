@@ -15,6 +15,9 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(10)->create();
         $this->call([ComposersSeeder::class]);
         $this->call([MusicsSeeder::class]);
+        $this->call([ArtistsSeeder::class]);
+        $this->call([RecordingsSeeder::class]);
+        $this->call([RecordingArtistSeeder::class]);
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',

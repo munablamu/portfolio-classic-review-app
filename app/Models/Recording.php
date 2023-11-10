@@ -12,9 +12,9 @@ class Recording extends Model
     protected $fillable = [
         'music_id',
         'title',
-        'publish_year',
-        'product_code',
-        'jacket_path'
+        'release_date',
+        'catalogue_no',
+        'jacket_filename'
     ];
 
     public function music()

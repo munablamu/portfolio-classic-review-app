@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('music_id')->constrained('musics')->nullable(false);
             $table->string('title')->nullable(false);
-            $table->integer('publish_year')->nullable(false);
-            $table->string('product_code')->nullable(false);
-            $table->string('jacket_path');
+            $table->dateTime('release_date')->nullable(true);
+            $table->string('catalogue_no')->nullable(false);
+            $table->string('jacket_filename')->nullable(true);
             $table->timestamps();
         });
     }
