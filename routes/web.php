@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MusicController;
 use App\Http\Controllers\RecordingController;
+use App\Http\Controllers\ArtistController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,11 @@ Route::delete('/music/delete/{id}', [MusicController::class, 'delete'])
 
 Route::get('/recording/index', [RecordingController::class, 'index'])
     ->name('recording');
+
+Route::get('/artist/index', [ArtistController::class, 'index'])
+    ->name('artist');
+Route::get('/artist/show/{id}', [ArtistController::class, 'show'])
+    ->name('artist.show');
 
 Route::get('/', function () {
     return view('welcome');

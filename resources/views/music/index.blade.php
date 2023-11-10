@@ -50,6 +50,9 @@
           @csrf
           <button type='submit'>削除</button>
         </form>
+        <div>
+          <a href="{{ route('recording', ['music_id' => $i_music->id]) }}">CDを見る</a>
+        </div>
       </details>
     @endforeach
   </div>

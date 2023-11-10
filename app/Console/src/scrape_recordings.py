@@ -260,10 +260,13 @@ def scrape_item_info(scraper: Scraper, url: str) -> dict:
     if artists_tag is not None:
         artists_text = ', '.join(p.get_text() for p in artists_tag.find_all('p'))
         artists_text = artists_text.replace('&', ',')
+        artists_text = artists_text.replace(' and ', ',')
+        artists_text = artists_text.replace('/', ',')
         artists_text = artists_text.replace('...', '')
         artists_text = re.sub(r'\([^)]*\)', '', artists_text) # (piano)などの文字を削除
         artists = artists_text.split(',')
-        info['artists'] = [i_artist.strip() for i_artist in artists]
+        artists = [i_artist.strip() for i_artist in artists]
+        info['artists'] = [i_artist for i_artist in artists if i_artist != ""] # 空文字要素を除く
 
     metadata_ul = scraper.select_one('.c-product-block__metadata > ul')
     for li in metadata_ul.find_all('li'):
@@ -356,7 +359,6 @@ def write_json(recordings_path: str, artists_path: str, jl_path: str):
             item_infos.at[i, 'artist_ids'] = artists_id
 
     item_infos = item_infos.drop(columns=['keyword', 'artists', 'url'])
-    item_infos.rename(columns={'id': 'music_id'}, inplace=True) # TODO 横着したので、最初からやり直す場合は消す
 
     with open(recordings_path, 'w') as f:
         f.write(item_infos.to_json(orient='records', force_ascii=False, indent=4))
