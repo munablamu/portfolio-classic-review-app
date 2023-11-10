@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MusicController;
+use App\Http\Controllers\RecordingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,9 @@ Route::put('/music/update/{id}', [MusicController::class, 'update'])
     ->name('music.update')->where('id', '[0-9]+');
 Route::delete('/music/delete/{id}', [MusicController::class, 'delete'])
     ->name('music.delete')->where('id', '[0-9]+');
+
+Route::get('/recording/index', [RecordingController::class, 'index'])
+    ->name('recording');
 
 Route::get('/', function () {
     return view('welcome');

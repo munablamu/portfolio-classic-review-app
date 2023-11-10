@@ -15,6 +15,6 @@ class Artist extends Model
 
     public function recordings()
     {
-        return $this->belongsToMany(Recording::class);
+        return $this->belongsToMany(Recording::class, 'recording_artist');
     }
 }

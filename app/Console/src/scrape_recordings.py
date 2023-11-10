@@ -330,12 +330,14 @@ def write_json(recordings_path: str, artists_path: str, jl_path: str):
     item_infos = pd.read_json(jl_path, orient='records', lines=True)
 
     artists = []
+    artists_set = set()
 
     id = 1
     for i, row in item_infos.iterrows():
         if row['artists'] is not None:
             for i_artist in row['artists']:
-                if i_artist not in artists:
+                if i_artist not in artists_set:
+                    artists_set.add(i_artist)
                     artists.append({"id": id, "name": i_artist})
                     id += 1
 
