@@ -12,7 +12,7 @@
     @csrf
 
     @error('composer_id')
-    <p style='color: red;'>{{ $message }}</p>
+      <p style='color: red;'>{{ $message }}</p>
     @enderror
     <label for='composer_id'>作曲家</label>
     <select id='composer_id' name='composer_id'>
@@ -23,13 +23,13 @@
     </select><br />
 
     @error('title')
-    <p style='color: red;'>{{ $message }}</p>
+      <p style='color: red;'>{{ $message }}</p>
     @enderror
     <label for='title'>曲名</label>
     <input id='title' type='text' name='title' placeholder='曲名を入力'></input><br />
 
     @error('opus')
-    <p style='color: red;'>{{ $message }}</p>
+      <p style='color: red;'>{{ $message }}</p>
     @enderror
     <label for='opus'>作品番号</label>
     <span>「op. **」や「BWV ***」のように書いてください。作品番号がない場合は何も記述しないでください。</span>

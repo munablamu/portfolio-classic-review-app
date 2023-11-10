@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->nullable(false);
             $table->foreignId('recording_id')->constrained('recordings')->nullable(false);
-            $table->string('review')->nullable(false);
-            $table->integer('rate');
-            $table->integer('like');
+            $table->string('review')->nullable(true);
+            $table->integer('rate')->nullable(false);
+            $table->integer('like')->nullable(true);
             $table->timestamps();
         });
     }

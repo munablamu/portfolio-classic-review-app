@@ -23,4 +23,17 @@ class RecordingController extends Controller
         return view('recording.index',
             compact('composer', 'title', 'opus', 'recordings'));
     }
+
+    public function show(Request $request)
+    {
+        $recording = Recording::where('id', $request->route('id'))->firstOrFail();
+        $title = $recording->title;
+        $release_date = $recording->release_date;
+        $catalogue_no = $recording->catalogue_no;
+        $jacket_filename = $recording->jacket_filename;
+        $reviews = $recording->reviews;
+
+        return view('recording.show',
+            compact('title', 'release_date', 'catalogue_no', 'jacket_filename', 'reviews'));
+    }
 }
