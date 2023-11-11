@@ -16,7 +16,7 @@
   <div>
     @foreach ( $reviews as $i_review )
       <details>
-        <summary>{{ $i_review->user->name }}, {{ $i_review->rate }}</summary>
+        <summary>{{ $i_review->user->name }}, {{ $i_review->rate }}, {{ $i_review->like }}</summary>
         <div>
           <p>{{ $i_review->review }}</p>
         </div>

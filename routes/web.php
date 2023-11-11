@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\MusicController;
 use App\Http\Controllers\RecordingController;
 use App\Http\Controllers\ArtistController;
@@ -41,6 +42,12 @@ Route::get('/artist/show/{id}', [ArtistController::class, 'show'])
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/user/index', [UserController::class, 'index'])
+    ->name('user');
+Route::get('/user/show/{id}', [UserController::class, 'show'])
+    ->name('user.show');
+
 
 Route::get('/home', function () {
     return view('home');
