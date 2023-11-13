@@ -27,9 +27,10 @@ class ReviewsSeeder extends Seeder
                 DB::table('reviews')->insert([
                     'user_id' => $chosen_user_ids[$i],
                     'recording_id' => $i_recording->id,
-                    'review' => $faker->realText(100),
+                    'title' => $faker->realText(15),
+                    'content' => $faker->realText(400),
                     'rate' => rand(1, 5),
-                    'like' => rand(0, 500),
+                    'like' => rand(0, 100),
                     'created_at' => now(),
                     'updated_at' => now(),
                 ]);
@@ -39,7 +40,8 @@ class ReviewsSeeder extends Seeder
                 DB::table('reviews')->insert([
                     'user_id' => $chosen_user_ids[$i+5],
                     'recording_id' => $i_recording->id,
-                    'review' => null,
+                    'title' => null,
+                    'content' => null,
                     'rate' => rand(1, 5),
                     'like' => null,
                     'created_at' => now(),
