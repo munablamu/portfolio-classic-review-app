@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/music/index', [MusicController::class, 'index'])
     ->name('music');
+Route::get('/music/search', [MusicController::class, 'search'])
+    ->name('music.search');
 Route::post('/music/store', [MusicController::class, 'store'])
     ->name('music.store');
 Route::get('/music/edit/{id}', [MusicController::class, 'edit'])

@@ -20,6 +20,18 @@ class MusicController extends Controller
             compact('composers', 'musics'));
     }
 
+    public function search(Request $request) {
+        $composers = Composer::all();
+        $musics = Music::search(trim($request->query('q')) ?? '')
+            ->query(function ($query) {
+                $query->orderBy('musics.id', 'asc');
+             })
+            ->get();
+
+        return view('music.index',
+            compact('composers', 'musics'));
+    }
+
     public function store(MusicRequest $request)
     {
         try {

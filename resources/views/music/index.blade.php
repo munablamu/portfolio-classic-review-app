@@ -38,6 +38,14 @@
     <button type='submit'>追加</button>
   </form>
 
+
+  <form action="{{ route('music.search') }}" method='get'>
+    @csrf
+    <label for='q'></label>
+    <input id='q' type='text' name='q' placeholder='探したい曲を入力してください' value="{{ old('q') }}"></input>
+    <button type='submit'>検索</button>
+  </from>
+
   <div>
     @foreach ( $musics as $i_music )
       <details>
