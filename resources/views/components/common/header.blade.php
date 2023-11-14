@@ -16,8 +16,17 @@
     </nav>
     <!-- secondary nav -->
     <div class="hidden md:flex items-center space-x-1">
-      <a href="{{ route('login') }}" class="inline-flex bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Login</a>
-      <a href="{{ route('register') }}" class="inline-flex bg-yellow-400 border-0 py-1 px-3 focus:outline-none hover:bg-yellow-300 rounded text-base mt-4 md:mt-0 text-yellow-900 hover:text-yellow-800 transition duration-300">Signup</a>
+      @guest
+        <a href="{{ route('login') }}" class="inline-flex bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Login</a>
+        <a href="{{ route('register') }}" class="inline-flex bg-yellow-400 border-0 py-1 px-3 focus:outline-none hover:bg-yellow-300 rounded text-base mt-4 md:mt-0 text-yellow-900 hover:text-yellow-800 transition duration-300">Signup</a>
+      @endguest
+      @auth
+        <a href="{{ route('home') }}" class="inline-flex bg-green-400 border-0 py-1 px-3 focus:outline-none hover:bg-green-300 rounded text-base mt-4 md:mt-0 text-green-900 hover:text-green-800 transition duration-300">Home</a>
+        <form action="{{ route('logout') }}" method="post">
+          @csrf
+          <button type="submit" class="inline-flex bg-red-400 border-0 py-1 px-3 focus:outline-none hover:bg-red-300 rounded text-base mt-4 md:mt-0 text-red-900 hover:text-red-800 transition duration-300">Logout</a>
+        </form>
+      @endauth
     </div>
   </div>
 </header>
