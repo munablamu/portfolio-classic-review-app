@@ -35,8 +35,8 @@ use Illuminate\Support\Facades\Route;
 //
 Route::get('/recording/index', [RecordingController::class, 'index'])
     ->name('recording');
-// Route::get('/recording/show/{id}', [RecordingController::class, 'show'])
-//     ->name('recording.show');
+Route::get('/recording/show/{id}', [RecordingController::class, 'show'])
+    ->name('recording.show');
 //
 // Route::get('/artist/index', [ArtistController::class, 'index'])
 //     ->name('artist');

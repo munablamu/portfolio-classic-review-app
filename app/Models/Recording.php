@@ -17,6 +17,10 @@ class Recording extends Model
         'jacket_filename'
     ];
 
+    protected $casts = [
+        'release_date' => 'datetime',
+    ];
+
     public function music()
     {
         return $this->belongsTo(Music::class);

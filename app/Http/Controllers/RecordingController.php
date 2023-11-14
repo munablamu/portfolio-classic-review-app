@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Music;
 use App\Models\Recording;
+use App\Models\Review;
 use Illuminate\Http\Request;
 
 class RecordingController extends Controller
@@ -28,12 +29,15 @@ class RecordingController extends Controller
     {
         $recording = Recording::where('id', $request->route('id'))->firstOrFail();
         $title = $recording->title;
-        $release_date = $recording->release_date;
+        $release_date = $recording->release_date->format('Y年m月d日');
         $catalogue_no = $recording->catalogue_no;
         $jacket_filename = $recording->jacket_filename;
-        $reviews = $recording->reviews;
+        $artists = $recording->artists;
+        $reviews = Review::where('recording_id', $recording->id)
+            ->whereNotNull('title')
+            ->paginate(10);
 
         return view('recording.show',
-            compact('title', 'release_date', 'catalogue_no', 'jacket_filename', 'reviews'));
+            compact('title', 'release_date', 'catalogue_no', 'jacket_filename', 'artists', 'reviews'));
     }
 }

@@ -18,6 +18,9 @@
           <!-- TODO 画像が存在しない倍の処理 -->
           <img src="{{ asset('storage/jackets/' . $i_recording->jacket_filename) }}" alt="" width="300">
         </div>
+        <div>
+          <a href="{{ route('recording.show', ['id' => $i_recording->id]) }}">レビューを見る</a>
+        </div>
       </details>
     @endforeach
   </div>
