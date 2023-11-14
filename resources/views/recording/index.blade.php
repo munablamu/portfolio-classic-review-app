@@ -6,13 +6,17 @@
   <div>
     @foreach ( $recordings as $i_recording )
       <details>
-        <summary>{{ $i_recording->title }}</summary>
-        <div>
+        <summary>
           @if ( $i_recording->artists !== null )
             @foreach ( $i_recording->artists as $j_artist )
-              <p>{{ $j_artist->name }}</p>
+              {{ $j_artist->name }}@if ( !$loop->last), @endif
             @endforeach
+          @else
+            {{ 'unknown' }}
           @endif
+        </summary>
+        <div>
+          <p>{{ $i_recording->title }}</p>
         </div>
         <div>
           <!-- TODO 画像が存在しない倍の処理 -->

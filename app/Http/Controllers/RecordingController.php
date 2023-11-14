@@ -12,11 +12,12 @@ class RecordingController extends Controller
     public function index(Request $request)
     {
         if ( $request->has('music_id') ) {
-            $music = Music::where('id', $request->query('music_id'))->firstOrFail();
+            $music_id = $request->query('music_id');
+            $music = Music::where('id', $music_id)->firstOrFail();
             $composer = $music->composer->name;
             $title = $music->title;
             $opus = $music->opus;
-            $recordings = Recording::where('music_id', $request->query('music_id'))->get();
+            $recordings = Recording::where('music_id', $music_id)->get();
         } else {
             $recordings = Recording::all();
         }
