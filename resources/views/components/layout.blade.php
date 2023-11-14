@@ -14,7 +14,9 @@
       h1 { font-size: 100pt; font-weight: bold; text-align:right; color:#eee; margin:-40px 0px -50px 0px; }
     </style>
   </head>
-  <body>
+  <x-common.header />
+  <body class="pt-16"> <!-- TODO: ヘッダーの高さがわからないのでpadding-top(pt-xx)を設定できない -->
     {{ $slot }}
   </body>
+  <x-common.footer />
 <html>
