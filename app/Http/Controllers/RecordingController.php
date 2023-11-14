@@ -40,9 +40,11 @@ class RecordingController extends Controller
         $average_rate = $recording->average_rate;
         $reviews = Review::where('recording_id', $recording->id)
             ->whereNotNull('title')
+            ->orderBy('like', 'desc')
             ->paginate(10);
 
         return view('recording.show',
-            compact('title', 'release_date', 'catalogue_no', 'jacket_filename', 'artists', 'average_rate', 'reviews'));
+            compact('title', 'release_date', 'catalogue_no', 'jacket_filename',
+                    'artists', 'average_rate', 'reviews'));
     }
 }
