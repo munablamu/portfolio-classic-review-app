@@ -1,17 +1,24 @@
 <x-layout title='Classic Music Review App'>
   <h1>Recording Detail</h1>
 
-  <h2>{{ $title }}</h2>
+  <h2>
+    @if ( $artists !== null )
+      @foreach ( $artists as $i_artist )
+        {{ $i_artist->name }}@if ( !$loop->last ), @endif
+      @endforeach
+    @else
+      {{ 'unknown' }}
+    @endif
+  </h2>
 
   <div>
-    @foreach ( $artists as $i_artist )
-      <p>{{ $i_artist->name }}</p>
-    @endforeach
+      <p>{{ $title }}</p>
   </div>
 
   <div>
     <p>発売日: {{ $release_date }}</p>
     <p>カタログ番号: {{ $catalogue_no }}</p>
+    <p>カスタマーレビュー: {{ $average_rate }}</p>
   </div>
 
   <div>

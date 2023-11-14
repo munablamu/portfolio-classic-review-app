@@ -18,6 +18,7 @@ return new class extends Migration
             $table->dateTime('release_date')->nullable(true);
             $table->string('catalogue_no')->nullable(false);
             $table->string('jacket_filename')->nullable(true);
+            $table->float('average_rate', 2, 1)->default(0.0)->nullable(false);
             $table->timestamps();
         });
     }

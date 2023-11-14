@@ -23,6 +23,7 @@ class RecordingsSeeder extends Seeder
                 'release_date' => $i_recording->release_date !== null ? Carbon::createFromTimestampMs($i_recording->release_date) : null,
                 'catalogue_no' => $i_recording->catalogue_no,
                 'jacket_filename' => $i_recording->jacket_filename,
+                'average_rate' => 0.0,
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);

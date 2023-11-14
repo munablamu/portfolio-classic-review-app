@@ -14,7 +14,8 @@ class Recording extends Model
         'title',
         'release_date',
         'catalogue_no',
-        'jacket_filename'
+        'jacket_filename',
+        'average_rate'
     ];
 
     protected $casts = [
@@ -34,5 +35,11 @@ class Recording extends Model
     public function reviews()
     {
         return $this->hasMany(Review::class);
+    }
+
+    public function setAverageRate()
+    {
+        $this->average_rate = $this->reviews()->avg('rate');
+        $this->save();
     }
 }

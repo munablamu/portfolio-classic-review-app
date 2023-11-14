@@ -16,7 +16,7 @@
           @endif
         </summary>
         <div>
-          <p>{{ $i_recording->title }}</p>
+          <p>{{ $i_recording->title }} (rate: {{ $i_recording->average_rate }})</p>
         </div>
         <div>
           <!-- TODO 画像が存在しない倍の処理 -->
@@ -28,4 +28,5 @@
       </details>
     @endforeach
   </div>
+  {{ $recordings->links() }}
 </x-layout>

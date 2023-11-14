@@ -17,9 +17,12 @@ class RecordingController extends Controller
             $composer = $music->composer->name;
             $title = $music->title;
             $opus = $music->opus;
-            $recordings = Recording::where('music_id', $music_id)->get();
+            $recordings = Recording::where('music_id', $music_id)
+                ->orderBy('average_rate', 'desc')
+                ->paginate(10)
+                ->appends(['music_id' => $music_id]);
         } else {
-            $recordings = Recording::all();
+            //
         }
 
         return view('recording.index',
@@ -34,11 +37,12 @@ class RecordingController extends Controller
         $catalogue_no = $recording->catalogue_no;
         $jacket_filename = $recording->jacket_filename;
         $artists = $recording->artists;
+        $average_rate = $recording->average_rate;
         $reviews = Review::where('recording_id', $recording->id)
             ->whereNotNull('title')
             ->paginate(10);
 
         return view('recording.show',
-            compact('title', 'release_date', 'catalogue_no', 'jacket_filename', 'artists', 'reviews'));
+            compact('title', 'release_date', 'catalogue_no', 'jacket_filename', 'artists', 'average_rate', 'reviews'));
     }
 }
