@@ -2,9 +2,10 @@
   <h1>Recording Detail</h1>
 
   <h2>
+    <!-- TODO: ここの処理をHTMLに書かずに済むようにしたい -->
     @if ( $artists !== null )
       @foreach ( $artists as $i_artist )
-        {{ $i_artist->name }}@if ( !$loop->last ), @endif
+        <a href="{{ route('artist.show', ['id' => $i_artist->id]) }}">{{ $i_artist->name }}</a>@if ( !$loop->last ), @endif
       @endforeach
     @else
       {{ 'unknown' }}

@@ -6,15 +6,7 @@
   <div>
     @foreach ( $recordings as $i_recording )
       <details>
-        <summary>
-          @if ( $i_recording->artists !== null )
-            @foreach ( $i_recording->artists as $j_artist )
-              {{ $j_artist->name }}@if ( !$loop->last), @endif
-            @endforeach
-          @else
-            {{ 'unknown' }}
-          @endif
-        </summary>
+        <summary>{{ $i_recording->artist_names_joined_by_comma }}</summary>
         <div>
           <p>{{ $i_recording->title }} (rate: {{ $i_recording->average_rate }})</p>
         </div>

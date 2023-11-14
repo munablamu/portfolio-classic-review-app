@@ -42,4 +42,17 @@ class Recording extends Model
         $this->average_rate = $this->reviews()->avg('rate');
         $this->save();
     }
+
+    public function getArtistNamesJoinedByCommaAttribute()
+    {
+        if ( $this->artists !== null && count($this->artists) > 0 ) {
+            $names = array_map(function ($artist) {
+                return $artist['name'];
+            }, $this->artists->toArray());
+
+            return implode(', ', $names);
+        } else {
+            return 'unknown';
+        }
+    }
 }
