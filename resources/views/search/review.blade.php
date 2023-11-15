@@ -18,6 +18,7 @@
         <div>
           <p>{{ $i_review->content }}</p>
         </div>
+        <a href="{{ route('recording.show', ['id' => $i_review->recording->id]) }}">他のレビューも見る</a>
       </details>
     @endforeach
   </div>
