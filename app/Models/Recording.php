@@ -55,4 +55,14 @@ class Recording extends Model
             return 'unknown';
         }
     }
+
+    public function getReleaseDateStringAttribute()
+    {
+        $release_date = $this->release_date;
+        if ( $release_date !== null ) {
+            return $release_date->format('Y年m月d日');
+        } else {
+            return '不明';
+        }
+    }
 }

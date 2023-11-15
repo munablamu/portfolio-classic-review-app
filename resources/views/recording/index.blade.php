@@ -1,7 +1,7 @@
 <x-layout title='Classic Music Review App'>
   <h1>Recording List</h1>
 
-  <h2>{{ $composer }}  {{ $title }}, {{ $opus }}</h2>
+  <h2>{{ $music->composer->name }}  {{ $music->title }}, {{ $music->opus }}</h2>
 
   <div>
     @foreach ( $recordings as $i_recording )
