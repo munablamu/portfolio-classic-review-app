@@ -16,6 +16,7 @@
   </head>
   <x-common.header />
   <body class="pt-16"> <!-- TODO: ヘッダーの高さがわからないのでpadding-top(pt-xx)を設定できない -->
+    <x-common.session_feedback />
     {{ $slot }}
   </body>
   <x-common.footer />

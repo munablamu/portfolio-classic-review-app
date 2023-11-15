@@ -27,6 +27,34 @@
     <img src="{{ asset('storage/jackets/' . $jacket_filename) }}" alt="" width="300">
   </div>
 
+  @guest
+    <div>
+      <p><a href="{{ route('login') }}">ログイン</a>をして、あなたもレビューを投稿してみませんか？</p>
+    </div>
+  @endguest
+
+  @auth
+    @empty ( $user_review )
+      <div>
+        <a href="{{ route('review.create', ['recording_id' => $recording_id]) }}">
+          {{ Auth::user()->name }}さんも、レビューを投稿してみましょう。
+        </a>
+      </div>
+    @else
+      <div>
+        <p>あなたのレビュー</p>
+        <div>
+          <p>評価: {{ $user_review->rate }}</p>
+          @isset ( $user_review->title )
+            <p>{{ $user_review->title }}</p>
+            <p>{{ $user_review->content }}</p>
+            <p>いいね: {{ $user_review->like}}</p>
+          @endisset
+          <a href="{{ route('review.edit', ['recording_id' => $recording_id]) }}">レビューを修正しますか？ </p>
+      </div>
+    @endempty
+  @endauth
+
   <div>
     @foreach ( $reviews as $i_review )
       <details>

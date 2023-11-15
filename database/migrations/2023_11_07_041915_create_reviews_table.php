@@ -20,6 +20,8 @@ return new class extends Migration
             $table->integer('rate')->nullable(false);
             $table->integer('like')->nullable(true);
             $table->timestamps();
+
+            $table->unique(['user_id', 'recording_id']);
         });
     }
 

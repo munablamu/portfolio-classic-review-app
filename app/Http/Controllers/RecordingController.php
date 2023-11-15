@@ -6,6 +6,7 @@ use App\Models\Music;
 use App\Models\Recording;
 use App\Models\Review;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RecordingController extends Controller
 {
@@ -31,20 +32,40 @@ class RecordingController extends Controller
 
     public function show(Request $request)
     {
-        $recording = Recording::where('id', $request->route('id'))->firstOrFail();
+        $recording_id = $request->route('id');
+        $recording = Recording::where('id', $recording_id)->firstOrFail();
         $title = $recording->title;
-        $release_date = $recording->release_date->format('Y年m月d日');
+        $release_date = $recording->release_date;
+        if ( $release_date !== null ) {
+            $release_date = $release_date->format('Y年m月d日');
+        } else {
+            $release_date = 'unknown';
+        }
+
         $catalogue_no = $recording->catalogue_no;
         $jacket_filename = $recording->jacket_filename;
         $artists = $recording->artists;
         $average_rate = $recording->average_rate;
-        $reviews = Review::where('recording_id', $recording->id)
-            ->whereNotNull('title')
-            ->orderBy('like', 'desc')
-            ->paginate(10);
+
+        if ( Auth::check() ) {
+            $user_review = Review::where('user_id', Auth::id())
+                ->where('recording_id', $recording_id)->firstOrFail();
+
+            $reviews = Review::where('recording_id', $recording_id)
+                ->where('user_id', '<>', Auth::id())
+                ->whereNotNull('title')
+                ->orderBy('like', 'desc')
+                ->paginate(10);
+        } else {
+            $user_review = null;
+            $reviews = Review::where('recording_id', $recording_id)
+                ->whereNotNull('title')
+                ->orderBy('like', 'desc')
+                ->paginate(10);
+        }
 
         return view('recording.show',
-            compact('title', 'release_date', 'catalogue_no', 'jacket_filename',
-                    'artists', 'average_rate', 'reviews'));
+            compact('recording_id', 'title', 'release_date', 'catalogue_no', 'jacket_filename',
+                    'artists', 'average_rate', 'user_review', 'reviews'));
     }
 }

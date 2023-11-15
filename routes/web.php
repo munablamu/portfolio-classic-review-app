@@ -7,6 +7,7 @@ use App\Http\Controllers\RecordingController;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\TopController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,6 +55,15 @@ Route::get('/search/artist', [SearchController::class, 'artist'])
     ->name('search.artist');
 Route::get('/search/review', [SearchController::class, 'review'])
     ->name('search.review');
+
+Route::get('/review/create', [ReviewController::class, 'create'])
+    ->name('review.create');
+Route::post('/review/store', [ReviewController::class, 'store'])
+    ->name('review.store');
+Route::get('/review/edit', [ReviewController::class, 'edit'])
+    ->name('review.edit');
+Route::post('/review/update', [ReviewController::class, 'update'])
+    ->name('review.update');
 
 // Route::get('/user/index', [UserController::class, 'index'])
 //     ->name('user');
