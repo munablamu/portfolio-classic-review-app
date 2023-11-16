@@ -37,6 +37,11 @@ class Recording extends Model
         return $this->hasMany(Review::class);
     }
 
+    public function favoritedByUsers()
+    {
+        return $this->belongsToMany(User::class, 'user_recordings');
+    }
+
     public function setAverageRate()
     {
         $this->average_rate = $this->reviews()->avg('rate');

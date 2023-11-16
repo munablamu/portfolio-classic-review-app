@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Review;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -15,11 +16,26 @@ class UserController extends Controller
     }
 
     public function show(Request $request) {
-        $user = User::where('id', $request->route('id'))->firstOrFail();
-        $user_name = $user->name;
-        $reviews = $user->reviews()->orderBy('like', 'desc')->get();
+        $user_id = $request->route('id');
+        $user = User::find($user_id)->firstOrFail();
+
+        $allReviewCount = Review::where('user_id', $user_id)->count();
+        $reviewCount = Review::where('user_id', $user_id)
+            ->whereNotNull('title')->count();
+
+        $likeSum = Review::where('user_id', $user_id)
+            ->sum('like');
+
+        $reviews = Review::where('user_id', $user_id)
+            ->whereNotNull('title')
+            ->orderBy('like', 'desc')
+            ->paginate(10);
 
         return view('user.show',
-            compact('user_name', 'reviews'));
+            compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'reviews'));
+    }
+
+    public function home(Request $request) {
+        return view('home');
     }
 }

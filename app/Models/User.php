@@ -43,7 +43,18 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function reviews() {
+    public function reviews()
+    {
         return $this->hasMany(Review::class);
+    }
+
+    public function favoriteRecordings()
+    {
+        return $this->belongsToMany(Recording::class, 'user_recordings');
+    }
+
+    public function favoriteArtists()
+    {
+        return $this->belongsToMany(Artist::class, 'user_artists');
     }
 }

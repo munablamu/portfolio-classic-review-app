@@ -67,13 +67,11 @@ Route::post('/review/update', [ReviewController::class, 'update'])
 
 // Route::get('/user/index', [UserController::class, 'index'])
 //     ->name('user');
-// Route::get('/user/show/{id}', [UserController::class, 'show'])
-//     ->name('user.show');
-
-
-Route::get('/home', function () {
-    return view('home');
-})->middleware(['auth', 'verified'])->name('home');
+Route::get('/user/show/{id}', [UserController::class, 'show'])
+    ->name('user.show');
+Route::get('/home', [UserController::class, 'home'])
+    ->middleware(['auth', 'verified'])
+    ->name('home');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

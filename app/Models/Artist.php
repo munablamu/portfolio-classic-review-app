@@ -20,6 +20,11 @@ class Artist extends Model
         return $this->belongsToMany(Recording::class, 'recording_artist');
     }
 
+    public function favoritedByUsers()
+    {
+        return $this->belongsToMany(User::class, 'user_recordings');
+    }
+
     public function toSearchableArray()
     {
         $array = $this->toArray();
