@@ -67,8 +67,10 @@ Route::post('/review/update', [ReviewController::class, 'update'])
 
 // Route::get('/user/index', [UserController::class, 'index'])
 //     ->name('user');
-Route::get('/user/show/{id}', [UserController::class, 'show'])
+Route::get('/user/{id}', [UserController::class, 'show'])
     ->name('user.show');
+Route::get('/user/{id}/reviews', [UserController::class, 'reviews'])
+    ->name('user.reviews');
 Route::get('/home', [UserController::class, 'home'])
     ->middleware(['auth', 'verified'])
     ->name('home');

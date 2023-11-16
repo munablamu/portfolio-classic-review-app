@@ -26,12 +26,28 @@ class UserController extends Controller
         $likeSum = Review::where('user_id', $user_id)
             ->sum('like');
 
+        return view('user.show',
+            compact('user', 'allReviewCount', 'reviewCount', 'likeSum'));
+    }
+
+    public function reviews(Request $request)
+    {
+        $user_id = $request->route('id');
+        $user = User::find($user_id)->firstOrFail();
+
+        $allReviewCount = Review::where('user_id', $user_id)->count();
+        $reviewCount = Review::where('user_id', $user_id)
+            ->whereNotNull('title')->count();
+
+        $likeSum = Review::where('user_id', $user_id)
+            ->sum('like');
+
         $reviews = Review::where('user_id', $user_id)
             ->whereNotNull('title')
             ->orderBy('like', 'desc')
             ->paginate(10);
 
-        return view('user.show',
+        return view('user.reviews',
             compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'reviews'));
     }
 
