@@ -31,7 +31,7 @@ class ReviewsSeeder extends Seeder
                     'title' => $faker->realText(15),
                     'content' => $faker->realText(400),
                     'rate' => rand(1, 5),
-                    'like' => null,
+                    'like' => 0,
                     'created_at' => $randomDateTime,
                     'updated_at' => $randomDateTime,
                 ]);
@@ -45,7 +45,7 @@ class ReviewsSeeder extends Seeder
                     'title' => null,
                     'content' => null,
                     'rate' => rand(1, 5),
-                    'like' => null,
+                    'like' => 0,
                     'created_at' => $randomDateTime,
                     'updated_at' => $randomDateTime,
                 ]);

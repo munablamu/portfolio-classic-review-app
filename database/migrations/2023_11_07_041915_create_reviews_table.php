@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title')->nullable(true);
             $table->text('content')->nullable(true);
             $table->integer('rate')->nullable(false);
-            $table->integer('like')->nullable(true);
+            $table->integer('like')->integer(0)->nullable(false);
             $table->timestamps();
 
             $table->unique(['user_id', 'recording_id']);
