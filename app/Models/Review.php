@@ -8,8 +8,7 @@ use Laravel\Scout\Searchable;
 
 class Review extends Model
 {
-    use HasFactory;
-    use Searchable;
+    use HasFactory, Searchable;
 
     protected $fillable = [
         'user_id',

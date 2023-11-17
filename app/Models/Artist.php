@@ -8,8 +8,7 @@ use Laravel\Scout\Searchable;
 
 class Artist extends Model
 {
-    use HasFactory;
-    use Searchable;
+    use HasFactory, Searchable;
 
     protected $fillable = [
         'name'

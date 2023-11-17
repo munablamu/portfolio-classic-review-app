@@ -8,8 +8,7 @@ use Laravel\Scout\Searchable;
 
 class Music extends Model
 {
-    use HasFactory;
-    use Searchable;
+    use HasFactory, Searchable;
 
     protected $table = 'musics';
 
