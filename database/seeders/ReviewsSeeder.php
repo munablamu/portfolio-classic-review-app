@@ -24,6 +24,7 @@ class ReviewsSeeder extends Seeder
             $chosen_user_ids = array_slice($all_user_ids, 0, 15);
 
             for ( $i = 0; $i < 5; $i++ ) {
+                $randomDateTime = $faker->dateTimeBetween($startDate='-3 year', $endDate='now');
                 DB::table('reviews')->insert([
                     'user_id' => $chosen_user_ids[$i],
                     'recording_id' => $i_recording->id,
@@ -31,12 +32,13 @@ class ReviewsSeeder extends Seeder
                     'content' => $faker->realText(400),
                     'rate' => rand(1, 5),
                     'like' => rand(0, 100),
-                    'created_at' => now(),
-                    'updated_at' => now(),
+                    'created_at' => $randomDateTime,
+                    'updated_at' => $randomDateTime,
                 ]);
             }
 
             for ( $i = 0; $i < 10; $i++ ) {
+                $randomDateTime = $faker->dateTimeBetween($startDate='-3 year', $endDate='now');
                 DB::table('reviews')->insert([
                     'user_id' => $chosen_user_ids[$i+5],
                     'recording_id' => $i_recording->id,
@@ -44,8 +46,8 @@ class ReviewsSeeder extends Seeder
                     'content' => null,
                     'rate' => rand(1, 5),
                     'like' => null,
-                    'created_at' => now(),
-                    'updated_at' => now(),
+                    'created_at' => $randomDateTime,
+                    'updated_at' => $randomDateTime,
                 ]);
             }
         }

@@ -79,6 +79,28 @@ class ReviewController extends Controller
         return redirect()
             ->route('recording.show', ['id' => $recording_id])
             ->with('feedback.success', 'レビューの編集に成功しました。');
+    }
 
+    public function deleteInHome(Request $request)
+    {
+        $id = $request->route('id');
+        $review = Review::find($id)->firstOrFail();
+        $reviewer_id = $review->user_id;
+        if ( Auth::check() && $reviewer_id === Auth::id() ) {
+            try {
+                DB::transaction(function () use ($review) {
+                    $review->delete();
+                });
+            } catch ( \Throwable $e ) {
+                \Log::error($e);
+                return redirect()
+                    ->route('home.reviews')
+                    ->with('feedback.error', 'レビューの削除に失敗しました。');
+            }
+
+            return redirect()
+                ->route('home.reviews')
+                ->with('feedback.success', 'レビューの削除に成功しました。');
+        }
     }
 }

@@ -16,12 +16,11 @@ class UserArtistsSeeder extends Seeder
     public function run(): void
     {
         $users = User::all();
-        $artist_ids = Artist::pluck('id')->toArray();
 
         foreach ( $users as $user ) {
-            $num_favorite = rand(0, 10);
-            shuffle($artist_ids);
-            $favorite_ids = array_slice($artist_ids, 0, $num_favorite);
+            $favorite_ids = Artist::inRandomOrder()
+                ->take(rand(0, 10))
+                ->pluck('id');
 
             foreach ( $favorite_ids as $i_favorite_id ) {
                 DB::table('user_artists')->insert([

@@ -1,5 +1,5 @@
 <x-layout title='Classic Music Review App'>
-  <h1>User Detail</h1>
+  <h1>User Reviews</h1>
 
   <h2>{{ $user->name }}</h2>
   <!-- TODO 画像が存在しない倍の処理 -->

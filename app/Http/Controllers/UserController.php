@@ -50,8 +50,4 @@ class UserController extends Controller
         return view('user.reviews',
             compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'reviews'));
     }
-
-    public function home(Request $request) {
-        return view('home');
-    }
 }

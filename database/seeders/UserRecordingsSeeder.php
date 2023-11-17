@@ -16,12 +16,11 @@ class UserRecordingsSeeder extends Seeder
     public function run(): void
     {
         $users = User::all();
-        $recording_ids = Recording::pluck('id')->toArray();
 
         foreach ( $users as $user ) {
-            $num_favorite = rand(0, 10);
-            shuffle($recording_ids);
-            $favorite_ids = array_slice($recording_ids, 0, $num_favorite);
+            $favorite_ids = Recording::inRandomOrder()
+                ->take(rand(0, 10))
+                ->pluck('id');
 
             foreach ( $favorite_ids as $i_favorite_id ) {
                 DB::table('user_recordings')->insert([

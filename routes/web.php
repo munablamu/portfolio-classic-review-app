@@ -8,6 +8,7 @@ use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\TopController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -64,6 +65,8 @@ Route::get('/review/edit', [ReviewController::class, 'edit'])
     ->name('review.edit');
 Route::post('/review/update', [ReviewController::class, 'update'])
     ->name('review.update');
+Route::delete('/review.deleteInHome/{id}', [ReviewController::class, 'deleteInHome'])
+    ->name('review.deleteInHome');
 
 // Route::get('/user/index', [UserController::class, 'index'])
 //     ->name('user');
@@ -71,9 +74,19 @@ Route::get('/user/{id}', [UserController::class, 'show'])
     ->name('user.show');
 Route::get('/user/{id}/reviews', [UserController::class, 'reviews'])
     ->name('user.reviews');
-Route::get('/home', [UserController::class, 'home'])
+
+Route::get('/home', [HomeController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('home');
+Route::get('/home/following_users', [HomeController::class, 'following_users'])
+    ->middleware(['auth', 'verified'])
+    ->name('home.following_users');
+Route::get('/home/reviews', [HomeController::class, 'reviews'])
+    ->middleware(['auth', 'verified'])
+    ->name('home.reviews');
+Route::get('/home/profile', [HomeController::class, 'edit_profile'])
+    ->middleware(['auth', 'verified'])
+    ->name('home.edit_profile');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

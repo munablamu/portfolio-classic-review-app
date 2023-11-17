@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             RecordingAverageRateSeeder::class,
             UserArtistsSeeder::class,
             UserRecordingsSeeder::class,
+            FollowsSeeder::class,
         ]);
 
         // \App\Models\User::factory()->create([
