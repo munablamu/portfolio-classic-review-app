@@ -17,8 +17,8 @@ class UsersSeeder extends Seeder
 
         $users = User::factory($num_users)->create();
 
-        foreach ( $users as $i => $user ) {
-            $user->update([
+        foreach ( $users as $i => $i_user ) {
+            $i_user->update([
                 'icon_filename' => 'user_' . str($i+1) . '.jpg',
             ]);
         }

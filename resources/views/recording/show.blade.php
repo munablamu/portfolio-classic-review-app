@@ -61,6 +61,23 @@
         <summary>{{ $i_review->user->name }}, {{ $i_review->title }}, {{ $i_review->rate }}, {{ $i_review->like }}</summary>
         <div>
           <p>{{ $i_review->content }}</p>
+          <!-- TODO: 多分ここでチェックするの良くない -->
+          @php
+            $liked = $i_review->likes()->where('user_id', Auth::id())->first();
+          @endphp
+
+          @if ( $liked )
+            <form action="{{ route('likes.destroy', ['review' => $i_review->id]) }}" method="post">
+              @method('DELETE')
+              @csrf
+              <button type="submit">いいねを解除する</button>
+            </form>
+          @else
+            <form action="{{ route('likes.store', ['review' => $i_review->id]) }}" method="post">
+              @csrf
+              <button type="submit">いいね</button>
+            </form>
+          @endif
         </div>
       </details>
     @endforeach

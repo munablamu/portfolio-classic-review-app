@@ -9,6 +9,7 @@ use App\Http\Controllers\TopController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LikeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -87,6 +88,11 @@ Route::get('/home/reviews', [HomeController::class, 'reviews'])
 Route::get('/home/profile', [HomeController::class, 'edit_profile'])
     ->middleware(['auth', 'verified'])
     ->name('home.edit_profile');
+
+Route::post('/reviews/{review}/likes', [LikeController::class, 'store'])
+    ->name('likes.store');
+Route::delete('/reviews/{review}/likes/destroy', [LikeController::class, 'destroy'])
+    ->name('likes.destroy');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

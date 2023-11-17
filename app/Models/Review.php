@@ -30,6 +30,11 @@ class Review extends Model
         return $this->belongsTo(Recording::class);
     }
 
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
+
     public function toSearchableArray()
     {
         if ( $this->title === null ) {

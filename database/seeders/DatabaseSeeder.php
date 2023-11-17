@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
             RecordingArtistSeeder::class,
             ReviewsSeeder::class,
             RecordingAverageRateSeeder::class,
+            LikesSeeder::class,
+            ReviewLikeSeeder::class,
             UserArtistsSeeder::class,
             UserRecordingsSeeder::class,
             FollowsSeeder::class,

@@ -36,7 +36,7 @@ class RecordingController extends Controller
             ->where('recording_id', $recording_id)->first();
         if ( Auth::check() ) {
             $reviews = Review::where('recording_id', $recording_id)
-                ->where('user_id', '<>', Auth::id())
+                ->where('user_id', '!=', Auth::id())
                 ->whereNotNull('title')
                 ->orderBy('like', 'desc')
                 ->paginate(10);

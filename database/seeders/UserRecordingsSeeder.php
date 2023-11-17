@@ -17,15 +17,15 @@ class UserRecordingsSeeder extends Seeder
     {
         $users = User::all();
 
-        foreach ( $users as $user ) {
+        foreach ( $users as $i_user ) {
             $favorite_ids = Recording::inRandomOrder()
                 ->take(rand(0, 10))
                 ->pluck('id');
 
-            foreach ( $favorite_ids as $i_favorite_id ) {
+            foreach ( $favorite_ids as $j_favorite_id ) {
                 DB::table('user_recordings')->insert([
-                    'user_id' => $user->id,
-                    'recording_id' => $i_favorite_id,
+                    'user_id' => $i_user->id,
+                    'recording_id' => $j_favorite_id,
                     'created_at' => now(),
                     'updated_at' => now(),
                 ]);
