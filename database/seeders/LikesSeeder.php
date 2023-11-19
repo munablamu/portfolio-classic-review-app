@@ -16,7 +16,7 @@ class LikesSeeder extends Seeder
     public function run(): void
     {
         $users = User::all();
-        $reviewsCount = Review::all()->count();
+        $reviewsCount = Review::whereNotNull('title')->count();
 
         foreach ( $users as $i_user ) {
             $like_ids = Review::whereNotNull('title')
