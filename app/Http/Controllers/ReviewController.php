@@ -36,7 +36,7 @@ class ReviewController extends Controller
                 ->with('feedback.error', 'レビューの投稿に失敗しました。');
         }
 
-        return redirect(Session::get('backUrl'))
+        return redirect(Session::get('reviewCreateBackUrl'))
             ->with('feedback.success', 'レビューの投稿に成功しました。');
     }
 

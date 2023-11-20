@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Rules\UniqueUserRecording;
+use App\Rules\MultiByteMax;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 
@@ -27,8 +28,8 @@ class ReviewRequest extends FormRequest
             'user_id' => 'required|exists:users,id',
             'recording_id' => 'required|exists:recordings,id', // TODO: user_idとrecording_idの組み合わせの一意性はmigrate時に定義しているのでここではcheckしないことにする
             'rate' => 'required|integer|between:1,5',
-            'title' => 'required_with:content',
-            'content' => 'required_with:title',
+            'title' => ['required_with:content', new MultiByteMax(50)],
+            'content' => ['required_with:title', new MultiByteMax(4000)],
             'like' => ''
         ];
     }

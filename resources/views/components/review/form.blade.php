@@ -13,7 +13,7 @@
     <select id="rate" name="rate">
       <option value="{{ -1 }}">--- 1から5の中から選んでください ---</option>
       @for ( $i = 1; $i <= 5; $i++ )
-        <option value="{{ $i }}">{{ $i }}</option>
+        <option value="{{ $i }}" {{ $i === (int)old('rate') ? 'selected' : '' }}>{{ $i }}</option>
       @endfor
     </select>
     <br />
