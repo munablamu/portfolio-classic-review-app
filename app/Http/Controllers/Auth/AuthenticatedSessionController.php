@@ -15,8 +15,11 @@ class AuthenticatedSessionController extends Controller
     /**
      * Display the login view.
      */
-    public function create(): View
+    public function create(Request $request): View
     {
+        // ログイン後、ログインページの前にいたページに戻れるようにする。
+        $request->session()->put('url.intended', url()->previous());
+
         return view('auth.login');
     }
 
@@ -29,7 +32,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended();
+        return redirect()->intended(RouteServiceProvider::HOME);
     }
 
     /**
