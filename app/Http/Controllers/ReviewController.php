@@ -7,7 +7,6 @@ use App\Models\Recording;
 use App\Http\Requests\ReviewRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 class ReviewController extends Controller
@@ -23,13 +22,11 @@ class ReviewController extends Controller
     public function store(ReviewRequest $request, Recording $recording)
     {
         try {
-            DB::transaction(function () use ($request) {
-                $review = new Review;
-                $form = $request->all();
-                unset($form['_token']);
-                $form['like'] = 0;
-                $review->fill($form)->save();
-            });
+            $review = new Review;
+            $form = $request->all();
+            unset($form['_token']);
+            $form['like'] = 0;
+            $review->fill($form)->save();
         } catch ( \Throwable $e ) {
             \Log::error($e);
             return redirect(Session::get('url.reviewCreate'))
@@ -55,20 +52,18 @@ class ReviewController extends Controller
     public function update(ReviewRequest $request, Recording $recording)
     {
         try {
-            DB::transaction(function () use ($request, $recording) {
-                $review = Review::where('user_id', Auth::id())
-                    ->where('recording_id', $recording->id)
-                    ->firstOrFail();
-                $form = $request->all();
-                unset($form['_token']);
+            $review = Review::where('user_id', Auth::id())
+                ->where('recording_id', $recording->id)
+                ->firstOrFail();
+            $form = $request->all();
+            unset($form['_token']);
 
-                // reviewにタイトル、コンテンツがない場合、likeを0に戻す
-                if ( $form['title'] === null ) {
-                    $form['like'] = 0;
-                }
+            // reviewにタイトル、コンテンツがない場合、likeを0に戻す
+            if ( $form['title'] === null ) {
+                $form['like'] = 0;
+            }
 
-                $review->fill($form)->save();
-            });
+            $review->fill($form)->save();
         } catch ( \Throwable $e ) {
             \Log::error($e);
             return redirect(Session::get('url.reviewEdit'))
@@ -84,9 +79,7 @@ class ReviewController extends Controller
         $reviewer_id = $review->user_id;
         if ( Auth::check() && $reviewer_id === Auth::id() ) {
             try {
-                DB::transaction(function () use ($review) {
-                    $review->delete();
-                });
+                $review->delete();
             } catch ( \Throwable $e ) {
                 \Log::error($e);
                 return back()

@@ -31,18 +31,13 @@ class RecordingController extends Controller
     {
         $user_review = Review::where('user_id', Auth::id())
             ->where('recording_id', $recording->id)->first();
-        if ( Auth::check() ) {
-            $reviews = Review::where('recording_id', $recording->id)
-                ->where('user_id', '!=', Auth::id())
-                ->whereNotNull('title')
-                ->orderBy('like', 'desc')
-                ->paginate(10);
-        } else {
-            $reviews = Review::where('recording_id', $recording->id)
-                ->whereNotNull('title')
-                ->orderBy('like', 'desc')
-                ->paginate(10);
-        }
+        $reviews = Review::where('recording_id', $recording->id)
+            ->when(Auth::check(), function ($query) {
+                return $query->where('user_id', '!=', Auth::id());
+            })
+            ->whereNotNull('title')
+            ->orderBy('like', 'desc')
+            ->paginate(10);
 
         return view('recording.show',
             compact('recording', 'user_review', 'reviews'));
