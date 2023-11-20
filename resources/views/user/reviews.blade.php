@@ -2,8 +2,7 @@
   <h1>User Reviews</h1>
 
   <h2>{{ $user->name }}</h2>
-  <!-- TODO 画像が存在しない倍の処理 -->
-  <img src="{{ asset('storage/user_icons/' . $user->icon_filename) }}" alt="" width="100">
+  <img src="{{ user_icon_url($user->icon_filename) }}" alt="" width="100">
   <p>レビュー件数: {{ $reviewCount }}件 (評価件数: {{ $allReviewCount }}件)</p>
   <p>レビューについたいいね総数: {{ $likeSum }}</p>
 
