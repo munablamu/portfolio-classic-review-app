@@ -14,7 +14,7 @@ class ReviewController extends Controller
 {
     public function create(Request $request, Recording $recording)
     {
-        Session::flash('reviewCreateBackUrl', url()->previous());
+        Session::flash('url.reviewCreate', url()->previous());
 
         return view('review.create',
             compact('recording'));
@@ -32,17 +32,17 @@ class ReviewController extends Controller
             });
         } catch ( \Throwable $e ) {
             \Log::error($e);
-            return redirect(Session::get('reviewCreateBackUrl'))
+            return redirect(Session::get('url.reviewCreate'))
                 ->with('feedback.error', 'レビューの投稿に失敗しました。');
         }
 
-        return redirect(Session::get('reviewCreateBackUrl'))
+        return redirect(Session::get('url.reviewCreate'))
             ->with('feedback.success', 'レビューの投稿に成功しました。');
     }
 
     public function edit(Request $request, Recording $recording)
     {
-        Session::flash('reviewEditBackUrl', url()->previous());
+        Session::flash('url.reviewEdit', url()->previous());
 
         $review = Review::where('user_id', Auth::id())
             ->where('recording_id', $recording->id)
@@ -66,11 +66,11 @@ class ReviewController extends Controller
             });
         } catch ( \Throwable $e ) {
             \Log::error($e);
-            return redirect(Session::get('reviewEditBackUrl'))
+            return redirect(Session::get('url.reviewEdit'))
                 ->with('feedback.error', 'レビューの編集に失敗しました。');
         }
 
-        return redirect(Session::get('reviewEditBackUrl'))
+        return redirect(Session::get('url.reviewEdit'))
             ->with('feedback.success', 'レビューの編集に成功しました。');
     }
 
