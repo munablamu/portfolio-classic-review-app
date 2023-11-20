@@ -48,7 +48,7 @@ class Recording extends Model
         $this->save();
     }
 
-    public function getArtistNamesJoinedByCommaAttribute()
+    public function getArtistsStringAttribute()
     {
         if ( $this->artists !== null && count($this->artists) > 0 ) {
             $names = array_map(function ($artist) {

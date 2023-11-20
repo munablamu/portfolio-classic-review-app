@@ -6,7 +6,7 @@
   <div>
     @foreach ( $recordings as $i_recording )
       <details>
-        <summary>{{ $i_recording->artist_names_joined_by_comma }}</summary>
+        <summary>{{ $i_recording->artistsString }}</summary>
         <div>
           <p>{{ $i_recording->title }} (rate: {{ $i_recording->average_rate }})</p>
         </div>
