@@ -61,7 +61,12 @@ class ReviewController extends Controller
                     ->firstOrFail();
                 $form = $request->all();
                 unset($form['_token']);
-                // ここではlikeの初期化はしない
+
+                // reviewにタイトル、コンテンツがない場合、likeを0に戻す
+                if ( $form['title'] === null ) {
+                    $form['like'] = 0;
+                }
+
                 $review->fill($form)->save();
             });
         } catch ( \Throwable $e ) {

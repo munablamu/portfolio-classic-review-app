@@ -34,6 +34,8 @@
     <textarea id="content" name="content" rows="5" cols="80" placeholder="レビューを書いてください">{{ old('content', $review->content) }}</textarea>
     <br />
 
+    <p>注意: タイトルとレビューが空の場合、このレビューに対する「いいね」は0に戻ります。</p>
+
     <button type="submit">編集</button>
   </form>
 </div>
