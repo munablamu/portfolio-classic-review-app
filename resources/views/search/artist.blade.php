@@ -8,7 +8,7 @@
       <details>
         <summary>{{ $i_artist->name }}, {{ $i_artist->id }}</summary>
         <div>
-          <a href="{{ route('artist.show', ['artist' => $i_artist->id]) }}">詳細を見る</a>
+          <a href="{{ route('artist.show', ['artist' => $i_artist]) }}">詳細を見る</a>
         </div>
       </details>
     @endforeach

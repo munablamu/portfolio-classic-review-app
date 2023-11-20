@@ -51,6 +51,11 @@
             <p>いいね: {{ $user_review->like}}</p>
           @endisset
           <a href="{{ route('review.edit', ['recording' => $recording]) }}">レビューを修正しますか？ </p>
+          <form action="{{ route('review.delete', ['review' => $user_review]) }}" method="post">
+            @method('DELETE')
+            @csrf
+            <button type="submit">削除</button>
+          </form>
       </div>
     @endempty
   @endauth

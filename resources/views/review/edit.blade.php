@@ -2,7 +2,7 @@
   <h1>Review Edit</h1>
 
   @include('components.review.updateForm', [
-    'recording_id' => $recording->id,
+    'recording' => $recording,
     'review' => $review
   ])
 </x-layout>

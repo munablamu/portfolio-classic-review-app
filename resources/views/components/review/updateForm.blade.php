@@ -13,7 +13,7 @@
     <label for="rate">評価</label>
     <select id="rate" name="rate">
       @for ( $i = 1; $i <= 5; $i++ )
-        <option value="{{ $i }}" {{ $i === old('rate', $review->rate) ? 'selected' : ''}}>
+        <option value="{{ $i }}" {{ $i === (int)old('rate', $review->rate) ? 'selected' : ''}}>
           {{ $i }}
         </option>
       @endfor
