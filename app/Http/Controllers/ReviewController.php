@@ -8,11 +8,14 @@ use App\Http\Requests\ReviewRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class ReviewController extends Controller
 {
     public function create(Request $request, Recording $recording)
     {
+        Session::flash('reviewCreateBackUrl', url()->previous());
+
         return view('review.create',
             compact('recording'));
     }
@@ -29,18 +32,18 @@ class ReviewController extends Controller
             });
         } catch ( \Throwable $e ) {
             \Log::error($e);
-            return redirect()
-                ->route('recording.show', ['recording' => $recording])
+            return redirect(Session::get('reviewCreateBackUrl'))
                 ->with('feedback.error', 'レビューの投稿に失敗しました。');
         }
 
-        return redirect()
-            ->route('recording.show', ['recording' => $recording])
+        return redirect(Session::get('backUrl'))
             ->with('feedback.success', 'レビューの投稿に成功しました。');
     }
 
     public function edit(Request $request, Recording $recording)
     {
+        Session::flash('reviewEditBackUrl', url()->previous());
+
         $review = Review::where('user_id', Auth::id())
             ->where('recording_id', $recording->id)
             ->firstOrFail();
@@ -63,13 +66,11 @@ class ReviewController extends Controller
             });
         } catch ( \Throwable $e ) {
             \Log::error($e);
-            return redirect()
-                ->route('recording.show', ['recording' => $recording])
+            return redirect(Session::get('reviewEditBackUrl'))
                 ->with('feedback.error', 'レビューの編集に失敗しました。');
         }
 
-        return redirect()
-            ->route('recording.show', ['recording' => $recording])
+        return redirect(Session::get('reviewEditBackUrl'))
             ->with('feedback.success', 'レビューの編集に成功しました。');
     }
 
