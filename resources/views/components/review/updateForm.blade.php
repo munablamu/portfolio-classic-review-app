@@ -1,11 +1,11 @@
 <div>
-  <form action="{{ route('review.update') }}" method="post">
+  <form action="{{ route('review.update', ['recording' => $recording]) }}" method="post">
     @csrf
 
+    <!-- これはもういらない -->
     @error('recording_id')
       <p style="color: red;">{{ $message }}</p>
     @enderror
-    <input type="hidden" name="recording_id" value="{{ $recording_id }}">
 
     @error('rate')
       <p style="color: red;">{{ $message }}</p>

@@ -15,9 +15,8 @@ class UserController extends Controller
             compact('users'));
     }
 
-    public function show(Request $request) {
-        $user_id = $request->route('id');
-        $user = User::find($user_id)->firstOrFail();
+    public function show(Request $request, User $user) {
+        $user_id = $user->id;
 
         $allReviewCount = Review::where('user_id', $user_id)->count();
         $reviewCount = Review::where('user_id', $user_id)
@@ -30,10 +29,9 @@ class UserController extends Controller
             compact('user', 'allReviewCount', 'reviewCount', 'likeSum'));
     }
 
-    public function reviews(Request $request)
+    public function reviews(Request $request, User $user)
     {
-        $user_id = $request->route('id');
-        $user = User::find($user_id)->firstOrFail();
+        $user_id = $user->id;
 
         $allReviewCount = Review::where('user_id', $user_id)->count();
         $reviewCount = Review::where('user_id', $user_id)

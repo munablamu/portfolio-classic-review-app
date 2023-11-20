@@ -11,58 +11,50 @@ use Illuminate\Support\Facades\DB;
 
 class ReviewController extends Controller
 {
-    public function create(Request $request)
+    public function create(Request $request, Recording $recording)
     {
-        $recording_id = $request->get('recording_id');
-        $recording = Recording::where('id', $recording_id)->firstOrFail();
-
         return view('review.create',
             compact('recording'));
     }
 
-    public function store(ReviewRequest $request)
+    public function store(ReviewRequest $request, Recording $recording)
     {
-        $recording_id = $request->post('recording_id');
         try {
             DB::transaction(function () use ($request) {
                 $review = new Review;
                 $form = $request->all();
                 unset($form['_token']);
-                $form['like'] = null;
+                $form['like'] = 0;
                 $review->fill($form)->save();
             });
         } catch ( \Throwable $e ) {
             \Log::error($e);
             return redirect()
-                ->route('recording.show', ['id' => $recording_id])
+                ->route('recording.show', ['recording' => $recording])
                 ->with('feedback.error', 'レビューの投稿に失敗しました。');
         }
 
         return redirect()
-            ->route('recording.show', ['id' => $recording_id])
+            ->route('recording.show', ['recording' => $recording])
             ->with('feedback.success', 'レビューの投稿に成功しました。');
     }
 
-    public function edit(Request $request)
+    public function edit(Request $request, Recording $recording)
     {
-        $recording_id = $request->get('recording_id');
-        $recording = Recording::where('id', $recording_id)->firstOrFail();
-
         $review = Review::where('user_id', Auth::id())
-            ->where('recording_id', $recording_id)
+            ->where('recording_id', $recording->id)
             ->firstOrFail();
 
         return view('review.edit',
             compact('recording', 'review'));
     }
 
-    public function update(ReviewRequest $request)
+    public function update(ReviewRequest $request, Recording $recording)
     {
-        $recording_id = $request->post('recording_id');
         try {
-            DB::transaction(function () use ($request, $recording_id) {
+            DB::transaction(function () use ($request, $recording) {
                 $review = Review::where('user_id', Auth::id())
-                    ->where('recording_id', $recording_id)
+                    ->where('recording_id', $recording->id)
                     ->firstOrFail();
                 $form = $request->all();
                 unset($form['_token']);
@@ -72,19 +64,17 @@ class ReviewController extends Controller
         } catch ( \Throwable $e ) {
             \Log::error($e);
             return redirect()
-                ->route('recording.show', ['id' => $recording_id])
+                ->route('recording.show', ['recording' => $recording])
                 ->with('feedback.error', 'レビューの編集に失敗しました。');
         }
 
         return redirect()
-            ->route('recording.show', ['id' => $recording_id])
+            ->route('recording.show', ['recording' => $recording])
             ->with('feedback.success', 'レビューの編集に成功しました。');
     }
 
-    public function deleteInHome(Request $request)
+    public function delete(Request $request, Review $review)
     {
-        $id = $request->route('id');
-        $review = Review::find($id)->firstOrFail();
         $reviewer_id = $review->user_id;
         if ( Auth::check() && $reviewer_id === Auth::id() ) {
             try {
@@ -93,13 +83,11 @@ class ReviewController extends Controller
                 });
             } catch ( \Throwable $e ) {
                 \Log::error($e);
-                return redirect()
-                    ->route('home.reviews')
+                return back()
                     ->with('feedback.error', 'レビューの削除に失敗しました。');
             }
 
-            return redirect()
-                ->route('home.reviews')
+            return back()
                 ->with('feedback.success', 'レビューの削除に成功しました。');
         }
     }

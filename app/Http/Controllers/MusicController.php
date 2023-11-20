@@ -53,20 +53,18 @@ class MusicController extends Controller
             ->with('feedback.success', '曲の追加に成功しました。');
     }
 
-    public function edit($id)
+    public function edit(Music $music)
     {
         $composers = Composer::all();
-        $music = Music::where('id', $id)->firstOrFail();
 
         return view('music.edit',
             compact('composers', 'music'));
     }
 
-    public function update(MusicRequest $request)
+    public function update(MusicRequest $request, Music $music)
     {
         try {
-            DB::transaction(function () use ($request) {
-                $music = Music::where('id', $request->route('id'))->firstOrFail();
+            DB::transaction(function () use ($request, $music) {
                 $form = $request->all();
                 unset($form['_token']);
                 $music->fill($form)->save();
@@ -83,11 +81,11 @@ class MusicController extends Controller
             ->with('feedback.success', '曲の編集に成功しました。');
     }
 
-    public function delete($id)
+    public function delete($music)
     {
         try {
-            DB::transaction(function () use ($id) {
-                Music::destroy($id);
+            DB::transaction(function () use ($music) {
+                $music->delete();
             });
         } catch ( \Throwable $e ) {
             \Log::error($e);

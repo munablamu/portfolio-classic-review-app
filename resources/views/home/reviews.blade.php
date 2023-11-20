@@ -18,19 +18,19 @@
     @if ( $reviews->count() === 0 )
       <p>レビューを投稿すると、ここにレビュー一覧が表示されます</p>
     @else
-      <details>
-        @foreach ( $reviews as $i_review )
+      @foreach ( $reviews as $i_review )
+        <details>
           <summary>{{ $i_review->recording->title }}</summary>
           <div>
             <p>{{ $i_review->rate }}</p>
-            <form action="{{ route('review.deleteInHome', ['id' => $i_review->id]) }}" method="post">
+            <form action="{{ route('review.delete', ['review' => $i_review]) }}" method="post">
               @method('DELETE')
               @csrf
               <button type="submit">削除</button>
             </form>
           </div>
-        @endforeach
-      </details>
+        </details>
+      @endforeach
     @endif
   </div>
 </x-layout>

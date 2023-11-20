@@ -5,7 +5,7 @@
     <!-- TODO: ここの処理をHTMLに書かずに済むようにしたい -->
     @if ( $recording->artists !== null )
       @foreach ( $recording->artists as $i_artist )
-        <a href="{{ route('artist.show', ['id' => $i_artist->id]) }}">{{ $i_artist->name }}</a>@if ( !$loop->last ), @endif
+        <a href="{{ route('artist.show', ['artist' => $i_artist]) }}">{{ $i_artist->name }}</a>@if ( !$loop->last ), @endif
       @endforeach
     @else
       {{ '不明' }}
@@ -36,7 +36,7 @@
   @auth
     @empty ( $user_review )
       <div>
-        <a href="{{ route('review.create', ['recording_id' => $recording->id]) }}">
+        <a href="{{ route('review.create', ['recording' => $recording]) }}">
           {{ Auth::user()->name }}さんも、レビューを投稿してみましょう。
         </a>
       </div>
@@ -50,7 +50,7 @@
             <p>{{ $user_review->content }}</p>
             <p>いいね: {{ $user_review->like}}</p>
           @endisset
-          <a href="{{ route('review.edit', ['recording_id' => $recording->id]) }}">レビューを修正しますか？ </p>
+          <a href="{{ route('review.edit', ['recording' => $recording]) }}">レビューを修正しますか？ </p>
       </div>
     @endempty
   @endauth

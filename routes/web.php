@@ -29,21 +29,21 @@ use Illuminate\Support\Facades\Route;
 //     ->name('music.search');
 // Route::post('/music/store', [MusicController::class, 'store'])
 //     ->name('music.store');
-// Route::get('/music/edit/{id}', [MusicController::class, 'edit'])
-//     ->name('music.edit')->where('id', '[0-9]+');
-// Route::put('/music/update/{id}', [MusicController::class, 'update'])
-//     ->name('music.update')->where('id', '[0-9]+');
-// Route::delete('/music/delete/{id}', [MusicController::class, 'delete'])
-//     ->name('music.delete')->where('id', '[0-9]+');
+// Route::get('/musics/{music}/edit', [MusicController::class, 'edit'])
+//     ->name('music.edit')->where('music', '[0-9]+');
+// Route::put('/musics/{music}/update', [MusicController::class, 'update'])
+//     ->name('music.update')->where('music', '[0-9]+');
+// Route::delete('/musics/{music}/delete', [MusicController::class, 'delete'])
+//     ->name('music.delete')->where('music', '[0-9]+');
 //
-Route::get('/recording/index', [RecordingController::class, 'index'])
+Route::get('/recordings/index', [RecordingController::class, 'index'])
     ->name('recording');
-Route::get('/recording/show/{id}', [RecordingController::class, 'show'])
-    ->name('recording.show');
+Route::get('/recordings/{recording}/show', [RecordingController::class, 'show'])
+    ->name('recording.show')->where('recording', '[0-9]+');
 //
 // Route::get('/artist/index', [ArtistController::class, 'index'])
 //     ->name('artist');
-Route::get('/artist/show/{id}', [ArtistController::class, 'show'])
+Route::get('/artists/{artist}', [ArtistController::class, 'show'])
     ->name('artist.show');
 //
 
@@ -58,23 +58,23 @@ Route::get('/search/artist', [SearchController::class, 'artist'])
 Route::get('/search/review', [SearchController::class, 'review'])
     ->name('search.review');
 
-Route::get('/review/create', [ReviewController::class, 'create'])
-    ->name('review.create');
-Route::post('/review/store', [ReviewController::class, 'store'])
-    ->name('review.store');
-Route::get('/review/edit', [ReviewController::class, 'edit'])
-    ->name('review.edit');
-Route::post('/review/update', [ReviewController::class, 'update'])
-    ->name('review.update');
-Route::delete('/review.deleteInHome/{id}', [ReviewController::class, 'deleteInHome'])
-    ->name('review.deleteInHome');
+Route::get('/review/create/{recording}', [ReviewController::class, 'create'])
+    ->name('review.create')->where('recording', '[0-9]+');
+Route::post('/review/store/{recording}', [ReviewController::class, 'store'])
+    ->name('review.store')->where('recording', '[0-9]+');
+Route::get('/review/edit/{recording}', [ReviewController::class, 'edit'])
+    ->name('review.edit')->where('recording', '[0-9]+');
+Route::post('/review/update/{recording}', [ReviewController::class, 'update'])
+    ->name('review.update')->where('recording', '[0-9]+');
+Route::delete('/review/delete/{review}', [ReviewController::class, 'delete'])
+    ->name('review.delete')->where('review', '[0-9]+');
 
 // Route::get('/user/index', [UserController::class, 'index'])
 //     ->name('user');
-Route::get('/user/{id}', [UserController::class, 'show'])
-    ->name('user.show');
-Route::get('/user/{id}/reviews', [UserController::class, 'reviews'])
-    ->name('user.reviews');
+Route::get('/users/{user}', [UserController::class, 'show'])
+    ->name('user.show')->where('user', '[0-9]+');
+Route::get('/users/{user}/reviews', [UserController::class, 'reviews'])
+    ->name('user.reviews')->where('user', '[0-9]+');
 
 Route::get('/home', [HomeController::class, 'index'])
     ->middleware(['auth', 'verified'])

@@ -14,7 +14,7 @@
         <summary>{{ $i_review->recording->title }}, {{ $i_review->rate }}, {{ $i_review->like }}</summary>
         <div>
           <p>{{ $i_review->title }}</p>
-          <a href="{{ route('recording.show', ['id' => $i_review->recording->id]) }}">レビューを見る</a>
+          <a href="{{ route('recording.show', ['recording' => $i_review->recording]) }}">レビューを見る</a>
         </div>
       </details>
     @endforeach

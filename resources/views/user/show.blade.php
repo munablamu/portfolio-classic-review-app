@@ -6,7 +6,7 @@
   <img src="{{ asset('storage/user_icons/' . $user->icon_filename) }}" alt="" width="100">
   <p>レビュー件数: {{ $reviewCount }}件 (評価件数: {{ $allReviewCount }}件)</p>
   <p>レビューについたいいね総数: {{ $likeSum }}</p>
-  <a href="{{ route('user.reviews', ['id' => $user->id ]) }}">{{ $user->name }}さんのレビューを見る</a>
+  <a href="{{ route('user.reviews', ['user' => $user ]) }}">{{ $user->name }}さんのレビューを見る</a>
 
   <div>
     <h3>自己紹介</h3>
@@ -20,7 +20,7 @@
         <summary>{{ $i_recording->title }}</summary>
         <dev>
           <p>{{ $i_recording->artist_names_joined_by_comma }}</p>
-          <a href="{{ route('recording.show', ['id' => $i_recording->id]) }}">詳細を見る</a>
+          <a href="{{ route('recording.show', ['recording' => $i_recording]) }}">詳細を見る</a>
         </div>
       </details>
     @endforeach
@@ -29,7 +29,7 @@
   <div>
     <h3>お気に入りの演奏家</h2>
     @foreach ( $user->favoriteArtists as $i_artist )
-        <a href="{{ route('artist.show', ['id' => $i_artist->id]) }}">{{ $i_artist->name }}</a>
+        <a href="{{ route('artist.show', ['artist' => $i_artist]) }}">{{ $i_artist->name }}</a>
         <br />
     @endforeach
   </div>

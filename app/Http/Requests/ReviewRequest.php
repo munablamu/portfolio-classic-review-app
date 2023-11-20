@@ -37,6 +37,7 @@ class ReviewRequest extends FormRequest
     {
       $this->merge([
         'user_id' => Auth::id(),
+        'recording_id' => $this->route('recording')->id,
       ]);
     }
 }

@@ -27,21 +27,18 @@ class RecordingController extends Controller
             compact('music', 'recordings'));
     }
 
-    public function show(Request $request)
+    public function show(Request $request, Recording $recording)
     {
-        $recording_id = $request->route('id');
-        $recording = Recording::where('id', $recording_id)->firstOrFail();
-
         $user_review = Review::where('user_id', Auth::id())
-            ->where('recording_id', $recording_id)->first();
+            ->where('recording_id', $recording->id)->first();
         if ( Auth::check() ) {
-            $reviews = Review::where('recording_id', $recording_id)
+            $reviews = Review::where('recording_id', $recording->id)
                 ->where('user_id', '!=', Auth::id())
                 ->whereNotNull('title')
                 ->orderBy('like', 'desc')
                 ->paginate(10);
         } else {
-            $reviews = Review::where('recording_id', $recording_id)
+            $reviews = Review::where('recording_id', $recording->id)
                 ->whereNotNull('title')
                 ->orderBy('like', 'desc')
                 ->paginate(10);

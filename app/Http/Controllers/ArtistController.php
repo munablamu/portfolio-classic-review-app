@@ -16,9 +16,8 @@ class ArtistController extends Controller
             compact('artists'));
     }
 
-    public function show(Request $request)
+    public function show(Request $request, Artist $artist)
     {
-        $artist = Artist::where('id', $request->route('id'))->firstOrFail();
         // $artistと関連するrecordingを検索する
         $recordings = Recording::whereHas('artists', function ($query) use ($artist) {
             $query->where('artists.id', $artist->id);
