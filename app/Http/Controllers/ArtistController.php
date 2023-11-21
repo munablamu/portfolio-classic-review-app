@@ -18,7 +18,7 @@ class ArtistController extends Controller
 
     public function show(Request $request, Artist $artist)
     {
-        // $artistと関連するrecordingを検索する
+        // $artistと関連するrecordingを検索する(RecordingとArtistは中間テーブルを介して関連付けられているので、whereInで書き換えることができない。)
         $recordings = Recording::whereHas('artists', function ($query) use ($artist) {
             $query->where('artists.id', $artist->id);
         })->orderBy('average_rate', 'desc')->paginate(10);

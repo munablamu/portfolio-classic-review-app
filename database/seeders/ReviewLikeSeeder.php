@@ -18,9 +18,14 @@ class ReviewLikeSeeder extends Seeder
         $reviews = Review::all();
 
         foreach ( $reviews as $i_review ) {
-            $like_count = Like::where('review_id', $i_review->id)->count();
-            $i_review->update([
-                'like' => $like_count,
+            $likeCount = Like::where('review_id', $i_review->id)->count();
+            $datetime = $i_review->updated_at;
+            // ReviewsSeederで設定したランダムなtimestampsを更新しないように、DB:tableメソッドを使用してreviewsテーブルに直接アクセスする。
+            DB::table('reviews')
+                ->where('id', $i_review->id)
+                ->update([
+                    'like' => $likeCount,
+                    'updated_at' => $datetime,
             ]);
         }
     }

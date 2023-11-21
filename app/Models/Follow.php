@@ -10,7 +10,7 @@ class Follow extends Model
     use HasFactory;
 
     protected $fillable = [
-        'followed_user_id',
-        'following_user_id'
+        'followed_user_id', // フォロー元ID
+        'following_user_id' // フォロー先ID
     ];
 }

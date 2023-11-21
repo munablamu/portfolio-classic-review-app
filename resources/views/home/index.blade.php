@@ -17,13 +17,15 @@
     @if ( $following_user_reviews->count() === 0 )
       <p>ユーザーをフォローすると、ここに新着レビューが表示されます。</p>
     @else
-      <details>
-        @foreach ( $following_user_reviews as $i_reviews )
-          <summary>{{ $i_reviews->title }}</summary>
+      @foreach ( $following_user_reviews as $i_review )
+        <details>
+          <summary>{{ $i_review->title }}, {{ $i_review->updated_at }}, {{ $i_review->user->name }}</summary>
           <div>
+            {{ $i_review->recording_id }}
           </div>
-        @endforeach
-      </details>
+        </details>
+      @endforeach
     @endif
+    {{ $following_user_reviews->links() }}
   </div>
 </x-layout>

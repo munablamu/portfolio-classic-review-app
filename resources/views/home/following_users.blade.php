@@ -17,13 +17,14 @@
     @if ( $following_users->count() === 0 )
       <p>ユーザーをフォローすると、ここにフォローユーザーが表示されます。</p>
     @else
-      <details>
-        @foreach ( $following_users as $i_user )
-          <summary><a href="{{ route('user.show', ['id' => $i_user->id]) }}">{{ $i_user->name }}</a></summary>
+      @foreach ( $following_users as $i_user )
+        <details>
+          <summary>{{ $i_user->name }}</summary>
           <div>
+            <a href="{{ route('user.show', ['user' => $i_user]) }}">ユーザーのページを見る</a>
           </div>
-        @endforeach
-      </details>
+        </details>
+      @endforeach
     @endif
   </div>
 </x-layout>
