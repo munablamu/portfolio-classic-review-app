@@ -6,6 +6,15 @@
   <p>レビュー件数: {{ $reviewCount }}件 (評価件数: {{ $allReviewCount }}件)</p>
   <p>レビューについたいいね総数: {{ $likeSum }}</p>
   <a href="{{ route('user.reviews', ['user' => $user ]) }}">{{ $user->name }}さんのレビューを見る</a>
+  <form action="{{ route('follow.store', ['user' => $user]) }}" method="post">
+    @csrf
+    <button type="submit">フォローする</button>
+  </form>
+  <form action="{{ route('follow.destroy', ['user' => $user]) }}" method="post">
+    @method('DELETE')
+    @csrf
+    <button type="submit">フォローを解除する</button>
+  </form>
 
   <div>
     <h3>自己紹介</h3>

@@ -8,14 +8,16 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $users = User::all();
 
         return view('user.index',
             compact('users'));
     }
 
-    public function show(Request $request, User $user) {
+    public function show(Request $request, User $user)
+    {
         $user_id = $user->id;
 
         $allReviewCount = Review::where('user_id', $user_id)->count();

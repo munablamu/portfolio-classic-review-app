@@ -10,6 +10,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LikeController;
+use App\Http\Controllers\FollowController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -93,6 +94,11 @@ Route::post('/reviews/{review}/likes', [LikeController::class, 'store'])
     ->name('likes.store');
 Route::delete('/reviews/{review}/likes/destroy', [LikeController::class, 'destroy'])
     ->name('likes.destroy');
+
+Route::post('/follow/{user}/store', [FollowController::class, 'store'])
+    ->name('follow.store');
+Route::delete('/follow/{user}/destroy', [FollowController::class, 'destroy'])
+    ->name('follow.destroy');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

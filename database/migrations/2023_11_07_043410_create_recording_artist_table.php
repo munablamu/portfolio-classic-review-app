@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignId('recording_id')->constrained('recordings')->nullable(false);
             $table->foreignId('artist_id')->constrained('artists')->nullable(false);
             $table->timestamps();
+
+            $table->unique(['recording_id', 'artist_id']);
         });
     }
 
