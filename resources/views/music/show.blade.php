@@ -1,5 +1,5 @@
 <x-layout title='Classic Music Review App'>
-  <h1>Recording List</h1>
+  <h1>Music Show</h1>
 
   <h2>{{ $music->composer->name }}  {{ $music->title }}, {{ $music->opus }}</h2>
 

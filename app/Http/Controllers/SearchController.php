@@ -11,7 +11,7 @@ class SearchController extends Controller
 {
     public function index(Request $request)
     {
-        $q = trim($request->get('q')) ?? '';
+        $q = trim($request->get('q'));
         $search_type = $request->get('search_type');
 
         $route = match($search_type) {
