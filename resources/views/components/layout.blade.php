@@ -14,10 +14,12 @@
       h1 { font-size: 100pt; font-weight: bold; text-align:right; color:#eee; margin:-40px 0px -50px 0px; }
     </style>
   </head>
-  <x-common.header />
-  <body class="pt-16"> <!-- TODO: ヘッダーの高さがわからないのでpadding-top(pt-xx)を設定できない -->
+  <body class="pt-16 flex flex-col min-h-screen"> <!-- TODO: ヘッダーの高さがわからないのでpadding-top(pt-xx)を設定できない -->
+    <x-common.header />
     <x-common.session_feedback />
-    {{ $slot }}
+    <div class="flex-grow">
+      {{ $slot }}
+    </div>
+    <x-common.footer class="fixed insert-x-0 bottom-0" />
   </body>
-  <x-common.footer />
 <html>
