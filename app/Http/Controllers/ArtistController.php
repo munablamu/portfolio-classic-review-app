@@ -4,24 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Models\Artist;
 use App\Models\Recording;
+use App\Services\ArtistService;
+use App\Services\RecordingService;
 use Illuminate\Http\Request;
 
 class ArtistController extends Controller
 {
-    public function index()
+    public function index(ArtistService $artistService)
     {
-        $artists = Artist::orderBy('name', 'ASC')->get();
+        $artists = $artistService->getArtists();
 
         return view('artist.index',
             compact('artists'));
     }
 
-    public function show(Request $request, Artist $artist)
+    public function show(Request $request, Artist $artist, RecordingService $recordingService)
     {
         // $artistと関連するrecordingを検索する(RecordingとArtistは中間テーブルを介して関連付けられているので、whereInで書き換えることができない。)
-        $recordings = Recording::whereHas('artists', function ($query) use ($artist) {
-            $query->where('artists.id', $artist->id);
-        })->orderBy('average_rate', 'desc')->paginate(10);
+        $recordings = $recordingService->getRecordingsRelatedToArtist($artist, 10);
 
         return view('artist.show',
             compact('artist', 'recordings'));

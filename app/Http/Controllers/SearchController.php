@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Music;
-use App\Models\Artist;
-use App\Models\Review;
+use App\Services\MusicService;
+use App\Services\ArtistService;
+use App\Services\ReviewService;
 use Illuminate\Http\Request;
 
 class SearchController extends Controller
@@ -24,34 +24,28 @@ class SearchController extends Controller
         return redirect()->route($route, ['q' => $q]);
     }
 
-    public function music(Request $request)
+    public function music(Request $request, MusicService $musicService)
     {
         $q = trim($request->query('q')) ?? '';
-        $musics = Music::search($q)
-            ->paginate(10)
-            ->appends(['q' => $q, 'query' => null]);
+        $musics = $musicService->search($q, 10);
 
         return view('search.music',
             compact('q', 'musics'));
     }
 
-    public function artist(Request $request)
+    public function artist(Request $request, ArtistService $artistService)
     {
         $q = trim($request->query('q')) ?? '';
-        $artists = Artist::search($q)
-            ->paginate(10)
-            ->appends(['q' => $q, 'query' => null]);
+        $artists = $artistService->search($q, 10);
 
         return view('search.artist',
             compact('q', 'artists'));
     }
 
-    public function review(Request $request)
+    public function review(Request $request, ReviewService $reviewService)
     {
         $q = trim($request->query('q')) ?? '';
-        $reviews = Review::search($q)
-            ->paginate(10)
-            ->appends(['q' => $q, 'query' => null]);
+        $reviews = $reviewService->search($q, 10);
 
         return view('search.review',
             compact('q', 'reviews'));

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Review;
 use App\Models\Recording;
+use App\Services\ReviewService;
 use App\Http\Requests\ReviewRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,14 +20,12 @@ class ReviewController extends Controller
             compact('recording'));
     }
 
-    public function store(ReviewRequest $request, Recording $recording)
+    // TODO: メソッド内では$recordingは使ってないが、仮引数に書かないとルーティングの関係上ReviewRequestで$this->route('recording')そのものがidの文字列になってしまい他のReviewControllerのメソッドと整合性が取れなくなってしまう。
+    public function store(ReviewRequest $request, Recording $recording, ReviewService $reviewService)
     {
         try {
-            $review = new Review;
             $form = $request->all();
-            unset($form['_token']);
-            $form['like'] = 0;
-            $review->fill($form)->save();
+            $reviewService->insertReview($form);
         } catch ( \Throwable $e ) {
             \Log::error($e);
             return redirect(Session::get('url.reviewCreate'))
@@ -37,33 +36,20 @@ class ReviewController extends Controller
             ->with('feedback.success', 'レビューの投稿に成功しました。');
     }
 
-    public function edit(Request $request, Recording $recording)
+    public function edit(Request $request, Recording $recording, ReviewService $reviewService)
     {
         Session::flash('url.reviewEdit', url()->previous());
-
-        $review = Review::where('user_id', Auth::id())
-            ->where('recording_id', $recording->id)
-            ->firstOrFail();
+        $review = $reviewService->getReviewRelatedToUserRecording(Auth::user(), $recording);
 
         return view('review.edit',
             compact('recording', 'review'));
     }
 
-    public function update(ReviewRequest $request, Recording $recording)
+    public function update(ReviewRequest $request, Recording $recording, ReviewService $reviewService)
     {
         try {
-            $review = Review::where('user_id', Auth::id())
-                ->where('recording_id', $recording->id)
-                ->firstOrFail();
             $form = $request->all();
-            unset($form['_token']);
-
-            // reviewにタイトル、コンテンツがない場合、likeを0に戻す
-            if ( $form['title'] === null ) {
-                $form['like'] = 0;
-            }
-
-            $review->fill($form)->save();
+            $reviewService->updateReview(Auth::user(), $recording, $form);
         } catch ( \Throwable $e ) {
             \Log::error($e);
             return redirect(Session::get('url.reviewEdit'))
@@ -77,6 +63,7 @@ class ReviewController extends Controller
     public function delete(Request $request, Review $review)
     {
         $reviewer_id = $review->user_id;
+        // routingでauth middlewareを使っているからAuth::check()は不要？
         if ( Auth::check() && $reviewer_id === Auth::id() ) {
             try {
                 $review->delete();

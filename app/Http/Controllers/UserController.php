@@ -3,29 +3,39 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\Review;
+use App\Services\UserService;
+use App\Services\ReviewService;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index()
+    public function __construct(ReviewService $reviewService)
     {
-        $users = User::all();
+        $this->reviewService = $reviewService;
+    }
+
+    // TODO: HomeControllerのgetUserInfoメソッドをヘルパー関数にして共用したほうがいい
+    protected function getUserInfo(User $user)
+    {
+        return [
+            'allReviewCount' => $this->reviewService->getAllReviewCount($user),
+            'reviewCount'    => $this->reviewService->getReviewCount($user),
+            'likeSum'        => $this->reviewService->getLikeSum($user),
+        ];
+    }
+
+    public function index(UserService $userService)
+    {
+        $users = $userService->getUsers();
 
         return view('user.index',
             compact('users'));
     }
 
-    public function show(Request $request, User $user)
+    public function show(User $user)
     {
-        $user_id = $user->id;
-
-        $allReviewCount = Review::where('user_id', $user_id)->count();
-        $reviewCount = Review::where('user_id', $user_id)
-            ->whereNotNull('title')->count();
-
-        $likeSum = Review::where('user_id', $user_id)
-            ->sum('like');
+        ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
+            = $this->getUserInfo($user);
 
         return view('user.show',
             compact('user', 'allReviewCount', 'reviewCount', 'likeSum'));
@@ -33,19 +43,10 @@ class UserController extends Controller
 
     public function reviews(Request $request, User $user)
     {
-        $user_id = $user->id;
+        ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
+            = $this->getUserInfo($user);
 
-        $allReviewCount = Review::where('user_id', $user_id)->count();
-        $reviewCount = Review::where('user_id', $user_id)
-            ->whereNotNull('title')->count();
-
-        $likeSum = Review::where('user_id', $user_id)
-            ->sum('like');
-
-        $reviews = Review::where('user_id', $user_id)
-            ->whereNotNull('title')
-            ->orderBy('like', 'desc')
-            ->paginate(10);
+        $reviews = $this->reviewService->getReviews($user, 10);
 
         return view('user.reviews',
             compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'reviews'));

@@ -77,18 +77,16 @@ Route::get('/users/{user}', [UserController::class, 'show'])
 Route::get('/users/{user}/reviews', [UserController::class, 'reviews'])
     ->name('user.reviews')->where('user', '[0-9]+');
 
-Route::get('/home', [HomeController::class, 'index'])
-    ->middleware(['auth', 'verified'])
-    ->name('home');
-Route::get('/home/following_users', [HomeController::class, 'following_users'])
-    ->middleware(['auth', 'verified'])
-    ->name('home.following_users');
-Route::get('/home/reviews', [HomeController::class, 'reviews'])
-    ->middleware(['auth', 'verified'])
-    ->name('home.reviews');
-Route::get('/home/profile', [HomeController::class, 'edit_profile'])
-    ->middleware(['auth', 'verified'])
-    ->name('home.edit_profile');
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/home', [HomeController::class, 'index'])
+        ->name('home');
+    Route::get('/home/following_users', [HomeController::class, 'following_users'])
+        ->name('home.following_users');
+    Route::get('/home/reviews', [HomeController::class, 'reviews'])
+        ->name('home.reviews');
+    Route::get('/home/profile', [HomeController::class, 'edit_profile'])
+        ->name('home.edit_profile');
+});
 
 Route::post('/reviews/{review}/likes', [LikeController::class, 'store'])
     ->name('likes.store');
