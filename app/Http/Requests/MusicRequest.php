@@ -23,9 +23,9 @@ class MusicRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'composer_id' => 'required|exists:composers,id',
-            'title' => 'required',
-            'opus' => '' // TODO: 作品番号の正規化は必要？
+            'composer_id' => ['required', 'exists:composers,id'],
+            'title' => ['required'],
+            'opus' => [], // TODO: 作品番号の正規化は必要？
         ];
     }
 }
