@@ -13,12 +13,12 @@
 
       <!-- Title -->
       <div class="col-span-11 xl:-ml-5">
-        <p class="text-blue-600 font-semibold"> {{ $i_music->title }} {{ $i_music->opus !== null ? '(' . $i_music->opus . ')' : '' }} </p>
+        <p class="text-blue-600"> {!! $i_music->title !!} {!! $i_music->opus !== null ? '(' . $i_music->opus . ')' : '' !!} </p>
       </div>
 
       <!-- Description -->
       <div class="md:col-start-2 col-span-11 xl:-ml-5">
-        <p class="text-sm text-gray-800 font-light"> 作曲家: {{ $i_music->composer->name }} </p>
+        <p class="text-sm text-gray-800 font-light"> 作曲家: {!! $i_music->composer->name !!} </p>
       </div>
 
     </a>

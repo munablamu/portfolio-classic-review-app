@@ -29,6 +29,15 @@ class SearchController extends Controller
         $q = trim($request->query('q')) ?? '';
         $musics = $musicService->search($q, 10);
 
+        $keywords = explode(' ', $q);
+        foreach ( $musics as $i_music) {
+            foreach ( $keywords as $j_keyword ) {
+                $i_music->title = highlightKeyword($i_music->title, $j_keyword);
+                $i_music->opus = highlightKeyword($i_music->opus, $j_keyword);
+                $i_music->composer->name = highlightKeyword($i_music->composer->name, $j_keyword);
+            }
+        }
+
         return view('search.music',
             compact('q', 'musics'));
     }
@@ -38,6 +47,13 @@ class SearchController extends Controller
         $q = trim($request->query('q')) ?? '';
         $artists = $artistService->search($q, 10);
 
+        $keywords = explode(' ', $q);
+        foreach ( $artists as $i_artist) {
+            foreach ( $keywords as $j_keyword ) {
+                $i_artist->name = highlightKeyword($i_artist->name, $j_keyword);
+            }
+        }
+
         return view('search.artist',
             compact('q', 'artists'));
     }
@@ -46,6 +62,14 @@ class SearchController extends Controller
     {
         $q = trim($request->query('q')) ?? '';
         $reviews = $reviewService->search($q, 10);
+
+        $keywords = explode(' ', $q);
+        foreach ( $reviews as $i_review) {
+            foreach ( $keywords as $j_keyword ) {
+                $i_review->title = highlightKeyword($i_review->title, $j_keyword);
+                $i_review->content = highlightKeyword($i_review->content, $j_keyword);
+            }
+        }
 
         return view('search.review',
             compact('q', 'reviews'));

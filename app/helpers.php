@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+use Illuminate\Support\Collection;
+
 if ( !function_exists('jacket_url') ) {
     function jacket_url(?string $filename): string
     {
@@ -38,5 +40,19 @@ if ( !function_exists('user_icon_url') ) {
         } else {
             return asset('storage/' . $userIconDirectory . $filename);
         }
+    }
+}
+
+
+if ( !function_exists('highlightKeyword') ) {
+    function highlightKeyword(?string $str, string $keyword): ?string
+    {
+        if ( $str !== null) {
+            $str = preg_replace_callback("/$keyword/i", function($matches) {
+                return '<strong>' . $matches[0] . '</strong>';
+            }, $str);
+        }
+
+        return $str;
     }
 }
