@@ -2,7 +2,7 @@
 
   @foreach ( $musics as $i_music )
     <!-- Card -->
-    <a href="{{ route('recording', ['music_id' => $i_music->id]) }}" class="rounded-sm w-1/2 grid grid-cols-12 bg-white shadow p-3 gap-2 items-center hover:shadow-lg transition delay-150 duration-300 ease-in-out hover:scale-105 transform">
+    <a href="{{ route('music.show', ['music' => $i_music]) }}" class="rounded-sm w-1/2 grid grid-cols-12 bg-white shadow p-3 gap-2 items-center hover:shadow-lg transition delay-150 duration-300 ease-in-out hover:scale-105 transform">
 
       <!-- Icon -->
       <div class="col-span-12 md:col-span-1">

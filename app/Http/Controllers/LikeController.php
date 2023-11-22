@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class LikeController extends Controller
 {
-    public function store(Request $request, Review $review)
+    public function store(Review $review)
     {
         try {
             DB::transaction(function () use ($review) {
@@ -29,7 +29,7 @@ class LikeController extends Controller
             ->with('feedback.success', 'いいねに成功しました。');
     }
 
-    public function destroy(Request $request, Review $review)
+    public function destroy(Review $review)
     {
         try {
             DB::transaction(function () use ($review) {

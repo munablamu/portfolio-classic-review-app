@@ -13,20 +13,6 @@ use Illuminate\Support\Facades\Auth;
 
 class RecordingController extends Controller
 {
-    public function index(Request $request, MusicService $musicService, RecordingService $recordingService)
-    {
-        if ( $request->has('music_id') ) {
-            $music_id = $request->query('music_id');
-            $music = $musicService->getMusic($music_id);
-            $recordings = $recordingService->getRecordingsRelatedToMusic($music, 10);
-        } else {
-            //
-        }
-
-        return view('recording.index',
-            compact('music', 'recordings'));
-    }
-
     public function show(Request $request, Recording $recording, ReviewService $reviewService)
     {
         $user_review = $reviewService->getUserReview($recording);

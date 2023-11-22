@@ -10,13 +10,13 @@ use Illuminate\Http\Request;
 
 class ArtistController extends Controller
 {
-    public function index(ArtistService $artistService)
-    {
-        $artists = $artistService->getArtists();
+    // public function index(ArtistService $artistService)
+    // {
+    //     $artists = $artistService->getArtists();
 
-        return view('artist.index',
-            compact('artists'));
-    }
+    //     return view('artist.index',
+    //         compact('artists'));
+    // }
 
     public function show(Request $request, Artist $artist, RecordingService $recordingService)
     {

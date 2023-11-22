@@ -36,7 +36,9 @@ use Illuminate\Support\Facades\Route;
 //     ->name('music.update')->where('music', '[0-9]+');
 // Route::delete('/musics/{music}/delete', [MusicController::class, 'delete'])
 //     ->name('music.delete')->where('music', '[0-9]+');
-//
+Route::get('/musics/{music}', [MusicController::class, 'show'])
+    ->name('music.show');
+
 Route::get('/recordings/index', [RecordingController::class, 'index'])
     ->name('recording');
 Route::get('/recordings/{recording}/show', [RecordingController::class, 'show'])
