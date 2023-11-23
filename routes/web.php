@@ -41,7 +41,7 @@ Route::get('/musics/{music}', [MusicController::class, 'show'])
 
 Route::get('/recordings/index', [RecordingController::class, 'index'])
     ->name('recording');
-Route::get('/recordings/{recording}/show', [RecordingController::class, 'show'])
+Route::get('/recordings/{recording}', [RecordingController::class, 'show'])
     ->name('recording.show')->where('recording', '[0-9]+');
 //
 // Route::get('/artist/index', [ArtistController::class, 'index'])
