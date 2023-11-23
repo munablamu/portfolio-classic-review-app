@@ -25,6 +25,7 @@
           </div>
         </details>
       @endforeach
+      {{ $following_users->links() }}
     @endif
   </div>
 </x-layout>

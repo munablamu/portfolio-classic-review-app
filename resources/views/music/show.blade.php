@@ -18,6 +18,6 @@
         </div>
       </details>
     @endforeach
+    {{ $recordings->links() }}
   </div>
-  {{ $recordings->links() }}
 </x-layout>

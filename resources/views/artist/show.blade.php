@@ -8,14 +8,14 @@
       <details>
         <summary>{{ $i_recording->title }}, {{ $i_recording->id }}</summary>
         <div>
-          <!-- TODO 画像が存在しない倍の処理 -->
-          <img src="{{ asset('storage/jackets/' . $i_recording->jacket_filename) }}" alt="" width="300">
+          <img src="{{ jacket_url($i_recording->jacket_filename) }}" alt="" width="300">
         </div>
         <div>
           <a href="{{ route('recording.show', ['recording' => $i_recording]) }}">レビューを見る</a>
         </div>
       </details>
     @endforeach
+    {{ $recordings->links() }}
   </div>
 </x-layout>
 

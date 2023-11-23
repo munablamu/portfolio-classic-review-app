@@ -21,6 +21,6 @@
         <a href="{{ route('recording.show', ['recording' => $i_review->recording]) }}">他のレビューも見る</a>
       </details>
     @endforeach
+    {{ $reviews->links() }}
   </div>
-  {{ $reviews->links() }}
 </x-layout>

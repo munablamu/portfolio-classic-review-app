@@ -12,6 +12,6 @@
         </div>
       </details>
     @endforeach
+    {{ $artists->links() }}
   </div>
-  {{ $artists->links() }}
 </x-layout>

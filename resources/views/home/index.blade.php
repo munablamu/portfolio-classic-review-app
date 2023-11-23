@@ -25,7 +25,7 @@
           </div>
         </details>
       @endforeach
+      {{ $following_user_reviews->links() }}
     @endif
-    {{ $following_user_reviews->links() }}
   </div>
 </x-layout>

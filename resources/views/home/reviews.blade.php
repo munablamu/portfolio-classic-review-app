@@ -30,6 +30,7 @@
           </div>
         </details>
       @endforeach
+      {{ $reviews->links() }}
     @endif
   </div>
 </x-layout>

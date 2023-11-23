@@ -43,7 +43,7 @@ class HomeController extends Controller
         ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
             = $this->getUserInfo($user);
 
-        $following_users = $user->following;
+        $following_users = $user->following()->paginate(10);
 
         return view('home.following_users',
             compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'following_users'));
