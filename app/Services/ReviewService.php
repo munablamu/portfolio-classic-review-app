@@ -69,6 +69,10 @@ class ReviewService
             $form['like'] = 0;
         }
 
+        // ユーザーから入力された文字列をエスケープ
+        $form['title'] = e($form['title']);
+        $form['content'] = e($form['content']);
+
         $review->fill($form)->save();
     }
 
@@ -76,6 +80,11 @@ class ReviewService
     {
         $review = new Review;
         unset($form['_token']);
+
+        // ユーザーから入力された文字列をエスケープ
+        $form['title'] = e($form['title']);
+        $form['content'] = e($form['content']);
+
         $form['like'] = 0;
         $review->fill($form)->save();
     }

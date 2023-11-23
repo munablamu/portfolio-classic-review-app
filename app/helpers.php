@@ -47,6 +47,8 @@ if ( !function_exists('user_icon_url') ) {
 if ( !function_exists('highlightKeyword') ) {
     function highlightKeyword(?string $str, string $keyword): ?string
     {
+        $keyword = preg_quote($keyword); // ユーザー入力のkeywordの中に存在する正規表現の特殊文字をエスケープ
+
         if ( $str !== null) {
             $str = preg_replace_callback("/$keyword/i", function($matches) {
                 return '<strong>' . $matches[0] . '</strong>';
