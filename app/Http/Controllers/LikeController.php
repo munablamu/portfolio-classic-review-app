@@ -17,7 +17,11 @@ class LikeController extends Controller
                 $review->likes()->create([
                     'user_id' => Auth::id(),
                 ]);
+
+                // いいねの更新ではReviewモデルのupdated_atを更新しないようにする
+                $review->timestamps = false;
                 $review->increment('like');
+                $review->timestamps = true;
             });
         } catch ( \Throwable $e ) {
             \Log::error($e);
@@ -37,7 +41,11 @@ class LikeController extends Controller
                     ->where('review_id', $review->id)
                     ->firstOrFail();
                 $like->delete();
+
+                // いいねの更新ではReviewモデルのupdated_atを更新しないようにする
+                $review->timestamps = false;
                 $review->decrement('like');
+                $review->timestamps = true;
             });
         } catch ( \Throwable $e ) {
             \Log::error($e);

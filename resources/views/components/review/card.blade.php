@@ -2,14 +2,16 @@
   <div class="relative mx-0 mt-4 flex items-center gap-4 overflow-hidden rounded-xl bg-transparent bg-clip-border pt-0 pb-8 text-gray-700 shadow-none">
     <img
       src="{{ user_icon_url($review->user->icon_filename) }}"
-      alt="tania andrew"
+      alt="{{ $review->user->name }}"
       class="relative inline-block h-[58px] w-[58px] !rounded-full object-cover object-center"
     />
     <div class="flex w-full flex-col gap-0.5">
       <div class="flex items-center justify-between">
-        <h5 class="block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+        <a href="{{ route('user.show', ['user' => $review->user]) }}">
+          <h5 class="block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
             {{ $review->user->name }}
-        </h5>
+          </h5>
+        </a>
         <x-common.rate :rate="$review->rate" />
       </div>
       <p class="block font-sans text-base font-light leading-relaxed text-blue-gray-900 antialiased">
