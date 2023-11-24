@@ -34,6 +34,24 @@ class Review extends Model
         return $this->hasMany(Like::class);
     }
 
+    public function getCreatedAtStringAttribute()
+    {
+        if ( $this->created_at !== null ) {
+            return $this->created_at->format('Y年m月d日');
+        } else {
+            return '不明';
+        }
+    }
+
+    public function getUpdatedAtStringAttribute()
+    {
+        if ( $this->updated_at !== null ) {
+            return $this->updated_at->format('Y年m月d日');
+        } else {
+            return '不明';
+        }
+    }
+
     public function toSearchableArray()
     {
         if ( $this->title === null ) {

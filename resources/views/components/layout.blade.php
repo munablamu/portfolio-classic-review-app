@@ -9,15 +9,17 @@
     <title>{{ $title ?? 'Classic Music Review App' }}</title>
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/c677d29c82.js" crossorigin="anonymous"></script>
     <style>
       body { font-size: 16pt; color: #555; }
       h1 { font-size: 100pt; font-weight: bold; text-align:right; color:#eee; margin:-40px 0px -50px 0px; }
     </style>
   </head>
-  <body class="flex flex-col min-h-screen"> <!-- TODO: ヘッダーの高さがわからないのでpadding-top(pt-xx)を設定できない -->
+  <body class="flex flex-col min-h-screen bg-slate-100"> <!-- TODO: ヘッダーの高さがわからないのでpadding-top(pt-xx)を設定できない -->
     <x-common.header />
     <x-common.session_feedback />
-    <div class="flex-grow pt-20">
+    <div class="flex-grow pt-20 relative w-full max-w-[60rem] mx-auto">
       {{ $slot }}
     </div>
     <x-common.footer class="fixed insert-x-0 bottom-0" />
