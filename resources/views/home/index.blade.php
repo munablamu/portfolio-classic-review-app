@@ -9,6 +9,7 @@
     @else
       @foreach ( $following_user_reviews as $i_review )
         <x-review.card_with_recording :review=$i_review />
+        <hr class="border-t border-blue-gray-200">
       @endforeach
       {{ $following_user_reviews->links() }}
     @endif
