@@ -34,7 +34,7 @@ class ReviewService
 
     public function getAllReviews(User $user, int $num_paginate)
     {
-        return Review::where('user_id', $user->id)->paginate($num_paginate);
+        return Review::where('user_id', $user->id)->orderBy('updated_at', 'desc')->paginate($num_paginate);
     }
 
     public function getReviews(User $user, int $num_paginate)

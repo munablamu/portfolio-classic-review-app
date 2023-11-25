@@ -34,7 +34,7 @@
     </p>
   </div>
   <div class=" mb-6 flex justify-end font-sans text-base font-medium text-inherit text-red-400">
-    @auth
+    @if ( Auth::check() && ($review->user->id !==  Auth::id()) )
       <!-- TODO: 多分ここでチェックするの良くない -->
       @php
         $liked = $review->likes()->where('user_id', Auth::id())->first();
@@ -59,6 +59,6 @@
       <span class="align-middle">
         <i class="far fa-heart like-btn"></i>{{ $review->like }}
       </span>
-    @endauth
+    @endif
   </div>
 </div>
