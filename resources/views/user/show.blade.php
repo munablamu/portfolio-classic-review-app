@@ -1,43 +1,45 @@
 <x-layout title='Classic Music Review App'>
-  <h1>User Detail</h1>
+  <x-user.info :user=$user :reviewCount=$reviewCount :allReviewCount=$allReviewCount :likeSum=$likeSum />
 
-  <h2>{{ $user->name }}</h2>
-  <img src="{{ user_icon_url($user->icon_filename) }}" alt="" width="100">
-  <p>レビュー件数: {{ $reviewCount }}件 (評価件数: {{ $allReviewCount }}件)</p>
-  <p>レビューについたいいね総数: {{ $likeSum }}</p>
-  <a href="{{ route('user.reviews', ['user' => $user ]) }}">{{ $user->name }}さんのレビューを見る</a>
-  <form action="{{ route('follow.store', ['user' => $user]) }}" method="post">
-    @csrf
-    <button type="submit">フォローする</button>
-  </form>
-  <form action="{{ route('follow.destroy', ['user' => $user]) }}" method="post">
-    @method('DELETE')
-    @csrf
-    <button type="submit">フォローを解除する</button>
-  </form>
-
-  <div>
-    <h3>自己紹介</h3>
-    <p>{{ $user->self_introduction }}</p>
+  <div class="justify-end flex">
+    @auth
+      @if ( Auth::user()->following()->where('following_user_id', $user->id)->exists() )
+        <form action="{{ route('follow.destroy', ['user' => $user]) }}" method="post">
+          @method('DELETE')
+          @csrf
+          <x-common.buttons.red type="submit">フォローを解除する</x-common.buttons.red>
+        </form>
+      @else
+        <form action="{{ route('follow.store', ['user' => $user]) }}" method="post">
+          @csrf
+          <x-common.buttons.blue type="submit">フォローする</x-common.buttons.blue>
+        </form>
+      @endif
+    @endauth
   </div>
 
-  <div>
-    <h3>お気に入りの録音</h2>
-    @foreach ( $user->favoriteRecordings as $i_recording )
-      <details>
-        <summary>{{ $i_recording->title }}</summary>
-        <dev>
-          <p>{{ $i_recording->artist_names_joined_by_comma }}</p>
-          <a href="{{ route('recording.show', ['recording' => $i_recording]) }}">詳細を見る</a>
-        </div>
-      </details>
-    @endforeach
+  <x-user.nav_tabs :user=$user />
+
+  <div class="mb-4">
+    <h3>自己紹介</h3>
+    <p class="text-base">{{ $user->self_introduction }}</p>
+  </div>
+
+  <div class="mb-4">
+    <h3>お気に入りの録音</h3>
+    <div class="flex overflow-x-scroll">
+      @foreach ( $user->favoriteRecordings as $i_recording )
+          <a href="{{ route('recording.show', ['recording' => $i_recording]) }}" class="flex-shrink-0">
+            <img src="{{ jacket_url($i_recording->jacket_filename) }}" alt="{{ $i_recording->title }}" class="w-48 h-48">
+          </a>
+      @endforeach
+    </div>
   </div>
 
   <div>
     <h3>お気に入りの演奏家</h2>
     @foreach ( $user->favoriteArtists as $i_artist )
-        <a href="{{ route('artist.show', ['artist' => $i_artist]) }}">{{ $i_artist->name }}</a>
+        <a href="{{ route('artist.show', ['artist' => $i_artist]) }}" class="mb-2 mt-2 text-base">{{ $i_artist->name }}</a>
         <br />
     @endforeach
   </div>

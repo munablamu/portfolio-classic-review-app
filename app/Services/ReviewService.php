@@ -37,11 +37,15 @@ class ReviewService
         return Review::where('user_id', $user->id)->orderBy('updated_at', 'desc')->paginate($num_paginate);
     }
 
-    public function getReviews(User $user, int $num_paginate)
+    public function getReviews(User $user, int $num_paginate, string $order)
     {
+        if ( $order !== 'like' ) {
+            $order = 'updated_at';
+        }
+
         $reviews = Review::where('user_id', $user->id)
             ->whereNotNull('title')
-            ->orderBy('like', 'desc')
+            ->orderBy($order, 'desc')
             ->paginate($num_paginate);
 
         return $reviews;
