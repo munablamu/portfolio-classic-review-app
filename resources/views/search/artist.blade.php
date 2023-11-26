@@ -1,7 +1,7 @@
 <x-layout title='Classic Music Review App'>
   <h1>Search by Artist</h1>
 
-  <x-search.form :q='$q' />
+  <x-search.bar :q='$q' :oldSearchType=$oldSearchType />
 
   <div>
     @foreach ( $artists as $i_artist )

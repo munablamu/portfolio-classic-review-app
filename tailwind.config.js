@@ -14,8 +14,12 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            backgroundImage: theme => ({
+                'top-background': "url('/storage/app/public/top_image.png')",
+            })
         },
     },
+    variants: {},
 
     plugins: [forms],
 };

@@ -7,8 +7,10 @@
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $title ?? 'Classic Music Review App' }}</title>
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/c677d29c82.js" crossorigin="anonymous"></script>
     <style>
