@@ -23,8 +23,7 @@ class RecordingService
     {
         $recordings = Recording::where('music_id', $music->id)
             ->orderBy('average_rate', 'desc')
-            ->paginate($num_paginate)
-            ->appends(['music_id' => $music->id]);
+            ->paginate($num_paginate);
 
         return $recordings;
     }

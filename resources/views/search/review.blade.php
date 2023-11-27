@@ -5,21 +5,7 @@
 
   <div>
     @foreach ( $reviews as $i_review )
-      <details>
-        <summary>{{ $i_review->user->name }}, {!! $i_review->title !!}</summary>
-        <div>
-          <p>{{ $i_review->recording->title }}</p>
-        </div>
-        <div>
-          @foreach ( $i_review->recording->artists as $j_artist )
-            <p>{{ $j_artist->name }}</p>
-          @endforeach
-        </div>
-        <div>
-          <p>{!! $i_review->content !!}</p>
-        </div>
-        <a href="{{ route('recording.show', ['recording' => $i_review->recording]) }}">他のレビューも見る</a>
-      </details>
+      <x-review.card_in_search :review=$i_review />
     @endforeach
     {{ $reviews->links() }}
   </div>

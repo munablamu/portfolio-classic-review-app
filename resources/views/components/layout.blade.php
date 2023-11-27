@@ -13,10 +13,12 @@
 
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/c677d29c82.js" crossorigin="anonymous"></script>
+    <!--
     <style>
       body { font-size: 16pt; color: #555; }
       h1 { font-size: 100pt; font-weight: bold; text-align:right; color:#eee; margin:-40px 0px -50px 0px; }
     </style>
+    -->
   </head>
   <body class="flex flex-col min-h-screen bg-slate-100"> <!-- TODO: ヘッダーの高さがわからないのでpadding-top(pt-xx)を設定できない -->
     <x-common.header />

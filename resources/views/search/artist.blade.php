@@ -1,16 +1,12 @@
 <x-layout title='Classic Music Review App'>
-  <h1>Search by Artist</h1>
+  <h1 class="text-3xl font-bold">演奏家検索</h1>
 
   <x-search.bar :q='$q' :oldSearchType=$oldSearchType />
 
   <div>
     @foreach ( $artists as $i_artist )
-      <details>
-        <summary>{!! $i_artist->name !!}, {{ $i_artist->id }}</summary>
-        <div>
-          <a href="{{ route('artist.show', ['artist' => $i_artist]) }}">詳細を見る</a>
-        </div>
-      </details>
+      <x-artist.card :artist=$i_artist />
+      <hr class="border-t border-blue-gray-200 mt-2 mb-2">
     @endforeach
     {{ $artists->links() }}
   </div>

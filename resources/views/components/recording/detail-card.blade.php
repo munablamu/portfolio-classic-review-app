@@ -16,7 +16,9 @@
     <p class="text-xl font-bold mb-2">{{ $recording->title }}</p>
     <p class="text-base">発売日: {{ $recording->release_date_string }}</p>
     <p class="text-base">カタログ番号: {{ $recording->catalogue_no }}</p>
-    <p class="text-base">カスタマーレビュー: {{ $recording->average_rate }}</p>
-    <x-common.rate :rate="$recording->average_rate" />
+    <div class="flex">
+      <p class="text-base">レビュー: {{ $recording->average_rate }}</p>
+      <x-common.rate :rate="$recording->average_rate" />
+    </div>
   </div>
 </div>
