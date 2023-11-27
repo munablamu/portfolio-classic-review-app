@@ -57,4 +57,42 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+
+    public function updateUserIcon(Request $request)
+    {
+        if ( $request->hasFile('user_icon') ) {
+            $file = $request->file('user_icon');
+
+            if ( $file->isValid() ) {
+                do {
+                    $filename = Str::random(10) . '.' . $file->getClientOriginalExtension();
+                } while ( Storage::exists('public/user_icons/' . $filename) );
+
+                $file->storeAs('public/user_icons', $filename);
+
+                $user = Auth::user();
+                $oldUserIconFilename = $user->icon_filename;
+                $user->icon_filename = $filename;
+
+                if ( $user->save() ) {
+                    // TODO: なぜpublic_pathを挟まないとdeleteできないのか？
+                    $publicPath = public_path('storage/user_icons/' . $oldUserIconFilename);
+                    $deleteSuccess = File::delete($publicPath);
+                }
+            }
+        }
+
+        return redirect()->route('home.edit_profile');
+    }
+
+    public function updateSelfIntroduction(Request $request)
+    {
+        $selfIntroduction = $request->post('self_introduction');
+
+        $user = Auth::user();
+        $user->self_introduction = $selfIntroduction;
+        $user->save();
+
+        return redirect()->route('home.edit_profile');
+    }
 }

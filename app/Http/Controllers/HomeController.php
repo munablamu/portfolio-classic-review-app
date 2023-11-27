@@ -8,6 +8,9 @@ use App\Models\Follow;
 use App\Services\ReviewService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
@@ -70,4 +73,5 @@ class HomeController extends Controller
         return view('home.profile',
             compact('user', 'allReviewCount', 'reviewCount', 'likeSum'));
     }
+
 }

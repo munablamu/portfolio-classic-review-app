@@ -88,6 +88,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
         ->name('home.reviews');
     Route::get('/home/profile', [HomeController::class, 'edit_profile'])
         ->name('home.edit_profile');
+
+    Route::post('/profile/update_user_icon', [ProfileController::class, 'updateUserIcon'])
+        ->name('profile.update_user_icon');
+    Route::post('/profile/update_self_introduction', [ProfileController::class, 'updateSelfIntroduction'])
+        ->name('profile.update_self_introduction');
 });
 
 Route::post('/reviews/{review}/likes', [LikeController::class, 'store'])
