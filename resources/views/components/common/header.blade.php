@@ -1,32 +1,66 @@
-<header class="text-gray-600 bg-slate-100 body-font fixed top-0 w-full z-50">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+<header class="text-gray-300 bg-gray-800 body-font fixed top-0 w-full z-10">
+  <div class="container mx-auto flex flex-wrap px-5 py-3 flex-row items-center justify-between">
     <!-- logo -->
-    <a href="{{ route('top') }}" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+    <a href="{{ route('top') }}" class="flex title-font font-medium items-center text-gray-100">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
       </svg>
       <span class="ml-3 text-xl">Classic Music Review App</span>
     </a>
     <!-- primary nav -->
-    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-      <a class="mr-5 hover:text-gray-900">First Link</a>
-      <a class="mr-5 hover:text-gray-900">Second Link</a>
-      <a class="mr-5 hover:text-gray-900">Third Link</a>
-      <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+    <nav class="hidden md:ml-auto md:mr-auto md:flex md:flex-wrap items-center text-base justify-center">
+      <a href="#" class="mr-5 hover:text-gray-100">このサイトの使い方</a>
     </nav>
     <!-- secondary nav -->
     <div class="hidden md:flex items-center space-x-1">
       @guest
-        <a href="{{ route('login') }}" class="inline-flex bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Login</a>
-        <a href="{{ route('register') }}" class="inline-flex bg-yellow-400 border-0 py-1 px-3 focus:outline-none hover:bg-yellow-300 rounded text-base mt-4 md:mt-0 text-yellow-900 hover:text-yellow-800 transition duration-300">Signup</a>
+        <a href="{{ route('login') }}" class="btn btn-black md:m-0">Login</a>
+        <a href="{{ route('register') }}" class="btn btn-yellow md:m-0">Signup</a>
       @endguest
       @auth
-        <a href="{{ route('home') }}" class="inline-flex bg-green-400 border-0 py-1 px-3 focus:outline-none hover:bg-green-300 rounded text-base mt-4 md:mt-0 text-green-900 hover:text-green-800 transition duration-300">Home</a>
+        <!-- TODO: tabキーでhomeだけフォーカスできない -->
+        <a href="{{ route('home') }}" class="btn btn-black md:m-0">Home</a>
         <form action="{{ route('logout') }}" method="post">
           @csrf
-          <button type="submit" class="inline-flex bg-red-400 border-0 py-1 px-3 focus:outline-none hover:bg-red-300 rounded text-base mt-4 md:mt-0 text-red-900 hover:text-red-800 transition duration-300">Logout</a>
+          <button type="submit" class="btn btn-pink md:m-0">Logout</a>
         </form>
       @endauth
     </div>
+    <!-- hamburger button -->
+    <div id="hamburger" class="md:hidden">
+      <button type="button" class="block text-gray-400 hover:text-gray-300 focus:text-gray-200 focus:outline-none">
+        <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
+          <path id="open" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+          <path id="close" class="hidden" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
+        </svg>
+      </button>
+    </div>
   </div>
+  <div id="hamburger_nav" class="hidden md:hidden text-right mx-auto px-5">
+    <nav class="px-2 pt-2 pb-4 flex flex-col p-0">
+      <a href="#" class="block px-2 py-1 rounded-md hover:text-gray-100 hover:bg-gray-600 focus:bg-gray-500">このサイトの使い方</a>
+      @guest
+        <a href="{{ route('login') }}" class="block px-2 py-1 rounded-md hover:text-gray-100 hover:bg-gray-600 focus:bg-gray-500">Login</a>
+        <a href="{{ route('register') }}" class="block px-2 py-1 rounded-md hover:text-gray-100 hover:bg-gray-600 focus:bg-gray-500">Signup</a>
+      @endguest
+      @auth
+        <a href="{{ route('home') }}" class="block px-2 py-1 rounded-md hover:text-gray-100 hover:bg-gray-600 focus:bg-gray-500">Home</a>
+        <form action="{{ route('logout') }}" method="post">
+          @csrf
+          <button type="submit" class="w-full text-right block px-2 py-1 rounded-md hover:text-gray-100 hover:bg-gray-600 focus:bg-gray-500">Logout</a>
+        </form>
+      @endauth
+    </nav>
+  </div>
+
+  <script>
+      document.getElementById('hamburger').addEventListener('click', function() {
+        var open = document.getElementById('open');
+        var close = document.getElementById('close');
+        var hamburger_nav = document.getElementById('hamburger_nav');
+        open.classList.toggle('hidden');
+        close.classList.toggle('hidden');
+        hamburger_nav.classList.toggle('hidden');
+      });
+    </script>
 </header>

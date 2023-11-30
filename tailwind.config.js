@@ -16,7 +16,12 @@ export default {
             },
             backgroundImage: theme => ({
                 'top-background': "url('/storage/app/public/top_image.png')",
-            })
+            }),
+            colors: {
+                'slate': {
+                    '150': '#eaeff5',
+                }
+            }
         },
     },
     variants: {},
