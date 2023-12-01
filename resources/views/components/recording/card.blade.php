@@ -1,3 +1,4 @@
+<div>
   <div class="flex">
     <div class="w-1/6">
       <a href="{{ route('recording.show', ['recording' => $recording]) }}">
@@ -6,14 +7,16 @@
     </div>
     <div class="w-5/6 pl-4">
       <a href="{{ route('recording.show', ['recording' => $recording]) }}">
-        <h2 class="text-2xl font-bold">{{ $recording->artists_string }}</h2>
+        <h3 class="url text-2xl font-bold">{{ $recording->artists_string }}</h3>
       </a>
-      <p class="text-base">タイトル: {{ $recording->title }}</p>
-      <p class="text-base">発売日: {{ $recording->release_date_string }}</p>
-      <div class="flex">
-        <p class="text-base">レビュー: {{ $recording->average_rate }}</p>
+      <p>タイトル: {{ $recording->title }}</p>
+      <p>発売日: {{ $recording->release_date_string }}</p>
+      <div class="flex items-center">
+        <p class="mr-1">レビュー: {{ $recording->average_rate }}</p>
         <x-common.rate :rate="$recording->average_rate" />
+        <p class="ml-1 text-slate-500">({{ $recording->reviews->count() }}人の評価)</p>
       </div>
     </div>
   </div>
-</a>
+  <hr class="border-t border-slate-200 mt-2 mb-2">
+</div>

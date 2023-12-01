@@ -62,7 +62,7 @@
     @apply text-purple-500;
 }
 .search_h {
-    @apply md:text-7xl sm:text-6xl text-3xl font-bold text-right mr-5 text-slate-300 capitalize;
+    @apply md:text-7xl sm:text-6xl text-3xl font-bold tracking-wide text-right mr-5 text-slate-300 capitalize;
 }
 
 @tailwind utilities;

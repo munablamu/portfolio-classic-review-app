@@ -33,4 +33,14 @@ class Music extends Model
 
         return $array;
     }
+
+    public function getOpusStringAttribute()
+    {
+        $opus = $this->opus;
+        if ( $opus !== null ) {
+            return $opus;
+        } else {
+            return '不明';
+        }
+    }
 }

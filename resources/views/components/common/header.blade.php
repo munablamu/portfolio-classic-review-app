@@ -41,13 +41,13 @@
       <a href="#" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-600 focus:bg-slate-500">このサイトの使い方</a>
       @guest
         <a href="{{ route('login') }}" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-600 focus:bg-slate-500">Login</a>
-        <a href="{{ route('register') }}" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-600 focus:bg-slate-500">Signup</a>
+        <a href="{{ route('register') }}" class="block px-2 py-1 rounded-md text-yellow-500 hover:text-yellow-400 focus:text-yellow-300 hover:bg-slate-600 focus:bg-slate-500">Signup</a>
       @endguest
       @auth
         <a href="{{ route('home') }}" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-600 focus:bg-slate-500">Home</a>
         <form action="{{ route('logout') }}" method="post">
           @csrf
-          <button type="submit" class="w-full text-right block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-600 focus:bg-slate-500">Logout</a>
+          <button type="submit" class="w-full text-right block px-2 py-1 rounded-md text-pink-500 hover:text-pink-400 focus:text-pink-300 hover:bg-slate-600 focus:bg-slate-500">Logout</a>
         </form>
       @endauth
     </nav>

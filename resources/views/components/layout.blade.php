@@ -20,7 +20,7 @@
     </style>
     -->
   </head>
-  <body class="flex flex-col min-h-screen bg-slate-150 text-slate-800 md:antialiased">
+  <body class="flex flex-col min-h-screen bg-slate-150 text-slate-600 md:antialiased">
     <x-common.header />
     <x-common.session_feedback />
     <div class="flex-grow pt-16 relative w-full max-w-[60rem] mx-auto">
