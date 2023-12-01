@@ -20,10 +20,10 @@
     </style>
     -->
   </head>
-  <body class="flex flex-col min-h-screen bg-slate-150 text-gray-800 md:antialiased"> <!-- TODO: ヘッダーの高さがわからないのでpadding-top(pt-xx)を設定できない -->
+  <body class="flex flex-col min-h-screen bg-slate-150 text-gray-800 md:antialiased">
     <x-common.header />
     <x-common.session_feedback />
-    <div class="flex-grow pt-20 relative w-full max-w-[60rem] mx-auto">
+    <div class="flex-grow pt-16 relative w-full max-w-[60rem] mx-auto">
       {{ $slot }}
     </div>
     <x-common.footer class="w-full fixed bottom-0" />

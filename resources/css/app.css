@@ -2,7 +2,7 @@
 @tailwind components;
 
 .btn {
-    @apply inline-flex justify-center py-1 px-3 m-1 rounded-md border-0 transition duration-300 text-base;
+    @apply inline-flex justify-center items-center py-1 px-3 m-1 rounded-md border-0 transition duration-300 text-base;
 }
 .btn:focus-visible {
     @apply outline-none ring-2 ring-offset-2;
@@ -27,6 +27,15 @@
 }
 .btn-yellow:active {
     @apply bg-yellow-500;
+}
+.btn-indigo {
+    @apply bg-indigo-500 text-indigo-100 ring-indigo-600;
+}
+.btn-indigo:hover {
+    @apply bg-indigo-400 text-indigo-50;
+}
+.btn-indigo:active {
+    @apply bg-indigo-600;
 }
 .btn-lightSlate {
     @apply bg-slate-150 ring-slate-300;
