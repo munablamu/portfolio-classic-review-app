@@ -1,11 +1,21 @@
 <x-layout title='Classic Music Review App'>
-  <h1 class="text-3xl font-bold">曲名検索</h1>
+  <h1 class="search_h">music title search</h1>
 
-  <x-search.bar :q='$q' :oldSearchType=$oldSearchType />
+  <div class="mx-3">
+    <x-search.bar :q='$q' :oldSearchType=$oldSearchType />
+  </div>
+  <p class="text-slate-600 text-sm mx-5">実際には英語に翻訳された「＊＊＊＊＊＊＊＊＊」で検索されています。</p>
+  <p class="text-slate-600 text-sm mx-5">検索結果: ****件</p>
 
+  <ul class="mx-5">
     @foreach ( $musics as $i_music )
+    <li>
       <x-music.card :music=$i_music />
-      <hr class="border-t border-blue-gray-200 mt-2 mb-2">
+    </li>
     @endforeach
-  {{ $musics->links() }}
+  </ul>
+
+  <div class="mx-5">
+    {{ $musics->links() }}
+  </div>
 </x-layout>
