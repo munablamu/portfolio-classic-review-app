@@ -1,41 +1,59 @@
-<div>
+<div class="mx-5 mb-5">
   <form action="{{ route('review.update', ['recording' => $recording]) }}" method="post">
     @csrf
 
-    <!-- これはもういらない -->
-    @error('recording_id')
-      <p style="color: red;">{{ $message }}</p>
-    @enderror
-
+    <label for="rate" class="block text-sm font-medium mb-1">評価</label>
     @error('rate')
-      <p style="color: red;">{{ $message }}</p>
+      <span style="color: red;">星1つから5つで、評価してください。</span>
     @enderror
-    <label for="rate">評価</label>
-    <select id="rate" name="rate">
+    <div id="user_rating" class="flex mb-4 text-lg">
       @for ( $i = 1; $i <= 5; $i++ )
-        <option value="{{ $i }}" {{ $i === (int)old('rate', $review->rate) ? 'selected' : ''}}>
-          {{ $i }}
-        </option>
+        <i class="fa-star cursor-pointer {{ $i <= old('rate', $review->rate) ? 'fas text-slate-400' : 'far text-gray-300' }}"></i>
       @endfor
-    </select>
-    <br />
+      <input type="hidden" id="rate" name="rate" value="{{ old('rate', $review->rate) }}">
+    </div>
 
+    <label for="title" class="text-sm font-medium">タイトル</label>
     @error('title')
-      <p style="color: red;">{{ $message }}</p>
+      <span class="validate ml-4">{{ $message }}</span>
     @enderror
-    <label for="title">タイトル</label>
-    <input id="title" type="text" name="title" placeholder="タイトルを入力してください" value="{{ old('title', $review->title) }}"></input>
-    <br />
+    <div class="mb-5">
+      <input id="title" type="text" name="title" class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 rounded-md" placeholder="タイトルを入力してください" value="{{ old('title', $review->title) }}"></input>
+    </div>
 
+    <label for="content" class="text-sm font-medium">レビュー</label>
     @error('content')
-      <p style="color: red;">{{ $message }}</p>
+      <span class="validate ml-4">{{ $message }}</span>
     @enderror
-    <label for="content">レビュー</label>
-    <textarea id="content" name="content" rows="5" cols="80" placeholder="レビューを書いてください">{{ old('content', $review->content) }}</textarea>
-    <br />
+    <textarea id="content" name="content" rows="5" cols="80" class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 rounded-md" placeholder="レビューを書いてください">{{ old('content', $review->content) }}</textarea>
 
-    <p>注意: タイトルとレビューが空の場合、このレビューに対する「いいね」は0に戻ります。</p>
+    @if ( $review->title !== null )
+      <div class="flex justify-end">
+        <span class="align-middle text-pink-400">
+          <i class="far fa-heart like-btn mr-1"></i>{{ $review->like }}
+        </span>
+      </div>
+      <div class="items-center my-2">
+        <span class="bg-rose-500 text-rose-50 py-1 px-3 rounded-full mr-1">注意</span>
+        <span class="text-rose-500">タイトルとレビューが空の場合、このレビューに対する「いいね」は0に戻ります。</span>
+      </div>
+    @endif
 
-    <button type="submit">編集</button>
+    <div class="flex justify-end">
+      <button class="btn btn-indigo" type="submit">編集</button>
+    </div>
   </form>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#user_rating .fa-star').click(function(){
+        var index = $(this).index();
+        $('#rate').val(index + 1);
+        $('#user_rating .fa-star').each(function(i){
+          $(this).removeClass('fas fa-star text-slate-400').addClass(i <= index ? 'fas fa-star text-slate-400' : 'far fa-star text-gray-300');
+        });
+      });
+    });
+  </script>
 </div>

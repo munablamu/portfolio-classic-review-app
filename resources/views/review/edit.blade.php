@@ -1,5 +1,5 @@
 <x-layout title='Classic Music Review App'>
-  <h1>Review Edit</h1>
+  <x-recording.detail-card :recording=$recording />
 
   @include('components.review.updateForm', [
     'recording' => $recording,

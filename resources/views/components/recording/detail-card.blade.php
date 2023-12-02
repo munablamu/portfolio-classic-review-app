@@ -2,7 +2,7 @@
   <div class="w-full sm:w-1/3">
     <img class="object-cover w-full" src="{{ jacket_url($recording->jacket_filename) }}" alt="{{ $recording->title }}">
   </div>
-  <div class="w-full sm:w-2/3 pl-4">
+  <div class="w-full sm:w-2/3 sm:pl-4">
     <h1 class="text-5xl font-bold text-slate-500">
       <!-- TODO: ここの処理をHTMLに書かずに済むようにしたい -->
       @if ( $recording->artists !== null )

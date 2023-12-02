@@ -73,5 +73,8 @@
 .search_h {
     @apply md:text-7xl sm:text-6xl text-3xl font-bold tracking-wide text-right mr-5 text-slate-300 capitalize;
 }
+.validate {
+    @apply text-rose-500 text-base font-semibold tracking-wide mt-2;
+}
 
 @tailwind utilities;

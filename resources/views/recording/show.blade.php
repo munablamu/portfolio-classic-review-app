@@ -14,8 +14,8 @@
 
     @auth
       @empty ( $user_review )
-        <div class="flex justify-between items-center mx-5 mb-10">
-          <span>{{ Auth::user()->name }}さんも、レビューを投稿してみましょう。</span>
+        <div class="mx-5 mb-10">
+          <p>{{ Auth::user()->name }}さんも、レビューを投稿してみましょう。</p>
           <a class="btn btn-indigo" href="{{ route('review.create', ['recording' => $recording]) }}">投稿</a>
         </div>
       @else
