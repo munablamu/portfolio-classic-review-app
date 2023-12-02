@@ -25,7 +25,7 @@
     @error('content')
       <span class="validate ml-4">{{ $message }}</span>
     @enderror
-    <textarea id="content" name="content" rows="5" cols="80" class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 rounded-md" placeholder="レビューを書いてください">{{ old('content', $review->content) }}</textarea>
+    <textarea id="content" name="content" rows="10" class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 rounded-md" placeholder="レビューを書いてください">{{ old('content', $review->content) }}</textarea>
 
     @if ( $review->title !== null )
       <div class="flex justify-end">
