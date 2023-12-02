@@ -14,7 +14,9 @@ class ReviewController extends Controller
 {
     public function create(Request $request, Recording $recording)
     {
-        Session::flash('url.reviewCreate', url()->previous());
+        if ( !Session::has('url.reviewCreate') ) {
+            Session::put('url.reviewCreate', url()->previous());
+        }
 
         return view('review.create',
             compact('recording'));
@@ -28,17 +30,25 @@ class ReviewController extends Controller
             $reviewService->insertReview($form);
         } catch ( \Throwable $e ) {
             \Log::error($e);
-            return redirect(Session::get('url.reviewCreate'))
+            $redirect = redirect(Session::get('url.reviewCreate'));
+            Session::forget('url.reviewCreate');
+            return $redirect
                 ->with('feedback.error', 'レビューの投稿に失敗しました。');
         }
 
-        return redirect(Session::get('url.reviewCreate'))
+        $redirect = redirect(Session::get('url.reviewCreate'));
+        Session::forget('url.reviewCreate');
+
+        return $redirect
             ->with('feedback.success', 'レビューの投稿に成功しました。');
     }
 
     public function edit(Request $request, Recording $recording, ReviewService $reviewService)
     {
-        Session::flash('url.reviewEdit', url()->previous());
+        if ( !Session::has('url.reviewEdit') ) {
+            Session::put('url.reviewEdit', url()->previous());
+        }
+
         $review = $reviewService->getReviewRelatedToUserRecording(Auth::user(), $recording);
 
         return view('review.edit',
@@ -52,11 +62,16 @@ class ReviewController extends Controller
             $reviewService->updateReview(Auth::user(), $recording, $form);
         } catch ( \Throwable $e ) {
             \Log::error($e);
-            return redirect(Session::get('url.reviewEdit'))
+            $redirect = redirect(Session::get('url.reviewEdit'));
+            Session::forget('url.reviewEdit');
+            return $redirect
                 ->with('feedback.error', 'レビューの編集に失敗しました。');
         }
 
-        return redirect(Session::get('url.reviewEdit'))
+        $redirect = redirect(Session::get('url.reviewEdit'));
+        Session::forget('url.reviewEdit');
+
+        return $redirect
             ->with('feedback.success', 'レビューの編集に成功しました。');
     }
 

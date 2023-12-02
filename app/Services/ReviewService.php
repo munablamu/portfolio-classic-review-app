@@ -93,9 +93,13 @@ class ReviewService
         $review = new Review;
         unset($form['_token']);
 
-        // ユーザーから入力された文字列をエスケープ
-        $form['title'] = e($form['title']);
-        $form['content'] = e($form['content']);
+        // nullはe関数によって空文字に変換されてしまい、ReviewService中のwhereNotNull('title')で弾かれなくなってしまうので nullかどうかを判定している
+        if ( $form['title'] !== null ) {
+            // ユーザーから入力された文字列をエスケープ
+            // (レビュー検索の結果表示の際に検索キーワードにstrongしてbladeテンプレート上で{!! !!}で表示するため)
+            $form['title'] = e($form['title']);
+            $form['content'] = e($form['content']);
+        }
 
         $form['like'] = 0;
         $review->fill($form)->save();

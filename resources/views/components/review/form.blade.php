@@ -1,21 +1,16 @@
 <div class="mx-5 mb-5">
-  <div class="mb-5">
-    <p>{{ Auth::user()->name }}さんのレビューを書いてみましょう。</p>
-    <p>レビューは評価だけでも構いません。その場合、他の人にあなたの評価は表示されません。</p>
-  </div>
-
-  <form action="{{ route('review.store', ['recording' => $recording]) }}" method="post">
+  <form action="{{ route('review.' . $formType, ['recording' => $recording]) }}" method="post">
     @csrf
 
-    <label for="rate" class="block text-sm font-medium mb-1">評価</label>
+    <label for="rate" class="inline-block text-sm font-medium mb-1">評価</label>
     @error('rate')
       <span class="validate ml-4">星1つから5つで、評価してください。</span>
     @enderror
     <div id="user_rating" class="flex mb-4 text-lg">
       @for ( $i = 1; $i <= 5; $i++ )
-        <i class="far fa-star text-gray-300 cursor-pointer"></i>
+        <i class="fa-star cursor-pointer {{ $i <= old('rate', isset($review) ? $review->rate : 0) ? 'fas text-slate-400' : 'far text-gray-300' }}"></i>
       @endfor
-      <input type="hidden" id="rate" name="rate" value="0">
+      <input type="hidden" id="rate" name="rate" value="{{ old('rate', isset($review) ? $review->rate : 0) }}">
     </div>
 
     <label for="title" class="text-sm font-medium">タイトル</label>
@@ -23,7 +18,10 @@
       <span class="validate ml-4">{{ $message }}</span>
     @enderror
     <div class="mb-5">
-      <input id="title" type="text" name="title" class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 rounded-md" placeholder="タイトルを入力してください" value="{{ old('title') }}"></input>
+      <input id="title" type="text" name="title"
+       class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 rounded-md"
+       placeholder="タイトルを入力してください" value="{{ old('title', isset($review) ? $review->title : null) }}"
+      ></input>
     </div>
 
     <label for="content" class="text-sm font-medium">レビュー</label>
@@ -31,11 +29,26 @@
       <span class="validate ml-4">{{ $message }}</span>
     @enderror
     <div class="mb-5">
-      <textarea id="content" name="content" rows="10" class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 rounded-md" placeholder="レビューを書いてください"></textarea>
+      <textarea id="content" name="content" rows="10"
+       class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 rounded-md"
+       placeholder="レビューを書いてください"
+      >{{ old('content', isset($review) ? $review->content : null) }}</textarea>
     </div>
 
+    @if ( isset($review) && $review->title !== null )
+      <div class="flex justify-end">
+        <span class="align-middle text-pink-400">
+          <i class="far fa-heart like-btn mr-1"></i>{{ $review->like }}
+        </span>
+      </div>
+      <div class="items-center my-2">
+        <span class="bg-rose-500 text-rose-50 py-1 px-3 rounded-full mr-1">注意</span>
+        <span class="text-rose-500">タイトルとレビューが空の場合、このレビューに対する「いいね」は0に戻ります。</span>
+      </div>
+    @endif
+
     <div class="flex justify-end">
-      <button type="submit" class="btn btn-indigo">投稿</button>
+      <button class="btn btn-indigo" type="submit">{{ $buttonText }}</button>
     </div>
   </form>
 
