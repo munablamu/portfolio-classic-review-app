@@ -29,13 +29,22 @@
     @apply bg-yellow-500;
 }
 .btn-indigo {
-    @apply bg-indigo-500 text-indigo-100 ring-indigo-600;
+    @apply bg-indigo-500 text-indigo-50 ring-indigo-600;
 }
 .btn-indigo:hover {
-    @apply bg-indigo-400 text-indigo-50;
+    @apply bg-indigo-400;
 }
 .btn-indigo:active {
     @apply bg-indigo-600;
+}
+.btn-rose {
+    @apply bg-rose-500 text-rose-50 ring-rose-600;
+}
+.btn-rose:hover {
+    @apply bg-rose-400;
+}
+.btn-rose:active {
+    @apply bg-rose-600;
 }
 .btn-lightSlate {
     @apply bg-slate-150 ring-slate-300;

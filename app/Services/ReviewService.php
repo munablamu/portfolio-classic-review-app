@@ -6,7 +6,9 @@ use App\Models\User;
 use App\Models\Recording;
 use App\Models\Review;
 use App\Models\Follow;
+use App\Models\Like;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ReviewService
 {
@@ -27,7 +29,7 @@ class ReviewService
             })
             ->whereNotNull('title')
             ->orderBy('like', 'desc')
-            ->paginate(10);
+            ->paginate($num_paginate);
 
         return $reviews;
     }
@@ -62,22 +64,28 @@ class ReviewService
 
     public function updateReview(User $user, Recording $recording, Array $form)
     {
-        unset($form['_token']);
-        // TODO: $formからuser_idとrecording_idもunsetしたほうが安全？
-        $review = Review::where('user_id', $user->id)
-            ->where('recording_id', $recording->id)
-            ->firstOrFail();
+        DB::transaction(function () use ($user, $recording, $form) {
+            unset($form['_token'], $form['user_id'], $form['recording_id']);
+            $review = Review::where('user_id', $user->id)
+                ->where('recording_id', $recording->id)
+                ->firstOrFail();
 
-        // reviewにタイトル、コンテンツがない場合、likeを0に戻す
-        if ( $form['title'] === null ) {
-            $form['like'] = 0;
-        }
+            // reviewにタイトル、コンテンツがない場合、likeを0に戻す
+            if ( $form['title'] === null ) {
+                $form['like'] = 0;
+                Like::where('review_id', $review->id)->delete();
+            }
 
-        // ユーザーから入力された文字列をエスケープ
-        $form['title'] = e($form['title']);
-        $form['content'] = e($form['content']);
+            // nullはe関数によって空文字に変換されてしまい、ReviewService中のwhereNotNull('title')で弾かれなくなってしまうので nullかどうかを判定している
+            if ( $form['title'] !== null ) {
+                // ユーザーから入力された文字列をエスケープ
+                // (レビュー検索の結果表示の際に検索キーワードにstrongしてbladeテンプレート上で{!! !!}で表示するため)
+                $form['title'] = e($form['title']);
+                $form['content'] = e($form['content']);
+            }
 
-        $review->fill($form)->save();
+            $review->fill($form)->save();
+        });
     }
 
     public function insertReview(array $form)

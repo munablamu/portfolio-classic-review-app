@@ -16,7 +16,7 @@ class RecordingController extends Controller
     public function show(Request $request, Recording $recording, ReviewService $reviewService)
     {
         $user_review = $reviewService->getUserReview($recording);
-        $reviews = $reviewService->getReviewsWithoutUserReview($recording, 10);
+        $reviews = $reviewService->getReviewsWithoutUserReview($recording, 5);
 
         return view('recording.show',
             compact('recording', 'user_review', 'reviews'));
