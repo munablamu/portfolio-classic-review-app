@@ -1,0 +1,22 @@
+<div>
+  <div class="flex">
+    <div class="w-1/6">
+      <a href="{{ route('recording.show', ['recording' => $recording]) }}">
+        <img class="object-cover w-full" src="{{ jacket_url($recording->jacket_filename) }}" alt="{{ $recording->title }}">
+      </a>
+    </div>
+    <div class="w-5/6 pl-4">
+      <a href="{{ route('recording.show', ['recording' => $recording]) }}">
+        <h3 class="url text-2xl font-bold">{{ $recording->title }}</h3>
+      </a>
+      <p>演奏家: {{ $recording->artists_string }}</p>
+      <p>発売日: {{ $recording->release_date_string }}</p>
+      <div class="flex items-center">
+        <p class="mr-1">レビュー: {{ $recording->average_rate }}</p>
+        <x-common.rate :rate="$recording->average_rate" />
+        <p class="ml-1 text-slate-500">({{ $recording->reviews->count() }}人の評価)</p>
+      </div>
+    </div>
+  </div>
+  <hr class="border-t border-slate-200 mt-2 mb-2">
+</div>

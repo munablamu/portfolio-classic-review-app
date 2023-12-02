@@ -9,7 +9,7 @@
       </h2>
     </div>
     <div class="mb-3 text-right">
-      <span class="bg-slate-500 text-slate-100 px-3 py-1 rounded-full">作品番号: {{ $music->opus_string }}</span>
+      <span class="bg-slate-500 text-slate-100 text-sm px-3 py-1 rounded-full">作品番号: {{ $music->opus_string }}</span>
     </div>
   </div>
 

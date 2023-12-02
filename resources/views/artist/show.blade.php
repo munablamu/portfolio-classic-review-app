@@ -1,21 +1,13 @@
 <x-layout title='Classic Music Review App'>
-  <h1>Artist Detail</h1>
+  <h1 class="mx-5 pt-2 mb-5 text-3xl sm:text-6xl font-black tracking-wide text-slate-500">{{ $artist->name }}</h1>
 
-  <h2>{{ $artist->name }}</h2>
-
-  <div>
+  <ul class="mx-5">
     @foreach ( $recordings as $i_recording )
-      <details>
-        <summary>{{ $i_recording->title }}, {{ $i_recording->id }}</summary>
-        <div>
-          <img src="{{ jacket_url($i_recording->jacket_filename) }}" alt="" width="300">
-        </div>
-        <div>
-          <a href="{{ route('recording.show', ['recording' => $i_recording]) }}">レビューを見る</a>
-        </div>
-      </details>
+      <li>
+        <x-recording.card_in_artist :recording=$i_recording />
+      </li>
     @endforeach
     {{ $recordings->links() }}
-  </div>
+  </ul>
 </x-layout>
 
