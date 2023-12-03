@@ -7,7 +7,7 @@
       <!-- TODO: ここの処理をHTMLに書かずに済むようにしたい -->
       @if ( $recording->artists !== null )
         @foreach ( $recording->artists as $i_artist )
-          <a href="{{ route('artist.show', ['artist' => $i_artist]) }}">{{ $i_artist->name }}</a>@if ( !$loop->last ), @endif
+          <a href="{{ route('artist.show', ['artist' => $i_artist]) }}" class="underline">{{ $i_artist->name }}</a>@if ( !$loop->last ), @endif
         @endforeach
       @else
         {{ '不明' }}

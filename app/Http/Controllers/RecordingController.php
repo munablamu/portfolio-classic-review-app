@@ -15,8 +15,10 @@ class RecordingController extends Controller
 {
     public function show(Request $request, Recording $recording, ReviewService $reviewService)
     {
+        $orderBy = $request->query('orderBy');
+
         $user_review = $reviewService->getUserReview($recording);
-        $reviews = $reviewService->getReviewsWithoutUserReview($recording, 5);
+        $reviews = $reviewService->getReviewsWithoutUserReview($recording, 5, $orderBy);
 
         return view('recording.show',
             compact('recording', 'user_review', 'reviews'));

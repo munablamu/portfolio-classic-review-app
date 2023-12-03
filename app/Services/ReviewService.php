@@ -21,14 +21,21 @@ class ReviewService
         return $review;
     }
 
-    public function getReviewsWithoutUserReview(Recording $recording, int $num_paginate)
+    public function getReviewsWithoutUserReview(Recording $recording, int $num_paginate, ?string $orderBy)
     {
+        $orderBy = match($orderBy) {
+            'like' => 'like',
+            'rate' => 'rate',
+            'updated_at' => 'updated_at',
+            default => 'like'
+        };
+
         $reviews = Review::where('recording_id', $recording->id)
             ->when(Auth::check(), function ($query) {
                 return $query->where('user_id', '!=', Auth::id()); // $user->idだと未ログイン状態でnullにidは無いというエラーが出るため、Auth::id()を使っている
             })
             ->whereNotNull('title')
-            ->orderBy('like', 'desc')
+            ->orderBy($orderBy, 'desc')
             ->paginate($num_paginate);
 
         return $reviews;
