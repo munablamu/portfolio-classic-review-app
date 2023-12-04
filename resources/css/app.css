@@ -77,4 +77,14 @@
     @apply text-rose-500 text-base font-semibold tracking-wide mt-2;
 }
 
+.nav_tabs {
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+  }
+
+  .nav_tabs::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
 @tailwind utilities;
