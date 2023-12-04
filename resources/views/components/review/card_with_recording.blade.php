@@ -48,34 +48,7 @@
           {{ $review->content }}
         </p>
       </div>
-      <div class=" mb-6 flex justify-end font-sans text-base font-medium text-inherit text-red-400">
-        @auth
-          <!-- TODO: 多分ここでチェックするの良くない -->
-          @php
-            $liked = $review->likes()->where('user_id', Auth::id())->first();
-          @endphp
-          @if ( $liked )
-            <form action="{{ route('likes.destroy', ['review' => $review->id]) }}" method="post">
-              @method('DELETE')
-              @csrf
-              <button type="submit" class="align-middle">
-                <i class="fas fa-heart unlike-btn"></i>{{ $review->like }} いいねを解除する
-              </button>
-            </form>
-          @else
-            <form action="{{ route('likes.store', ['review' => $review->id]) }}" method="post">
-              @csrf
-              <button type="submit" class="align-middle">
-                <i class="far fa-heart like-btn"></i>{{ $review->like }} いいね
-              </button>
-            </form>
-          @endif
-        @else
-          <span class="align-middle">
-            <i class="far fa-heart like-btn"></i>{{ $review->like }}
-          </span>
-        @endauth
-      </div>
+      <x-common.like :review=$review />
     </div>
   </div>
 </div>

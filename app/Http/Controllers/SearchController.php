@@ -74,6 +74,7 @@ class SearchController extends Controller
             foreach ( $keywords as $j_keyword ) {
                 $i_review->title = highlightKeyword($i_review->title, $j_keyword);
                 $i_review->content = highlightKeyword($i_review->content, $j_keyword);
+                $i_review->content = extractKeywordContext($i_review->content);
             }
         }
 

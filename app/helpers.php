@@ -58,3 +58,29 @@ if ( !function_exists('highlightKeyword') ) {
         return $str;
     }
 }
+
+if ( !function_exists('extractKeywordContext') ) {
+    function extractKeywordContext(?string $str): ?string
+    {
+        preg_match('/(.{0,50})<strong>.*?<\/strong>(.{0,50})/u', $str, $matches);
+
+        if ( !empty($matches) ) {
+            $result = $matches[0];
+
+            if (mb_strlen($matches[1]) === 50) {
+                $result = '...' . $result;
+            }
+            if (mb_strlen($matches[2]) === 50) {
+                $result .= '...';
+            }
+        } else {
+            if (mb_strlen($str) > 100) {
+                $result = mb_substr($str, 0, 100) . '...';
+            } else {
+                $result = $str;
+            }
+        }
+
+        return $result;
+    }
+}
