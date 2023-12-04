@@ -2,15 +2,19 @@
 
   <div class="flex flex-col sm:flex-row">
     <div class="w-1/2 sm:w-1/4 mx-auto">
-      <img class="object-contain" src="{{ jacket_url($review->recording->jacket_filename) }}" alt="{{ $review->recording->title }}" />
+      <a href="{{ route('recording.show', ['recording' => $review->recording]) }}">
+        <img class="object-contain" src="{{ jacket_url($review->recording->jacket_filename) }}" alt="{{ $review->recording->title }}" />
+      </a>
     </div>
     <div class="w-full sm:w-3/4 ml-3">
       <div class="flex items-center gap-4 overflow-hidden pt-0 pb-2">
-        <img
-          src="{{ user_icon_url($review->user->icon_filename) }}"
-          alt="{{ $review->user->name }}"
-          class="h-[48px] w-[48px] !rounded-full object-cover object-center"
-        />
+        <a href="{{ route('user.show', ['user' => $review->user]) }}">
+          <img
+            src="{{ user_icon_url($review->user->icon_filename) }}"
+            alt="{{ $review->user->name }}"
+            class="h-[48px] w-[48px] !rounded-full object-cover object-center"
+          />
+        </a>
         <div class="w-full flex-col">
           <div class="flex items-center justify-between">
             <a href="{{ route('user.show', ['user' => $review->user]) }}" class="text-slate-500 underline text-lg font-semibold">
