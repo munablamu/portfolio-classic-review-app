@@ -3,14 +3,17 @@
 
   <x-home.nav_tabs />
 
-  <div>
+  <div class="mx-5 mt-4">
     @if ( $following_user_reviews->count() === 0 )
       <p>ユーザーをフォローすると、ここに新着レビューが表示されます。</p>
     @else
+      <ul>
       @foreach ( $following_user_reviews as $i_review )
-        <x-review.card_with_recording :review=$i_review />
-        <hr class="border-t border-blue-gray-200">
+        <li>
+          <x-review.card_in_home :review=$i_review />
+        </li>
       @endforeach
+      </ul>
       {{ $following_user_reviews->links() }}
     @endif
   </div>

@@ -45,7 +45,7 @@
         </p>
       </div>
       <div class="p-0">
-        <p class="font-semibold leading-relaxed">
+        <p class="font-semibold leading-relaxed line-clamp-3">
           {!! $review->title !!}
         </p>
       </div>
