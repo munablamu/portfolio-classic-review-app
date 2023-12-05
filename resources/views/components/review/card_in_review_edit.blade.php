@@ -1,12 +1,14 @@
-<div class="relative flex w-full max-w-[60rem] flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
-  <div class="relative mx-0 mt-4 flex items-center gap-4 overflow-hidden rounded-xl bg-transparent bg-clip-border pt-0 text-gray-700 shadow-none">
-    <div class="flex w-full gap-0.5">
-      <div class="w-1/4 flex items-start">
-        <img class="object-contain" src="{{ jacket_url($review->recording->jacket_filename) }}" alt="{{ $review->recording->title }}" />
+<div class="flex flex-col">
+  <div class="my-4 flex items-center gap-4">
+    <div class="flex w-full gap-0.5 flex-col sm:flex-row">
+      <div class="w-1/2 sm:w-1/4 mx-auto flex items-start">
+        <a href="{{ route('recording.show', ['recording' => $review->recording]) }}">
+          <img class="object-contain" src="{{ jacket_url($review->recording->jacket_filename) }}" alt="{{ $review->recording->title }}" />
+        </a>
       </div>
-      <div class="w-3/4">
+      <div class="w-full sm:w-3/4 sm:ml-3">
         <div class="flex items-center justify-between">
-          <p class="block font-sans text-base font-light leading-relaxed text-blue-gray-900 antialiased">
+          <p class="text-sm font-light leading-relaxed">
             @if ( $review->created_at == $review->updated_at )
               投稿日: {{ $review->created_at_string }}
             @else
@@ -16,34 +18,32 @@
           <x-common.rate :rate="$review->rate" />
         </div>
         <div class="p-0">
-          <a href="{{ route('recording.show', ['recording' => $review->recording]) }}" class="block font-sans text-base font-semibold leading-relaxed text-inherit antialiased">
+          <a href="{{ route('recording.show', ['recording' => $review->recording]) }}" class="url font-semibold leading-relaxed">
             {{ $review->recording->title }}
           </a>
         </div>
         <div class="p-0">
-          <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+          <p>
             {{ $review->recording->artists_string }}
           </p>
         </div>
         <div class="p-0">
-          <p class="block font-sans text-base font-semibold leading-relaxed text-inherit antialiased">
+          <p class="font-semibold leading-relaxed">
             {{ $review->title }}
           </p>
         </div>
         <div class="p-0">
-          <p class="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+          <p class="">
             {{ $review->content }}
           </p>
         </div>
         @if ( Auth::check() && Auth::id() === $review->user->id )
           <div class="justify-end flex">
-            <x-common.buttons.blue>
-              <a href="{{ route('review.edit', ['recording' => $review->recording]) }}">編集</a>
-            </x-common.buttons.blue>
+            <a href="{{ route('review.edit', ['recording' => $review->recording]) }}" class="btn btn-indigo">編集</a>
             <form action="{{ route('review.delete', ['review' => $review]) }}" method="post">
               @method('DELETE')
               @csrf
-              <x-common.buttons.red type="submit">削除</x-common.buttons.red>
+              <button type="submit" class="btn btn-rose">削除</button>
             </form>
           </div>
         @else
@@ -52,4 +52,5 @@
       </div>
     </div>
   </div>
+  <hr class="border-t border-slate-200">
 </div>

@@ -1,12 +1,11 @@
 <div class="flex flex-col">
-
   <div class="flex flex-col sm:flex-row">
     <div class="w-1/2 sm:w-1/4 mx-auto">
       <a href="{{ route('recording.show', ['recording' => $review->recording]) }}">
         <img class="object-contain" src="{{ jacket_url($review->recording->jacket_filename) }}" alt="{{ $review->recording->title }}" />
       </a>
     </div>
-    <div class="w-full sm:w-3/4 ml-3">
+    <div class="w-full sm:w-3/4 sm:ml-3">
       <div class="flex items-center gap-4 overflow-hidden pt-0 pb-2">
         <a href="{{ route('user.show', ['user' => $review->user]) }}">
           <img

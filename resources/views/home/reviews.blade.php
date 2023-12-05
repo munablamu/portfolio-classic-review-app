@@ -3,13 +3,12 @@
 
   <x-home.nav_tabs />
 
-  <div>
+  <div class="mx-5">
     @if ( $reviews->count() === 0 )
       <p>レビューを投稿すると、ここにレビュー一覧が表示されます</p>
     @else
       @foreach ( $reviews as $i_review )
         <x-review.card_in_review_edit :review=$i_review />
-        <hr class="border-t border-blue-gray-200">
       @endforeach
       {{ $reviews->links() }}
     @endif
