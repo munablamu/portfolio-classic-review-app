@@ -3,11 +3,11 @@
 
   <x-home.nav_tabs />
 
-  <div class="mx-5">
+  <div class="mx-5 mt-4">
     @if ( $following_users->count() === 0 )
       <p>ユーザーをフォローすると、ここにフォローユーザーが表示されます。</p>
     @else
-      <ul>
+      <ul class="-mt-4">
         @foreach ( $following_users as $i_user )
           <li>
             <x-user.card :user=$i_user />

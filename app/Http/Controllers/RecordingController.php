@@ -15,7 +15,7 @@ class RecordingController extends Controller
 {
     public function show(Request $request, Recording $recording, ReviewService $reviewService)
     {
-        $orderBy = $request->query('orderBy');
+        $orderBy = $request->query('orderBy', 'like');
 
         $user_review = $reviewService->getUserReview($recording);
         $reviews = $reviewService->getReviewsWithoutUserReview($recording, 5, $orderBy);

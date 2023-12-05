@@ -10,6 +10,9 @@
 .btn:active {
     @apply duration-0;
 }
+.btn-fat {
+    @apply py-2;
+}
 .btn-pink {
     @apply bg-pink-500 text-pink-50 ring-pink-600;
 }
@@ -77,13 +80,13 @@
     @apply text-rose-500 text-base font-semibold tracking-wide mt-2;
 }
 
-.nav_tabs {
+.overflow-x {
     overflow-x: auto;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
   }
 
-  .nav_tabs::-webkit-scrollbar {
+  .overflow-x::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
   }
 

@@ -1,8 +1,8 @@
-<ul class="grid grid-flow-col text-center border-b border-gray-200 text-gray-500 text-base">
-  <li>
-    <a href="{{ route('user.show', ['user' => $user]) }}" class="{{ Request::routeIs('user.show', ['user' => $user]) ? 'text-green-600 border-green-600' : 'hover:text-green-600 hover:border-green-600 border-transparent' }} flex justify-center border-b-4 py-4">プロフィール</a>
+<ul class="overflow-x grid grid-flow-col text-center border-b border-slate-200 text-slate-500 mx-5">
+  <li class="min-w-[8rem]">
+    <a href="{{ route('user.show', ['user' => $user]) }}" class="{{ Request::routeIs('user.show', ['user' => $user]) ? 'text-green-600 border-green-600 font-bold' : 'hover:text-green-600 hover:font-bold border-transparent' }} flex justify-center border-b-4 py-4">プロフィール</a>
   </li>
-  <li>
-    <a href="{{ route('user.reviews', ['user' => $user]) }}" class="{{ Request::routeIs('user.reviews', ['user' => $user]) ? 'text-green-600 border-green-600' : 'hover:text-green-600 hover:border-green-600 border-transparent' }} flex justify-center border-b-4 py-4">レビュー一覧</a>
+  <li class="min-w-[8rem]">
+    <a href="{{ route('user.reviews', ['user' => $user]) }}" class="{{ Request::routeIs('user.reviews', ['user' => $user]) ? 'text-green-600 border-green-600 font-bold' : 'hover:text-green-600 hover:font-bold border-transparent' }} flex justify-center border-b-4 py-4">レビュー</a>
   </li>
 </ul>

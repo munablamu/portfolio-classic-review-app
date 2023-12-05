@@ -46,9 +46,9 @@ class UserController extends Controller
         ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
             = $this->getUserInfo($user);
 
-        $order = $request->input('order', 'like');
+        $orderBy = $request->query('orderBy', 'like');
 
-        $reviews = $this->reviewService->getReviews($user, 10, $order);
+        $reviews = $this->reviewService->getReviews($user, 10, $orderBy);
 
         return view('user.reviews',
             compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'reviews'));

@@ -1,43 +1,32 @@
 <x-layout title='Classic Music Review App'>
   <x-user.info :user=$user :reviewCount=$reviewCount :allReviewCount=$allReviewCount :likeSum=$likeSum />
 
-  <div class="justify-end flex">
-    @auth
-      @if ( Auth::user()->following()->where('following_user_id', $user->id)->exists() )
-        <form action="{{ route('follow.destroy', ['user' => $user]) }}" method="post">
-          @method('DELETE')
-          @csrf
-          <x-common.buttons.red type="submit">フォローを解除する</x-common.buttons.red>
-        </form>
-      @else
-        <form action="{{ route('follow.store', ['user' => $user]) }}" method="post">
-          @csrf
-          <x-common.buttons.blue type="submit">フォローする</x-common.buttons.blue>
-        </form>
-      @endif
-    @endauth
-  </div>
-
   <x-user.nav_tabs :user=$user />
 
-  <div class="flex justify-end">
-    <form action="{{ route('user.reviews', ['user' => $user]) }}" method="get" class="mr-2">
-      <!-- TODO: なぜ、action="{{ route('user.reviews', ['user' => $user, 'order' => 'like']) }}"ではだめなのか？ -->
-      <input type="hidden" name="order" value="like">
-      <x-common.buttons.blue type="submit">いいね順</x-common.buttons.blue>
-    </form>
-    <form action="{{ route('user.reviews', ['user' => $user]) }}" method="get">
-      <input type="hidden" name="order" value="updated_at">
-      <x-common.buttons.blue type="submit">更新日順</x-common.buttons.blue>
-    </form>
+  <div class="flex justify-end mx-5">
+    @php
+      $orderBy = request()->query('orderBy', 'like');
+    @endphp
+    <div class="my-4 text-right">
+      <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 {{ $orderBy === 'like' ? ' bg-slate-500 text-slate-50' : 'bg-slate-150 text-slate-500' }}"
+        href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'like']) }}">いいね順</a>
+      <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 {{ $orderBy === 'rate' ? ' bg-slate-500 text-slate-50' : 'bg-slate-150 text-slate-500' }}"
+        href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'rate']) }}">高評価順</a>
+      <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 {{ $orderBy === 'updated_at' ? ' bg-slate-500 text-slate-50' : 'bg-slate-150 text-slate-500' }}"
+        href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'updated_at']) }}">新着投稿順</a>
+    </div>
   </div>
 
-  <div>
-    @foreach ( $reviews as $i_review )
-      <x-review.card_in_review_edit :review=$i_review />
-      <hr class="border-t border-blue-gray-200">
-    @endforeach
-    {{ $reviews->links() }}
+  <div class="mx-5">
+    <ul>
+      @foreach ( $reviews as $i_review )
+        <li>
+          <x-review.card_in_user_review :review=$i_review />
+          <hr class="border-t border-blue-gray-200">
+        </li>
+      @endforeach
+    </ul>
   </div>
+  {{ $reviews->appends(request()->query())->links() }}
 </x-layout>
 
