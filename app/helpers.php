@@ -43,6 +43,21 @@ if ( !function_exists('user_icon_url') ) {
     }
 }
 
+if ( !function_exists('subscription_icon_url') ) {
+    function subscription_icon_url(?string $filename): string
+    {
+        $subscriptionIconDirectory = 'subscription_icons/';
+
+        if ( app()->environment('production') ) {
+            return (string) app()
+                ->make(\Cloudinary\Cloudinary::class)
+                ->image($subscriptionIconDirectory . $filename)
+                ->secure();
+        } else {
+            return asset('storage/' . $subscriptionIconDirectory . $filename);
+        }
+    }
+}
 
 if ( !function_exists('highlightKeyword') ) {
     function highlightKeyword(?string $str, string $keyword): ?string
