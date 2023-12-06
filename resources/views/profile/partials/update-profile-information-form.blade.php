@@ -47,8 +47,9 @@
             @endif
         </div>
 
-        <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+        <div class="flex items-center justify-end">
+            {{-- <x-primary-button>{{ __('Save') }}</x-primary-button> --}}
+            <button type="submit" class="btn btn-indigo">更新</button>
 
             @if (session('status') === 'profile-updated')
                 <p

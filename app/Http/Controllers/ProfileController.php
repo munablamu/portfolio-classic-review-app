@@ -26,15 +26,21 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
+        try {
+            $request->user()->fill($request->validated());
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+            if ($request->user()->isDirty('email')) {
+                $request->user()->email_verified_at = null;
+            }
+
+            $request->user()->save();
+        } catch ( \Throwable $e ) {
+            \Log::error($e);
+            return Redirect::route('home.edit_profile')->with('feedback.error', 'プロフィールの編集に失敗しました。');
         }
 
-        $request->user()->save();
-
-        return Redirect::route('profile.edit')->with('status', 'profile-updated');
+        // return Redirect::route('profile.edit')->with('status', 'profile-updated');
+        return Redirect::route('home.edit_profile')->with('feedback.success', 'プロフィールの編集に成功しました。');
     }
 
     /**
