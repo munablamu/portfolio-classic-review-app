@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang='ja'>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
   <head>
-    <meta charset='UTF-8'>
+    <meta charset='utf-8'>
     <meta name='viewport'
           content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
@@ -11,14 +11,10 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <!-- Font awesome -->
+    <!-- Fonts -->
     <script src="https://kit.fontawesome.com/c677d29c82.js" crossorigin="anonymous"></script>
-    <!--
-    <style>
-      body { font-size: 16pt; color: #555; }
-      h1 { font-size: 100pt; font-weight: bold; text-align:right; color:#eee; margin:-40px 0px -50px 0px; }
-    </style>
-    -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
   </head>
   <body class="flex flex-col min-h-screen bg-slate-150 text-slate-600 md:antialiased">
     <x-common.header />
