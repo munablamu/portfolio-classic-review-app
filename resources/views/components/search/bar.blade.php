@@ -6,5 +6,5 @@
   </select>
   <input id='q' type="text" name="q" class="rounded-md sm:rounded-l-none h-10 pl-5 pr-5 w-full sm:w-auto border border-slate-300 text-slate-600 bg-slate-100 hover:border-slate-400 focus:outline-none appearance-none" placeholder="Please enter keywords..." value="{{ old('q', $q) }}">
   {{-- sm:w-20を付けないとtopページで表示がおかしくなる。 --}}
-  <button type="submit" class="btn btn-indigo px-6 ml-2 h-10 w-full sm:w-20">Search</button>
+  <button type="submit" class="btn btn-indigo px-6 ml-2 h-10 w-full sm:w-20 font-bold">Search</button>
 </form>

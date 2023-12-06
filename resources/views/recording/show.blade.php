@@ -37,7 +37,7 @@
   @php
     $orderBy = request()->query('orderBy', 'like');
   @endphp
-  <div class="mb-4 text-right mx-5">
+  <div class="my-4 text-right mx-5">
     <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 {{ $orderBy === 'like' ? ' bg-slate-500 text-slate-50' : 'bg-slate-150 text-slate-500' }}"
       href="{{ route('recording.show', ['recording' => $recording, 'orderBy' => 'like']) }}">いいね順</a>
     <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 {{ $orderBy === 'rate' ? ' bg-slate-500 text-slate-50' : 'bg-slate-150 text-slate-500' }}"
