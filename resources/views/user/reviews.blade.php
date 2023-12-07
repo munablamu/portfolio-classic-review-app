@@ -1,5 +1,5 @@
 <x-layout title='Classic Music Review App'>
-  <x-user.info :user=$user :reviewCount=$reviewCount :allReviewCount=$allReviewCount :likeSum=$likeSum />
+  <x-user.info :user=$user :reviewCount=$reviewCount :allReviewCount=$allReviewCount :likeSum=$likeSum :fromUserController=$fromUserController />
 
   <x-user.nav_tabs :user=$user />
 

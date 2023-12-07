@@ -36,21 +36,23 @@ class UserController extends Controller
     {
         ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
             = $this->getUserInfo($user);
+        $fromUserController = true;
 
         return view('user.show',
-            compact('user', 'allReviewCount', 'reviewCount', 'likeSum'));
+            compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'fromUserController'));
     }
 
     public function reviews(Request $request, User $user)
     {
         ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
             = $this->getUserInfo($user);
+        $fromUserController = true;
 
         $orderBy = $request->query('orderBy', 'like');
 
         $reviews = $this->reviewService->getReviews($user, 10, $orderBy);
 
         return view('user.reviews',
-            compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'reviews'));
+            compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'fromUserController', 'reviews'));
     }
 }

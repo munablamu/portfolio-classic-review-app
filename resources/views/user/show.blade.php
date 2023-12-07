@@ -1,5 +1,5 @@
 <x-layout title='Classic Music Review App'>
-  <x-user.info :user=$user :reviewCount=$reviewCount :allReviewCount=$allReviewCount :likeSum=$likeSum />
+  <x-user.info :user=$user :reviewCount=$reviewCount :allReviewCount=$allReviewCount :likeSum=$likeSum :fromUserController=$fromUserController />
 
 
   <x-user.nav_tabs :user=$user />
@@ -8,6 +8,7 @@
     <h3 class="text-lg font-semibold">自己紹介</h3>
     <p class="text-base">{{ $user->self_introduction }}</p>
   </div>
+  <hr class="border-t border-slate-200 mt-4 mb-2 mx-5">
 
   <div class="mb-4 mx-5">
     <h3 class="text-lg font-semibold">お気に入りの録音</h3>
@@ -19,6 +20,7 @@
       @endforeach
     </div>
   </div>
+  <hr class="border-t border-slate-200 mt-4 mb-2 mx-5">
 
   <div class="mx-5">
     <h3 class="text-lg font-semibold">お気に入りの演奏家</h2>

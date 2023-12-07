@@ -49,6 +49,15 @@
 .btn-rose:active {
     @apply bg-rose-600;
 }
+.btn-emerald {
+    @apply bg-emerald-500 text-emerald-50 ring-emerald-600;
+}
+.btn-emerald:hover {
+    @apply bg-emerald-400;
+}
+.btn-emerald:active {
+    @apply bg-emerald-600;
+}
 .btn-lightSlate {
     @apply bg-slate-150 ring-slate-300;
 }

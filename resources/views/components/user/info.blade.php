@@ -9,8 +9,8 @@
       <p class="text-pink-400"><i class="far fa-heart like-btn mr-1"></i>{{ $likeSum }}</p>
     </div>
   </div>
-  <div class="flex flex-col justify-end">
-    @if ( Auth::check() && Auth::id() !== $user->id )
+  @if ( Auth::check() && Auth::id() !== $user->id )
+    <div class="flex flex-col justify-end">
       @if ( Auth::user()->following()->where('following_user_id', $user->id)->exists() )
         <form action="{{ route('follow.destroy', ['user' => $user]) }}" method="post">
           @method('DELETE')
@@ -23,6 +23,19 @@
           <button type="submit" class="btn btn-fat btn-indigo">フォローする</button>
         </form>
       @endif
+    </div>
+  @endif
+
+  @auth
+    @if ( Auth::id() === $user->id && !empty($fromUserController) && $fromUserController )
+      <div class="flex flex-col justify-end">
+        <a class="btn btn-emerald" href="{{ route('home') }}">Home</a>
+      </div>
     @endif
-  </div>
+    @if ( !empty($fromHomeController) && $fromHomeController )
+      <div class="flex flex-col justify-end">
+        <a class="btn btn-emerald" href="{{ route('user.show', ['user' => $user]) }}">現在の表示を確認</a>
+      </div>
+    @endif
+  @endauth
 </div>
