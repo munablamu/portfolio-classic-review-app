@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="flex flex-col justify-end">
-    @auth
+    @if ( Auth::check() && Auth::id() !== $user->id )
       @if ( Auth::user()->following()->where('following_user_id', $user->id)->exists() )
         <form action="{{ route('follow.destroy', ['user' => $user]) }}" method="post">
           @method('DELETE')
@@ -23,6 +23,6 @@
           <button type="submit" class="btn btn-fat btn-indigo">フォローする</button>
         </form>
       @endif
-    @endauth
+    @endif
   </div>
 </div>

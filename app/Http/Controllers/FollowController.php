@@ -12,6 +12,10 @@ class FollowController extends Controller
     public function store(User $user)
     {
         try {
+            if ( Auth::id() === $user->id ) {
+                throw Exception();
+            }
+
             Auth::user()->following()->attach($user);
         } catch ( \Throwable $e) {
             \Log::error($e);
@@ -26,6 +30,10 @@ class FollowController extends Controller
     public function destroy(User $user)
     {
         try {
+            if ( Auth::id() === $user->id ) {
+                throw Exception();
+            }
+
             $detachedRows = Auth::user()->following()->detach($user);
             if ( $detachedRows === 0 ) {
                 throw new Exception();
