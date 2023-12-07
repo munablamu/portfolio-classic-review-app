@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Exception;
 
 class FollowController extends Controller
 {
@@ -25,8 +26,10 @@ class FollowController extends Controller
     public function destroy(User $user)
     {
         try {
-            // TODO: detach()メソッドはレコードがなくてもエラーを出さないので、このままだと、フォローしていなくてもフォロー解除に成功してしまう。
-            Auth::user()->following()->detach($user);
+            $detachedRows = Auth::user()->following()->detach($user);
+            if ( $detachedRows === 0 ) {
+                throw new Exception();
+            }
         } catch ( \Throwable $e ) {
             return back()
                 ->with('feedback.error', 'フォロー解除に失敗しました。');

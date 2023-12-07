@@ -2,7 +2,7 @@
   <div class="w-full sm:w-1/3">
     <img class="object-cover w-full" src="{{ jacket_url($recording->jacket_filename) }}" alt="{{ $recording->title }}">
   </div>
-  <div class="w-full sm:w-2/3 sm:pl-4">
+  <div class="w-full sm:w-2/3 sm:pl-4 flex flex-col">
     <h1 class="text-5xl font-bold text-slate-500">
       <!-- TODO: ここの処理をHTMLに書かずに済むようにしたい -->
       @if ( $recording->artists !== null )
@@ -36,5 +36,25 @@
         <img class="h-8" src="{{ subscription_icon_url('spotify.png') }}" alt="spotifyで検索">
       </a>
     </div>
+
+    @auth
+      <div class="text-right">
+        @php
+          $favorited = Auth::user()->favoriteRecordings()->where('recording_id', $recording->id)->first();
+        @endphp
+        @if ( $favorited )
+          <form action="{{ route('favoriteRecording.destroy', ['recording' => $recording]) }}" method="post">
+            @method('DELETE')
+            @csrf
+            <button type="submit" class="btn btn-rose">お気に入り解除</button>
+          </form>
+        @else
+          <form action="{{ route('favoriteRecording.store', ['recording' => $recording]) }}" method="post">
+            @csrf
+            <button type="submit" class="btn btn-indigo">お気に入り登録</button>
+          </form>
+        @endif
+      </div>
+    @endauth
   </div>
 </div>

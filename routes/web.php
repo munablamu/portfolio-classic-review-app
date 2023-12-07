@@ -11,6 +11,8 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\FollowController;
+use App\Http\Controllers\FavoriteRecordingController;
+use App\Http\Controllers\FavoriteArtistController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -93,17 +95,27 @@ Route::middleware(['auth', 'verified'])->group(function () {
         ->name('profile.update_user_icon');
     Route::post('/profile/update_self_introduction', [ProfileController::class, 'updateSelfIntroduction'])
         ->name('profile.update_self_introduction');
+
+    Route::post('/reviews/{review}/likes', [LikeController::class, 'store'])
+        ->name('likes.store');
+    Route::delete('/reviews/{review}/likes/destroy', [LikeController::class, 'destroy'])
+        ->name('likes.destroy');
+
+    Route::post('/follow/{user}/store', [FollowController::class, 'store'])
+        ->name('follow.store');
+    Route::delete('/follow/{user}/destroy', [FollowController::class, 'destroy'])
+        ->name('follow.destroy');
+
+    Route::post('/favoriteRecording/{recording}/store', [FavoriteRecordingController::class, 'store'])
+        ->name('favoriteRecording.store');
+    Route::delete('/favoriteRecording/{recording}/destroy', [FavoriteRecordingController::class, 'destroy'])
+        ->name('favoriteRecording.destroy');
+
+    Route::post('/favoriteArtist/{artist}/store', [FavoriteArtistController::class, 'store'])
+        ->name('favoriteArtist.store');
+    Route::delete('/favoriteArtist/{artist}/destroy', [FavoriteArtistController::class, 'destroy'])
+        ->name('favoriteArtist.destroy');
 });
-
-Route::post('/reviews/{review}/likes', [LikeController::class, 'store'])
-    ->name('likes.store');
-Route::delete('/reviews/{review}/likes/destroy', [LikeController::class, 'destroy'])
-    ->name('likes.destroy');
-
-Route::post('/follow/{user}/store', [FollowController::class, 'store'])
-    ->name('follow.store');
-Route::delete('/follow/{user}/destroy', [FollowController::class, 'destroy'])
-    ->name('follow.destroy');
 
 Route::middleware('auth')->group(function () {
     // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

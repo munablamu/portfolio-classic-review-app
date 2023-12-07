@@ -5,7 +5,7 @@
         $liked = $review->likes()->where('user_id', Auth::id())->first();
       @endphp
       @if ( $liked )
-        <form action="{{ route('likes.destroy', ['review' => $review->id]) }}" method="post">
+        <form action="{{ route('likes.destroy', ['review' => $review]) }}" method="post">
           @method('DELETE')
           @csrf
           <button type="submit" class="align-middle">
@@ -13,7 +13,7 @@
           </button>
         </form>
       @else
-        <form action="{{ route('likes.store', ['review' => $review->id]) }}" method="post">
+        <form action="{{ route('likes.store', ['review' => $review]) }}" method="post">
           @csrf
           <button type="submit" class="align-middle">
             <i class="far fa-heart like-btn mr-1"></i>{{ $review->like }} いいね
