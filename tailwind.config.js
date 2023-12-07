@@ -61,7 +61,7 @@ export default {
             }
         },
     },
-    darkMode: 'media', // 'media' or 'class'
+    darkMode: 'class', // 'media' or 'class'
     variants: {},
 
     plugins: [forms],

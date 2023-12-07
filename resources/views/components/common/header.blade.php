@@ -13,6 +13,7 @@
     </nav>
     <!-- secondary nav -->
     <div class="hidden md:flex items-center space-x-1">
+      <button id="theme-toggle">ダークモード切り替え</button>
       @guest
         <a href="{{ route('login') }}" class="btn btn-black md:m-0">Login</a>
         <a href="{{ route('register') }}" class="btn btn-yellow md:m-0">Signup</a>
@@ -54,13 +55,36 @@
   </div>
 
   <script>
-      document.getElementById('hamburger').addEventListener('click', function() {
-        var open = document.getElementById('open');
-        var close = document.getElementById('close');
-        var hamburger_nav = document.getElementById('hamburger_nav');
-        open.classList.toggle('hidden');
-        close.classList.toggle('hidden');
-        hamburger_nav.classList.toggle('hidden');
-      });
-    </script>
+    // hamburger
+    document.getElementById('hamburger').addEventListener('click', function() {
+      var open = document.getElementById('open');
+      var close = document.getElementById('close');
+      var hamburger_nav = document.getElementById('hamburger_nav');
+      open.classList.toggle('hidden');
+      close.classList.toggle('hidden');
+      hamburger_nav.classList.toggle('hidden');
+    });
+
+
+    // dark mode toggle
+    var themeToggleBtn = document.getElementById('theme-toggle');
+    themeToggleBtn.addEventListener('click', function() {
+      if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('color-theme', 'light');
+      } else {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('color-theme', 'dark');
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const storedTheme = localStorage.getItem('color-theme');
+      if (storedTheme) {
+          document.documentElement.classList.add(storedTheme);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+      }
+    });
+  </script>
 </header>
