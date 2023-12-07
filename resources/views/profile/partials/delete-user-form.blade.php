@@ -14,7 +14,7 @@
         x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
     >{{ __('Delete Account') }}</x-danger-button> --}}
     <div class="flex justify-end">
-        <button type="submit" class="btn btn-rose font-bold">アカウント削除</button>
+        <button type="submit" class="btn btn-fat btn-rose font-bold">アカウント削除</button>
     </div>
 
     <x-modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>

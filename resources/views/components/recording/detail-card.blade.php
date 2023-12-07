@@ -3,7 +3,7 @@
     <img class="object-cover w-full" src="{{ jacket_url($recording->jacket_filename) }}" alt="{{ $recording->title }}">
   </div>
   <div class="w-full sm:w-2/3 sm:pl-4 flex flex-col">
-    <h1 class="text-5xl font-bold text-slate-500">
+    <h1 class="text-5xl font-bold text-slate-500 dark:text-slate-400">
       <!-- TODO: ここの処理をHTMLに書かずに済むようにしたい -->
       @if ( $recording->artists !== null )
         @foreach ( $recording->artists as $i_artist )
@@ -19,7 +19,7 @@
     <div class="flex items-center">
       <p class="mr-1">レビュー: {{ $recording->average_rate }}</p>
       <x-common.rate :rate="$recording->average_rate" />
-      <p class="ml-1 text-slate-500">({{ $recording->reviews->count() }}人の評価)</p>
+      <p class="ml-1 text-slate-500 dark:text-slate-400">({{ $recording->reviews->count() }}人の評価)</p>
     </div>
 
     @php

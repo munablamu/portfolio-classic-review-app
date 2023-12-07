@@ -4,8 +4,8 @@
   <div class="mx-3">
     <x-search.bar :q='$q' :oldSearchType=$oldSearchType />
   </div>
-  <p class="text-slate-600 text-sm mx-5">実際には英語に翻訳された「＊＊＊＊＊＊＊＊＊」で検索されています。</p>
-  <p class="text-slate-600 text-sm mx-5">検索結果: ****件</p>
+  <p class="text-slate-600 dark:text-slate-300 text-sm mx-5">実際には英語に翻訳された「＊＊＊＊＊＊＊＊＊」で検索されています。</p>
+  <p class="text-slate-600 dark:text-slate-300 text-sm mx-5">検索結果: ****件</p>
 
   <ul class="mx-5">
     @foreach ( $musics as $i_music )

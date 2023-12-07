@@ -17,5 +17,5 @@
       <button type="submit" class="btn btn-rose">解除する</button>
     </form>
   </div>
-  <hr class="border-t border-slate-200">
+  <hr class="border-t border-slate-200 dark:border-slate-600">
 </div>

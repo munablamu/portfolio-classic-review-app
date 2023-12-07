@@ -5,7 +5,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-8 h-8 sm:w-10 sm:h-10 text-slate-100 p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
       </svg>
-      <span class="ml-3 sm:text-xl text-sm">Classic Music Review App</span>
+      <span class="ml-3 text-xl font-bold">Classic Music Review App</span>
     </a>
     <!-- primary nav -->
     <nav class="hidden md:ml-auto md:mr-auto md:flex md:flex-wrap items-center text-base justify-center">

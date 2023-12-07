@@ -19,7 +19,7 @@
     @enderror
     <div class="mb-5">
       <input id="title" type="text" name="title"
-       class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 rounded-md"
+       class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md"
        placeholder="タイトルを入力してください" value="{{ old('title', isset($review) ? $review->title : null) }}"
       ></input>
     </div>
@@ -30,7 +30,7 @@
     @enderror
     <div class="mb-5">
       <textarea id="content" name="content" rows="10"
-       class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 rounded-md"
+       class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md"
        placeholder="レビューを書いてください"
       >{{ old('content', isset($review) ? $review->content : null) }}</textarea>
     </div>
@@ -41,13 +41,13 @@
           <i class="far fa-heart like-btn mr-1"></i>{{ $review->like }}
         </span>
       </div>
-      <div class="items-center my-2">
-        <span class="bg-rose-500 text-rose-50 py-1 px-3 rounded-full mr-1">注意</span>
-        <span class="text-rose-500">タイトルとレビューが空の場合、このレビューに対する「いいね」は0に戻ります。</span>
+      <div class="items-center my-2 border-2 p-2 bg-rose-100 border-rose-500 dark:bg-rose-700 dark:border-rose-700  rounded-lg">
+        <span class="bg-rose-500 text-rose-50 dark:bg-rose-100 dark:text-rose-700 font-bold py-1 px-3 rounded-full mr-1">注意</span>
+        <span class="text-rose-500 dark:text-rose-100 tracking-wide font-bold ">タイトルとレビューが空の場合、このレビューに対する「いいね」は0に戻ります。</span>
       </div>
     @endif
 
-    <div class="flex justify-end">
+    <div class="flex justify-end mt-6">
       <button class="btn btn-indigo" type="submit">{{ $buttonText }}</button>
     </div>
   </form>

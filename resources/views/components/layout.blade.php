@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
   </head>
-  <body class="flex flex-col min-h-screen bg-slate-150 text-slate-600 md:antialiased">
+  <body class="flex flex-col min-h-screen bg-slate-150 text-slate-600 dark:bg-slate-700 dark:text-slate-250 md:antialiased">
     <x-common.header />
     <x-common.session_feedback />
     <div class="flex-grow pt-16 relative w-full max-w-[60rem] mx-auto">

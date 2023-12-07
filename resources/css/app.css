@@ -32,31 +32,31 @@
     @apply bg-yellow-500;
 }
 .btn-indigo {
-    @apply bg-indigo-500 text-indigo-50 ring-indigo-600;
+    @apply bg-indigo-500 text-indigo-50 ring-indigo-600 dark:bg-indigo-700 dark:text-indigo-100 dark:ring-indigo-600;
 }
 .btn-indigo:hover {
-    @apply bg-indigo-400;
+    @apply bg-indigo-400 dark:bg-indigo-600;
 }
 .btn-indigo:active {
-    @apply bg-indigo-600;
+    @apply bg-indigo-600 dark:bg-indigo-800 dark:text-indigo-200;
 }
 .btn-rose {
-    @apply bg-rose-500 text-rose-50 ring-rose-600;
+    @apply bg-rose-500 text-rose-50 ring-rose-600 dark:bg-rose-700 dark:text-rose-100 dark:ring-rose-600;
 }
 .btn-rose:hover {
-    @apply bg-rose-400;
+    @apply bg-rose-400 dark:bg-rose-600;
 }
 .btn-rose:active {
-    @apply bg-rose-600;
+    @apply bg-rose-600 dark:bg-rose-800 dark:text-rose-200;
 }
 .btn-emerald {
-    @apply bg-emerald-500 text-emerald-50 ring-emerald-600;
+    @apply bg-emerald-500 text-emerald-50 ring-emerald-600 dark:bg-emerald-700 dark:text-emerald-50 dark:ring-emerald-600;
 }
 .btn-emerald:hover {
-    @apply bg-emerald-400;
+    @apply bg-emerald-400 dark:bg-emerald-600;
 }
 .btn-emerald:active {
-    @apply bg-emerald-600;
+    @apply bg-emerald-600 dark:bg-emerald-800 dark:text-emerald-500;
 }
 .btn-lightSlate {
     @apply bg-slate-150 ring-slate-300;
@@ -83,7 +83,7 @@
     @apply text-purple-500;
 }
 .search_h {
-    @apply md:text-7xl sm:text-6xl text-3xl font-bold tracking-wide text-right mr-5 text-slate-300 capitalize;
+    @apply md:text-7xl sm:text-6xl text-3xl font-bold tracking-wide text-right mr-5 text-slate-300 dark:text-slate-400 capitalize;
 }
 .validate {
     @apply text-rose-500 text-base font-semibold tracking-wide mt-2;
@@ -98,5 +98,23 @@
   .overflow-x::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
   }
+
+/* ブラウザの検索候補を選んだ際に、検索窓の背景色と文字色が変更されてしまうことを防ぐ */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: theme('colors.slate.600') !important;
+    -webkit-box-shadow: 0 0 0 30px theme('colors.slate.100') inset !important;
+}
+@media (prefers-color-scheme: dark) {
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-text-fill-color: theme('colors.slate.150') !important;
+        -webkit-box-shadow: 0 0 0 30px theme('colors.slate.600') inset !important;
+    }
+}
 
 @tailwind utilities;

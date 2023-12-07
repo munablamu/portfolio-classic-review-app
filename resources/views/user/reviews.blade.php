@@ -8,11 +8,11 @@
       $orderBy = request()->query('orderBy', 'like');
     @endphp
     <div class="my-4 text-right">
-      <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 {{ $orderBy === 'like' ? ' bg-slate-500 text-slate-50' : 'bg-slate-150 text-slate-500' }}"
+      <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 dark:border-sky-300 {{ $orderBy === 'like' ? ' bg-slate-500 text-slate-50 dark:bg-sky-300 dark:text-slate-700' : 'bg-slate-150 text-slate-500 dark:bg-slate-700 dark:text-sky-300' }}"
         href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'like']) }}">いいね順</a>
-      <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 {{ $orderBy === 'rate' ? ' bg-slate-500 text-slate-50' : 'bg-slate-150 text-slate-500' }}"
+      <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 dark:border-sky-300 {{ $orderBy === 'rate' ? ' bg-slate-500 text-slate-50 dark:bg-sky-300 dark:text-slate-700' : 'bg-slate-150 text-slate-500 dark:bg-slate-700 dark:text-sky-300' }}"
         href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'rate']) }}">高評価順</a>
-      <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 {{ $orderBy === 'updated_at' ? ' bg-slate-500 text-slate-50' : 'bg-slate-150 text-slate-500' }}"
+      <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 dark:border-sky-300 {{ $orderBy === 'updated_at' ? ' bg-slate-500 text-slate-50 dark:bg-sky-300 dark:text-slate-700' : 'bg-slate-150 text-slate-500 dark:bg-slate-700 dark:text-sky-300' }}"
         href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'updated_at']) }}">新着投稿順</a>
     </div>
   </div>
@@ -22,7 +22,6 @@
       @foreach ( $reviews as $i_review )
         <li>
           <x-review.card_in_user_review :review=$i_review />
-          <hr class="border-t border-blue-gray-200">
         </li>
       @endforeach
     </ul>

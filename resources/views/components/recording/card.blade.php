@@ -14,9 +14,9 @@
       <div class="flex items-center">
         <p class="mr-1">レビュー: {{ $recording->average_rate }}</p>
         <x-common.rate :rate="$recording->average_rate" />
-        <p class="ml-1 text-slate-500">({{ $recording->reviews->count() }}人の評価)</p>
+        <p class="ml-1 text-slate-500 dark:text-slate-400">({{ $recording->reviews->count() }}人の評価)</p>
       </div>
     </div>
   </div>
-  <hr class="border-t border-slate-200 mt-2 mb-2">
+  <hr class="border-t border-slate-200 dark:border-slate-600 mt-2 mb-2">
 </div>

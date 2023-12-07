@@ -10,7 +10,7 @@
         <div class="flex items-center justify-between">
           <p class="text-sm font-light leading-relaxed">
             @if ( \Carbon\Carbon::parse($review->updated_at)->gt(\Carbon\Carbon::now()->subMonths(3)) )
-              <span class="bg-mauve-500 text-mauve-50 py-0.5 px-2 rounded-full mr-1 font-base uppercase">new</span>
+              <span class="bg-mauve-500 text-mauve-50 dark:bg-mauve-600 dark:text-mauve-100 py-0.5 px-2 rounded-full mr-1 font-base uppercase">new</span>
             @endif
             @if ( $review->created_at == $review->updated_at )
               投稿日: {{ $review->created_at_string }}
@@ -55,5 +55,5 @@
       </div>
     </div>
   </div>
-  <hr class="border-t border-slate-200">
+  <hr class="border-t border-slate-200 dark:border-slate-600">
 </div>

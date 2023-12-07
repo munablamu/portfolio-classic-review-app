@@ -5,7 +5,7 @@
     <x-search.bar :q='$q' :oldSearchType=$oldSearchType />
   </div>
 
-  <p class="text-slate-600 text-sm mx-5 mb-5">検索結果: ****件</p>
+  <p class="text-slate-600 dark:text-slate-300 text-sm mx-5 mb-5">検索結果: ****件</p>
 
   <ul>
     @foreach ( $reviews as $i_review )

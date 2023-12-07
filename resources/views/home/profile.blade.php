@@ -9,7 +9,7 @@
       <div>
         <label for="user_icon" class="block text-sm font-medium">ユーザーアイコン</label>
         <div class="mt-1 flex rounded-md shadow-sm">
-          <input type="file" name="user_icon" id="user_icon" class="focus:ring-indigo-500 focus:border-indigo-500 flex-grow border-slate-300 bg-slate-100 rounded-md">
+          <input type="file" name="user_icon" id="user_icon" class="focus:ring-indigo-500 focus:border-indigo-500 flex-grow border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md">
         </div>
       </div>
       <div class="flex justify-end">
@@ -31,7 +31,7 @@
       <div>
         <label for="self_introduction" class="block text-sm font-medium">自己紹介</label>
         <div class="mt-1">
-          <textarea id="self_introduction" name="self_introduction" rows="10" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full border-slate-300 rounded-md" placeholder="レビューを書いてください">{{ old('self_introduction', $user->self_introduction) }}</textarea>
+          <textarea id="self_introduction" name="self_introduction" rows="10" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md" placeholder="レビューを書いてください">{{ old('self_introduction', $user->self_introduction) }}</textarea>
         </div>
       </div>
 

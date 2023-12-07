@@ -20,6 +20,7 @@ export default {
             colors: {
                 'slate': {
                     '150': '#eaeff5',
+                    '250': '#d7dfe9',
                 },
                 'sage': {
                     '50': '#F3F4D8',
@@ -60,6 +61,7 @@ export default {
             }
         },
     },
+    darkMode: 'media', // 'media' or 'class'
     variants: {},
 
     plugins: [forms],

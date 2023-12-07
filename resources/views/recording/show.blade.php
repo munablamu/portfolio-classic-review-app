@@ -16,7 +16,7 @@
       @empty ( $user_review )
         <div class="mx-5 mb-10">
           <p>{{ Auth::user()->name }}さんも、レビューを投稿してみましょう。</p>
-          <a class="btn btn-fat btn-indigo" href="{{ route('review.create', ['recording' => $recording]) }}">投稿</a>
+          <a class="btn btn-indigo font-bold" href="{{ route('review.create', ['recording' => $recording]) }}">投稿</a>
         </div>
       @else
         <div class="relative w-full max-w-[60rem] mx-auto">
@@ -38,11 +38,11 @@
     $orderBy = request()->query('orderBy', 'like');
   @endphp
   <div class="my-4 text-right mx-5">
-    <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 {{ $orderBy === 'like' ? ' bg-slate-500 text-slate-50' : 'bg-slate-150 text-slate-500' }}"
+    <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 dark:border-sky-300 {{ $orderBy === 'like' ? ' bg-slate-500 text-slate-50 dark:bg-sky-300 dark:text-slate-700' : 'bg-slate-150 text-slate-500 dark:bg-slate-700 dark:text-sky-300' }}"
       href="{{ route('recording.show', ['recording' => $recording, 'orderBy' => 'like']) }}">いいね順</a>
-    <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 {{ $orderBy === 'rate' ? ' bg-slate-500 text-slate-50' : 'bg-slate-150 text-slate-500' }}"
+    <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 dark:border-sky-300 {{ $orderBy === 'rate' ? ' bg-slate-500 text-slate-50 dark:bg-sky-300 dark:text-slate-700' : 'bg-slate-150 text-slate-500 dark:bg-slate-700 dark:text-sky-300' }}"
       href="{{ route('recording.show', ['recording' => $recording, 'orderBy' => 'rate']) }}">高評価順</a>
-    <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 {{ $orderBy === 'updated_at' ? ' bg-slate-500 text-slate-50' : 'bg-slate-150 text-slate-500' }}"
+    <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 dark:border-sky-300 {{ $orderBy === 'updated_at' ? ' bg-slate-500 text-slate-50 dark:bg-sky-300 dark:text-slate-700' : 'bg-slate-150 text-slate-500 dark:bg-slate-700 dark:text-sky-300' }}"
       href="{{ route('recording.show', ['recording' => $recording, 'orderBy' => 'updated_at']) }}">新着投稿順</a>
   </div>
 
