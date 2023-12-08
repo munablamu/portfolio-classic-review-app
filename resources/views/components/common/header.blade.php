@@ -2,14 +2,19 @@
   <div class="container mx-auto flex flex-wrap px-5 py-3 flex-row items-center justify-between">
     <!-- logo -->
     <a href="{{ route('top') }}" class="flex title-font font-medium items-center text-slate-100">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-8 h-8 sm:w-10 sm:h-10 text-slate-100 p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+      {{-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-8 h-8 sm:w-10 sm:h-10 text-slate-100 p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-      </svg>
+      </svg> --}}
+      <div class="w-8 h-8 sm:w-10 sm:h-10 text-base sm:text-xl text-slate-100 p-2 bg-indigo-500 rounded-full flex justify-center items-center">
+        <i class="fa-solid fa-music"></i>
+      </div>
       <span class="ml-3 text-xl font-bold">Classic Music Review App</span>
     </a>
     <!-- primary nav -->
     <nav class="hidden md:ml-auto md:mr-auto md:flex md:flex-wrap items-center text-base justify-center">
-      <a href="#" class="mr-5 hover:text-slate-100">このサイトの使い方</a>
+      <a href="#" class="mr-5 hover:text-slate-100">
+        <i class="fa-solid fa-seedling"></i><span class="ml-1">このサイトの使い方</span>
+      </a>
     </nav>
 
 
@@ -35,7 +40,7 @@
           <a href="{{ route('home') }}" class="btn btn-black md:m-0 md:mr-2">Home</a>
           <form action="{{ route('logout') }}" method="post">
             @csrf
-            <button type="submit" class="btn btn-pink md:m-0">Logout</a>
+            <button type="submit" class="btn btn-pink md:m-0">Logout</button>
           </form>
         @endauth
       </div>
@@ -61,7 +66,7 @@
         <a href="{{ route('home') }}" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-600 focus:bg-slate-500">Home</a>
         <form action="{{ route('logout') }}" method="post">
           @csrf
-          <button type="submit" class="w-full text-right block px-2 py-1 rounded-md text-pink-500 hover:text-pink-400 focus:text-pink-300 hover:bg-slate-600 focus:bg-slate-500">Logout</a>
+          <button type="submit" class="w-full text-right block px-2 py-1 rounded-md text-pink-500 hover:text-pink-400 focus:text-pink-300 hover:bg-slate-600 focus:bg-slate-500">Logout</button>
         </form>
       @endauth
     </nav>

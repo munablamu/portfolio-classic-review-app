@@ -57,7 +57,9 @@
 
         <div class="flex items-center justify-end">
             {{-- <x-primary-button>{{ __('Save') }}</x-primary-button> --}}
-            <button type="submit" class="btn btn-indigo">更新</button>
+            <button type="submit" class="btn btn-indigo">
+                <i class="fa-solid fa-wrench"></i><span class="ml-1">更新</span>
+            </button>
 
             @if (session('status') === 'profile-updated')
                 <p

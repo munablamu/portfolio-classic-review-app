@@ -48,7 +48,9 @@
     @endif
 
     <div class="flex justify-end mt-6">
-      <button class="btn btn-indigo" type="submit">{{ $buttonText }}</button>
+      <button class="btn btn-indigo" type="submit">
+      <i class="fa-solid fa-pen-nib"></i><span class="ml-1">{{ $buttonText }}</span>
+      </button>
     </div>
   </form>
 

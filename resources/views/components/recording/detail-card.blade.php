@@ -46,12 +46,16 @@
           <form action="{{ route('favoriteRecording.destroy', ['recording' => $recording]) }}" method="post">
             @method('DELETE')
             @csrf
-            <button type="submit" class="btn btn-rose">お気に入り解除</button>
+            <button type="submit" class="btn btn-rose">
+            <i class="fa-regular fa-bookmark"></i><span class="ml-1">お気に入り解除</span>
+            </button>
           </form>
         @else
           <form action="{{ route('favoriteRecording.store', ['recording' => $recording]) }}" method="post">
             @csrf
-            <button type="submit" class="btn btn-indigo">お気に入り登録</button>
+            <button type="submit" class="btn btn-indigo">
+              <i class="fa-solid fa-bookmark"></i><span class="ml-1">お気に入り登録</span>
+            </button>
           </form>
         @endif
       </div>

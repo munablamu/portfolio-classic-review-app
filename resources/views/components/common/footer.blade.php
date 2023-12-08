@@ -1,7 +1,9 @@
 <footer class="text-slate-300 bg-slate-800 body-font z-10">
   <div class="container px-5 py-1 mx-auto flex items-center sm:flex-row flex-col">
     <p class="text-sm sm:py-2 sm:mt-0 mt-2">© 2023 munablemu —
-      <a href="https://github.com/munablamu/portfolio-classic-review-app" class="text-slate-400 underline ml-1" rel="noopener noreferrer" target="_blank">github</a>
+      <a href="https://github.com/munablamu/portfolio-classic-review-app" class="text-slate-400 underline ml-1" rel="noopener noreferrer" target="_blank">
+      <i class="fa-brands fa-github mr-1"></i>github
+      </a>
     </p>
     <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
       <a class="text-slate-400 hover:text-slate-300">

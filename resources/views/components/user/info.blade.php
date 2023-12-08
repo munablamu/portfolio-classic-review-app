@@ -5,7 +5,7 @@
     </div>
     <div class="ml-2 my-2">
       <h2 class="text-3xl font-bold">{{ $user->name }}</h2>
-      <p class="">レビュー: {{ $reviewCount }}件 (評価: {{ $allReviewCount }}件)</p>
+      <p><i class="fa-solid fa-pen-nib mr-1"></i>{{ $reviewCount }}件 (評価: {{ $allReviewCount }}件)</p>
       <p class="text-pink-400"><i class="far fa-heart like-btn mr-1"></i>{{ $likeSum }}</p>
     </div>
   </div>
@@ -29,12 +29,16 @@
   @auth
     @if ( Auth::id() === $user->id && !empty($fromUserController) && $fromUserController )
       <div class="flex flex-col justify-end">
-        <a class="btn btn-emerald" href="{{ route('home') }}">Home</a>
+        <a class="btn btn-emerald" href="{{ route('home') }}">
+          <i class="fa-solid fa-house"></i><span class="ml-1">Home</span>
+        </a>
       </div>
     @endif
     @if ( !empty($fromHomeController) && $fromHomeController )
       <div class="flex flex-col justify-end">
-        <a class="btn btn-emerald" href="{{ route('user.show', ['user' => $user]) }}">現在の表示を確認</a>
+        <a class="btn btn-emerald" href="{{ route('user.show', ['user' => $user]) }}">
+          <i class="fa-solid fa-check"></i><span class="ml-1">現在の表示を確認</span>
+        </a>
       </div>
     @endif
   @endauth

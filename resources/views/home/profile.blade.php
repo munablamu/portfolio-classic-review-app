@@ -14,7 +14,7 @@
       </div>
       <div class="flex justify-end">
         <button type="submit" class="btn btn-indigo">
-          更新
+          <i class="fa-solid fa-wrench"></i><span class="ml-1">更新</span>
         </button>
       </div>
     </form>
@@ -37,7 +37,7 @@
 
       <div class="flex justify-end mt-6">
         <button type="submit" class="btn btn-indigo">
-          更新
+          <i class="fa-solid fa-wrench"></i><span class="ml-1">更新</span>
         </button>
       </div>
     </form>
