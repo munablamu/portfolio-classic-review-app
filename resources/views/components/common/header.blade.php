@@ -13,7 +13,16 @@
     </nav>
     <!-- secondary nav -->
     <div class="hidden md:flex items-center space-x-1">
-      <button id="theme-toggle">ダークモード切り替え</button>
+      <!-- light / dark theme toggle button -->
+      <button id="theme-toggle" class="btn btn-black h-8 w-8 rounded-lg border-2 border-slate-300 text-slate-300">
+        <span class="w-full h-full flex items-center justify-center text-2xl" id="dark-icon">
+          <i class="fa-solid fa-moon"></i>
+        </span>
+        <span class="w-full h-full flex items-center justify-center text-2xl hidden" id="light-icon">
+          <i class="fa-solid fa-sun"></i>
+        </span>
+      </button>
+
       @guest
         <a href="{{ route('login') }}" class="btn btn-black md:m-0">Login</a>
         <a href="{{ route('register') }}" class="btn btn-yellow md:m-0">Signup</a>
@@ -67,24 +76,50 @@
 
 
     // dark mode toggle
-    var themeToggleBtn = document.getElementById('theme-toggle');
-    themeToggleBtn.addEventListener('click', function() {
-      if (document.documentElement.classList.contains('dark')) {
-          document.documentElement.classList.remove('dark');
-          localStorage.setItem('color-theme', 'light');
-      } else {
-          document.documentElement.classList.add('dark');
-          localStorage.setItem('color-theme', 'dark');
-      }
-    });
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const themeToggle = document.getElementById('theme-toggle');
+      const darkIcon = document.getElementById('dark-icon');
+      const lightIcon = document.getElementById('light-icon');
 
-    window.addEventListener('DOMContentLoaded', (event) => {
-      const storedTheme = localStorage.getItem('color-theme');
-      if (storedTheme) {
-          document.documentElement.classList.add(storedTheme);
-      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          document.documentElement.classList.add('dark');
+      // 初期テーマの設定
+      const theme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.classList.add(theme);
+      if (theme === 'dark') {
+        darkIcon.classList.add('hidden');
+        lightIcon.classList.remove('hidden');
+      } else {
+        darkIcon.classList.remove('hidden');
+        lightIcon.classList.add('hidden');
       }
+
+      // テーマ切り替えボタンのクリックイベント
+      themeToggle.addEventListener('click', () => {
+        if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+          localStorage.setItem('theme', 'light');
+          darkIcon.classList.remove('hidden');
+          lightIcon.classList.add('hidden');
+        } else {
+          document.documentElement.classList.remove('light');
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+          darkIcon.classList.add('hidden');
+          lightIcon.classList.remove('hidden');
+        }
+
+        // サーバーにテーマを送信
+        fetch('/set-theme', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+          },
+          body: JSON.stringify({
+            theme: localStorage.getItem('theme')
+          })
+        });
+      });
     });
   </script>
 </header>

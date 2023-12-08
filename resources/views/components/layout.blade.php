@@ -1,5 +1,8 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@php
+  $theme = session('theme', 'light');
+@endphp
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="{{ $theme }}">
   <head>
     <meta charset='utf-8'>
     <meta name='viewport'
