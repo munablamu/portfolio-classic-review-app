@@ -11,10 +11,12 @@
     <nav class="hidden md:ml-auto md:mr-auto md:flex md:flex-wrap items-center text-base justify-center">
       <a href="#" class="mr-5 hover:text-slate-100">このサイトの使い方</a>
     </nav>
+
+
     <!-- secondary nav -->
-    <div class="hidden md:flex items-center space-x-1">
+    <div class="items-center space-x-1 flex flex-row">
       <!-- light / dark theme toggle button -->
-      <button id="theme-toggle" class="btn btn-black h-8 w-8 rounded-lg border-2 border-slate-300 text-slate-300">
+      <button id="theme-toggle" aria-label="Toggle theme" class="btn btn-black h-8 w-8 rounded-lg border-2 border-slate-300 text-slate-300">
         <span class="w-full h-full flex items-center justify-center text-2xl" id="dark-icon">
           <i class="fa-solid fa-moon"></i>
         </span>
@@ -23,27 +25,29 @@
         </span>
       </button>
 
-      @guest
-        <a href="{{ route('login') }}" class="btn btn-black md:m-0">Login</a>
-        <a href="{{ route('register') }}" class="btn btn-yellow md:m-0">Signup</a>
-      @endguest
-      @auth
-        <!-- TODO: tabキーでhomeだけフォーカスできない -->
-        <a href="{{ route('home') }}" class="btn btn-black md:m-0">Home</a>
-        <form action="{{ route('logout') }}" method="post">
-          @csrf
-          <button type="submit" class="btn btn-pink md:m-0">Logout</a>
-        </form>
-      @endauth
-    </div>
-    <!-- hamburger button -->
-    <div id="hamburger" class="md:hidden">
-      <button type="button" class="block text-slate-400 hover:text-slate-300 focus:text-slate-200 focus:outline-none">
-        <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
-          <path id="open" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
-          <path id="close" class="hidden" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
-        </svg>
-      </button>
+      <div class="hidden md:flex">
+        @guest
+          <a href="{{ route('login') }}" class="btn btn-black md:m-0">Login</a>
+          <a href="{{ route('register') }}" class="btn btn-yellow md:m-0">Signup</a>
+        @endguest
+        @auth
+          <!-- TODO: tabキーでhomeだけフォーカスできない -->
+          <a href="{{ route('home') }}" class="btn btn-black md:m-0">Home</a>
+          <form action="{{ route('logout') }}" method="post">
+            @csrf
+            <button type="submit" class="btn btn-pink md:m-0">Logout</a>
+          </form>
+        @endauth
+      </div>
+      <!-- hamburger button -->
+      <div id="hamburger" class="md:hidden">
+        <button type="button" class="block text-slate-400 hover:text-slate-300 focus:text-slate-200 focus:outline-none">
+          <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
+            <path id="open" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+            <path id="close" class="hidden" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
   <div id="hamburger_nav" class="hidden md:hidden text-right mx-auto px-5">
@@ -95,14 +99,12 @@
       // テーマ切り替えボタンのクリックイベント
       themeToggle.addEventListener('click', () => {
         if (document.documentElement.classList.contains('dark')) {
-          document.documentElement.classList.remove('dark');
-          document.documentElement.classList.add('light');
+          document.documentElement.className = 'light';
           localStorage.setItem('theme', 'light');
           darkIcon.classList.remove('hidden');
           lightIcon.classList.add('hidden');
         } else {
-          document.documentElement.classList.remove('light');
-          document.documentElement.classList.add('dark');
+          document.documentElement.className = 'dark';
           localStorage.setItem('theme', 'dark');
           darkIcon.classList.add('hidden');
           lightIcon.classList.remove('hidden');

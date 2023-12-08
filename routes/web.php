@@ -13,7 +13,7 @@ use App\Http\Controllers\LikeController;
 use App\Http\Controllers\FollowController;
 use App\Http\Controllers\FavoriteRecordingController;
 use App\Http\Controllers\FavoriteArtistController;
-use App\Http\COntrollers\ThemeController;
+use App\Http\Controllers\ThemeController;
 use Illuminate\Support\Facades\Route;
 
 /*
