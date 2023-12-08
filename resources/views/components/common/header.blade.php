@@ -27,12 +27,12 @@
 
       <div class="hidden md:flex">
         @guest
-          <a href="{{ route('login') }}" class="btn btn-black md:m-0">Login</a>
+          <a href="{{ route('login') }}" class="btn btn-black md:m-0 md:mr-2">Login</a>
           <a href="{{ route('register') }}" class="btn btn-yellow md:m-0">Signup</a>
         @endguest
         @auth
           <!-- TODO: tabキーでhomeだけフォーカスできない -->
-          <a href="{{ route('home') }}" class="btn btn-black md:m-0">Home</a>
+          <a href="{{ route('home') }}" class="btn btn-black md:m-0 md:mr-2">Home</a>
           <form action="{{ route('logout') }}" method="post">
             @csrf
             <button type="submit" class="btn btn-pink md:m-0">Logout</a>
