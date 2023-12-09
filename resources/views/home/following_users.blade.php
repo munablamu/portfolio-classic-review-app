@@ -5,7 +5,7 @@
 
   <div class="mx-5 mt-4">
     @if ( $following_users->count() === 0 )
-      <p>ユーザーをフォローすると、ここにフォローユーザーが表示されます。</p>
+      <p class="text-slate-400 dark:text-slate-400">ユーザーをフォローすると、ここにフォローユーザーが表示されます。</p>
     @else
       <ul class="-mt-4">
         @foreach ( $following_users as $i_user )

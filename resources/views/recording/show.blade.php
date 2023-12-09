@@ -54,12 +54,18 @@
     </a>
   </div>
 
-  <ul>
-    @foreach ( $reviews as $i_review )
-      <li>
-        <x-review.card :review=$i_review />
-      </li>
-    @endforeach
-  </ul>
+  <div>
+    @if ( $reviews->count() === 0 )
+      <p>まだレビューを書いている人がいません。</p>
+    @else
+      <ul>
+        @foreach ( $reviews as $i_review )
+          <li>
+            <x-review.card :review=$i_review />
+          </li>
+        @endforeach
+      </ul>
+    @endif
+  </div>
   {{ $reviews->appends(request()->query())->links() }}
 </x-layout>

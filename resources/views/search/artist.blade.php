@@ -1,5 +1,5 @@
 <x-layout title='Classic Music Review App'>
-  <h1 class="search_h">artist search</h1>
+  <h1 class="search_h">Search by Artist</h1>
 
   <div class="mx-3">
     <x-search.bar :q='$q' :oldSearchType=$oldSearchType />
@@ -7,15 +7,21 @@
   <p class="text-slate-600 dark:text-slate-300 text-sm mx-5">実際には英語に翻訳された「＊＊＊＊＊＊＊＊＊」で検索されています。</p>
   <p class="text-slate-600 dark:text-slate-300 text-sm mx-5">検索結果: ****件</p>
 
-  <ul class="mx-5">
-    @foreach ( $artists as $i_artist )
-      <li>
-        <x-artist.card :artist=$i_artist />
-      </li>
-    @endforeach
-  </ul>
+  <div class="mx-5 mt-2">
+    @if ( $artists->count() === 0 )
+      <p>検索したキーワードでは、1件もヒットしませんでした。</p>
+    @else
+      <ul>
+        @foreach ( $artists as $i_artist )
+          <li>
+            <x-artist.card :artist=$i_artist />
+          </li>
+        @endforeach
+      </ul>
 
-  <div class="mx-5">
-    {{ $artists->links() }}
+      <div>
+        {{ $artists->links() }}
+      </div>
+    @endif
   </div>
 </x-layout>

@@ -5,7 +5,7 @@
 
   <div class="mx-5 mt-4">
     @if ( $following_user_reviews->count() === 0 )
-      <p>ユーザーをフォローすると、ここに新着レビューが表示されます。</p>
+      <p class="text-slate-400 dark:text-slate-400">ユーザーをフォローすると、ここに新着レビューが表示されます。</p>
     @else
       <ul>
       @foreach ( $following_user_reviews as $i_review )

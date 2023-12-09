@@ -24,13 +24,17 @@
   </div>
 
   <div class="mx-5">
-    <ul>
-      @foreach ( $reviews as $i_review )
-        <li>
-          <x-review.card_in_user_review :review=$i_review />
-        </li>
-      @endforeach
-    </ul>
+    @if ( $reviews->count() === 0 )
+      <p class="text-slate-400 dark:text-slate-400">このユーザーはまだレビューを投稿していません。</p>
+    @else
+      <ul>
+        @foreach ( $reviews as $i_review )
+          <li>
+            <x-review.card_in_user_review :review=$i_review />
+          </li>
+        @endforeach
+      </ul>
+    @endif
   </div>
   {{ $reviews->appends(request()->query())->links() }}
 </x-layout>
