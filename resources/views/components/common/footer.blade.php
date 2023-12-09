@@ -26,7 +26,7 @@
         </svg>
       </a>
       <!-- Linkedin -->
-      <a class="ml-3 text-slate-400 hover:text-slate-300">
+      <a id="linkedin" class="ml-3 text-slate-400 hover:text-slate-300">
         <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
           <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
           <circle cx="4" cy="4" r="2" stroke="none"></circle>
@@ -37,9 +37,17 @@
 
   <script>
     const currentUrl = window.location.href;
+    const pageTitle = document.title;
 
     const twitter = document.getElementById('twitter');
-    twitter.setAttribute("href", `https://twitter.com/intent/tweet?url=${currentUrl}&hashtags=ClassicMusicReviewApp`);
+    twitter.setAttribute("href", `https://twitter.com/intent/tweet?text=${pageTitle}&url=${currentUrl}&hashtags=ClassicMusicReviewApp`);
+
+    const linkedin = document.getElementById('linkedin');
+    linkedin.setAttribute("href", `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`)
   </script>
+  <!-- twitter -->
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <!-- linkedin -->
+  <script src="https://platform.linkedin.com/in.js" type="text/javascript"></script>
+  <script type="IN/Share" data-url="https://cly7796.net/blog/sample/set-up-a-linkedin-share-button/"></script>
 </footer>
