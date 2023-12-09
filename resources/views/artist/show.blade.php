@@ -28,7 +28,7 @@
         <x-recording.card_in_artist :recording=$i_recording />
       </li>
     @endforeach
-    {{ $recordings->links() }}
+    {{ $recordings->appends(request()->query())->links() }}
   </ul>
 </x-layout>
 

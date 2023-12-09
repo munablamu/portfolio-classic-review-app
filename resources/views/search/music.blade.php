@@ -20,7 +20,7 @@
       </ul>
 
       <div>
-        {{ $musics->links() }}
+        {{ $musics->appends(request()->query())->links() }}
       </div>
     @endif
   </div>

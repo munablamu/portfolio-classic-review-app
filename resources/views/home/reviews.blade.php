@@ -14,7 +14,7 @@
           </li>
         @endforeach
       </ul>
-      {{ $reviews->links() }}
+      {{ $reviews->appends(request()->query())->links() }}
     @endif
   </div>
 </x-layout>
