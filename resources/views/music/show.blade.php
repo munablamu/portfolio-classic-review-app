@@ -1,10 +1,10 @@
 <x-layout title='Classic Music Review App'>
   <div class="mx-5">
     <div class="relative pt-2 pb-1">
-      <h1 class="text-3xl sm:text-6xl font-black tracking-wide text-slate-500 dark:text-slate-400">
+      <h1 class="text-3xl sm:text-6xl font-Ubuntu font-bold tracking-wide text-slate-500 dark:text-slate-400">
         {{ $music->title }}
       </h1>
-      <h2 class="text-xl sm:text-5xl font-bold tracking-wide text-right -mt-4 sm:-mt-5 text-sage-500">
+      <h2 class="text-xl sm:text-5xl font-Ubuntu font-bold tracking-wide text-right -mt-4 sm:-mt-5 text-sage-500">
         {{ $music->composer->name }}
       </h2>
     </div>

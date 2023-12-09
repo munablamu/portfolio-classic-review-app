@@ -19,7 +19,7 @@
       </div>
     </form>
   </div>
-  <hr class="border-t border-slate-200 my-4 mx-5">
+  <hr class="border-t border-slate-200 dark:border-slate-600 my-4 mx-5">
 
   <div class="mx-5">
     <form action="{{ route('profile.update_self_introduction') }}" method="post">
@@ -31,7 +31,7 @@
       <div>
         <label for="self_introduction" class="block text-sm font-medium">自己紹介</label>
         <div class="mt-1">
-          <textarea id="self_introduction" name="self_introduction" rows="10" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md" placeholder="レビューを書いてください">{{ old('self_introduction', $user->self_introduction) }}</textarea>
+          <textarea id="self_introduction" name="self_introduction" rows="10" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md" placeholder="自己紹介文を書いてください">{{ old('self_introduction', $user->self_introduction) }}</textarea>
         </div>
       </div>
 
@@ -42,14 +42,14 @@
       </div>
     </form>
   </div>
-  <hr class="border-t border-slate-200 my-4 mx-5">
+  <hr class="border-t border-slate-200 dark:border-slate-600 my-4 mx-5">
 
   <div class="mx-5 mb-5">
     @include('profile.partials.update-profile-information-form')
-    <hr class="border-t border-blue-slate-200 my-4">
+    <hr class="border-t border-blue-slate-200 dark:border-slate-600 my-4">
 
     @include('profile.partials.update-password-form')
-    <hr class="border-t border-blue-slate-200 my-4">
+    <hr class="border-t border-blue-slate-200 dark:border-slate-600 my-4">
 
     @include('profile.partials.delete-user-form')
   </div>

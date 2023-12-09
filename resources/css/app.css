@@ -83,7 +83,7 @@
     @apply text-purple-500;
 }
 .search_h {
-    @apply md:text-7xl sm:text-6xl text-3xl font-bold tracking-wide text-right mr-5 text-slate-300 dark:text-slate-400;
+    @apply md:text-7xl sm:text-6xl text-3xl font-bold tracking-wide text-right mr-5 text-slate-300 dark:text-slate-400 font-Ubuntu italic;
 }
 .validate {
     @apply text-rose-500 text-base font-semibold tracking-wide mt-2;
@@ -116,3 +116,6 @@ input:-webkit-autofill:active {
 }
 
 @tailwind utilities;
+
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Hind&family=Ubuntu:ital,wght@1,700&display=swap');

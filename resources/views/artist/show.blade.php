@@ -1,6 +1,6 @@
 <x-layout title='Classic Music Review App'>
   <div class="mx-5 pt-2 mb-5">
-    <h1 class="text-3xl sm:text-6xl font-black tracking-wide text-slate-500 dark:text-slate-400">{{ $artist->name }}</h1>
+    <h1 class="text-3xl sm:text-6xl font-Ubuntu font-bold tracking-wide text-slate-500 dark:text-slate-400">{{ $artist->name }}</h1>
   </div>
   @auth
     <div class="flex justify-end mb-5 mx-5">

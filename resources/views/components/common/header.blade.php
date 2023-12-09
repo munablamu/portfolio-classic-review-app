@@ -8,7 +8,7 @@
       <div class="w-8 h-8 sm:w-10 sm:h-10 text-base sm:text-xl text-slate-100 p-2 bg-indigo-500 rounded-full flex justify-center items-center">
         <i class="fa-solid fa-music"></i>
       </div>
-      <span class="ml-3 text-xl font-bold">Classic Music Review App</span>
+      <span class="ml-3 text-xl font-bold font-Hind">Classic Music Review App</span>
     </a>
     <!-- primary nav -->
     <nav class="hidden md:ml-auto md:mr-auto md:flex md:flex-wrap items-center text-base justify-center">

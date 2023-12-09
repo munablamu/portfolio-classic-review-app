@@ -18,6 +18,10 @@
     <script src="https://kit.fontawesome.com/c677d29c82.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Hind&family=Ubuntu:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
   </head>
   <body class="flex flex-col min-h-screen bg-slate-150 text-slate-600 dark:bg-slate-700 dark:text-slate-250 md:antialiased">
     <x-common.header />

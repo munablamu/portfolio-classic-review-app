@@ -13,6 +13,9 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                'Hind': ['Hind'],
+                'Ubuntu': ['Ubuntu'],
+                'Fjalla One': ['Fjalla One'],
             },
             backgroundImage: theme => ({
                 'top-background': "url('/storage/app/public/top_image.png')",
