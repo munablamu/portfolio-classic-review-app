@@ -8,7 +8,7 @@
       <div class="w-8 h-8 sm:w-10 sm:h-10 text-base sm:text-xl text-slate-100 p-2 bg-indigo-500 rounded-full flex justify-center items-center">
         <i class="fa-solid fa-music"></i>
       </div>
-      <span class="ml-3 text-xl font-bold font-Hind">Classic Music Review App</span>
+      <span class="ml-3 text-xl font-bold font-Lobster tracking-widest">Classic Music Review App</span>
     </a>
     <!-- primary nav -->
     <nav class="hidden md:ml-auto md:mr-auto md:flex md:flex-wrap items-center text-base justify-center">
@@ -57,7 +57,9 @@
   </div>
   <div id="hamburger_nav" class="hidden md:hidden text-right mx-auto px-5">
     <nav class="px-2 pt-2 pb-4 flex flex-col p-0">
-      <a href="#" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-600 focus:bg-slate-500">このサイトの使い方</a>
+      <a href="#" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-600 focus:bg-slate-500">
+        <i class="fa-solid fa-seedling"></i><span class="ml-1">このサイトの使い方</span>
+      </a>
       @guest
         <a href="{{ route('login') }}" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-600 focus:bg-slate-500">Login</a>
         <a href="{{ route('register') }}" class="block px-2 py-1 rounded-md text-yellow-500 hover:text-yellow-400 focus:text-yellow-300 hover:bg-slate-600 focus:bg-slate-500">Signup</a>

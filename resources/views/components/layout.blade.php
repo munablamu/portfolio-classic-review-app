@@ -21,9 +21,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Hind&family=Ubuntu:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lobster&family=Ubuntu:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
   </head>
-  <body class="flex flex-col min-h-screen bg-slate-125 text-slate-600 dark:bg-slate-700 dark:text-slate-250 md:antialiased">
+  <body class="flex flex-col min-h-screen font-sans bg-slate-125 text-slate-600 dark:bg-slate-700 dark:text-slate-250 md:antialiased">
     <x-common.header />
     <x-common.session_feedback />
     <div class="flex-grow pt-16 relative w-full max-w-[60rem] mx-auto">

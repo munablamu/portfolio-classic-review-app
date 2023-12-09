@@ -12,10 +12,9 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-                'Hind': ['Hind'],
+                sans: ['Lato', ...defaultTheme.fontFamily.sans],
                 'Ubuntu': ['Ubuntu'],
-                'Fjalla One': ['Fjalla One'],
+                'Lobster': ['Lobster'],
             },
             backgroundImage: theme => ({
                 'top-background': "url('/storage/app/public/top_image.png')",

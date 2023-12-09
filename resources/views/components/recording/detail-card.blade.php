@@ -3,7 +3,7 @@
     <img class="object-cover w-full" src="{{ jacket_url($recording->jacket_filename) }}" alt="{{ $recording->title }}">
   </div>
   <div class="w-full sm:w-2/3 sm:pl-4 flex flex-col">
-    <h1 class="text-5xl font-Ubuntu font-bold text-slate-500 dark:text-slate-400">
+    <h1 class="mb-1 text-5xl font-Ubuntu font-bold text-slate-500 dark:text-slate-400">
       <!-- TODO: ここの処理をHTMLに書かずに済むようにしたい -->
       @if ( $recording->artists !== null )
         @foreach ( $recording->artists as $i_artist )

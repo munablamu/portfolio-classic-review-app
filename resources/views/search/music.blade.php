@@ -1,5 +1,5 @@
 <x-layout title='Classic Music Review App'>
-  <h1 class="search_h">Search by Music Title</h1>
+  <h1 class="search_h">Search by Title</h1>
 
   <div class="mx-3">
     <x-search.bar :q='$q' :oldSearchType=$oldSearchType />
