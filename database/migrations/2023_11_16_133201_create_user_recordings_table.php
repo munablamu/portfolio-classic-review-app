@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('recording_id')->constrained()->onDelete('cascade');
             $table->timestamps();
 
+            $table->index(['user_id', 'recording_id'], 'user_recording_index');
             $table->unique(['user_id', 'recording_id']);
         });
     }
