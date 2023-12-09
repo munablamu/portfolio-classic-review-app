@@ -22,8 +22,9 @@ export default {
             }),
             colors: {
                 'slate': {
-                    '150': '#eaeff5',
-                    '250': '#d7dfe9',
+                    '125': '#EEF2F7',
+                    '150': '#EAEFF5',
+                    '250': '#D7DFE9',
                 },
                 'sage': {
                     '50': '#F3F4D8',
