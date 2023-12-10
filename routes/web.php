@@ -14,6 +14,7 @@ use App\Http\Controllers\FollowController;
 use App\Http\Controllers\FavoriteRecordingController;
 use App\Http\Controllers\FavoriteArtistController;
 use App\Http\Controllers\ThemeController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -120,6 +121,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 // theme
 Route::post('/set-theme', [ThemeController::class, 'set']);
+
+// contact
+Route::get('/contact', [ContactController::class, 'index'])
+    ->name('contact.index');
+Route::post('/contact/confirm', [ContactController::class, 'confirm'])
+    ->name('contact.confirm');
+Route::post('/contact/send', [ContactController::class, 'send'])
+    ->name('contact.send');
 
 Route::middleware('auth')->group(function () {
     // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

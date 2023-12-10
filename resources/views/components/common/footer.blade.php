@@ -1,10 +1,15 @@
 <footer class="text-slate-300 bg-slate-800 body-font z-10">
   <div class="container px-5 py-1 mx-auto flex items-center sm:flex-row flex-col">
     <p class="text-sm sm:py-2 sm:mt-0 mt-2">© 2023 munablemu —
-      <a href="https://github.com/munablamu/portfolio-classic-review-app" class="text-slate-400 underline ml-1" rel="noopener noreferrer" target="_blank">
+      <a href="https://github.com/munablamu/portfolio-classic-review-app" class="text-slate-400 hover:text-slate-300 underline ml-1" rel="noopener noreferrer" target="_blank">
       <i class="fa-brands fa-github mr-1"></i>github
       </a>
     </p>
+
+    <a href="{{ route('contact.index') }}" class="sm:ml-10 text-sm text-slate-400 hover:text-slate-300">
+      <i class="fa-solid fa-envelope mr-1"></i>お問い合わせ
+    </a>
+
     <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
       <!-- Facebook -->
       <a id="facebook" class="text-slate-400 hover:text-slate-300" rel="nofollow noopener" target="_blank">
