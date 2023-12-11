@@ -29,7 +29,7 @@
                 $user_review->content = "レビュー文がありません。"
               @endphp
             @endempty
-            <x-review.card :review=$user_review />
+            <x-review.card :review=$user_review :clamp=false />
           </div>
         </div>
       @endempty
