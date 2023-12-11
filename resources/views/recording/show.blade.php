@@ -61,7 +61,7 @@
       <ul>
         @foreach ( $reviews as $i_review )
           <li>
-            <x-review.card :review=$i_review />
+            <x-review.card :review=$i_review :clamp=true />
           </li>
         @endforeach
       </ul>

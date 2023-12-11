@@ -1,5 +1,7 @@
 <x-layout title='Classic Music Review App'>
-  <x-recording.detail-card :recording=$recording />
+  <div class="mx-5 mt-5">
+    <x-recording.card :recording=$recording />
+  </div>
 
   <div class="mx-5 mb-5">
     <p>{{ Auth::user()->name }}さんのレビューを書いてみましょう。</p>

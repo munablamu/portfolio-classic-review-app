@@ -45,9 +45,9 @@
         </p>
       </div>
       <div class="p-0">
-        <p class="font-semibold leading-relaxed line-clamp-3">
-          {!! $review->title !!}
-        </p>
+        <a class="url font-semibold leading-relaxed line-clamp-3" href="{{ route('review.show', ['review' => $review]) }}">
+          {!! $review->title !!} (続きを読む)
+        </a>
       </div>
       <div class="p-0">
         <p class="leading-relaxed">

@@ -65,6 +65,8 @@ Route::get('/search/artist', [SearchController::class, 'artist'])
 Route::get('/search/review', [SearchController::class, 'review'])
     ->name('search.review');
 
+Route::get('/review/{review}', [ReviewController::class, 'show'])
+    ->name('review.show')->where('review', '[0-9]+');
 Route::get('/review/create/{recording}', [ReviewController::class, 'create'])
     ->name('review.create')->where('recording', '[0-9]+');
 Route::post('/review/store/{recording}', [ReviewController::class, 'store'])

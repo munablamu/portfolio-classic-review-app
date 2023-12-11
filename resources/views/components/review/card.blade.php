@@ -25,12 +25,12 @@
     </div>
   </div>
   <div class="p-0">
-    <p class="font-bold leading-relaxed">
+    <a class="font-bold leading-relaxed url" href="{{ route('review.show', ['review' => $review ]) }}">
       {{ $review->title }}
-    </p>
+    </a>
   </div>
   <div class="p-0">
-    <p class="font-normal leading-relaxed">
+    <p class="font-normal leading-relaxed {{ $clamp ? 'line-clamp-5' : '' }}">
       {{ $review->content }}
     </p>
   </div>

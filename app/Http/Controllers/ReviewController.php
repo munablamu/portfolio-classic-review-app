@@ -12,6 +12,14 @@ use Illuminate\Support\Facades\Session;
 
 class ReviewController extends Controller
 {
+    public function show(Review $review)
+    {
+        $recording = $review->recording;
+
+        return view('review.show',
+            compact('review', 'recording'));
+    }
+
     public function create(Request $request, Recording $recording)
     {
         if ( !Session::has('url.reviewCreate') ) {
