@@ -8,12 +8,18 @@ use App\Models\Recording;
 
 class RecordingService
 {
-    public function getRecordingsRelatedToArtist(Artist $artist, int $num_paginate)
+    public function getRecordingsRelatedToArtist(Artist $artist, int $num_paginate, ?string $orderBy)
     {
+        $orderBy = match($orderBy) {
+            'release_date' => 'release_date',
+            'average_rate' => 'average_rate',
+            default => 'release_date'
+        };
+
         // TODO: これpaginateのpageクエリパラメータ大丈夫？
         $recordings = Recording::whereHas('artists', function ($query) use ($artist) {
             $query->where('artists.id', $artist->id);
-            })->orderBy('average_rate', 'desc')
+            })->orderBy($orderBy, 'desc')
             ->paginate($num_paginate);
 
         return $recordings;

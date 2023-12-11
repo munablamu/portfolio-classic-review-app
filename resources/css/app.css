@@ -93,6 +93,16 @@
     @apply text-rose-500 text-base font-semibold tracking-wide mt-2;
 }
 
+.order {
+    @apply py-1 px-2 mx-1 rounded-full border-2 border-slate-500 dark:border-sky-300;
+}
+.order-true {
+    @apply bg-slate-500 text-slate-50 dark:bg-sky-300 dark:text-slate-700;
+}
+.order-false {
+    @apply bg-inherit text-slate-500 dark:bg-inherit dark:text-sky-300;
+}
+
 .overflow-x {
     overflow-x: auto;
     scrollbar-width: none; /* Firefox */

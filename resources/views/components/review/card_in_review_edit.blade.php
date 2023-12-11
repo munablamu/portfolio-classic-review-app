@@ -37,6 +37,7 @@
             {{ $review->content }}
           </p>
         </div>
+        <x-common.like :review=$review />
         @if ( Auth::check() && Auth::id() === $review->user->id )
           <div class="justify-end flex">
             <a href="{{ route('review.edit', ['recording' => $review->recording]) }}" class="btn btn-indigo">
@@ -50,8 +51,6 @@
               </button>
             </form>
           </div>
-        @else
-          <x-common.like :review=$review />
         @endif
       </div>
     </div>

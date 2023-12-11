@@ -40,22 +40,7 @@
             {{ $review->content }}
           </p>
         </div>
-        @if ( Auth::check() && Auth::id() === $review->user->id )
-          <div class="justify-end flex">
-            <a href="{{ route('review.edit', ['recording' => $review->recording]) }}" class="btn btn-indigo">
-              <i class="fa-solid fa-pen-nib mr-1"></i>編集
-            </a>
-            <form action="{{ route('review.delete', ['review' => $review]) }}" method="post">
-              @method('DELETE')
-              @csrf
-              <button type="submit" class="btn btn-rose">
-                <i class="fa-solid fa-trash mr-1"></i>削除
-              </button>
-            </form>
-          </div>
-        @else
-          <x-common.like :review=$review />
-        @endif
+        <x-common.like :review=$review />
       </div>
     </div>
   </div>

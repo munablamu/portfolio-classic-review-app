@@ -3,30 +3,30 @@
 
   <x-user.nav_tabs :user=$user />
 
-  <div class="flex justify-end mx-5">
-    @php
-      $orderBy = request()->query('orderBy', 'like');
-    @endphp
-    <div class="my-4 text-right">
-      <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 dark:border-sky-300 {{ $orderBy === 'like' ? ' bg-slate-500 text-slate-50 dark:bg-sky-300 dark:text-slate-700' : 'bg-inherit text-slate-500 dark:bg-inherit dark:text-sky-300' }}"
-        href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'like']) }}">
-        <i class="fa-solid fa-heart mr-1"></i>いいね順
-      </a>
-      <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 dark:border-sky-300 {{ $orderBy === 'rate' ? ' bg-slate-500 text-slate-50 dark:bg-sky-300 dark:text-slate-700' : 'bg-inherit text-slate-500 dark:bg-inherit dark:text-sky-300' }}"
-        href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'rate']) }}">
-        <i class="fa-solid fa-star mr-1"></i>高評価順
-      </a>
-      <a class="py-1 px-2 mx-1 rounded-full border-2 border-slate-500 dark:border-sky-300 {{ $orderBy === 'updated_at' ? ' bg-slate-500 text-slate-50 dark:bg-sky-300 dark:text-slate-700' : 'bg-inherit text-slate-500 dark:bg-inherit dark:text-sky-300' }}"
-        href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'updated_at']) }}">
-        <i class="fa-solid fa-calendar-plus mr-1"></i>新着投稿順
-      </a>
+  @if ( $user->self_introduction === null )
+    <p class="text-slate-400 dark:text-slate-400 mx-5">このユーザーはまだレビューを投稿していません。</p>
+  @else
+    <div class="flex justify-end mx-5">
+      @php
+        $orderBy = request()->query('orderBy', 'like');
+      @endphp
+      <div class="my-4 text-right">
+        <a class="order {{ $orderBy === 'like' ? 'order-true' : 'order-false' }}"
+          href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'like']) }}">
+          <i class="fa-solid fa-heart mr-1"></i>いいね順
+        </a>
+        <a class="order {{ $orderBy === 'rate' ? 'order-true' : 'order-false' }}"
+          href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'rate']) }}">
+          <i class="fa-solid fa-star mr-1"></i>高評価順
+        </a>
+        <a class="order {{ $orderBy === 'updated_at' ? 'order-true' : 'order-false' }}"
+          href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'updated_at']) }}">
+          <i class="fa-solid fa-calendar-plus mr-1"></i>新着投稿順
+        </a>
+      </div>
     </div>
-  </div>
 
-  <div class="mx-5">
-    @if ( $reviews->count() === 0 )
-      <p class="text-slate-400 dark:text-slate-400">このユーザーはまだレビューを投稿していません。</p>
-    @else
+    <div class="mx-5">
       <ul>
         @foreach ( $reviews as $i_review )
           <li>
@@ -34,8 +34,8 @@
           </li>
         @endforeach
       </ul>
-    @endif
-  </div>
-  {{ $reviews->appends(request()->query())->links() }}
+    </div>
+    {{ $reviews->appends(request()->query())->links() }}
+  @endif
 </x-layout>
 
