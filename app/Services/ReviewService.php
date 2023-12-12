@@ -156,9 +156,13 @@ class ReviewService
 
     public function search(string $q, int $num_paginate)
     {
-        $reviews = Review::search($q)
-            ->paginate($num_paginate)
-            ->appends(['q' => $q, 'query' => null]);
+        if ( !empty($q) ) {
+            $reviews = Review::search($q)
+                ->paginate($num_paginate)
+                ->appends(['q' => $q, 'query' => null]);
+        } else {
+            $reviews = collect();
+        }
 
         return $reviews;
     }

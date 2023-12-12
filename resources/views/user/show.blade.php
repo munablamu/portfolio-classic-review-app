@@ -1,4 +1,4 @@
-<x-layout title='Classic Music Review App'>
+<x-layout :title="$user->name">
   <x-user.info :user=$user :reviewCount=$reviewCount :allReviewCount=$allReviewCount :likeSum=$likeSum :fromUserController=$fromUserController />
 
 

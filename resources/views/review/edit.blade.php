@@ -1,4 +1,4 @@
-<x-layout title='Classic Music Review App'>
+<x-layout>
   <div class="mx-5 mt-5">
     <x-recording.card :recording=$recording />
   </div>

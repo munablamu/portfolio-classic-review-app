@@ -1,4 +1,4 @@
-<x-layout title='Classic Music Review App'>
+<x-layout :title="'Search by Title'">
   <h1 class="search_h">Search by Title</h1>
 
   <div class="mx-3">

@@ -13,9 +13,13 @@ class ArtistService
 
     public function search(string $q, int $num_paginate)
     {
-        $artists = Artist::search($q)
-            ->paginate($num_paginate)
-            ->appends(['q' => $q, 'query' => null]);
+        if ( !empty($q) ) {
+            $artists = Artist::search($q)
+                ->paginate($num_paginate)
+                ->appends(['q' => $q, 'query' => null]);
+        } else {
+            $artists = collect();
+        }
 
         return $artists;
     }

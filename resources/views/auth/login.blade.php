@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :title="'ログイン'">
     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:w-[28rem] w-full">
         <div class="mx-5">
             <!-- Session Status -->

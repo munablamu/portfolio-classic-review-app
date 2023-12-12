@@ -1,4 +1,7 @@
-<x-layout title='Classic Music Review App'>
+@php
+  $title = $music->composer->name . ', ' . $music->title
+@endphp
+<x-layout :title=$title>
   <div class="mx-5">
     <div class="relative pt-2 pb-1">
       <h1 class="text-3xl sm:text-6xl font-Ubuntu font-bold tracking-wide text-slate-500 dark:text-slate-400">

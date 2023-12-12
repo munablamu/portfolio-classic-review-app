@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :title="'お問い合わせ内容のご確認'">
     <h1 class="mx-5 my-5 text-xl font-bold">お問い合わせ内容のご確認</h1>
     <div class="mx-5">
         <form action="{{ route('contact.send') }}" method="post">

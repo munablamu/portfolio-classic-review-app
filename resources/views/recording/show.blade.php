@@ -1,4 +1,4 @@
-<x-layout title='Classic Music Review App'>
+<x-layout :title="$recording->title">
   <x-recording.detail-card :recording=$recording />
 
   @php

@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :title="'お問い合わせありがとうございました'">
     <div class="md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
         <div class="flex flex-col items-center justify-center md:whitespace-nowrap">
             <h1 class="text-3xl font-bold font-Ubuntu text-slate-400 dark:text-slate-500">お問い合わせありがとうございました。</h1>
