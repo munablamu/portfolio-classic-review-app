@@ -8,7 +8,10 @@
       @method("PUT")
       @csrf
       <div>
-        <label for="user_icon" class="block text-sm font-medium">ユーザーアイコン</label>
+        <label for="user_icon" class="inline-block text-sm font-medium">ユーザーアイコン</label>
+        @error('user_icon')
+          <span class="validate ml-4">{{ $message }}</span>
+        @enderror
         <div class="mt-1 flex rounded-md shadow-sm">
           <input type="file" name="user_icon" id="user_icon" class="focus:ring-indigo-500 focus:border-indigo-500 flex-grow border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md">
         </div>

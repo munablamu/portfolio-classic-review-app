@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Http\Requests\UserIconRequest;
+use App\Http\Requests\SelfIntroductionRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -69,7 +71,7 @@ class ProfileController extends Controller
         return Redirect::to('/');
     }
 
-    public function updateUserIcon(Request $request)
+    public function updateUserIcon(UserIconRequest $request)
     {
         try {
             if ( $request->hasFile('user_icon') ) {
@@ -103,7 +105,7 @@ class ProfileController extends Controller
             ->with('feedback.success', 'ユーザーアイコンの更新に成功しました。');
     }
 
-    public function updateSelfIntroduction(Request $request)
+    public function updateSelfIntroduction(SelfIntroductionRequest $request)
     {
         try {
             $selfIntroduction = $request->post('self_introduction');
