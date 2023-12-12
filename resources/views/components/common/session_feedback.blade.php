@@ -75,9 +75,9 @@
   </script>
 @endif
 @if ( session('feedback.success') )
-  <div id="alert" class="fixed bottom-0 w-full sm:w-auto sm:top-20 sm:right-5 z-50">
+  <div id="alert" class="fixed bottom-5 mx-5 w-[calc(100%-2.5rem)] sm:m-0 sm:w-auto sm:top-20 sm:right-5 sm:bottom-auto z-10">
     <div class="shadow-lg p-2 bg-emerald-800 items-center text-emerald-50 leading-none rounded-lg flex" role="alert">
-      <span class="flex rounded-full bg-emerald-500 uppercase px-2 py-1 text-xs font-bold mr-3">Success</span>
+      <span class="flex rounded-full bg-emerald-600 uppercase px-2 py-1 text-xs font-bold mr-3">Success</span>
       <span class="font-semibold mr-2 text-left flex-auto">{{ session('feedback.success') }}</span>
     </div>
   </div>
