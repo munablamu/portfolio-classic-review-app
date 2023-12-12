@@ -28,4 +28,12 @@ class ContactRequest extends FormRequest
             'message' => ['required'],
         ];
     }
+
+    public function attributes(): array
+    {
+        return [
+            'title' => '件名',
+            'message' => 'お問い合わせ内容',
+        ];
+    }
 }
