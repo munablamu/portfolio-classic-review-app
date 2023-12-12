@@ -78,12 +78,14 @@ Route::put('/review/update/{recording}', [ReviewController::class, 'update'])
 Route::delete('/review/delete/{review}', [ReviewController::class, 'delete'])
     ->name('review.delete')->where('review', '[0-9]+');
 
-// Route::get('/user/index', [UserController::class, 'index'])
-//     ->name('user');
 Route::get('/users/{user}', [UserController::class, 'show'])
     ->name('user.show')->where('user', '[0-9]+');
 Route::get('/users/{user}/reviews', [UserController::class, 'reviews'])
     ->name('user.reviews')->where('user', '[0-9]+');
+Route::get('/users/{user}/follows', [UserController::class, 'follows'])
+    ->name('user.follows')->where('user', '[0-9]+');
+Route::get('/users/{user}/followers', [UserController::class, 'followers'])
+    ->name('user.followers')->where('user', '[0-9]+');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])

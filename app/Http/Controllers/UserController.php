@@ -55,4 +55,28 @@ class UserController extends Controller
         return view('user.reviews',
             compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'fromUserController', 'reviews'));
     }
+
+    public function follows(User $user)
+    {
+        ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
+            = $this->getUserInfo($user);
+        $fromUserController = true;
+
+        $follows = $user->following()->paginate(10);
+
+        return view('user.follows',
+            compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'fromUserController', 'follows'));
+    }
+
+    public function followers(User $user)
+    {
+        ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
+            = $this->getUserInfo($user);
+        $fromUserController = true;
+
+        $followers = $user->followers()->paginate(10);
+
+        return view('user.followers',
+            compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'fromUserController', 'followers'));
+    }
 }

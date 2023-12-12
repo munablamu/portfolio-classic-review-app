@@ -12,10 +12,12 @@
         </a>
       </div>
     </div>
-    <form action="{{ route('follow.destroy', ['user' => $user]) }}" method="post">
-      @csrf
-      <button type="submit" class="btn btn-rose">解除する</button>
-    </form>
+    @if ( Str::startsWith(Request::path(), 'home') )
+      <form action="{{ route('follow.destroy', ['user' => $user]) }}" method="post">
+        @csrf
+        <button type="submit" class="btn btn-rose">解除する</button>
+      </form>
+    @endif
   </div>
   <hr class="border-t border-slate-200 dark:border-slate-600">
 </div>
