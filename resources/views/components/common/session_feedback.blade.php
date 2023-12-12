@@ -1,21 +1,19 @@
 @if ( session('feedback.info') )
-  <div class="alert max-w-lg fixed top-20 right-0 z-50" id="alert">
-    <div class="flex bg-blue-100 rounded-lg p-4 mb-4 text-sm text-blue-700" role="alert">
-      <svg class="w-5 h-5 inline mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-      <div>
-        <span class="font-medium">Info</span> {{ session('feedback.info') }}
-      </div>
+  <div id="alert" class="fixed bottom-0 w-full sm:w-auto sm:top-20 sm:right-5 z-50">
+    <div class="shadow-lg p-2 bg-indigo-800 items-center text-indigo-50 leading-none rounded-lg flex" role="alert">
+      <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">Info</span>
+      <span class="font-semibold mr-2 text-left flex-auto">{{ session('feedback.info') }}</span>
     </div>
   </div>
 
   <style>
-    .alert {
+    #alert {
       animation: disappear 10s forwards; /* アラートを10秒後に消す */
     }
 
     @keyframes disappear {
       0%   { opacity: 1; }
-      99%  { opacity: 1; }
+      95%  { opacity: 1; }
       100% { opacity: 0; }
     }
   </style>
@@ -24,26 +22,36 @@
     document.getElementById('alert').addEventListener('animationend', function() {
       this.style.display = 'none';
     });
+
+    // TODO: info, success, error, warningで変数名が違うので注意
+    if ( "{{ session('feedback.info') }}" ) {
+      const infoIdValue = "{{ uniqid() }}";
+      if ( sessionStorage ) {
+        if ( sessionStorage.getItem('infoId') === infoIdValue ) {
+          document.getElementById('alert').style.display = "none";
+        } else {
+          sessionStorage.setItem('infoId', infoIdValue);
+        }
+      }
+    }
   </script>
 @endif
 @if ( session('feedback.error') )
-  <div class="alert max-w-lg fixed top-20 right-0 z-50" id="alert">
-    <div class="flex bg-red-100 rounded-lg p-4 mb-4 text-sm text-red-700" role="alert">
-      <svg class="w-5 h-5 inline mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-      <div>
-        <span class="font-medium">Error</span> {{ session('feedback.error') }}
-      </div>
+  <div id="alert" class="fixed bottom-0 w-full sm:w-auto sm:top-20 sm:right-5 z-50">
+    <div class="shadow-lg p-2 bg-rose-800 items-center text-rose-50 leading-none rounded-lg flex" role="alert">
+      <span class="flex rounded-full bg-rose-500 uppercase px-2 py-1 text-xs font-bold mr-3">Error</span>
+      <span class="font-semibold mr-2 text-left flex-auto">{{ session('feedback.error') }}</span>
     </div>
   </div>
 
   <style>
-    .alert {
+    #alert {
       animation: disappear 10s forwards; /* アラートを10秒後に消す */
     }
 
     @keyframes disappear {
       0%   { opacity: 1; }
-      99%  { opacity: 1; }
+      95%  { opacity: 1; }
       100% { opacity: 0; }
     }
   </style>
@@ -52,26 +60,36 @@
     document.getElementById('alert').addEventListener('animationend', function() {
       this.style.display = 'none';
     });
+
+    // TODO: info, success, error, warningで変数名が違うので注意
+    if ( "{{ session('feedback.error') }}" ) {
+      const errorIdValue = "{{ uniqid() }}";
+      if ( sessionStorage ) {
+        if ( sessionStorage.getItem('errorId') === errorIdValue ) {
+          document.getElementById('alert').style.display = "none";
+        } else {
+          sessionStorage.setItem('errorId', errorIdValue);
+        }
+      }
+    }
   </script>
 @endif
 @if ( session('feedback.success') )
-  <div class="alert max-w-lg fixed top-20 right-0 z-50" id="alert">
-    <div class="flex bg-green-100 rounded-lg p-4 mb-4 text-sm text-green-700" role="alert">
-      <svg class="w-5 h-5 inline mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-      <div>
-        <span class="font-medium">Success</span> {{ session('feedback.success') }}
-      </div>
+  <div id="alert" class="fixed bottom-0 w-full sm:w-auto sm:top-20 sm:right-5 z-50">
+    <div class="shadow-lg p-2 bg-emerald-800 items-center text-emerald-50 leading-none rounded-lg flex" role="alert">
+      <span class="flex rounded-full bg-emerald-500 uppercase px-2 py-1 text-xs font-bold mr-3">Success</span>
+      <span class="font-semibold mr-2 text-left flex-auto">{{ session('feedback.success') }}</span>
     </div>
   </div>
 
   <style>
-    .alert {
+    #alert {
       animation: disappear 10s forwards; /* アラートを10秒後に消す */
     }
 
     @keyframes disappear {
       0%   { opacity: 1; }
-      99%  { opacity: 1; }
+      95%  { opacity: 1; }
       100% { opacity: 0; }
     }
   </style>
@@ -80,26 +98,36 @@
     document.getElementById('alert').addEventListener('animationend', function() {
       this.style.display = 'none';
     });
+
+    // TODO: info, success, error, warningで変数名が違うので注意
+    if ( "{{ session('feedback.success') }}" ) {
+      const successIdValue = "{{ uniqid() }}";
+      if ( sessionStorage ) {
+        if ( sessionStorage.getItem('successId') === successIdValue ) {
+          document.getElementById('alert').style.display = "none";
+        } else {
+          sessionStorage.setItem('successId', successIdValue);
+        }
+      }
+    }
   </script>
 @endif
 @if ( session('feedback.warning') )
-  <div class="alert max-w-lg fixed top-20 right-0 z-50" id="alert">
-    <div class="flex bg-yellow-100 rounded-lg p-4 mb-4 text-sm text-yellow-700" role="alert">
-      <svg class="w-5 h-5 inline mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-      <div>
-        <span class="font-medium">Warning</span> {{ session('feedback.warning') }}
-      </div>
+  <div id="alert" class="fixed bottom-0 w-full sm:w-auto sm:top-20 sm:right-5 z-50">
+    <div class="shadow-lg p-2 bg-amber-800 items-center text-amber-50 leading-none rounded-lg flex" role="alert">
+      <span class="flex rounded-full bg-amber-500 uppercase px-2 py-1 text-xs font-bold mr-3">Warning</span>
+      <span class="font-semibold mr-2 text-left flex-auto">{{ session('feedback.warning') }}</span>
     </div>
   </div>
 
   <style>
-    .alert {
+    #alert {
       animation: disappear 10s forwards; /* アラートを10秒後に消す */
     }
 
     @keyframes disappear {
       0%   { opacity: 1; }
-      99%  { opacity: 1; }
+      95%  { opacity: 1; }
       100% { opacity: 0; }
     }
   </style>
@@ -108,5 +136,17 @@
     document.getElementById('alert').addEventListener('animationend', function() {
       this.style.display = 'none';
     });
+
+    // TODO: info, success, error, warningで変数名が違うので注意
+    if ( "{{ session('feedback.warning') }}" ) {
+      const warningIdValue = "{{ uniqid() }}";
+      if ( sessionStorage ) {
+        if ( sessionStorage.getItem('warningId') === warningIdValue ) {
+          document.getElementById('alert').style.display = "none";
+        } else {
+          sessionStorage.setItem('warningId', warningIdValue);
+        }
+      }
+    }
   </script>
 @endif
