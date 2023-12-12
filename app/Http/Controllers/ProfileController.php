@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class ProfileController extends Controller
 {
@@ -36,11 +39,13 @@ class ProfileController extends Controller
             $request->user()->save();
         } catch ( \Throwable $e ) {
             \Log::error($e);
-            return Redirect::route('home.edit_profile')->with('feedback.error', 'プロフィールの編集に失敗しました。');
+            return Redirect::route('home.edit_profile')
+                ->with('feedback.error', 'プロフィールの更新に失敗しました。');
         }
 
         // return Redirect::route('profile.edit')->with('status', 'profile-updated');
-        return Redirect::route('home.edit_profile')->with('feedback.success', 'プロフィールの編集に成功しました。');
+        return Redirect::route('home.edit_profile')
+            ->with('feedback.success', 'プロフィールの更新に成功しました。');
     }
 
     /**
@@ -66,39 +71,53 @@ class ProfileController extends Controller
 
     public function updateUserIcon(Request $request)
     {
-        if ( $request->hasFile('user_icon') ) {
-            $file = $request->file('user_icon');
+        try {
+            if ( $request->hasFile('user_icon') ) {
+                $file = $request->file('user_icon');
 
-            if ( $file->isValid() ) {
-                do {
-                    $filename = Str::random(10) . '.' . $file->getClientOriginalExtension();
-                } while ( Storage::exists('public/user_icons/' . $filename) );
+                if ( $file->isValid() ) {
+                    do {
+                        $filename = Str::random(10) . '.' . $file->getClientOriginalExtension();
+                    } while ( Storage::exists('public/user_icons/' . $filename) );
 
-                $file->storeAs('public/user_icons', $filename);
+                    $file->storeAs('public/user_icons', $filename);
 
-                $user = Auth::user();
-                $oldUserIconFilename = $user->icon_filename;
-                $user->icon_filename = $filename;
+                    $user = Auth::user();
+                    $oldUserIconFilename = $user->icon_filename;
+                    $user->icon_filename = $filename;
 
-                if ( $user->save() ) {
-                    // TODO: なぜpublic_pathを挟まないとdeleteできないのか？
-                    $publicPath = public_path('storage/user_icons/' . $oldUserIconFilename);
-                    $deleteSuccess = File::delete($publicPath);
+                    if ( $user->save() ) {
+                        // TODO: なぜpublic_pathを挟まないとdeleteできないのか？
+                        $publicPath = public_path('storage/user_icons/' . $oldUserIconFilename);
+                        $deleteSuccess = File::delete($publicPath);
+                    }
                 }
             }
+        } catch ( \Throwable $e ) {
+            \Log::error($e);
+            return Redirect::route('home.edit_profile')
+                ->with('feedback.error', 'ユーザーアイコンの更新に失敗しました。');
         }
 
-        return redirect()->route('home.edit_profile');
+        return Redirect::route('home.edit_profile')
+            ->with('feedback.success', 'ユーザーアイコンの更新に成功しました。');
     }
 
     public function updateSelfIntroduction(Request $request)
     {
-        $selfIntroduction = $request->post('self_introduction');
+        try {
+            $selfIntroduction = $request->post('self_introduction');
 
-        $user = Auth::user();
-        $user->self_introduction = $selfIntroduction;
-        $user->save();
+            $user = Auth::user();
+            $user->self_introduction = $selfIntroduction;
+            $user->save();
+        } catch ( \Throwable $e ) {
+            \Log::error($e);
+            return Redirect::route('home.edit_profile')
+                ->with('feedback.error', '自己紹介の更新に失敗しました。');
+        }
 
-        return redirect()->route('home.edit_profile');
+        return Redirect::route('home.edit_profile')
+            ->with('feedback.success', '自己紹介の更新に成功しました。');
     }
 }

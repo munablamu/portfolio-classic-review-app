@@ -9,8 +9,8 @@
   </div>
 
   @include('components.review.form', [
-    'recording' => $recording,
-    'formType' => 'store',
+    'recording'  => $recording,
+    'formType'   => 'store',
     'buttonText' => '投稿',
   ])
 </x-layout>

@@ -1,5 +1,8 @@
 <div class="mx-5 mb-5">
   <form action="{{ route('review.' . $formType, ['recording' => $recording]) }}" method="post">
+    @if ( isset($method) && strtolower($method) === "put")
+      @method("PUT")
+    @endif
     @csrf
 
     <label for="rate" class="inline-block text-sm font-medium mb-1">評価</label>

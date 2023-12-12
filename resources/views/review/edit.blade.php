@@ -10,9 +10,10 @@
   @endif
 
   @include('components.review.form', [
-    'recording' => $recording,
-    'review' => $review,
-    'formType' => 'update',
+    'recording'  => $recording,
+    'review'     => $review,
+    'method'     => 'put',
+    'formType'   => 'update',
     'buttonText' => '編集',
   ])
 </x-layout>

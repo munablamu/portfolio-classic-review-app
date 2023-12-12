@@ -5,6 +5,7 @@
 
   <div class="mx-5">
     <form action="{{ route('profile.update_user_icon') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
+      @method("PUT")
       @csrf
       <div>
         <label for="user_icon" class="block text-sm font-medium">ユーザーアイコン</label>
@@ -23,6 +24,7 @@
 
   <div class="mx-5">
     <form action="{{ route('profile.update_self_introduction') }}" method="post">
+      @method("PUT")
       @csrf
 
       @error('self_introduction')

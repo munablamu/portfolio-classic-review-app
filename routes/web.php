@@ -73,7 +73,7 @@ Route::post('/review/store/{recording}', [ReviewController::class, 'store'])
     ->name('review.store')->where('recording', '[0-9]+');
 Route::get('/review/edit/{recording}', [ReviewController::class, 'edit'])
     ->name('review.edit')->where('recording', '[0-9]+');
-Route::post('/review/update/{recording}', [ReviewController::class, 'update'])
+Route::put('/review/update/{recording}', [ReviewController::class, 'update'])
     ->name('review.update')->where('recording', '[0-9]+');
 Route::delete('/review/delete/{review}', [ReviewController::class, 'delete'])
     ->name('review.delete')->where('review', '[0-9]+');
@@ -95,9 +95,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/home/profile', [HomeController::class, 'edit_profile'])
         ->name('home.edit_profile');
 
-    Route::post('/profile/update_user_icon', [ProfileController::class, 'updateUserIcon'])
+    Route::put('/profile/update_user_icon', [ProfileController::class, 'updateUserIcon'])
         ->name('profile.update_user_icon');
-    Route::post('/profile/update_self_introduction', [ProfileController::class, 'updateSelfIntroduction'])
+    Route::put('/profile/update_self_introduction', [ProfileController::class, 'updateSelfIntroduction'])
         ->name('profile.update_self_introduction');
 
     Route::post('/reviews/{review}/likes', [LikeController::class, 'store'])
