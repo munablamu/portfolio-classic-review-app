@@ -26,7 +26,7 @@
       </div>
     </div>
 
-    <div class="mx-5">
+    <div class="mx-5 mb-4">
       <ul>
         @foreach ( $reviews as $i_review )
           <li>
@@ -35,7 +35,9 @@
         @endforeach
       </ul>
     </div>
-    {{ $reviews->appends(request()->query())->links() }}
+    <div class="mx-5">
+      {{ $reviews->appends(request()->query())->links('vendor.pagination.original') }}
+    </div>
   @endif
 </x-layout>
 

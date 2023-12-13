@@ -7,14 +7,14 @@
     @if ( $follows->count() === 0 )
       <p class="text-slate-400 dark:text-slate-400">このユーザーは誰もフォローしていません。</p>
     @else
-      <ul class="-mt-4">
+      <ul class="-mt-4 mb-4">
         @foreach ( $follows as $i_user )
           <li>
             <x-user.card :user=$i_user />
           </li>
         @endforeach
       </ul>
-      {{ $follows->appends(request()->query())->links() }}
+      {{ $follows->appends(request()->query())->links('vendor.pagination.original') }}
     @endif
   </div>
 </x-layout>

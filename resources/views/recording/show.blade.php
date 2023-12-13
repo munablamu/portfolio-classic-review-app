@@ -67,5 +67,7 @@
       </ul>
     @endif
   </div>
-  {{ $reviews->appends(request()->query())->links() }}
+  <div class="mx-5">
+    {{ $reviews->appends(request()->query())->links('vendor.pagination.original') }}
+  </div>
 </x-layout>

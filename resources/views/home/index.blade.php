@@ -14,7 +14,7 @@
         </li>
       @endforeach
       </ul>
-      {{ $following_user_reviews->appends(request()->query())->links() }}
+      {{ $following_user_reviews->appends(request()->query())->links('vendor.pagination.original') }}
     @endif
   </div>
 </x-layout>

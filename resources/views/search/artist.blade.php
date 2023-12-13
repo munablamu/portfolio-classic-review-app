@@ -20,7 +20,7 @@
       </ul>
 
       <div>
-        {{ $artists->appends(request()->query())->links() }}
+        {{ $artists->appends(request()->query())->links('vendor.pagination.original') }}
       </div>
     @endif
   </div>

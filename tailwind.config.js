@@ -23,6 +23,7 @@ export default {
                 'slate': {
                     '125': '#EEF2F7',
                     '150': '#EAEFF5',
+                    '175': '#E6ECF3',
                     '250': '#D7DFE9',
                 },
                 'sage': {

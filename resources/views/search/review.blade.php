@@ -18,7 +18,9 @@
           </li>
         @endforeach
       </ul>
-      {{ $reviews->appends(request()->query())->links() }}
+      <div class="mx-5">
+        {{ $reviews->appends(request()->query())->links('vendor.pagination.original') }}
+      </div>
     @endif
   </div>
 </x-layout>

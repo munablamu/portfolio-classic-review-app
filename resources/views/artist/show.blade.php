@@ -44,7 +44,7 @@
         <x-recording.card_in_artist :recording=$i_recording />
       </li>
     @endforeach
-    {{ $recordings->appends(request()->query())->links() }}
+    {{ $recordings->appends(request()->query())->links('vendor.pagination.original') }}
   </ul>
 </x-layout>
 
