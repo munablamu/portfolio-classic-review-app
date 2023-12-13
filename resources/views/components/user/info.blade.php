@@ -6,7 +6,7 @@
     <div class="ml-2 my-2">
       <h2 class="text-3xl font-bold">{{ $user->name }}</h2>
       <p><i class="fa-solid fa-pen-nib mr-1"></i>{{ $reviewCount }}件 (評価: {{ $allReviewCount }}件)</p>
-      <p class="text-pink-400"><i class="far fa-heart like-btn mr-1"></i>{{ $likeSum }}</p>
+      <p class="text-pink-400"><i class="fas fa-heart unlike-btn mr-1"></i>{{ $likeSum }}</p>
     </div>
   </div>
   @if ( Auth::check() && Auth::id() !== $user->id )
