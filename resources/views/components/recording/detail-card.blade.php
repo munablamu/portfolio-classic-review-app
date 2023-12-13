@@ -26,13 +26,13 @@
       $search_keyword = $recording->title . ' ' . $recording->artists_string . ' ' . $recording->release_year;
     @endphp
     <div class="flex items-center">
-      <a href="https://music.amazon.co.jp/search/{{ $search_keyword }}/albums" class="m-2">
+      <a href="https://music.amazon.co.jp/search/{{ $search_keyword }}/albums" target=“_blank” rel=“noopener” class="m-2">
         <img class="h-8" src="{{ subscription_icon_url('Amazon_Music.png') }}" alt="Amazon Musicで検索">
       </a>
-      <a href="https://music.apple.com/jp/search?term={{ $search_keyword }}" class="m-2">
+      <a href="https://music.apple.com/jp/search?term={{ $search_keyword }}" target=“_blank” rel=“noopener” class="m-2">
         <img class="h-8" src="{{ subscription_icon_url('Apple_Music.svg') }}" alt="Apple Musicで検索">
       </a>
-      <a href="https://open.spotify.com/search/{{ $search_keyword }}/albums" class="m-2">
+      <a href="https://open.spotify.com/search/{{ $search_keyword }}/albums" target=“_blank” rel=“noopener” class="m-2">
         <img class="h-8" src="{{ subscription_icon_url('spotify.png') }}" alt="spotifyで検索">
       </a>
     </div>
