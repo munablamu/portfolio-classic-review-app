@@ -17,64 +17,73 @@ class HomeController extends Controller
     public function __construct(ReviewService $reviewService)
     {
         $this->reviewService = $reviewService;
+        $this->fromHomeController = true;
     }
 
-    protected function getUserInfo(User $user)
+    protected function setUserInfo()
     {
-        return [
-            'allReviewCount' => $this->reviewService->getAllReviewCount($user),
-            'reviewCount'    => $this->reviewService->getReviewCount($user),
-            'likeSum'        => $this->reviewService->getLikeSum($user),
-        ];
+        // TODO: なぜコンストラクタでAuth::user()メソッドを使うとログイン中でもnullを返してしまうのか？
+        $this->user = Auth::user();
+        $this->allReviewCount = $this->reviewService->getAllReviewCount($this->user);
+        $this->reviewCount    = $this->reviewService->getReviewCount($this->user);
+        $this->likeSum        = $this->reviewService->getLikeSum($this->user);
     }
 
     public function index()
     {
-        $user = Auth::user();
-        ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
-            = $this->getUserInfo($user);
-        $fromHomeController = true;
+        $this->setUserInfo();
+        $following_user_reviews = $this->reviewService->getFollowingUserReviews($this->user, 10);
 
-        $following_user_reviews = $this->reviewService->getFollowingUserReviews($user, 10);
-
-        return view('home.index',
-            compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'fromHomeController', 'following_user_reviews'));
+        return view('home.index', [
+            'user'                   => $this->user,
+            'allReviewCount'         => $this->allReviewCount,
+            'reviewCount'            => $this->reviewCount,
+            'likeSum'                => $this->likeSum,
+            'fromHomeController'     => $this->fromHomeController,
+            'following_user_reviews' => $following_user_reviews,
+        ]);
     }
 
     public function following_users()
     {
-        $user = Auth::user();
-        ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
-            = $this->getUserInfo($user);
-        $fromHomeController = true;
+        $this->setUserInfo();
+        $following_users = $this->user->following()->paginate(10);
 
-        $following_users = $user->following()->paginate(10);
-
-        return view('home.following_users',
-            compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'fromHomeController', 'following_users'));
+        return view('home.following_users', [
+            'user'               => $this->user,
+            'allReviewCount'     => $this->allReviewCount,
+            'reviewCount'        => $this->reviewCount,
+            'likeSum'            => $this->likeSum,
+            'fromHomeController' => $this->fromHomeController,
+            'following_users'    => $following_users,
+        ]);
     }
 
     public function reviews()
     {
-        $user = Auth::user();
-        ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
-            = $this->getUserInfo($user);
-        $fromHomeController = true;
+        $this->setUserInfo();
+        $reviews = $this->reviewService->getAllReviews($this->user, 10);
 
-        $reviews = $this->reviewService->getAllReviews($user, 10);
-
-        return view('home.reviews',
-            compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'fromHomeController', 'reviews'));
+        return view('home.reviews', [
+            'user'               => $this->user,
+            'allReviewCount'     => $this->allReviewCount,
+            'reviewCount'        => $this->reviewCount,
+            'likeSum'            => $this->likeSum,
+            'fromHomeController' => $this->fromHomeController,
+            'reviews'            => $reviews,
+        ]);
     }
 
     public function edit_profile()
     {
-        $user = Auth::user();
-        ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
-            = $this->getUserInfo($user);
-        $fromHomeController = true;
+        $this->setUserInfo();
 
-        return view('home.profile',
-            compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'fromHomeController'));
+        return view('home.profile', [
+            'user'               => $this->user,
+            'allReviewCount'     => $this->allReviewCount,
+            'reviewCount'        => $this->reviewCount,
+            'likeSum'            => $this->likeSum,
+            'fromHomeController' => $this->fromHomeController,
+        ]);
     }
 }

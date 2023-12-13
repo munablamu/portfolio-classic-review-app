@@ -12,71 +12,75 @@ class UserController extends Controller
     public function __construct(ReviewService $reviewService)
     {
         $this->reviewService = $reviewService;
+        $this->fromUserController = true;
     }
 
-    // TODO: HomeControllerのgetUserInfoメソッドをヘルパー関数にして共用したほうがいい
-    protected function getUserInfo(User $user)
+    protected function setUserInfo(User $user)
     {
-        return [
-            'allReviewCount' => $this->reviewService->getAllReviewCount($user),
-            'reviewCount'    => $this->reviewService->getReviewCount($user),
-            'likeSum'        => $this->reviewService->getLikeSum($user),
-        ];
-    }
-
-    public function index(UserService $userService)
-    {
-        $users = $userService->getUsers();
-
-        return view('user.index',
-            compact('users'));
+        // TODO: なぜコンストラクタでAuth::user()メソッドを使うとログイン中でもnullを返してしまうのか？
+        $this->user = $user;
+        $this->allReviewCount = $this->reviewService->getAllReviewCount($this->user);
+        $this->reviewCount    = $this->reviewService->getReviewCount($this->user);
+        $this->likeSum        = $this->reviewService->getLikeSum($this->user);
     }
 
     public function show(User $user)
     {
-        ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
-            = $this->getUserInfo($user);
-        $fromUserController = true;
+        $this->setUserInfo($user);
 
-        return view('user.show',
-            compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'fromUserController'));
+        return view('user.show', [
+            'user'               => $this->user,
+            'allReviewCount'     => $this->allReviewCount,
+            'reviewCount'        => $this->reviewCount,
+            'likeSum'            => $this->likeSum,
+            'fromUserController' => $this->fromUserController,
+        ]);
     }
 
     public function reviews(Request $request, User $user)
     {
-        ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
-            = $this->getUserInfo($user);
-        $fromUserController = true;
+        $this->setUserInfo($user);
 
         $orderBy = $request->query('orderBy', 'like');
-
         $reviews = $this->reviewService->getReviews($user, 10, $orderBy);
 
-        return view('user.reviews',
-            compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'fromUserController', 'reviews'));
+        return view('user.reviews', [
+            'user'               => $this->user,
+            'allReviewCount'     => $this->allReviewCount,
+            'reviewCount'        => $this->reviewCount,
+            'likeSum'            => $this->likeSum,
+            'fromUserController' => $this->fromUserController,
+            'reviews'            => $reviews,
+        ]);
     }
 
     public function follows(User $user)
     {
-        ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
-            = $this->getUserInfo($user);
-        $fromUserController = true;
-
+        $this->setUserInfo($user);
         $follows = $user->following()->paginate(10);
 
-        return view('user.follows',
-            compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'fromUserController', 'follows'));
+        return view('user.follows', [
+            'user'               => $this->user,
+            'allReviewCount'     => $this->allReviewCount,
+            'reviewCount'        => $this->reviewCount,
+            'likeSum'            => $this->likeSum,
+            'fromUserController' => $this->fromUserController,
+            'follows'            => $follows,
+        ]);
     }
 
     public function followers(User $user)
     {
-        ['allReviewCount' => $allReviewCount, 'reviewCount' => $reviewCount, 'likeSum' => $likeSum]
-            = $this->getUserInfo($user);
-        $fromUserController = true;
-
+        $this->setUserInfo($user);
         $followers = $user->followers()->paginate(10);
 
-        return view('user.followers',
-            compact('user', 'allReviewCount', 'reviewCount', 'likeSum', 'fromUserController', 'followers'));
+        return view('user.followers', [
+            'user'               => $this->user,
+            'allReviewCount'     => $this->allReviewCount,
+            'reviewCount'        => $this->reviewCount,
+            'likeSum'            => $this->likeSum,
+            'fromUserController' => $this->fromUserController,
+            'followers'          => $followers,
+        ]);
     }
 }
