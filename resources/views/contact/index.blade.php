@@ -11,7 +11,7 @@
             <div class="mb-5">
                 <input id="name" type="text" name="name"
                     class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md"
-                    placeholder="お名前を入力してください" value="{{ old('name') }}"
+                    placeholder="お名前を入力してください" value="{{ old('name') }}" autofocus
                 ></input>
             </div>
 

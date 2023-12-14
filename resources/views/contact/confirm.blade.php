@@ -4,25 +4,25 @@
         <form action="{{ route('contact.send') }}" method="post">
             @csrf
 
-            <p class="inline-block text-sm font-medium mb-1">お名前</p>
+            <p class="inline-block text-sm font-medium mb-1 text-sky-500 dark:text-sky-300">お名前</p>
             <div class="mb-5">
                 {{ $form['name'] }}
                 <input name="name" value="{{ $form['name'] }}" type="hidden">
             </div>
 
-            <p class="inline-block text-sm font-medium mb-1">メールアドレス</p>
+            <p class="inline-block text-sm font-medium mb-1 text-sky-500 dark:text-sky-300">メールアドレス</p>
             <div class="mb-5">
                 {{ $form['email'] }}
                 <input name="email" value="{{ $form['email'] }}" type="hidden">
             </div>
 
-            <p class="inline-block text-sm font-medium mb-1">件名</p>
+            <p class="inline-block text-sm font-medium mb-1 text-sky-500 dark:text-sky-300">件名</p>
             <div class="mb-5">
                 {{ $form['title'] }}
                 <input name="title" value="{{ $form['title'] }}" type="hidden">
             </div>
 
-            <p class="text-sm font-medium">お問い合わせ内容</p>
+            <p class="inline-block text-sm font-medium mb-1 text-sky-500 dark:text-sky-300">お問い合わせ内容</p>
             <div>
                 {!! nl2br(e($form['message'])) !!}
                 <input name="message" value="{{ $form['message'] }}" type="hidden">

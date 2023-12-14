@@ -8,6 +8,9 @@ class TopController extends Controller
 {
     public function __invoke()
     {
-        return view('top.index');
+        $fromTopController = true;
+
+        return view('top.index',
+            compact('fromTopController'));
     }
 }
