@@ -5,7 +5,7 @@
     <x-search.bar :q='$q' :oldSearchType=$oldSearchType />
   </div>
 
-  <p class="text-slate-600 dark:text-slate-300 text-sm mx-5">検索結果: ****件</p>
+  <p class="text-slate-600 dark:text-slate-300 text-sm mx-5">検索結果: {{ $reviews->total() }}件</p>
 
   <div class="mt-2">
     @if ( $reviews->count() === 0 )

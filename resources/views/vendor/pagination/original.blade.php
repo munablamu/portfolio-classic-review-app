@@ -3,7 +3,7 @@
     <div class="mb-2">
       <p class="text-sm leading-5">
         <span class="font-medium">{{ $paginator->total() }}</span>
-        件中
+        件のうち
         @if ( $paginator->firstItem() )
           <span class="font-medium">{{ $paginator->firstItem() }}</span>
           から
