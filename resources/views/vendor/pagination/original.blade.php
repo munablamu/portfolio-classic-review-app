@@ -1,6 +1,6 @@
 @if ( $paginator->hasPages() )
   <nav role="navigation" aria-label="{{ __('Pagination Navigation') }}" class="mb-4">
-    <div class="mb-2">
+    <div class="mb-2 flex justify-center sm:block">
       <p class="text-sm leading-5">
         <span class="font-medium">{{ $paginator->total() }}</span>
         件のうち
