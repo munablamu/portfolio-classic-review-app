@@ -17,6 +17,19 @@
 
     <div class="sm:hidden">
       <ul class="list-style-none flex items-center justify-center">
+        {{-- First Page Link --}}
+        <li>
+          @if ( $paginator->onFirstPage() )
+            <span  class="pointer-events-none relative block rounded bg-transparent px-3 py-1.5 text-sm transition-all duration-300 text-slate-400">
+              <i class="fa-solid fa-angles-left"></i>
+            </span>
+          @else
+            <a href="{{ $paginator->url(1) }}" class="relative block rounded bg-transparent px-3 py-1.5 text-sm transition-all duration-300 hover:text-slate-600 hover:bg-slate-175 hover:font-bold dark:hover:text-slate-300 dark:hover:bg-slate-500">
+              <i class="fa-solid fa-angles-left"></i>
+            </a>
+          @endif
+        </li>
+
         {{-- Previous Page Link --}}
         <li>
           @if ( $paginator->onFirstPage() )
@@ -40,6 +53,19 @@
             <span class="pointer-events-none relative block rounded bg-transparent px-3 py-1.5 text-sm transition-all duration-300 text-slate-400">
               Next<i class="fa-solid fa-angle-right ml-2"></i>
             </span>
+          @endif
+        </li>
+
+        {{-- Last Page Link --}}
+        <li>
+          @if ( $paginator->onLastPage() )
+            <span  class="pointer-events-none relative block rounded bg-transparent px-3 py-1.5 text-sm transition-all duration-300 text-slate-400">
+              <i class="fa-solid fa-angles-right"></i>
+            </span>
+          @else
+            <a href="{{ $paginator->url($paginator->lastPage()) }}" class="relative block rounded bg-transparent px-3 py-1.5 text-sm transition-all duration-300 hover:text-slate-600 hover:bg-slate-175 hover:font-bold dark:hover:text-slate-300 dark:hover:bg-slate-500">
+              <i class="fa-solid fa-angles-right"></i>
+            </a>
           @endif
         </li>
       </ul>
