@@ -7,13 +7,17 @@
     <form action="{{ route('profile.update_user_icon') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
       @method("PUT")
       @csrf
-      <div>
-        <label for="user_icon" class="inline-block text-sm font-medium">ユーザーアイコン</label>
+      <div class="w-full">
+        <p class="inline-block text-sm font-medium mb-1">ユーザーアイコン</label>
         @error('user_icon')
           <span class="validate ml-4">{{ $message }}</span>
         @enderror
-        <div class="mt-1 flex rounded-md shadow-sm">
-          <input type="file" name="user_icon" id="user_icon" class="focus:ring-indigo-500 focus:border-indigo-500 flex-grow border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md">
+        <div class="flex items-center">
+          <label for="user_icon" class="flex flex-shrink-0 px-2 items-center h-8 bg-slate-700 hover:bg-slate-500 text-slate-200 hover:text-slate-50 active:bg-slate-800 dark:bg-slate-200 dark:hover:bg-slate-150 dark:text-slate-800 dark:active:bg-slate-300 rounded-md shadow tracking-wide uppercase cursor-pointer">
+            <span class="leading-normal">ファイルを選択</span>
+            <input type='file' class="hidden" name="user_icon" id="user_icon" onchange="showFileName()" />
+          </label>
+          <span id="file-name" class="flex items-center w-full px-2 h-8 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md ml-1">選択されていません</span>
         </div>
       </div>
       <div class="flex justify-end">
@@ -59,3 +63,17 @@
     @include('profile.partials.delete-user-form')
   </div>
 </x-layout>
+
+
+<script>
+  function showFileName() {
+    var input = document.getElementById('user_icon');
+    var infoArea = document.getElementById('file-name');
+
+    // get the file name
+    var inputFileName = input.files[0].name;
+
+    // display the file name
+    infoArea.textContent = inputFileName;
+  }
+</script>
