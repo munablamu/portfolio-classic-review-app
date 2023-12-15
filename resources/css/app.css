@@ -113,6 +113,35 @@
     display: none; /* Chrome, Safari and Opera */
   }
 
+
+/* スクロールバー全体のスタイル */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+/* スクロールバーの背景色 */
+::-webkit-scrollbar-track {
+  background: theme('colors.slate.200');
+}
+.dark ::-webkit-scrollbar-track {
+  background: theme('colors.slate.600');
+}
+/* スクロールバーのボタン（上下左右）のスタイル */
+::-webkit-scrollbar-thumb {
+  background: theme('colors.slate.500');
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.slate.500');
+}
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.slate.600');
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.slate.400');
+}
+
+
 /* ブラウザの検索候補を選んだ際に、検索窓の背景色と文字色が変更されてしまうことを防ぐ */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

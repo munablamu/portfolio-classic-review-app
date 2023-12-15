@@ -4,7 +4,7 @@
 
   <x-user.nav_tabs :user=$user />
 
-  <div class="mb-4 mx-5">
+  <div class="my-4 mx-5">
     <h3 class="text-lg font-semibold">自己紹介</h3>
     @if ( $user->self_introduction === null )
       <p class="text-slate-400 dark:text-slate-400">自己紹介がありません。</p>
@@ -19,10 +19,10 @@
     @if ( $user->favoriteRecordings->count() === 0 )
       <p class="text-slate-400 dark:text-slate-400">お気に入りの録音がありません。</p>
     @else
-      <div class="flex overflow-x">
+      <div class="flex overflow-x-auto">
         @foreach ( $user->favoriteRecordings as $i_recording )
             <a href="{{ route('recording.show', ['recording' => $i_recording]) }}" class="flex-shrink-0">
-              <img src="{{ jacket_url($i_recording->jacket_filename) }}" alt="{{ $i_recording->title }}" class="w-48 h-48">
+              <img src="{{ jacket_url($i_recording->jacket_filename) }}" alt="{{ $i_recording->title }}" class="w-36 h-36 sm:w-48 sm:h-48">
             </a>
         @endforeach
       </div>
@@ -30,7 +30,7 @@
   </div>
   <hr class="border-t border-slate-200 dark:border-slate-600 mt-4 mb-2 mx-5">
 
-  <div class="mx-5">
+  <div class="mx-5 mb-5">
     <h3 class="text-lg font-semibold">お気に入りの演奏家</h2>
     @if ( $user->favoriteRecordings->count() === 0 )
       <p class="text-slate-400 dark:text-slate-400">お気に入りの演奏家がいません。</p>
