@@ -2,16 +2,17 @@
   <nav role="navigation" aria-label="{{ __('Pagination Navigation') }}" class="mb-4">
     <div class="mb-2 flex justify-center sm:block">
       <p class="text-sm leading-5">
-        <span class="font-medium">{{ $paginator->total() }}</span>
+        <span class="font-bold">{{ $paginator->total() }}</span>
         件のうち
         @if ( $paginator->firstItem() )
-          <span class="font-medium">{{ $paginator->firstItem() }}</span>
+          <span class="font-bold">{{ $paginator->firstItem() }}</span>
           から
-          <span class="font-medium">{{ $paginator->lastItem() }}</span>
+          <span class="font-bold">{{ $paginator->lastItem() }}</span>
         @else
-          {{ $paginator->count() }}
+          <span class="font-bold">{{ $paginator->count() }}</span>
         @endif
         を表示
+        <span class="ml-1 sm:hidden">({{ $paginator->currentPage() }}ページ目)</span>
       </p>
     </div>
 

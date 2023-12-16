@@ -6,38 +6,40 @@
           <img class="object-contain" src="{{ jacket_url($review->recording->jacket_filename) }}" alt="{{ $review->recording->title }}" />
         </a>
       </div>
-      <div class="w-full sm:w-3/4 sm:ml-3">
-        <div class="flex items-center justify-between">
-          <p class="text-sm font-light leading-relaxed">
-            @if ( $review->created_at == $review->updated_at )
-              投稿日: {{ $review->created_at_string }}
-            @else
-              更新日: {{ $review->updated_at_string }}
-            @endif
-          </p>
-          <x-common.rate :rate="$review->rate" />
+      <div class="w-full sm:w-3/4 sm:ml-3 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between">
+            <p class="text-sm font-light leading-relaxed">
+              @if ( $review->created_at == $review->updated_at )
+                投稿日: {{ $review->created_at_string }}
+              @else
+                更新日: {{ $review->updated_at_string }}
+              @endif
+            </p>
+            <x-common.rate :rate="$review->rate" />
+          </div>
+          <div class="p-0">
+            <a href="{{ route('recording.show', ['recording' => $review->recording]) }}" class="url font-semibold leading-relaxed">
+              {{ $review->recording->title }}
+            </a>
+          </div>
+          <div class="p-0">
+            <p>
+              {{ $review->recording->artists_string }}
+            </p>
+          </div>
+          <div class="p-0">
+            <p class="font-semibold leading-relaxed">
+              {{ $review->title }}
+            </p>
+          </div>
+          <div class="p-0">
+            <p class="">
+              {{ $review->content }}
+            </p>
+          </div>
+          <x-common.like :review=$review />
         </div>
-        <div class="p-0">
-          <a href="{{ route('recording.show', ['recording' => $review->recording]) }}" class="url font-semibold leading-relaxed">
-            {{ $review->recording->title }}
-          </a>
-        </div>
-        <div class="p-0">
-          <p>
-            {{ $review->recording->artists_string }}
-          </p>
-        </div>
-        <div class="p-0">
-          <p class="font-semibold leading-relaxed">
-            {{ $review->title }}
-          </p>
-        </div>
-        <div class="p-0">
-          <p class="">
-            {{ $review->content }}
-          </p>
-        </div>
-        <x-common.like :review=$review />
         @if ( Auth::check() && Auth::id() === $review->user->id )
           <div class="justify-end flex">
             <a href="{{ route('review.edit', ['recording' => $review->recording]) }}" class="btn btn-indigo">

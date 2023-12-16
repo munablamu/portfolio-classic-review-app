@@ -8,7 +8,7 @@
     </div>
     <div class="w-full sm:w-3/4 ml-3">
       <div class="flex items-center gap-4 overflow-hidden pt-0 pb-2">
-        <a href="{{ route('user.show', ['user' => $review->user]) }}">
+        <a href="{{ route('user.show', ['user' => $review->user]) }}" class="flex-shrink-0">
           <img
             src="{{ user_icon_url($review->user->icon_filename) }}"
             alt="{{ $review->user->name }}"
