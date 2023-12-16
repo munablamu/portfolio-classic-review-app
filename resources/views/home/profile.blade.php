@@ -13,11 +13,11 @@
           <span class="validate ml-4">{{ $message }}</span>
         @enderror
         <div class="flex items-center">
-          <label for="user_icon" class="flex flex-shrink-0 px-2 items-center h-8 bg-slate-700 hover:bg-slate-500 text-slate-200 hover:text-slate-50 active:bg-slate-800 dark:bg-slate-200 dark:hover:bg-slate-150 dark:text-slate-800 dark:active:bg-slate-300 rounded-md shadow tracking-wide uppercase cursor-pointer">
+          <label for="user_icon" class="flex flex-shrink-0 px-2 items-center h-10 bg-slate-700 hover:bg-slate-500 text-slate-200 hover:text-slate-50 active:bg-slate-800 dark:bg-slate-200 dark:hover:bg-slate-150 dark:text-slate-800 dark:active:bg-slate-300 rounded-md shadow tracking-wide uppercase cursor-pointer">
             <span class="leading-normal">ファイルを選択</span>
             <input type='file' class="hidden" name="user_icon" id="user_icon" onchange="showFileName()" />
           </label>
-          <span id="file-name" class="flex items-center w-full px-2 h-8 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md ml-1">選択されていません</span>
+          <span id="file-name" class="input flex items-center px-2 h-10 mt-1 ml-1">選択されていません</span>
         </div>
       </div>
       <div class="flex justify-end">
@@ -40,7 +40,9 @@
       <div>
         <label for="self_introduction" class="block text-sm font-medium">自己紹介</label>
         <div class="mt-1">
-          <textarea id="self_introduction" name="self_introduction" rows="10" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md" placeholder="自己紹介文を書いてください">{{ old('self_introduction', $user->self_introduction) }}</textarea>
+          <textarea id="self_introduction" name="self_introduction" rows="10" class="input mt-1"
+            placeholder="自己紹介文を書いてください">{{ old('self_introduction', $user->self_introduction) }}
+          </textarea>
         </div>
       </div>
 

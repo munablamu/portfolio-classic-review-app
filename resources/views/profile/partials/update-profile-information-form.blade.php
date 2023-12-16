@@ -21,7 +21,7 @@
             <x-input-label for="name" :value="__('Name')" />
             {{-- <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" /> --}}
             <input id="name" name="name" type="text"
-                class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md"
+                class="input mt-1"
                 value="{{ old('name', $user->name) }}" placeholder="ユーザー名" required autocomplete="username">
             </input>
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
@@ -31,7 +31,7 @@
             <x-input-label for="email" :value="__('Email')" />
             {{-- <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" /> --}}
             <input id="email" name="email" type="email"
-                class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md"
+                class="input mt-1"
                 value="{{ old('email', $user->email) }}" placeholder="メールアドレス" required autocomplete="username">
             </input>
             <x-input-error class="mt-2" :messages="$errors->get('email')" />

@@ -21,9 +21,9 @@
       <span class="validate ml-4">{{ $message }}</span>
     @enderror
     <div class="mb-5">
-      <input id="title" type="text" name="title"
-       class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md"
-       placeholder="タイトルを入力してください" value="{{ old('title', isset($review) ? $review->title : null) }}"
+      <input id="title" type="text" name="title" class="input mt-1"
+       placeholder="タイトルを入力してください"
+       value="{{ old('title', isset($review) ? $review->title : null) }}"
       ></input>
     </div>
 
@@ -33,7 +33,7 @@
     @enderror
     <div class="mb-5">
       <textarea id="content" name="content" rows="10"
-       class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md"
+       class="input mt-1"
        placeholder="レビューを書いてください"
       >{{ old('content', isset($review) ? $review->content : null) }}</textarea>
     </div>
