@@ -3,6 +3,26 @@ declare(strict_types=1);
 
 use Illuminate\Support\Collection;
 
+if ( !function_exists('logo_url') ) {
+    function logo_url(string $extension): string
+    {
+        if ( $extension === 'ico' ) {
+            $filename = 'favicon.ico';
+        } else {
+            $filename = 'ClassicMusicReviewAppIcon.png';
+        }
+
+        if ( app()->environment('production') ) {
+            return (string) app()
+                ->make(\Cloudinary\Cloudinary::class)
+                ->image($userIconDirectory . $filename)
+                ->secure();
+        } else {
+            return asset('storage/' . $filename);
+        }
+    }
+}
+
 if ( !function_exists('jacket_url') ) {
     function jacket_url(?string $filename): string
     {
@@ -65,9 +85,11 @@ if ( !function_exists('highlightKeyword') ) {
         $keyword = preg_quote($keyword); // ユーザー入力のkeywordの中に存在する正規表現の特殊文字をエスケープ
 
         if ( $str !== null) {
-            $str = preg_replace_callback("/$keyword/i", function($matches) {
-                return '<strong>' . $matches[0] . '</strong>';
-            }, $str);
+            $str = preg_replace_callback_array(
+                ["/$keyword/i" => function($matches) {
+                    return '<strong class="strong-color">' . $matches[0] . '</strong>';
+                }], $str, 1
+            );
         }
 
         return $str;
@@ -77,7 +99,7 @@ if ( !function_exists('highlightKeyword') ) {
 if ( !function_exists('extractKeywordContext') ) {
     function extractKeywordContext(?string $str): ?string
     {
-        preg_match('/(.{0,50})<strong>.*?<\/strong>(.{0,50})/u', $str, $matches);
+        preg_match('/(.{0,50})<strong class="strong-color">.*?<\/strong>(.{0,50})/u', $str, $matches);
 
         if ( !empty($matches) ) {
             $result = $matches[0];

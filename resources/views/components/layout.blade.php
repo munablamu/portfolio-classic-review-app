@@ -11,6 +11,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name') }}{{ isset($title) ? '|' . $title : '' }}</title>
 
+    <link rel="icon" href="{{ logo_url('ico') }}">
     <!-- Fonts -->
     <script src="https://kit.fontawesome.com/c677d29c82.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.bunny.net">

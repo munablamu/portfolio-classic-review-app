@@ -54,8 +54,10 @@ Route::get('/artists/{artist}', [ArtistController::class, 'show'])
     ->name('artist.show');
 //
 
-Route::get('/', TopController::class)
+Route::get('/', [TopController::class, 'index'])
     ->name('top');
+Route::get('/help', [TopController::class, 'help'])
+    ->name('help');
 Route::get('/search/index', [SearchController::class, 'index'])
     ->name('search.index');
 Route::get('/search/music', [SearchController::class, 'music'])

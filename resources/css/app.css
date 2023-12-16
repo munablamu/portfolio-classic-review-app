@@ -81,10 +81,10 @@
     @apply bg-slate-500 text-slate-100;
 }
 .url {
-    @apply text-indigo-500 underline;
+    @apply text-indigo-500 dark:text-indigo-300 underline;
 }
 .url:visited {
-    @apply text-purple-500;
+    @apply text-purple-500 dark:text-purple-300;
 }
 .search_h {
     @apply md:text-7xl sm:text-6xl text-3xl font-bold tracking-wide text-right mr-5 text-slate-300 dark:text-slate-400 font-Ubuntu italic;
@@ -101,6 +101,9 @@
 }
 .order-false {
     @apply bg-inherit text-slate-500 dark:bg-inherit dark:text-sky-300;
+}
+.strong-color {
+    @apply text-mauve-500 dark:text-sky-300;
 }
 
 .overflow-x {
