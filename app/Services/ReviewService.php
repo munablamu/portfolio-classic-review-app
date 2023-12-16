@@ -30,7 +30,8 @@ class ReviewService
             default => 'like'
         };
 
-        $reviews = Review::where('recording_id', $recording->id)
+        $reviews = Review::with('user')
+            ->where('recording_id', $recording->id)
             ->when(Auth::check(), function ($query) {
                 return $query->where('user_id', '!=', Auth::id()); // $user->idだと未ログイン状態でnullにidは無いというエラーが出るため、Auth::id()を使っている
             })
@@ -43,7 +44,7 @@ class ReviewService
 
     public function getAllReviews(User $user, int $num_paginate)
     {
-        return Review::where('user_id', $user->id)->orderBy('updated_at', 'desc')->paginate($num_paginate);
+        return Review::with(['user', 'recording'])->where('user_id', $user->id)->orderBy('updated_at', 'desc')->paginate($num_paginate);
     }
 
     public function getReviews(User $user, int $num_paginate, ?string $orderBy)
@@ -55,7 +56,8 @@ class ReviewService
             default => 'like'
         };
 
-        $reviews = Review::where('user_id', $user->id)
+        $reviews = Review::with('recording')
+            ->where('user_id', $user->id)
             ->whereNotNull('title')
             ->orderBy($orderBy, 'desc')
             ->paginate($num_paginate);
@@ -146,7 +148,8 @@ class ReviewService
         $followingUserId = Follow::where('followed_user_id', $user->id)
             ->pluck('following_user_id');
 
-        $followingUserReviews = Review::whereIn('user_id', $followingUserId)
+        $followingUserReviews = Review::with(['user', 'recording'])
+            ->whereIn('user_id', $followingUserId)
             ->whereNotNull('title')
             ->orderBy('updated_at', 'desc')
             ->paginate($num_paginate);
@@ -157,7 +160,8 @@ class ReviewService
     public function search(string $q, int $num_paginate)
     {
         if ( !empty($q) ) {
-            $reviews = Review::search($q)
+            $reviews = Review::with('user')
+                ->whereIn('id', Review::search($q)->keys())
                 ->paginate($num_paginate)
                 ->appends(['q' => $q, 'query' => null]);
         } else {

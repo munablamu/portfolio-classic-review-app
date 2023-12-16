@@ -14,7 +14,8 @@ class MusicService
     public function search(string $q, int $num_paginate)
     {
         if ( !empty($q) ) {
-            $musics = Music::search($q)
+            $musics = Music::with('composer')
+                ->whereIn('id', Music::search($q)->keys())
                 ->paginate($num_paginate)
                 ->appends(['q' => $q, 'query' => null]);
         } else {

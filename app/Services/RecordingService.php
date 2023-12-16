@@ -16,9 +16,9 @@ class RecordingService
             default => 'release_date'
         };
 
-        // TODO: これpaginateのpageクエリパラメータ大丈夫？
-        $recordings = Recording::whereHas('artists', function ($query) use ($artist) {
-            $query->where('artists.id', $artist->id);
+        $recordings = Recording::with('reviews')
+            ->whereHas('artists', function ($query) use ($artist) {
+                $query->where('artists.id', $artist->id);
             })->orderBy($orderBy, 'desc')
             ->paginate($num_paginate);
 
@@ -27,7 +27,8 @@ class RecordingService
 
     public function getRecordingsRelatedToMusic(Music $music, int $num_paginate)
     {
-        $recordings = Recording::where('music_id', $music->id)
+        $recordings = Recording::with('reviews')
+            ->where('music_id', $music->id)
             ->orderBy('average_rate', 'desc')
             ->paginate($num_paginate);
 
