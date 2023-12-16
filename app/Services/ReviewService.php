@@ -97,24 +97,49 @@ class ReviewService
             }
 
             $review->fill($form)->save();
+
+            // recordingの平均評価を更新
+            $review->recording->timestamps = false;
+            $review->recording->setAverageRate();
+            $review->recording->timestamps = true;
         });
     }
 
     public function insertReview(array $form)
     {
-        $review = new Review;
-        unset($form['_token']);
+        DB::transaction(function () use ($form) {
+            $review = new Review;
+            unset($form['_token']);
 
-        // nullはe関数によって空文字に変換されてしまい、ReviewService中のwhereNotNull('title')で弾かれなくなってしまうので nullかどうかを判定している
-        if ( $form['title'] !== null ) {
-            // ユーザーから入力された文字列をエスケープ
-            // (レビュー検索の結果表示の際に検索キーワードにstrongしてbladeテンプレート上で{!! !!}で表示するため)
-            $form['title'] = e($form['title']);
-            $form['content'] = e($form['content']);
-        }
+            // nullはe関数によって空文字に変換されてしまい、ReviewService中のwhereNotNull('title')で弾かれなくなってしまうので nullかどうかを判定している
+            if ( $form['title'] !== null ) {
+                // ユーザーから入力された文字列をエスケープ
+                // (レビュー検索の結果表示の際に検索キーワードにstrongしてbladeテンプレート上で{!! !!}で表示するため)
+                $form['title'] = e($form['title']);
+                $form['content'] = e($form['content']);
+            }
 
-        $form['like'] = 0;
-        $review->fill($form)->save();
+            $form['like'] = 0;
+            $review->fill($form)->save();
+
+            // recordingの平均評価を更新
+            $review->recording->timestamps = false;
+            $review->recording->setAverageRate();
+            $review->recording->timestamps = true;
+        });
+    }
+
+    public function deleteReview(Review $review)
+    {
+        DB::transaction(function () use ($review) {
+            $recording = $review->recording;
+            $review->delete();
+
+            // recordingの平均評価を更新
+            $recording->timestamps = false;
+            $recording->setAverageRate();
+            $recording->timestamps = true;
+        });
     }
 
     public function getAllReviewCount(User $user)
