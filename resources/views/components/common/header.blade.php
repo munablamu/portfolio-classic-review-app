@@ -100,6 +100,22 @@
         lightIcon.classList.add('hidden');
       }
 
+      // サーバー:light、ブラウザ:darkだと、<html class="light dark">になってしまう。この場合、ページ遷移時に画面がちらつくので、ブラウザ側のテーマをサーバー側に送信する。
+      const serverTheme = document.documentElement.classList.contains('light dark') ? 'dark' : 'light';
+      if (theme !== serverTheme) {
+        // テーマが一致しない場合、サーバーにテーマを送信
+        fetch('/set-theme', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+          },
+          body: JSON.stringify({
+            theme: theme
+          })
+        });
+      }
+
       // テーマ切り替えボタンのクリックイベント
       themeToggle.addEventListener('click', () => {
         if (document.documentElement.classList.contains('dark')) {

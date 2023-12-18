@@ -59,5 +59,4 @@
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <!-- linkedin -->
   <script src="https://platform.linkedin.com/in.js" type="text/javascript"></script>
-  <script type="IN/Share" data-url="https://cly7796.net/blog/sample/set-up-a-linkedin-share-button/"></script>
 </footer>
