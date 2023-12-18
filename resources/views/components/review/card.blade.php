@@ -1,5 +1,5 @@
 <div class="flex flex-col mx-5">
-  <div class="flex items-center gap-4 overflow-hidden pt-0 pb-2">
+  <div class="flex flex-shrink-0 items-center gap-4 overflow-hidden pt-0 pb-2">
     <img
       src="{{ user_icon_url($review->user->icon_filename) }}"
       alt="{{ $review->user->name }}"

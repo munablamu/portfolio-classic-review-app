@@ -10,7 +10,7 @@
         <a href="{{ route('user.show', ['user' => $user]) }}">
           <p class="underline">{{ $user->name }}</p>
         </a>
-        <p class="text-sm text-slate-400 dark:text-slate-400 line-clamp-1">
+        <p class="text-sm text-slate-400 dark:text-slate-400 sm:line-clamp-1 line-clamp-2">
           {{ $user->self_introduction }}
         </p>
       </div>
