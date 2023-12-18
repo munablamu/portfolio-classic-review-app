@@ -10,7 +10,7 @@
     <!-- primary nav -->
     <nav class="hidden md:ml-auto md:mr-auto md:flex md:flex-wrap items-center text-base justify-center">
       <a href="{{ route('help') }}" class="mr-5 hover:text-slate-100">
-        <i class="fa-solid fa-seedling"></i><span class="ml-1">このサイトの使い方</span>
+        <i class="fa-solid fa-seedling"></i><span class="ml-1">はじめての方へ</span>
       </a>
     </nav>
 
@@ -55,7 +55,7 @@
   <div id="hamburger_nav" class="hidden md:hidden text-right mx-auto px-5">
     <nav class="px-2 pt-2 pb-4 flex flex-col p-0">
       <a href="#" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-600 focus:bg-slate-500">
-        <i class="fa-solid fa-seedling"></i><span class="ml-1">このサイトの使い方</span>
+        <i class="fa-solid fa-seedling"></i><span class="ml-1">はじめての方へ</span>
       </a>
       @guest
         <a href="{{ route('login') }}" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-600 focus:bg-slate-500">Login</a>
