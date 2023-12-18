@@ -15,12 +15,12 @@
         <form action="{{ route('follow.destroy', ['user' => $user]) }}" method="post">
           @method('DELETE')
           @csrf
-          <button type="submit" class="btn btn-fat btn-rose">フォローを解除する</button>
+          <button type="submit" class="btn btn-rose">フォローを解除する</button>
         </form>
       @else
         <form action="{{ route('follow.store', ['user' => $user]) }}" method="post">
           @csrf
-          <button type="submit" class="btn btn-fat btn-indigo">フォローする</button>
+          <button type="submit" class="btn btn-indigo">フォローする</button>
         </form>
       @endif
     </div>
