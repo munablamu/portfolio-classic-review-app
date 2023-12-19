@@ -836,16 +836,6 @@
     {
         "music_id":3,
         "title":"Bach, J S: The Well-Tempered Clavier, Books 1 & 2",
-        "release_date":1188259200000.0,
-        "catalogue_no":"CDS442914",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk1OTA0Ny4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTA4NTkxNTJ9",
-        "artist_ids":[
-            272
-        ]
-    },
-    {
-        "music_id":3,
-        "title":"Bach, J S: The Well-Tempered Clavier, Books 1 & 2",
         "release_date":1222646400000.0,
         "catalogue_no":"SIGCD136",
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk3NjMzOC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjEyODUxNTM5ODB9",
@@ -1266,16 +1256,6 @@
     {
         "music_id":5,
         "title":"Bach, J S: Goldberg Variations, BWV988",
-        "release_date":728006400000.0,
-        "catalogue_no":"COLSMK52619",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAwMzI4OS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjEzMTgzNDk3MTl9",
-        "artist_ids":[
-            277
-        ]
-    },
-    {
-        "music_id":5,
-        "title":"Bach, J S: Goldberg Variations, BWV988",
         "release_date":null,
         "catalogue_no":"ODE1273-2",
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA3MDIzMy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NzExNjM4MTh9",
@@ -1422,16 +1402,6 @@
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk0OTg0OS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1MTA5MTc1NDl9",
         "artist_ids":[
             340
-        ]
-    },
-    {
-        "music_id":6,
-        "title":"Bach, J S: Sonatas & Partitas for solo violin, BWV1001-1006",
-        "release_date":null,
-        "catalogue_no":"98250",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk1NjcwNi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0MDE5ODI1NDN9",
-        "artist_ids":[
-            331
         ]
     },
     {
@@ -1882,19 +1852,6 @@
     },
     {
         "music_id":9,
-        "title":"Anton Bruckner: Symphony No. 3 'Wagner' - Richard Wagner: Parsifal (Kundry's Aria), Tristan und Isolde (Prelude & Liebestod)",
-        "release_date":null,
-        "catalogue_no":"PRD350140D",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTMyMzA5OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NDkzMjQ3MzN9",
-        "artist_ids":[
-            362,
-            357,
-            359,
-            360
-        ]
-    },
-    {
-        "music_id":9,
         "title":"Felix Mendelssohn Bartholdy: Symphonies Nos. 4 & 5 - Richard Wagner: Parsifal, Prelude",
         "release_date":null,
         "catalogue_no":"PRD350128D",
@@ -2192,17 +2149,6 @@
     },
     {
         "music_id":10,
-        "title":"Wagner: Overtures and Preludes",
-        "release_date":null,
-        "catalogue_no":"CHSA5126",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAzMjUwOS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NDkzMjQ5NzZ9",
-        "artist_ids":[
-            402,
-            403
-        ]
-    },
-    {
-        "music_id":10,
         "title":"Wagner: Die Meistersinger von Nürnberg: Prelude",
         "release_date":1542326400000.0,
         "catalogue_no":"4836446",
@@ -2382,16 +2328,6 @@
             596,
             597,
             598
-        ]
-    },
-    {
-        "music_id":10,
-        "title":"Chagall : the Sound of Colors; Wolfgang Amadeus Mozart;richard Wagner;franz Liszt;claude Debussy;maurice Ravel;christoph Willibald Gluck",
-        "release_date":1624579200000.0,
-        "catalogue_no":"CAL1529",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODkzOTYxNi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODQzMTM0MzJ9",
-        "artist_ids":[
-            491
         ]
     },
     {
@@ -2729,18 +2665,6 @@
     },
     {
         "music_id":12,
-        "title":"Beethoven: Complete Symphonies",
-        "release_date":1563494400000.0,
-        "catalogue_no":"8505251",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODYxOTU3Mi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NjM3OTcxNzF9",
-        "artist_ids":[
-            610,
-            611,
-            612
-        ]
-    },
-    {
-        "music_id":12,
         "title":"Beethoven: Symphony No. 5 & Gossec: Symphonie",
         "release_date":1599782400000.0,
         "catalogue_no":"HMM902423",
@@ -2748,80 +2672,6 @@
         "artist_ids":[
             691,
             692
-        ]
-    },
-    {
-        "music_id":12,
-        "title":"Beethoven: Symphonies Nos. 5 & 7",
-        "release_date":1054080000000.0,
-        "catalogue_no":"E4716302",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyNDQ0Ny4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0OTAwODMyMTV9",
-        "artist_ids":[
-            605,
-            690
-        ]
-    },
-    {
-        "music_id":12,
-        "title":"Beethoven: Symphonies Nos. 1-9 & Overtures",
-        "release_date":null,
-        "catalogue_no":"4783492",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAwNDA5NC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTU5MzgwMjh9",
-        "artist_ids":[
-            613,
-            614,
-            382,
-            128,
-            615,
-            616,
-            617,
-            618,
-            619
-        ]
-    },
-    {
-        "music_id":12,
-        "title":"Beethoven: Symphonies Nos. 1-9",
-        "release_date":1461888000000.0,
-        "catalogue_no":"BPHR160091",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODExODQ2MC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1ODMyMzYzMDR9",
-        "artist_ids":[
-            626,
-            627,
-            628,
-            629,
-            82,
-            508,
-            630
-        ]
-    },
-    {
-        "music_id":12,
-        "title":"Beethoven: The Symphonies",
-        "release_date":1657843200000.0,
-        "catalogue_no":"4863050",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTMzNjAxNS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NTc3MTYyMjh9",
-        "artist_ids":[
-            660
-        ]
-    },
-    {
-        "music_id":12,
-        "title":"Beethoven: Symphonies Nos. 1-9",
-        "release_date":1173052800000.0,
-        "catalogue_no":"LSO0598",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk1MzAwOC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MzY1NjAwNzR9",
-        "artist_ids":[
-            654,
-            655,
-            656,
-            623,
-            657,
-            658,
-            325,
-            456,
-            659,
-            625
         ]
     },
     {
@@ -2844,22 +2694,6 @@
         "artist_ids":[
             694,
             695
-        ]
-    },
-    {
-        "music_id":12,
-        "title":"Beethoven - Complete Symphonies",
-        "release_date":1053129600000.0,
-        "catalogue_no":"0927497682",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyODIzNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MTUwMzEyOTd9",
-        "artist_ids":[
-            682,
-            683,
-            684,
-            384,
-            685,
-            445,
-            686
         ]
     },
     {
@@ -3730,78 +3564,6 @@
     },
     {
         "music_id":17,
-        "title":"Beethoven: Complete Symphonies",
-        "release_date":1563494400000.0,
-        "catalogue_no":"8505251",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODYxOTU3Mi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NjM3OTcxNzF9",
-        "artist_ids":[
-            610,
-            611,
-            612
-        ]
-    },
-    {
-        "music_id":17,
-        "title":"Beethoven Révolution Vol. II",
-        "release_date":1641513600000.0,
-        "catalogue_no":"AVSA9946",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTI2ODUxNy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NDM3MTE2NDF9",
-        "artist_ids":[
-            631,
-            632,
-            633,
-            634,
-            635,
-            636,
-            637
-        ]
-    },
-    {
-        "music_id":17,
-        "title":"Beethoven: Symphonies Nos. 1-9 & Overtures",
-        "release_date":null,
-        "catalogue_no":"4783492",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAwNDA5NC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTU5MzgwMjh9",
-        "artist_ids":[
-            613,
-            614,
-            382,
-            128,
-            615,
-            616,
-            617,
-            618,
-            619
-        ]
-    },
-    {
-        "music_id":17,
-        "title":"Beethoven: Symphonies Nos. 1-9",
-        "release_date":1461888000000.0,
-        "catalogue_no":"BPHR160091",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODExODQ2MC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1ODMyMzYzMDR9",
-        "artist_ids":[
-            626,
-            627,
-            628,
-            629,
-            82,
-            508,
-            630
-        ]
-    },
-    {
-        "music_id":17,
-        "title":"Beethoven: The Symphonies",
-        "release_date":1657843200000.0,
-        "catalogue_no":"4863050",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTMzNjAxNS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NTc3MTYyMjh9",
-        "artist_ids":[
-            660
-        ]
-    },
-    {
-        "music_id":17,
         "title":"Beethoven: Symphony No. 6 in F major, Op. 68 'Pastoral'",
         "release_date":null,
         "catalogue_no":"C600031",
@@ -3824,25 +3586,6 @@
     },
     {
         "music_id":17,
-        "title":"Beethoven: Symphonies Nos. 1-9",
-        "release_date":1173052800000.0,
-        "catalogue_no":"LSO0598",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk1MzAwOC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MzY1NjAwNzR9",
-        "artist_ids":[
-            654,
-            655,
-            656,
-            623,
-            657,
-            658,
-            325,
-            456,
-            659,
-            625
-        ]
-    },
-    {
-        "music_id":17,
         "title":"Beethoven: Symphony No. 6 in F major, Op. 68 'Pastoral', etc.",
         "release_date":1045094400000.0,
         "catalogue_no":"5679652",
@@ -3851,21 +3594,6 @@
             357,
             368,
             75
-        ]
-    },
-    {
-        "music_id":17,
-        "title":"Beethoven - Complete Symphonies & 6 Overtures",
-        "release_date":1220832000000.0,
-        "catalogue_no":"4777578",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk3NTkyNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0OTQzNjI1MDZ9",
-        "artist_ids":[
-            687,
-            688,
-            78,
-            689,
-            82,
-            83
         ]
     },
     {
@@ -3881,17 +3609,6 @@
     },
     {
         "music_id":17,
-        "title":"Beethoven: Symphonies Nos. 5 & 6",
-        "release_date":1700179200000.0,
-        "catalogue_no":"19658791822",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTUzMzEzNS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTM5OTU3MDl9",
-        "artist_ids":[
-            694,
-            695
-        ]
-    },
-    {
-        "music_id":17,
         "title":"Beethoven: Symphony No. 6 'Pastoral' & Knecht: Le Portrait musical de la Nature ou Grande Symphonie",
         "release_date":1582848000000.0,
         "catalogue_no":"HMM902425",
@@ -3899,49 +3616,6 @@
         "artist_ids":[
             58,
             833
-        ]
-    },
-    {
-        "music_id":17,
-        "title":"Beethoven - Complete Symphonies",
-        "release_date":1053129600000.0,
-        "catalogue_no":"0927497682",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyODIzNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MTUwMzEyOTd9",
-        "artist_ids":[
-            682,
-            683,
-            684,
-            384,
-            685,
-            445,
-            686
-        ]
-    },
-    {
-        "music_id":17,
-        "title":"Beethoven: Symphony No. 6 & Schubert: Symphony No. 5",
-        "release_date":null,
-        "catalogue_no":"4794876",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA2MDEwOC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTU5Mzk3Nzh9",
-        "artist_ids":[
-            359,
-            401
-        ]
-    },
-    {
-        "music_id":17,
-        "title":"The Symphonies: A Beethoven Journey",
-        "release_date":null,
-        "catalogue_no":"4864117",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTUwMjY4OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODY5MDg4NjB9",
-        "artist_ids":[
-            700,
-            701,
-            702,
-            703,
-            704,
-            221,
-            705
         ]
     },
     {
@@ -4197,18 +3871,6 @@
             864,
             871,
             872
-        ]
-    },
-    {
-        "music_id":18,
-        "title":"Beethoven: Violin Concerto in D major, Op. 61",
-        "release_date":970704000000.0,
-        "catalogue_no":"E4138182",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkzMDg0OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NDE4Mzk1NTZ9",
-        "artist_ids":[
-            863,
-            82,
-            83
         ]
     },
     {
@@ -4547,16 +4209,6 @@
     },
     {
         "music_id":20,
-        "title":"Beethoven: Complete Piano Sonatas",
-        "release_date":1568332800000.0,
-        "catalogue_no":"19075843182",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODY0OTk3MC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NjYyMzAwMDV9",
-        "artist_ids":[
-            323
-        ]
-    },
-    {
-        "music_id":20,
         "title":"Alice Sara Ott - Beethoven",
         "release_date":1695945600000.0,
         "catalogue_no":"4864898",
@@ -4569,42 +4221,12 @@
     },
     {
         "music_id":20,
-        "title":"Evgeny Kissin: Beethoven",
-        "release_date":1503619200000.0,
-        "catalogue_no":"4797581",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODM0NzkwNy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTU5MzY5Njd9",
-        "artist_ids":[
-            766
-        ]
-    },
-    {
-        "music_id":20,
-        "title":"Glenn Gould plays Beethoven: Piano Sonatas Nos. 1-3, 5-10, 12-14, 15-18, 23 & 30-32",
-        "release_date":1347235200000.0,
-        "catalogue_no":"88725412862",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAyMzIzNS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1MTM3ODMzMDJ9",
-        "artist_ids":[
-            277
-        ]
-    },
-    {
-        "music_id":20,
         "title":"El Bohemio",
         "release_date":null,
         "catalogue_no":"5419772617",
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTUyMTI2My4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTY0MjQ1OTd9",
         "artist_ids":[
             964
-        ]
-    },
-    {
-        "music_id":20,
-        "title":"Beethoven: The Complete Wartime Piano Sonata Recordings",
-        "release_date":1506643200000.0,
-        "catalogue_no":"APR_7403",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODM2MzA2My4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1MDcyNzc1MjJ9",
-        "artist_ids":[
-            773
         ]
     },
     {
@@ -4649,26 +4271,6 @@
     },
     {
         "music_id":20,
-        "title":"Beethoven: Piano Sonatas Nos. 14, 17 & 23",
-        "release_date":1644537600000.0,
-        "catalogue_no":"HMM902442",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTI2NTUwNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NDI2ODUxOTJ9",
-        "artist_ids":[
-            774
-        ]
-    },
-    {
-        "music_id":20,
-        "title":"Beethoven: The Complete Piano Sonatas",
-        "release_date":1411948800000.0,
-        "catalogue_no":"BIS2000",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA0Njc0OS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1MjY5MDgxMzZ9",
-        "artist_ids":[
-            767
-        ]
-    },
-    {
-        "music_id":20,
         "title":"Beethoven: Piano Sonata No. 14 in C-Sharp Minor, Op. 27 No. 2 'Moonlight'",
         "release_date":1615507200000.0,
         "catalogue_no":"SWR10658",
@@ -4689,35 +4291,12 @@
     },
     {
         "music_id":20,
-        "title":"Gornostaeva Plays Piano Works by Beethoven: Piano Sonatas - No. 14, Op. 27 'Moonlight Sonata' \/ No. 23, Op. 57 'Appassionata' \/ No. 26, Op. 81a 'The Farewell'",
-        "release_date":1692921600000.0,
-        "catalogue_no":"RCD16214",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTUzNTM4NS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTM5OTY3OTJ9",
-        "artist_ids":[
-            776,
-            777,
-            778,
-            777
-        ]
-    },
-    {
-        "music_id":20,
         "title":"Beethoven : Piano Sonata No.14 in C sharp minor Op.27 No.2, 'Moonlight'",
         "release_date":null,
         "catalogue_no":"2564633816",
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODM2MDQzNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjEwODM5MjZ9",
         "artist_ids":[
             774
-        ]
-    },
-    {
-        "music_id":20,
-        "title":"Emil Gilels - Beethoven Sonatas",
-        "release_date":1163376000000.0,
-        "catalogue_no":"4776360",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk1MDc3Ni4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NzA2NDg0NjN9",
-        "artist_ids":[
-            768
         ]
     },
     {
@@ -4738,16 +4317,6 @@
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAzOTAyOS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTUwNzQ4MjJ9",
         "artist_ids":[
             787
-        ]
-    },
-    {
-        "music_id":21,
-        "title":"Beethoven - Late String Quartets",
-        "release_date":null,
-        "catalogue_no":"4708492",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkzMzkxOS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1OTExNzM3MjN9",
-        "artist_ids":[
-            716
         ]
     },
     {
@@ -4798,46 +4367,6 @@
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk2MDk4MS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0MDE5ODI1NDN9",
         "artist_ids":[
             969
-        ]
-    },
-    {
-        "music_id":21,
-        "title":"Beethoven: The Complete String Quartets",
-        "release_date":1567123200000.0,
-        "catalogue_no":"ALPHA469",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODY1MTQ1Ni4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MjM5Mjc2MDl9",
-        "artist_ids":[
-            722
-        ]
-    },
-    {
-        "music_id":21,
-        "title":"Beethoven: String Quartets Nos. 1-16 (complete, inc. Grosse Fuge)",
-        "release_date":1490313600000.0,
-        "catalogue_no":"4831607",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODMwNTkyOS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MDEyOTYyMzV9",
-        "artist_ids":[
-            716
-        ]
-    },
-    {
-        "music_id":21,
-        "title":"Beethoven: The Complete String Quartets",
-        "release_date":1589500800000.0,
-        "catalogue_no":"9029533981",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODc2NjI4OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1ODg2ODc5Mzd9",
-        "artist_ids":[
-            728
-        ]
-    },
-    {
-        "music_id":21,
-        "title":"Beethoven: The Late String Quartets",
-        "release_date":1202688000000.0,
-        "catalogue_no":"5096552",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk2MTk4My4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjEwODM5NTd9",
-        "artist_ids":[
-            729
         ]
     },
     {
@@ -4896,16 +4425,6 @@
     },
     {
         "music_id":21,
-        "title":"Beethoven: The String Quartets",
-        "release_date":1283731200000.0,
-        "catalogue_no":"4778649",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk4ODg4My4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NzExMzQzMTN9",
-        "artist_ids":[
-            740
-        ]
-    },
-    {
-        "music_id":21,
         "title":"Beethoven: String Quartet in B-Flat Major, Op. 130",
         "release_date":null,
         "catalogue_no":"4843087",
@@ -4951,74 +4470,6 @@
     },
     {
         "music_id":22,
-        "title":"Beethoven: Symphonies Nos. 5 & 7",
-        "release_date":793238400000.0,
-        "catalogue_no":"4474002",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyNDE3Ni4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTcwOTk1NzN9",
-        "artist_ids":[
-            605,
-            690
-        ]
-    },
-    {
-        "music_id":22,
-        "title":"Beethoven: Complete Symphonies",
-        "release_date":1563494400000.0,
-        "catalogue_no":"8505251",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODYxOTU3Mi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NjM3OTcxNzF9",
-        "artist_ids":[
-            610,
-            611,
-            612
-        ]
-    },
-    {
-        "music_id":22,
-        "title":"Beethoven Révolution Vol. II",
-        "release_date":1641513600000.0,
-        "catalogue_no":"AVSA9946",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTI2ODUxNy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NDM3MTE2NDF9",
-        "artist_ids":[
-            631,
-            632,
-            633,
-            634,
-            635,
-            636,
-            637
-        ]
-    },
-    {
-        "music_id":22,
-        "title":"Beethoven: Symphonies Nos. 5 & 7",
-        "release_date":1054080000000.0,
-        "catalogue_no":"E4716302",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyNDQ0Ny4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0OTAwODMyMTV9",
-        "artist_ids":[
-            605,
-            690
-        ]
-    },
-    {
-        "music_id":22,
-        "title":"Beethoven: Symphonies Nos. 1-9 & Overtures",
-        "release_date":null,
-        "catalogue_no":"4783492",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAwNDA5NC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTU5MzgwMjh9",
-        "artist_ids":[
-            613,
-            614,
-            382,
-            128,
-            615,
-            616,
-            617,
-            618,
-            619
-        ]
-    },
-    {
-        "music_id":22,
         "title":"Beethoven: Symphony No. 7 in A major, Op. 92",
         "release_date":1141603200000.0,
         "catalogue_no":"C700051",
@@ -5026,62 +4477,6 @@
         "artist_ids":[
             983,
             690
-        ]
-    },
-    {
-        "music_id":22,
-        "title":"Beethoven: Symphonies Nos. 1-9",
-        "release_date":1461888000000.0,
-        "catalogue_no":"BPHR160091",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODExODQ2MC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1ODMyMzYzMDR9",
-        "artist_ids":[
-            626,
-            627,
-            628,
-            629,
-            82,
-            508,
-            630
-        ]
-    },
-    {
-        "music_id":22,
-        "title":"Beethoven: The Symphonies",
-        "release_date":1657843200000.0,
-        "catalogue_no":"4863050",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTMzNjAxNS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NTc3MTYyMjh9",
-        "artist_ids":[
-            660
-        ]
-    },
-    {
-        "music_id":22,
-        "title":"Beethoven: Symphonies Nos. 5 & 7",
-        "release_date":null,
-        "catalogue_no":"SDG717",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAyMzU0Ny4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1MjI2NjAzNTV9",
-        "artist_ids":[
-            693,
-            13
-        ]
-    },
-    {
-        "music_id":22,
-        "title":"Beethoven: Symphonies Nos. 1-9",
-        "release_date":1173052800000.0,
-        "catalogue_no":"LSO0598",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk1MzAwOC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MzY1NjAwNzR9",
-        "artist_ids":[
-            654,
-            655,
-            656,
-            623,
-            657,
-            658,
-            325,
-            456,
-            659,
-            625
         ]
     },
     {
@@ -5097,22 +4492,6 @@
     },
     {
         "music_id":22,
-        "title":"Beethoven - Complete Symphonies",
-        "release_date":1053129600000.0,
-        "catalogue_no":"0927497682",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyODIzNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MTUwMzEyOTd9",
-        "artist_ids":[
-            682,
-            683,
-            684,
-            384,
-            685,
-            445,
-            686
-        ]
-    },
-    {
-        "music_id":22,
         "title":"Beethoven: Triple Concerto & Symphony No. 7",
         "release_date":1584662400000.0,
         "catalogue_no":"4838242",
@@ -5122,21 +4501,6 @@
             863,
             985,
             986
-        ]
-    },
-    {
-        "music_id":22,
-        "title":"Beethoven - Complete Symphonies & 6 Overtures",
-        "release_date":1220832000000.0,
-        "catalogue_no":"4777578",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk3NTkyNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0OTQzNjI1MDZ9",
-        "artist_ids":[
-            687,
-            688,
-            78,
-            689,
-            82,
-            83
         ]
     },
     {
@@ -5173,72 +4537,6 @@
         ]
     },
     {
-        "music_id":22,
-        "title":"The Symphonies: A Beethoven Journey",
-        "release_date":null,
-        "catalogue_no":"4864117",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTUwMjY4OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODY5MDg4NjB9",
-        "artist_ids":[
-            700,
-            701,
-            702,
-            703,
-            704,
-            221,
-            705
-        ]
-    },
-    {
-        "music_id":22,
-        "title":"Beethoven: Complete Symphonies",
-        "release_date":1694736000000.0,
-        "catalogue_no":"CDS7950",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTUxMjU2MC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTAyNzg1Mzd9",
-        "artist_ids":[
-            706,
-            54,
-            701,
-            707,
-            708,
-            709
-        ]
-    },
-    {
-        "music_id":22,
-        "title":"Beethoven: The Symphonies",
-        "release_date":1380499200000.0,
-        "catalogue_no":"900119",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAzNDA1MC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODE5MzM2ODJ9",
-        "artist_ids":[
-            710,
-            711
-        ]
-    },
-    {
-        "music_id":23,
-        "title":"Beethoven: Complete Piano Concertos",
-        "release_date":1625788800000.0,
-        "catalogue_no":"4839971",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODkwMzIzMS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MjYxNzAzMjd9",
-        "artist_ids":[
-            783,
-            456,
-            630
-        ]
-    },
-    {
-        "music_id":23,
-        "title":"Beethoven: The Piano Concertos",
-        "release_date":null,
-        "catalogue_no":"CDA68291-3",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODczMjQxMS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTA4NTg5MTB9",
-        "artist_ids":[
-            787,
-            788,
-            789
-        ]
-    },
-    {
         "music_id":23,
         "title":"Beethoven: Piano Concertos Nos. 3 & 4",
         "release_date":1405296000000.0,
@@ -5248,42 +4546,6 @@
             991,
             992,
             842
-        ]
-    },
-    {
-        "music_id":23,
-        "title":"Beethoven: Piano Concerto Nos 1-5",
-        "release_date":1683849600000.0,
-        "catalogue_no":"FR-751SACD",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTQ3MzcwNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODAwMjgxMDB9",
-        "artist_ids":[
-            784,
-            785,
-            786
-        ]
-    },
-    {
-        "music_id":23,
-        "title":"Beethoven - Piano Concertos Nos. 4 & 5",
-        "release_date":null,
-        "catalogue_no":"4763315",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk4MzkxMy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTU5Mzk1OTJ9",
-        "artist_ids":[
-            794,
-            795,
-            796
-        ]
-    },
-    {
-        "music_id":23,
-        "title":"Beethoven: Piano Concertos 1-5",
-        "release_date":1544140800000.0,
-        "catalogue_no":"BPHR180241",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODUyMDAyNS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NzQzMjczMjh9",
-        "artist_ids":[
-            793,
-            82,
-            630
         ]
     },
     {
@@ -5300,65 +4562,12 @@
     },
     {
         "music_id":23,
-        "title":"Beethoven: The Piano Concertos",
-        "release_date":null,
-        "catalogue_no":"BIS2274",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODY3NjM1Mi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NzI0NDc5NDh9",
-        "artist_ids":[
-            767,
-            802,
-            803
-        ]
-    },
-    {
-        "music_id":23,
-        "title":"Beethoven: Piano Concertos",
-        "release_date":1599177600000.0,
-        "catalogue_no":"CHSA5273(3)",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODc5NzIxMS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MzQ4MTg4ODJ9",
-        "artist_ids":[
-            781,
-            811,
-            812,
-            813,
-            814,
-            815
-        ]
-    },
-    {
-        "music_id":23,
         "title":"Beethoven: Piano Concertos Nos. 2 & 4",
         "release_date":1521158400000.0,
         "catalogue_no":"ODE1311-2",
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODQwNDQ3Mi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1MjEyNzg1MjB9",
         "artist_ids":[
             325
-        ]
-    },
-    {
-        "music_id":23,
-        "title":"Beethoven: The 5 Piano Concertos",
-        "release_date":1667520000000.0,
-        "catalogue_no":"BIS2581",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTM3NjAxMS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NjU0MDkxMjJ9",
-        "artist_ids":[
-            807,
-            808,
-            242
-        ]
-    },
-    {
-        "music_id":23,
-        "title":"Beethoven: Complete Works for Piano and Orchestra",
-        "release_date":null,
-        "catalogue_no":"CHAN10695(4)",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAwMzYzNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NTcwMDg0MDl9",
-        "artist_ids":[
-            820,
-            821,
-            658,
-            822,
-            823
         ]
     },
     {
@@ -5371,18 +4580,6 @@
             993,
             994,
             995
-        ]
-    },
-    {
-        "music_id":23,
-        "title":"Beethoven: Piano Concertos Nos. 4 & 5",
-        "release_date":null,
-        "catalogue_no":"BISSACD1758",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk5NTI5OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0ODgxOTQzODd9",
-        "artist_ids":[
-            824,
-            677,
-            678
         ]
     },
     {
@@ -5424,18 +4621,6 @@
     },
     {
         "music_id":23,
-        "title":"Beethoven: Piano Concertos Nos. 1-5",
-        "release_date":1278892800000.0,
-        "catalogue_no":"HMC902053\/55",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk4Njk4Mi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0MjM4MjMyNTN9",
-        "artist_ids":[
-            817,
-            818,
-            819
-        ]
-    },
-    {
-        "music_id":23,
         "title":"Ludwig van Beethoven: Piano Concertos 0-7; Rondo in B Flat Woo 6",
         "release_date":null,
         "catalogue_no":"555447-2",
@@ -5456,16 +4641,6 @@
             1006,
             1007,
             75
-        ]
-    },
-    {
-        "music_id":24,
-        "title":"Beethoven - Late String Quartets",
-        "release_date":null,
-        "catalogue_no":"4708492",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkzMzkxOS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1OTExNzM3MjN9",
-        "artist_ids":[
-            716
         ]
     },
     {
@@ -5500,36 +4675,6 @@
     },
     {
         "music_id":24,
-        "title":"Beethoven: The Complete String Quartets",
-        "release_date":1567123200000.0,
-        "catalogue_no":"ALPHA469",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODY1MTQ1Ni4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MjM5Mjc2MDl9",
-        "artist_ids":[
-            722
-        ]
-    },
-    {
-        "music_id":24,
-        "title":"Beethoven: String Quartets Nos. 1-16 (complete, inc. Grosse Fuge)",
-        "release_date":1490313600000.0,
-        "catalogue_no":"4831607",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODMwNTkyOS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MDEyOTYyMzV9",
-        "artist_ids":[
-            716
-        ]
-    },
-    {
-        "music_id":24,
-        "title":"Beethoven: The Late String Quartets",
-        "release_date":1202688000000.0,
-        "catalogue_no":"5096552",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk2MTk4My4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjEwODM5NTd9",
-        "artist_ids":[
-            729
-        ]
-    },
-    {
-        "music_id":24,
         "title":"Between Two Worlds: Lassus, Beethoven, Adès & Dowland",
         "release_date":1651190400000.0,
         "catalogue_no":"DCD34272",
@@ -5540,42 +4685,12 @@
     },
     {
         "music_id":24,
-        "title":"Beethoven: The Complete String Quartets",
-        "release_date":1589500800000.0,
-        "catalogue_no":"9029533981",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODc2NjI4OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1ODg2ODc5Mzd9",
-        "artist_ids":[
-            728
-        ]
-    },
-    {
-        "music_id":24,
-        "title":"Beethoven: The String Quartets",
-        "release_date":1283731200000.0,
-        "catalogue_no":"4778649",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk4ODg4My4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NzExMzQzMTN9",
-        "artist_ids":[
-            740
-        ]
-    },
-    {
-        "music_id":24,
         "title":"Beethoven: String Quartet No. 15 in A minor, Op. 132",
         "release_date":null,
         "catalogue_no":"4116432",
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA1OTI4OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTU4NTR9",
         "artist_ids":[
             968
-        ]
-    },
-    {
-        "music_id":24,
-        "title":"Sinta Quartet Plays Beethoven: Op.95, Op. 131, Op. 132",
-        "release_date":1702598400000.0,
-        "catalogue_no":"BSTD0196",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTU0MDIwNS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTY0MjUxNjh9",
-        "artist_ids":[
-            739
         ]
     },
     {
@@ -5686,16 +4801,6 @@
     },
     {
         "music_id":25,
-        "title":"Beethoven: Complete Piano Sonatas",
-        "release_date":1568332800000.0,
-        "catalogue_no":"19075843182",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODY0OTk3MC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NjYyMzAwMDV9",
-        "artist_ids":[
-            323
-        ]
-    },
-    {
-        "music_id":25,
         "title":"Beethoven: The Late Piano Sonatas",
         "release_date":1376870400000.0,
         "catalogue_no":"88883747352",
@@ -5722,26 +4827,6 @@
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk0NTExNS4xLmpwZyIsImVkaXRzIjp7InRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTMwMTE2MzZ9",
         "artist_ids":[
             765
-        ]
-    },
-    {
-        "music_id":25,
-        "title":"Evgeny Kissin: Beethoven",
-        "release_date":1503619200000.0,
-        "catalogue_no":"4797581",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODM0NzkwNy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTU5MzY5Njd9",
-        "artist_ids":[
-            766
-        ]
-    },
-    {
-        "music_id":25,
-        "title":"Glenn Gould plays Beethoven: Piano Sonatas Nos. 1-3, 5-10, 12-14, 15-18, 23 & 30-32",
-        "release_date":1347235200000.0,
-        "catalogue_no":"88725412862",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAyMzIzNS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1MTM3ODMzMDJ9",
-        "artist_ids":[
-            277
         ]
     },
     {
@@ -5842,16 +4927,6 @@
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA0ODA3My4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTQ0ODh9",
         "artist_ids":[
             816
-        ]
-    },
-    {
-        "music_id":25,
-        "title":"Beethoven: Piano Sonatas Volume 3",
-        "release_date":1477612800000.0,
-        "catalogue_no":"CHAN10925(3)",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODE4NTI4MC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MzQ4MTg2Mjd9",
-        "artist_ids":[
-            781
         ]
     },
     {
@@ -6222,26 +5297,6 @@
         "release_date":null,
         "catalogue_no":"OABD7033D",
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk4MDQyNy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6MzAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjEyODUxNTM5NTh9",
-        "artist_ids":[
-            1124,
-            1125,
-            623,
-            1126,
-            1127,
-            1128,
-            1129,
-            1130,
-            1131,
-            1132,
-            1133
-        ]
-    },
-    {
-        "music_id":27,
-        "title":"Mozart: Le nozze di Figaro, K492",
-        "release_date":null,
-        "catalogue_no":"OA0990D",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk2MjYzNi4xLmpwZyIsImVkaXRzIjp7InRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjEyODUxNTM5ODR9",
         "artist_ids":[
             1124,
             1125,
@@ -6836,18 +5891,6 @@
     },
     {
         "music_id":29,
-        "title":"Mozart: Piano Concertos, Volume 4",
-        "release_date":null,
-        "catalogue_no":"CHAN20083",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODYxNzc0NC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MzQ4MTg4NzV9",
-        "artist_ids":[
-            781,
-            989,
-            705
-        ]
-    },
-    {
-        "music_id":29,
         "title":"Mozart: Piano Concertos Nos. 20 & 23",
         "release_date":1697760000000.0,
         "catalogue_no":"AN29026",
@@ -7045,17 +6088,6 @@
     },
     {
         "music_id":30,
-        "title":"Mozart - Symphonies Nos. 38 - 41",
-        "release_date":1203897600000.0,
-        "catalogue_no":"CKD308",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk2MTk4Ni4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NDU0NjU0NTF9",
-        "artist_ids":[
-            1230,
-            1231
-        ]
-    },
-    {
-        "music_id":30,
         "title":"Mozart: Symphonies Nos. 29 & 40, Oboe Concerto",
         "release_date":null,
         "catalogue_no":"AP328",
@@ -7064,17 +6096,6 @@
             1287,
             1288,
             1289
-        ]
-    },
-    {
-        "music_id":30,
-        "title":"Mozart - Symphonies",
-        "release_date":796953600000.0,
-        "catalogue_no":"4474162",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkzMDY4Ny4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTU5NDA0MDh9",
-        "artist_ids":[
-            82,
-            401
         ]
     },
     {
@@ -7090,50 +6111,6 @@
     },
     {
         "music_id":30,
-        "title":"Mozart: Symphonies Nos. 40 & 41",
-        "release_date":1549584000000.0,
-        "catalogue_no":"PTC5186757",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODUzOTgxMi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NDk2MjE5NDJ9",
-        "artist_ids":[
-            1232,
-            798
-        ]
-    },
-    {
-        "music_id":30,
-        "title":"Mozart: Symphony No. 40 in G minor, K550, etc.",
-        "release_date":1053907200000.0,
-        "catalogue_no":"4742292",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyNDY5Mi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTM3NzB9",
-        "artist_ids":[
-            1243,
-            328
-        ]
-    },
-    {
-        "music_id":30,
-        "title":"Mozart Symphonies Nos. 39, 40, 41",
-        "release_date":null,
-        "catalogue_no":"19439921162",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTI0ODIwMy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MzA0MTExOTh9",
-        "artist_ids":[
-            694,
-            695
-        ]
-    },
-    {
-        "music_id":30,
-        "title":"Mozart: Symphonies Nos. 39, 40 & 41",
-        "release_date":1680825600000.0,
-        "catalogue_no":"900196",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTQ2NDY5NS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NzgzNjM2OTh9",
-        "artist_ids":[
-            1233,
-            752
-        ]
-    },
-    {
-        "music_id":30,
         "title":"Mozart: Symphony No. 40 in G minor, K550, etc.",
         "release_date":1152489600000.0,
         "catalogue_no":"E4775798",
@@ -7141,17 +6118,6 @@
         "artist_ids":[
             1291,
             1292
-        ]
-    },
-    {
-        "music_id":30,
-        "title":"Mozart - Symphonies Nos. 40 & 41",
-        "release_date":null,
-        "catalogue_no":"E4455482",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyNDE2Mi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTYwMjJ9",
-        "artist_ids":[
-            605,
-            724
         ]
     },
     {
@@ -7174,18 +6140,6 @@
         "artist_ids":[
             1293,
             1294
-        ]
-    },
-    {
-        "music_id":30,
-        "title":"Mozart: Piano Concerto No. 23, Symphony No. 40 & Don Giovanni Overture",
-        "release_date":null,
-        "catalogue_no":"ALPHA875",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTM2NTkxMy4xLmpwZyIsImVkaXRzIjp7InRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NTk0NTc3MTJ9",
-        "artist_ids":[
-            1111,
-            1112,
-            1113
         ]
     },
     {
@@ -7255,17 +6209,6 @@
         "artist_ids":[
             1268,
             1269
-        ]
-    },
-    {
-        "music_id":30,
-        "title":"Mozart: Symphonies Nos. 39, 40 & 41 'Jupiter'",
-        "release_date":1582848000000.0,
-        "catalogue_no":"HMM90262930",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODczMjQyNS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NDE4NDM2NTR9",
-        "artist_ids":[
-            1234,
-            1034
         ]
     },
     {
@@ -7598,28 +6541,6 @@
     },
     {
         "music_id":32,
-        "title":"Mozart: Complete Quintets Vol. 2",
-        "release_date":857952000000.0,
-        "catalogue_no":"4560582",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkzMDU4Ni4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTE2MjV9",
-        "artist_ids":[
-            1322,
-            1323,
-            1324,
-            1325,
-            1326,
-            1327,
-            1328,
-            1329,
-            1330,
-            1331,
-            1332,
-            1316,
-            1317
-        ]
-    },
-    {
-        "music_id":32,
         "title":"Mozart: String Quintets K. 515 & 516",
         "release_date":1600992000000.0,
         "catalogue_no":"ALPHA587",
@@ -7659,17 +6580,6 @@
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAwNzMzMy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1MDc1NDM4MDJ9",
         "artist_ids":[
             970
-        ]
-    },
-    {
-        "music_id":32,
-        "title":"Mozart: String Quintets Nos. 1-6",
-        "release_date":1505433600000.0,
-        "catalogue_no":"4798234",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODM2NDg2MS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTU5MzYyMjF9",
-        "artist_ids":[
-            1373,
-            1374
         ]
     },
     {
@@ -7828,18 +6738,6 @@
             59,
             685,
             1031
-        ]
-    },
-    {
-        "music_id":33,
-        "title":"Mozart: Opera Arias",
-        "release_date":1507248000000.0,
-        "catalogue_no":"88985430862",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODM1ODkzNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1MDY1MTg3ODR9",
-        "artist_ids":[
-            1032,
-            1033,
-            1034
         ]
     },
     {
@@ -8055,25 +6953,6 @@
     },
     {
         "music_id":33,
-        "title":"Mozart: Die Zauberflöte, K620",
-        "release_date":null,
-        "catalogue_no":"OA1066D",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAwNDI5MC4xLmpwZyIsImVkaXRzIjp7InRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjEzMjI4NDY3NTR9",
-        "artist_ids":[
-            1413,
-            1414,
-            1410,
-            923,
-            1415,
-            1416,
-            1417,
-            1418,
-            1419,
-            1420
-        ]
-    },
-    {
-        "music_id":33,
         "title":"Mozart: Die Zauberflöte",
         "release_date":1637884800000.0,
         "catalogue_no":"OA1343D",
@@ -8107,44 +6986,6 @@
             1469,
             191,
             1470
-        ]
-    },
-    {
-        "music_id":34,
-        "title":"Mozart Momentum - 1785",
-        "release_date":1622160000000.0,
-        "catalogue_no":"19439742462",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODkxNTA5OS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MjEzMzM2MjV9",
-        "artist_ids":[
-            1254,
-            444,
-            1255,
-            1256,
-            1257
-        ]
-    },
-    {
-        "music_id":34,
-        "title":"Mozart - The Great Piano Concertos, Volume 1",
-        "release_date":null,
-        "catalogue_no":"4422692",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyNzM3Ny4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTgwNTR9",
-        "artist_ids":[
-            779,
-            1250,
-            1251
-        ]
-    },
-    {
-        "music_id":34,
-        "title":"Mozart: Piano Concertos, Volume 4",
-        "release_date":null,
-        "catalogue_no":"CHAN20083",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODYxNzc0NC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MzQ4MTg4NzV9",
-        "artist_ids":[
-            781,
-            989,
-            705
         ]
     },
     {
@@ -8370,18 +7211,6 @@
     },
     {
         "music_id":35,
-        "title":"Mozart - The Great Piano Concertos, Volume 1",
-        "release_date":null,
-        "catalogue_no":"4422692",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyNzM3Ny4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTgwNTR9",
-        "artist_ids":[
-            779,
-            1250,
-            1251
-        ]
-    },
-    {
-        "music_id":35,
         "title":"Mozart Momentum - 1786",
         "release_date":1649376000000.0,
         "catalogue_no":"19439854512",
@@ -8404,37 +7233,6 @@
         "artist_ids":[
             793,
             908
-        ]
-    },
-    {
-        "music_id":35,
-        "title":"Mozart: Minore - Piano Concertos No. 20 & 24, Adagio K. 540",
-        "release_date":null,
-        "catalogue_no":"19075917322",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTMxNTM4Ny4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NDUwMTg1NDl9",
-        "artist_ids":[
-            1270,
-            1271,
-            1155
-        ]
-    },
-    {
-        "music_id":35,
-        "title":"Mozart & Haydn - Complete Concerto Recordings (1933-1947)",
-        "release_date":null,
-        "catalogue_no":"APR_7303",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk0NTgxNy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0OTU3MTQwNzl9",
-        "artist_ids":[
-            279,
-            552,
-            1272,
-            1273,
-            368,
-            605,
-            279,
-            1274,
-            1275,
-            1058
         ]
     },
     {
@@ -8510,29 +7308,6 @@
     },
     {
         "music_id":35,
-        "title":"Mozart: Piano Concerto No. 21 in C Major, K. 467 - Piano Concerto No. 24 in C Minor, K. 491",
-        "release_date":53395200000.0,
-        "catalogue_no":"30133",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODY0OTIwNi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTUxNTY0ODh9",
-        "artist_ids":[
-            1495,
-            1496,
-            1497
-        ]
-    },
-    {
-        "music_id":35,
-        "title":"Mozart: Great Piano Concertos",
-        "release_date":null,
-        "catalogue_no":"4529582",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyMzYyOC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTM4NDZ9",
-        "artist_ids":[
-            274,
-            368
-        ]
-    },
-    {
-        "music_id":35,
         "title":"Mozart: Concerto for Piano and Orchestra No. 22 in E Flat Major, KV 482 - Concerto for Piano and Orchestra No. 24 in C Minor, KV 491",
         "release_date":null,
         "catalogue_no":"CDAG2015",
@@ -8589,18 +7364,6 @@
             1260,
             1261,
             20
-        ]
-    },
-    {
-        "music_id":35,
-        "title":"Mozart: Piano Concerto No. 20 in D minor, K466, etc.",
-        "release_date":null,
-        "catalogue_no":"4626222",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyNzQ2MS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTg2MzN9",
-        "artist_ids":[
-            779,
-            1230,
-            1231
         ]
     },
     {
@@ -8913,61 +7676,6 @@
     },
     {
         "music_id":37,
-        "title":"Mozart - Symphonies Nos. 38 - 41",
-        "release_date":1203897600000.0,
-        "catalogue_no":"CKD308",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk2MTk4Ni4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NDU0NjU0NTF9",
-        "artist_ids":[
-            1230,
-            1231
-        ]
-    },
-    {
-        "music_id":37,
-        "title":"Mozart - Symphonies",
-        "release_date":796953600000.0,
-        "catalogue_no":"4474162",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkzMDY4Ny4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTU5NDA0MDh9",
-        "artist_ids":[
-            82,
-            401
-        ]
-    },
-    {
-        "music_id":37,
-        "title":"Mozart Symphonies Nos. 39, 40, 41",
-        "release_date":null,
-        "catalogue_no":"19439921162",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTI0ODIwMy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MzA0MTExOTh9",
-        "artist_ids":[
-            694,
-            695
-        ]
-    },
-    {
-        "music_id":37,
-        "title":"Mozart: Symphonies Nos. 39, 40 & 41",
-        "release_date":1680825600000.0,
-        "catalogue_no":"900196",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTQ2NDY5NS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NzgzNjM2OTh9",
-        "artist_ids":[
-            1233,
-            752
-        ]
-    },
-    {
-        "music_id":37,
-        "title":"Mozart - Symphonies Nos. 39 & 40",
-        "release_date":1269820800000.0,
-        "catalogue_no":"HMC901959",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk4NDc5OS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0MjI5NTk1NzR9",
-        "artist_ids":[
-            647,
-            60
-        ]
-    },
-    {
-        "music_id":37,
         "title":"Mozart: Symphony No. 39 & Beethoven: Symphony No. 2",
         "release_date":null,
         "catalogue_no":"4223892",
@@ -8975,17 +7683,6 @@
         "artist_ids":[
             1595,
             862
-        ]
-    },
-    {
-        "music_id":37,
-        "title":"Mozart: Symphonies Nos. 39, 40 & 41 'Jupiter'",
-        "release_date":1582848000000.0,
-        "catalogue_no":"HMM90262930",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODczMjQyNS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NDE4NDM2NTR9",
-        "artist_ids":[
-            1234,
-            1034
         ]
     },
     {
@@ -9092,17 +7789,6 @@
             1598,
             1603,
             1604
-        ]
-    },
-    {
-        "music_id":37,
-        "title":"Mozart: Symphonies Nos. 35 - 41",
-        "release_date":null,
-        "catalogue_no":"4794882",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA2MDEwMi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTU5NDA0MDh9",
-        "artist_ids":[
-            82,
-            401
         ]
     },
     {
@@ -10009,28 +8695,6 @@
     },
     {
         "music_id":41,
-        "title":"Stravinsky: Pétrouchka & Le Sacre du printemps",
-        "release_date":1301270400000.0,
-        "catalogue_no":"BISSACD1474",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk5NjM4NS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0ODMzNTEwNTN9",
-        "artist_ids":[
-            1715,
-            1716
-        ]
-    },
-    {
-        "music_id":41,
-        "title":"Stravinsky: Le Sacre du Printemps, Petrouchka",
-        "release_date":1404086400000.0,
-        "catalogue_no":"ASM15",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA0MjQxNS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MjQzNTk1NjJ9",
-        "artist_ids":[
-            691,
-            692
-        ]
-    },
-    {
-        "music_id":41,
         "title":"Four Pieces - Four Pianos",
         "release_date":1516924800000.0,
         "catalogue_no":"HMM902299",
@@ -10082,17 +8746,6 @@
         "artist_ids":[
             1746,
             1744
-        ]
-    },
-    {
-        "music_id":41,
-        "title":"Stravinsky: The Rite of Spring, etc.",
-        "release_date":null,
-        "catalogue_no":"4455382",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk0MTM0Mi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTI1ODN9",
-        "artist_ids":[
-            1718,
-            724
         ]
     },
     {
@@ -10376,17 +9029,6 @@
     },
     {
         "music_id":43,
-        "title":"Great Composers in Words and Music: Pyotr Il'yich Tchaikovsky",
-        "release_date":1685059200000.0,
-        "catalogue_no":"8578369",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTQ3OTc2OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODE5NDMyOTF9",
-        "artist_ids":[
-            1762,
-            1763
-        ]
-    },
-    {
-        "music_id":43,
         "title":"Tchaikovsky: The Nutcracker, Op. 71, etc.",
         "release_date":1171238400000.0,
         "catalogue_no":"PTC5186091",
@@ -10612,17 +9254,6 @@
     },
     {
         "music_id":44,
-        "title":"Great Composers in Words and Music: Pyotr Il'yich Tchaikovsky",
-        "release_date":1685059200000.0,
-        "catalogue_no":"8578369",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTQ3OTc2OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODE5NDMyOTF9",
-        "artist_ids":[
-            1762,
-            1763
-        ]
-    },
-    {
-        "music_id":44,
         "title":"Tchaikovsky: Swan Lake, Op. 20",
         "release_date":905817600000.0,
         "catalogue_no":"4629502",
@@ -10652,69 +9283,6 @@
         "artist_ids":[
             1803,
             1804
-        ]
-    },
-    {
-        "music_id":44,
-        "title":"Pyotr Tchaikovsky. Suites from 'Swan Lake' & 'Nutcracker' ballets",
-        "release_date":null,
-        "catalogue_no":"CDK0088",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODE2NDY5My4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0Njk0NDYxNzh9",
-        "artist_ids":[
-            826,
-            1791
-        ]
-    },
-    {
-        "music_id":44,
-        "title":"Pyotr Ilyich Tchaikovsky Piano Collection",
-        "release_date":1595548800000.0,
-        "catalogue_no":"CTLL2028A",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTUxMjQ2MS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODk2ODY4MDF9",
-        "artist_ids":[
-            1785
-        ]
-    },
-    {
-        "music_id":44,
-        "title":"Pyotr Ilyich Tchaikovsky: Essential Ballets and Operas",
-        "release_date":1626393600000.0,
-        "catalogue_no":"6514200275",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODkzODQ4NC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MjYxODEzOTR9",
-        "artist_ids":[
-            1776,
-            183,
-            1777,
-            1778,
-            1071,
-            1779,
-            1780,
-            1781,
-            1782,
-            1783,
-            1784
-        ]
-    },
-    {
-        "music_id":44,
-        "title":"Tchaikovsky: Excerpts from The Nutcracker, Swan Lake & Sleeping Beauty",
-        "release_date":1194825600000.0,
-        "catalogue_no":"AV2139",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk2MDg0OS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0MzczODQzNDl9",
-        "artist_ids":[
-            791,
-            792
-        ]
-    },
-    {
-        "music_id":44,
-        "title":"Tchaikovsky: Swan Lake Suite, The Nutcracker Suite & Romeo and Juliet",
-        "release_date":null,
-        "catalogue_no":"4307072",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA1MDM3NC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1OTIyMjIxMzd9",
-        "artist_ids":[
-            109,
-            110
         ]
     },
     {
@@ -10866,19 +9434,6 @@
     },
     {
         "music_id":45,
-        "title":"Tchaikovsky: Piano Concerto No. 1 & Nutcracker Suite",
-        "release_date":839808000000.0,
-        "catalogue_no":"E4498162",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkzMTQ0NS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTU4NDJ9",
-        "artist_ids":[
-            1258,
-            1773,
-            82,
-            446
-        ]
-    },
-    {
-        "music_id":45,
         "title":"Tchaikovsky & Grieg: Piano Concertos",
         "release_date":null,
         "catalogue_no":"PTC5186566",
@@ -10959,29 +9514,6 @@
     },
     {
         "music_id":45,
-        "title":"Great Composers in Words and Music: Pyotr Il'yich Tchaikovsky",
-        "release_date":1685059200000.0,
-        "catalogue_no":"8578369",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTQ3OTc2OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODE5NDMyOTF9",
-        "artist_ids":[
-            1762,
-            1763
-        ]
-    },
-    {
-        "music_id":45,
-        "title":"Pyotr Ilyich Tchaikovsky: Piano Concerto No. 1 & Symphony No. 6 'Pathétique'",
-        "release_date":null,
-        "catalogue_no":"PRD350069D",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTMxNTcyMy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NDU3MDQyMjh9",
-        "artist_ids":[
-            273,
-            1752,
-            1753
-        ]
-    },
-    {
-        "music_id":45,
         "title":"Tchaikovsky: Piano Concerto No. 1 & Rachmaninov: Piano Concerto No. 3",
         "release_date":1176681600000.0,
         "catalogue_no":"ARPCD0343",
@@ -10992,25 +9524,6 @@
             826,
             1841,
             827
-        ]
-    },
-    {
-        "music_id":45,
-        "title":"Pyotr Ilyich Tchaikovsky: Essential Orchestral Works",
-        "release_date":1626393600000.0,
-        "catalogue_no":"6514200276",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODkzODQ4NS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODgxOTMzODR9",
-        "artist_ids":[
-            782,
-            1765,
-            1766,
-            1767,
-            1768,
-            554,
-            1769,
-            1770,
-            1771,
-            1772
         ]
     },
     {
@@ -11125,17 +9638,6 @@
     },
     {
         "music_id":46,
-        "title":"Great Composers in Words and Music: Pyotr Il'yich Tchaikovsky",
-        "release_date":1685059200000.0,
-        "catalogue_no":"8578369",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTQ3OTc2OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODE5NDMyOTF9",
-        "artist_ids":[
-            1762,
-            1763
-        ]
-    },
-    {
-        "music_id":46,
         "title":"Tchaikovsky: Sleeping Beauty, Op. 66",
         "release_date":1318204800000.0,
         "catalogue_no":"4779788",
@@ -11183,53 +9685,12 @@
     },
     {
         "music_id":46,
-        "title":"Pyotr Ilyich Tchaikovsky: Essential Ballets and Operas",
-        "release_date":1626393600000.0,
-        "catalogue_no":"6514200275",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODkzODQ4NC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MjYxODEzOTR9",
-        "artist_ids":[
-            1776,
-            183,
-            1777,
-            1778,
-            1071,
-            1779,
-            1780,
-            1781,
-            1782,
-            1783,
-            1784
-        ]
-    },
-    {
-        "music_id":46,
-        "title":"Pyotr Ilyich Tchaikovsky Piano Collection",
-        "release_date":1595548800000.0,
-        "catalogue_no":"CTLL2028A",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTUxMjQ2MS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODk2ODY4MDF9",
-        "artist_ids":[
-            1785
-        ]
-    },
-    {
-        "music_id":46,
         "title":"The Symphony Lounge, Vol. 12: Tchaikovsky Ballet Music — Romeo & Julia Overture-Fantasy, The Sleeping Beauty, & Swan Lake",
         "release_date":null,
         "catalogue_no":"JUBE1483",
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODcwMTA5OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODE5MzgwMzh9",
         "artist_ids":[
             1863
-        ]
-    },
-    {
-        "music_id":46,
-        "title":"Tchaikovsky: Excerpts from The Nutcracker, Swan Lake & Sleeping Beauty",
-        "release_date":1194825600000.0,
-        "catalogue_no":"AV2139",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk2MDg0OS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0MzczODQzNDl9",
-        "artist_ids":[
-            791,
-            792
         ]
     },
     {
@@ -11267,53 +9728,6 @@
     },
     {
         "music_id":46,
-        "title":"Tchaikovsky: Ballet Suites",
-        "release_date":null,
-        "catalogue_no":"4272192",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA1MTA3Ni4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2Njk5NTYyMDl9",
-        "artist_ids":[
-            82,
-            1805,
-            417
-        ]
-    },
-    {
-        "music_id":46,
-        "title":"Tchaikovsky: Ballet Suites",
-        "release_date":null,
-        "catalogue_no":"E4191752",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk0MTQ3Ny4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTIxODF9",
-        "artist_ids":[
-            82,
-            83
-        ]
-    },
-    {
-        "music_id":46,
-        "title":"Tchaikovsky - Ballet Suites",
-        "release_date":null,
-        "catalogue_no":"E4663792",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyMzczNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTc2Njd9",
-        "artist_ids":[
-            605,
-            83
-        ]
-    },
-    {
-        "music_id":46,
-        "title":"Tchaikovsky - Ballets",
-        "release_date":1097452800000.0,
-        "catalogue_no":"4775153",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkzMjY3OS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTcyNjR9",
-        "artist_ids":[
-            1242,
-            1754,
-            252,
-            1755
-        ]
-    },
-    {
-        "music_id":46,
         "title":"Fairy Music",
         "release_date":null,
         "catalogue_no":"CCLCDG1002",
@@ -11330,30 +9744,6 @@
             1882,
             1883,
             1884
-        ]
-    },
-    {
-        "music_id":46,
-        "title":"The Glory of Rostropovich",
-        "release_date":1171843200000.0,
-        "catalogue_no":"E4776579",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk1MjY3NC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTUxOTB9",
-        "artist_ids":[
-            1790,
-            1819,
-            1820,
-            1820,
-            1821,
-            1330,
-            1822,
-            1823,
-            1258,
-            1824,
-            1825,
-            1826,
-            1752,
-            82,
-            256
         ]
     },
     {
@@ -11376,72 +9766,6 @@
         "artist_ids":[
             1886,
             1887
-        ]
-    },
-    {
-        "music_id":47,
-        "title":"Pyotr Ilyich Tchaikovsky : Concerto for Piano and Orchestra No. 1, Op. 23 • Romeo and Juliet",
-        "release_date":1690416000000.0,
-        "catalogue_no":"ERM 139 ADD",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTUzMjg2MS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTMzODY3ODN9",
-        "artist_ids":[
-            1831,
-            1832,
-            1833,
-            463
-        ]
-    },
-    {
-        "music_id":47,
-        "title":"Pyotr Ilyich Tchaikovsky: Symphony No. 6, Op. 74 & Overture-Fantasy 'Romeo and Juliet'",
-        "release_date":null,
-        "catalogue_no":"RCID14782798",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTQ0NTA3MS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NzQ0NzgwMjV9",
-        "artist_ids":[
-            827,
-            1761,
-            1761
-        ]
-    },
-    {
-        "music_id":47,
-        "title":"Tchaikovsky: Symphony No. 6 & Romeo & Juliet Fantasy Overture",
-        "release_date":1289174400000.0,
-        "catalogue_no":"C832101A",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk5MDQ4OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NDkwNjM5NDR9",
-        "artist_ids":[
-            1737,
-            1764
-        ]
-    },
-    {
-        "music_id":47,
-        "title":"Tchaikovsky: Symphony No.6 'Pathétique' & Romeo and Julia - Fantasy Overture",
-        "release_date":null,
-        "catalogue_no":"4297402",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA0ODgzMS4xLmpwZyIsImVkaXRzIjp7InRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NzExMzU1MjN9",
-        "artist_ids":[
-            368,
-            1757
-        ]
-    },
-    {
-        "music_id":47,
-        "title":"Pyotr Ilyich Tchaikovsky: Essential Orchestral Works",
-        "release_date":1626393600000.0,
-        "catalogue_no":"6514200276",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODkzODQ4NS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODgxOTMzODR9",
-        "artist_ids":[
-            782,
-            1765,
-            1766,
-            1767,
-            1768,
-            554,
-            1769,
-            1770,
-            1771,
-            1772
         ]
     },
     {
@@ -11557,28 +9881,6 @@
         "artist_ids":[
             359,
             1895
-        ]
-    },
-    {
-        "music_id":47,
-        "title":"Tchaikovsky: Swan Lake Suite, The Nutcracker Suite & Romeo and Juliet",
-        "release_date":null,
-        "catalogue_no":"4307072",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA1MDM3NC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1OTIyMjIxMzd9",
-        "artist_ids":[
-            109,
-            110
-        ]
-    },
-    {
-        "music_id":47,
-        "title":"Tchaikovsky: Symphony No. 6 in B minor, Op. 74 'Pathétique', etc.",
-        "release_date":1046390400000.0,
-        "catalogue_no":"E4717422",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyNDQ2Ni4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NzExMzI0MTV9",
-        "artist_ids":[
-            1754,
-            1755
         ]
     },
     {
@@ -12092,20 +10394,6 @@
     },
     {
         "music_id":49,
-        "title":"Joseph Calleja - Verdi",
-        "release_date":null,
-        "catalogue_no":"4831539",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODM4OTE4MS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTU5MzY4NDl9",
-        "artist_ids":[
-            1930,
-            1931,
-            1932,
-            1933,
-            1934
-        ]
-    },
-    {
-        "music_id":49,
         "title":"Verdi Choruses",
         "release_date":1676592000000.0,
         "catalogue_no":"4853950",
@@ -12262,18 +10550,6 @@
             2088,
             2089,
             2090
-        ]
-    },
-    {
-        "music_id":49,
-        "title":"Verdi Heroines",
-        "release_date":1362355200000.0,
-        "catalogue_no":"4669522",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyMzc1NS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTg2NjJ9",
-        "artist_ids":[
-            1932,
-            1952,
-            619
         ]
     },
     {
@@ -12661,18 +10937,6 @@
             2159,
             263,
             2160
-        ]
-    },
-    {
-        "music_id":51,
-        "title":"Verdi",
-        "release_date":1614297600000.0,
-        "catalogue_no":"19439753632",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODg3MDcxNS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MTA5NTc3MTJ9",
-        "artist_ids":[
-            1196,
-            1908,
-            1909
         ]
     },
     {
@@ -13212,17 +11476,6 @@
         "artist_ids":[
             2265,
             2266
-        ]
-    },
-    {
-        "music_id":53,
-        "title":"Great Composers in Words and Music: Antonín Dvořák",
-        "release_date":1689292800000.0,
-        "catalogue_no":"8578368",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTUwMTA4OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODYwNTc2MDV9",
-        "artist_ids":[
-            2243,
-            1763
         ]
     },
     {
@@ -14120,17 +12373,6 @@
     },
     {
         "music_id":58,
-        "title":"Schubert: Symphonies Nos. 8 'Unfinished' & 9 'The Great'",
-        "release_date":1657238400000.0,
-        "catalogue_no":"4863045",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTMzNjAxNy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODAyMDcxMzV9",
-        "artist_ids":[
-            239,
-            752
-        ]
-    },
-    {
-        "music_id":58,
         "title":"Mein Traum",
         "release_date":1665100800000.0,
         "catalogue_no":"HMM905345",
@@ -14139,17 +12381,6 @@
             152,
             157,
             158
-        ]
-    },
-    {
-        "music_id":58,
-        "title":"Schubert: Transfiguration",
-        "release_date":1664496000000.0,
-        "catalogue_no":"AVSA9950",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTM2NTk2OS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODg0NjYyOTB9",
-        "artist_ids":[
-            635,
-            637
         ]
     },
     {
@@ -14176,17 +12407,6 @@
     },
     {
         "music_id":58,
-        "title":"Schubert Unfinished and Great Symphonies",
-        "release_date":1685059200000.0,
-        "catalogue_no":"PTC5187065",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTQ4MjM2Ni4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODE3NDEyNzJ9",
-        "artist_ids":[
-            263,
-            510
-        ]
-    },
-    {
-        "music_id":58,
         "title":"Schubert: Symphony No. 7 'Unfinished' & Franz Schuberts Begräbniß-Feyer, Roland Moser: Echoraum",
         "release_date":null,
         "catalogue_no":"19075814432",
@@ -14194,39 +12414,6 @@
         "artist_ids":[
             2368,
             1330
-        ]
-    },
-    {
-        "music_id":58,
-        "title":"Schubert: The Symphonies",
-        "release_date":1283731200000.0,
-        "catalogue_no":"4778687",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk4ODg4Mi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NzExMzY3MzR9",
-        "artist_ids":[
-            2355,
-            446
-        ]
-    },
-    {
-        "music_id":58,
-        "title":"Schubert: the Symphonies",
-        "release_date":1604016000000.0,
-        "catalogue_no":"ICAC5160",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODgyOTI3Ni4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MzQ2NTA5NDN9",
-        "artist_ids":[
-            685,
-            686
-        ]
-    },
-    {
-        "music_id":58,
-        "title":"Schubert: Symphony No. 8 in B Minor, Dvorak: Symphony No. 9",
-        "release_date":1497571200000.0,
-        "catalogue_no":"9305211237",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODMyMTQzNS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NzcxNzEzODN9",
-        "artist_ids":[
-            857,
-            1797
         ]
     },
     {
@@ -14345,16 +12532,6 @@
         "artist_ids":[
             1520,
             2381
-        ]
-    },
-    {
-        "music_id":59,
-        "title":"Schubert: String Quartet No. 14 'Death and the Maiden' & Beethoven: String Quartet No. 14, Op. 131",
-        "release_date":1699574400000.0,
-        "catalogue_no":"ORC100265",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTUzODE3NC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTUyMjczMTF9",
-        "artist_ids":[
-            717
         ]
     },
     {
@@ -14655,18 +12832,6 @@
             2430,
             2431,
             490
-        ]
-    },
-    {
-        "music_id":60,
-        "title":"Schubert: Piano Quintet & String Quartet No. 14",
-        "release_date":856137600000.0,
-        "catalogue_no":"4497462",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkzMDcxMC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTM4Mzl9",
-        "artist_ids":[
-            768,
-            2386,
-            1374
         ]
     },
     {
@@ -15031,18 +13196,6 @@
     {
         "music_id":61,
         "title":"Brahms: Piano Concerto No. 2 in B flat major, Op. 83",
-        "release_date":1396915200000.0,
-        "catalogue_no":"4792385",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA1MTI2NC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NzExMzM5Njd9",
-        "artist_ids":[
-            816,
-            750,
-            2122
-        ]
-    },
-    {
-        "music_id":61,
-        "title":"Brahms: Piano Concerto No. 2 in B flat major, Op. 83",
         "release_date":874713600000.0,
         "catalogue_no":"4535052",
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA0ODk2MS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTM4ODR9",
@@ -15124,17 +13277,6 @@
         "release_date":null,
         "catalogue_no":"4794372",
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA0ODAzOS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTU5Mzc1ODl9",
-        "artist_ids":[
-            1727,
-            2481
-        ]
-    },
-    {
-        "music_id":62,
-        "title":"Brahms: Symphony No. 4 in E minor, Op. 98",
-        "release_date":null,
-        "catalogue_no":"4779459",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAzNjcyMy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0Mjk4ODE1OTh9",
         "artist_ids":[
             1727,
             2481
@@ -15341,17 +13483,6 @@
     },
     {
         "music_id":63,
-        "title":"Mozart & Brahms: Clarinet Quintets",
-        "release_date":1404086400000.0,
-        "catalogue_no":"CDR90000147",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA0MDUwNS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NzExMjY3MDV9",
-        "artist_ids":[
-            1314,
-            1315
-        ]
-    },
-    {
-        "music_id":63,
         "title":"Brahms: Clarinet Quintet in B minor, Op. 115",
         "release_date":null,
         "catalogue_no":"C068831",
@@ -15414,16 +13545,6 @@
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODQzMTk0Ny4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0ODQ3NTA1MTd9",
         "artist_ids":[
             2520
-        ]
-    },
-    {
-        "music_id":63,
-        "title":"Mozart: Clarinet Quintet in A major, K581, etc.",
-        "release_date":null,
-        "catalogue_no":"CRD3445",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyMzQxNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NzExNjk4NjZ9",
-        "artist_ids":[
-            1307
         ]
     },
     {
@@ -15634,18 +13755,6 @@
     },
     {
         "music_id":64,
-        "title":"Beethoven & Brahms: Violin Concertos",
-        "release_date":1615507200000.0,
-        "catalogue_no":"CC20",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODg3NDExOC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MzY1NjA1ODh9",
-        "artist_ids":[
-            344,
-            859,
-            860
-        ]
-    },
-    {
-        "music_id":64,
         "title":"Brahms: Piano Concerto No. 1 & Violin Concerto & Schumann: Piano Quartet",
         "release_date":null,
         "catalogue_no":"RCO17001",
@@ -15804,39 +13913,6 @@
     },
     {
         "music_id":65,
-        "title":"Brahms: Complete Symphonies",
-        "release_date":1661472000000.0,
-        "catalogue_no":"8574465-67",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTM2MjMzMy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NTg5OTQ3Mjd9",
-        "artist_ids":[
-            611,
-            612
-        ]
-    },
-    {
-        "music_id":65,
-        "title":"Brahms: Symphonies Nos. 1-4",
-        "release_date":null,
-        "catalogue_no":"CKD601",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODQwMzYzNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MTU0NTk4MzZ9",
-        "artist_ids":[
-            1230,
-            839
-        ]
-    },
-    {
-        "music_id":65,
-        "title":"Brahms: The Symphonies",
-        "release_date":1402272000000.0,
-        "catalogue_no":"4787471",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA0MjA4Ni4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NzExMzc1MTF9",
-        "artist_ids":[
-            239,
-            619
-        ]
-    },
-    {
-        "music_id":65,
         "title":"Brahms: Symphony No. 3 & Serenade No. 2",
         "release_date":1623369600000.0,
         "catalogue_no":"CCSSA43821",
@@ -15882,28 +13958,6 @@
     },
     {
         "music_id":65,
-        "title":"Brahms: The Symphonies",
-        "release_date":1252281600000.0,
-        "catalogue_no":"2672542",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk4MTQyMC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MDU1NDMzMDV9",
-        "artist_ids":[
-            82,
-            780
-        ]
-    },
-    {
-        "music_id":65,
-        "title":"Brahms: Symphonies Nos. 3 & 4",
-        "release_date":1652400000000.0,
-        "catalogue_no":"PTC5186852",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTMxOTAyNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NTEwNjA5NDh9",
-        "artist_ids":[
-            615,
-            752
-        ]
-    },
-    {
-        "music_id":65,
         "title":"Brahms: Symphony No. 3 in F major",
         "release_date":null,
         "catalogue_no":"LSO0056",
@@ -15911,17 +13965,6 @@
         "artist_ids":[
             456,
             625
-        ]
-    },
-    {
-        "music_id":65,
-        "title":"Brahms: Symphonies Nos. 1-4",
-        "release_date":1495756800000.0,
-        "catalogue_no":"BSOCL1701",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODMxNDE3Ni4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0OTE5MDU4MTd9",
-        "artist_ids":[
-            1242,
-            1764
         ]
     },
     {
@@ -16814,36 +14857,6 @@
     },
     {
         "music_id":70,
-        "title":"Mussorgsky-Stokowski: Pictures at an Exhibition",
-        "release_date":1125360000000.0,
-        "catalogue_no":"8557645",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyMzkxOS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0MDE5ODI1NTd9",
-        "artist_ids":[
-            2657,
-            2658
-        ]
-    },
-    {
-        "music_id":70,
-        "title":"Mussorgsky: Boris Godunov",
-        "release_date":1690502400000.0,
-        "catalogue_no":"OA1376D",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTQ5OTQ3My4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODU3MDMyOTV9",
-        "artist_ids":[
-            599,
-            2672,
-            1407,
-            2673,
-            2674,
-            1405,
-            2675,
-            1152,
-            1132,
-            2676
-        ]
-    },
-    {
-        "music_id":70,
         "title":"Revive",
         "release_date":1478217600000.0,
         "catalogue_no":"94795937",
@@ -17287,19 +15300,6 @@
     },
     {
         "music_id":73,
-        "title":"Debussy: Suite bergamasque, L. 75, Prélude à l'après-midi d'un faune, L. 86, Children's Corner, L. 113 & Syrinx, L. 129",
-        "release_date":1684022400000.0,
-        "catalogue_no":"INDEDIGI054",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTQ5NjA4My4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODQzMTMzNzV9",
-        "artist_ids":[
-            1788,
-            2763,
-            2764,
-            2765
-        ]
-    },
-    {
-        "music_id":73,
         "title":"Claude Debussy: Essential Works",
         "release_date":1520553600000.0,
         "catalogue_no":"4803307354",
@@ -17715,18 +15715,6 @@
     },
     {
         "music_id":75,
-        "title":"Benjamin Bernheim",
-        "release_date":1573171200000.0,
-        "catalogue_no":"4836078",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODY2NTYzOC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NzI0NDc4Njl9",
-        "artist_ids":[
-            2181,
-            2182,
-            2183
-        ]
-    },
-    {
-        "music_id":75,
         "title":"Puccini: La Bohème",
         "release_date":null,
         "catalogue_no":"4210492",
@@ -17750,22 +15738,6 @@
         "release_date":1654819200000.0,
         "catalogue_no":"2110728",
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTMyOTAxMy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NTE4MzMzNjl9",
-        "artist_ids":[
-            2864,
-            2865,
-            2866,
-            2867,
-            2868,
-            2869,
-            2870
-        ]
-    },
-    {
-        "music_id":75,
-        "title":"Giacomo Puccini: La Bohème",
-        "release_date":1654819200000.0,
-        "catalogue_no":"NBD0148V",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTMyOTAxNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NTE4MzMzNjh9",
         "artist_ids":[
             2864,
             2865,
@@ -17862,30 +15834,6 @@
             2901,
             2902,
             1132
-        ]
-    },
-    {
-        "music_id":76,
-        "title":"The Great Puccini",
-        "release_date":1695945600000.0,
-        "catalogue_no":"4864683",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTUyNzg4Mi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTMzODE3ODB9",
-        "artist_ids":[
-            2845,
-            2846,
-            2847
-        ]
-    },
-    {
-        "music_id":76,
-        "title":"Anima Rara",
-        "release_date":1600992000000.0,
-        "catalogue_no":"9293802532",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODc5NTk0MS4xLmpwZyIsImVkaXRzIjp7InRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1OTM3OTU2ODZ9",
-        "artist_ids":[
-            2161,
-            1933,
-            2162
         ]
     },
     {
@@ -18899,18 +16847,6 @@
     },
     {
         "music_id":81,
-        "title":"Strauss Alliance",
-        "release_date":1651795200000.0,
-        "catalogue_no":"4862040",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTMwODY1OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NTEwNjA1MjN9",
-        "artist_ids":[
-            1242,
-            615,
-            1764
-        ]
-    },
-    {
-        "music_id":81,
         "title":"Richard Strauss: Ein Heldenleben & Metamorphosen",
         "release_date":null,
         "catalogue_no":"4365962",
@@ -19364,24 +17300,6 @@
             82,
             508,
             630
-        ]
-    },
-    {
-        "music_id":84,
-        "title":"Mahler: The Complete Symphonies",
-        "release_date":1503014400000.0,
-        "catalogue_no":"9029586917",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODM0NTczNy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1MTE4MDE3MDF9",
-        "artist_ids":[
-            1159,
-            69,
-            683,
-            3060,
-            3061,
-            3062,
-            2389,
-            683,
-            3063
         ]
     },
     {
@@ -19873,20 +17791,6 @@
     },
     {
         "music_id":86,
-        "title":"Sibelius: Complete Symphonies & Tone Poems",
-        "release_date":1333929600000.0,
-        "catalogue_no":"4783696",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAwNTkzMi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTIwNTl9",
-        "artist_ids":[
-            3134,
-            2984,
-            1242,
-            456,
-            810
-        ]
-    },
-    {
-        "music_id":86,
         "title":"Sibelius: Finlandia, En Saga, The Swan of Tuonela, The Oceanides, Valse Triste, King Christian II Suite",
         "release_date":null,
         "catalogue_no":"CKD566",
@@ -20086,17 +17990,6 @@
         "artist_ids":[
             3161,
             1698
-        ]
-    },
-    {
-        "music_id":86,
-        "title":"Sibelius: Symphony No. 2 & Tone Poems",
-        "release_date":1165795200000.0,
-        "catalogue_no":"4365662",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA1MDQ0MS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NzExMzMzMDF9",
-        "artist_ids":[
-            1242,
-            274
         ]
     },
     {
@@ -20662,16 +18555,6 @@
     },
     {
         "music_id":89,
-        "title":"Debussy - Chopin - Mussorgsky",
-        "release_date":1610668800000.0,
-        "catalogue_no":"ALPHA653",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODg2NDkxNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2MjM5Mjc1Mzh9",
-        "artist_ids":[
-            2656
-        ]
-    },
-    {
-        "music_id":89,
         "title":"Chopin: Preludes, Op. 28 & Schumann: Ghost Variations",
         "release_date":1582848000000.0,
         "catalogue_no":"9029529234",
@@ -20876,39 +18759,6 @@
     },
     {
         "music_id":90,
-        "title":"Chopin Competition Winner 2015: Seong-Jin Cho",
-        "release_date":1446768000000.0,
-        "catalogue_no":"4795332",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA3ODU2OS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTU5NDE3NjJ9",
-        "artist_ids":[
-            1279
-        ]
-    },
-    {
-        "music_id":90,
-        "title":"The Complete Chopin Edition",
-        "release_date":1263168000000.0,
-        "catalogue_no":"4778445",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk4MzEwNy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjcxODgzMzV9",
-        "artist_ids":[
-            783,
-            809,
-            1023,
-            816,
-            274,
-            991,
-            1258,
-            3290,
-            2976,
-            770,
-            1755,
-            3291,
-            3292,
-            256
-        ]
-    },
-    {
-        "music_id":90,
         "title":"Chopin: Polonaises Nos. 1-7",
         "release_date":1380499200000.0,
         "catalogue_no":"4790928",
@@ -20974,30 +18824,10 @@
     },
     {
         "music_id":90,
-        "title":"Chopin: 24 Préludes, Op. 28 & Polonaise No. 6, Op. 53 'Héroique'",
-        "release_date":null,
-        "catalogue_no":"3610154097558",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTUxNTM3MC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTA5OTEyNzV9",
-        "artist_ids":[
-            762
-        ]
-    },
-    {
-        "music_id":90,
         "title":"Chopin: 24 Préludes, Op. 28 & Polonaise No. 6, Op. 53",
         "release_date":null,
         "catalogue_no":"3610153727616",
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTQ5ODc0MC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2ODU0NTY2OTd9",
-        "artist_ids":[
-            762
-        ]
-    },
-    {
-        "music_id":90,
-        "title":"Chopin: 24 Préludes, Op. 28 & Polonaise No. 6, Op. 53",
-        "release_date":null,
-        "catalogue_no":"3610154959511",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTUxNTYwMy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTA5OTE3NDl9",
         "artist_ids":[
             762
         ]
@@ -21138,54 +18968,6 @@
     },
     {
         "music_id":91,
-        "title":"Grieg & Schumann - Piano Concertos",
-        "release_date":null,
-        "catalogue_no":"5575622",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyNTEyNy4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTkzNDMxMzh9",
-        "artist_ids":[
-            1254,
-            604,
-            711
-        ]
-    },
-    {
-        "music_id":91,
-        "title":"Tchaikovsky & Grieg: Piano Concertos",
-        "release_date":null,
-        "catalogue_no":"PTC5186566",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODExMDc2Ni4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ4MzYwNzJ9",
-        "artist_ids":[
-            1828,
-            509,
-            1829
-        ]
-    },
-    {
-        "music_id":91,
-        "title":"Grieg & Schumann: Piano Concertos",
-        "release_date":null,
-        "catalogue_no":"4663832",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkzMTkwNS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTg2Njh9",
-        "artist_ids":[
-            2359,
-            456,
-            2240
-        ]
-    },
-    {
-        "music_id":91,
-        "title":"Grieg & Schumann: Piano Concertos",
-        "release_date":1190592000000.0,
-        "catalogue_no":"5034192",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk1OTI2Ni4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2OTkzNDM3MTZ9",
-        "artist_ids":[
-            1254,
-            82,
-            711
-        ]
-    },
-    {
-        "music_id":91,
         "title":"Edvard Grieg: Piano Concerto in A Minor, Op. 16",
         "release_date":1448409600000.0,
         "catalogue_no":"SCDL14044",
@@ -21196,23 +18978,6 @@
             3319,
             3320,
             2349
-        ]
-    },
-    {
-        "music_id":91,
-        "title":"Grieg & Schumann: Piano Concertos",
-        "release_date":null,
-        "catalogue_no":"4336282",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkyMzU1OC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0MDE5ODI1MTh9",
-        "artist_ids":[
-            1267,
-            1498,
-            552,
-            456,
-            359,
-            2597,
-            2598,
-            2599
         ]
     },
     {
@@ -21533,17 +19298,6 @@
     {
         "music_id":92,
         "title":"Shostakovich: Symphony No. 10 in E minor, Op. 93",
-        "release_date":1281312000000.0,
-        "catalogue_no":"E4297162",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzk5MDU0OS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0NjQ3OTgwNzR9",
-        "artist_ids":[
-            82,
-            83
-        ]
-    },
-    {
-        "music_id":92,
-        "title":"Shostakovich: Symphony No. 10 in E minor, Op. 93",
         "release_date":null,
         "catalogue_no":"4330732",
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODE5MzMwNC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0MDE5ODI1MTh9",
@@ -21645,17 +19399,6 @@
         "artist_ids":[
             791,
             792
-        ]
-    },
-    {
-        "music_id":93,
-        "title":"Shostakovich: Symphony No. 5 in D minor, Op. 47, etc.",
-        "release_date":null,
-        "catalogue_no":"BISCD973974",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiNzkzNzA5NS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0MDE5ODI1NTd9",
-        "artist_ids":[
-            1893,
-            2465
         ]
     },
     {
@@ -21767,17 +19510,6 @@
         "artist_ids":[
             456,
             2113
-        ]
-    },
-    {
-        "music_id":93,
-        "title":"Shostakovich - Complete Symphonies",
-        "release_date":null,
-        "catalogue_no":"6324",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAzMDA1OS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0MDQ4MTA4NTR9",
-        "artist_ids":[
-            2468,
-            3360
         ]
     },
     {
@@ -22108,18 +19840,6 @@
     },
     {
         "music_id":95,
-        "title":"Arias",
-        "release_date":1660262400000.0,
-        "catalogue_no":"4862927",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTMzNjAxOS4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NTk1MjM2MzF9",
-        "artist_ids":[
-            2845,
-            2904,
-            2905
-        ]
-    },
-    {
-        "music_id":95,
         "title":"Bizet: Carmen",
         "release_date":1283126400000.0,
         "catalogue_no":"0734581",
@@ -22190,21 +19910,6 @@
             3428,
             3429,
             3430
-        ]
-    },
-    {
-        "music_id":95,
-        "title":"Il Tenore",
-        "release_date":1656028800000.0,
-        "catalogue_no":"4852945",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiOTMyNjk3Mi4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NTYwODYwNDZ9",
-        "artist_ids":[
-            2910,
-            2911,
-            2912,
-            2913,
-            368,
-            2914
         ]
     },
     {
@@ -22944,24 +20649,6 @@
         "music_id":98,
         "title":"Haydn: The Creation",
         "release_date":null,
-        "catalogue_no":"4796499",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODE3Mzg1Ny4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE1NTU5MzU2ODR9",
-        "artist_ids":[
-            76,
-            77,
-            194,
-            1576,
-            901,
-            219,
-            81,
-            82,
-            83
-        ]
-    },
-    {
-        "music_id":98,
-        "title":"Haydn: The Creation",
-        "release_date":null,
         "catalogue_no":"900125",
         "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODA0NTkyOC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE0OTM2NDc1NDJ9",
         "artist_ids":[
@@ -23309,17 +20996,6 @@
         "artist_ids":[
             109,
             1841
-        ]
-    },
-    {
-        "music_id":100,
-        "title":"Bartók: Concerto for Orchestra, BB 123, Sz.116",
-        "release_date":1184630400000.0,
-        "catalogue_no":"4777182",
-        "jacket_filename":"eyJidWNrZXQiOiJwcmVzdG8tY292ZXItaW1hZ2VzIiwia2V5IjoiODAzNjc2NC4xLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6OTAwfSwianBlZyI6eyJxdWFsaXR5Ijo2NX0sInRvRm9ybWF0IjoianBlZyJ9LCJ0aW1lc3RhbXAiOjE2NDE4MzUzOTJ9",
-        "artist_ids":[
-            1727,
-            2481
         ]
     },
     {

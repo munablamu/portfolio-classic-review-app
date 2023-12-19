@@ -82,7 +82,8 @@ if ( !function_exists('subscription_icon_url') ) {
 if ( !function_exists('highlightKeyword') ) {
     function highlightKeyword(?string $str, string $keyword): ?string
     {
-        $keyword = preg_quote($keyword); // ユーザー入力のkeywordの中に存在する正規表現の特殊文字をエスケープ
+        $delimiter = '/';
+        $keyword = preg_quote($keyword, $delimiter); // ユーザー入力のkeywordの中に存在する正規表現の特殊文字をエスケープ
 
         if ( $str !== null) {
             $str = preg_replace_callback_array(

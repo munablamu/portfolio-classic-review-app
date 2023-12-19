@@ -2,10 +2,10 @@
   <div class="mx-5 my-5">
     <div class="rounded-lg p-2 mb-4 border-4 border-emerald-600 text-emerald-600 bg-emerald-100">
       <strong>サンプルアカウントについて</strong>
-      <p>　ご採用担当者の方向けにサンプルアカウント（メールアドレス：sample@example.com、パスワード：password）をご用意しております。ログイン時の機能をご確認される際は、よろしければこちらをご利用ください。</p>
+      <p>　ご採用担当者の方向けにサンプルアカウント（メールアドレス：sample@example.com、パスワード：password）をご用意しております。ログイン時の機能をご確認される際は、よろしければこちらをご活用ください。</p>
     </div>
 
-    <p>　このたびは、私のポートフォリオサイト「<strong class="strong-color">Classic Music Review App</strong>」をご覧いただき、ありがとうございます。このページでは、このサイトの使い方をかんたんにご説明させていただきます。</p>
+    <p>　このたびは、私のポートフォリオサイト「<strong class="strong-color">Classic Music Review App</strong>」をご覧いただき、ありがとうございます。このページでは、このサイトの使い方と機能をかんたんにご説明させていただきます。なお、こちらのページを読んでいただかなくても差し支えないように、<strong class='strong-color'>ページ左下</strong>にそのページについての説明もご用意いたしました。あわせてご利用ください。</p>
 
     <h2 class="text-2xl mt-4 mb-2 font-bold text-slate-500 dark:text-slate-400">検索機能</h2>
     <p>　このサイトは、名前の通りクラシック音楽のレビュー共有を想定して作成いたしました。録音（CD、アルバム、BOXなど）に対してレビューを投稿したり、他の方の投稿を見ることができるサイトになっております。録音は<a href="/" class="url">トップページ</a>から「曲名」、「演奏家名」、「レビュー」の3つの目的に応じて検索していただけます。</p>
