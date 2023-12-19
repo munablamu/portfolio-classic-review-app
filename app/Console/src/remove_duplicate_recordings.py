@@ -8,7 +8,7 @@ def main():
     df = df.drop_duplicates(subset=['artist_ids', 'title'])
     df['artist_ids'] = df['artist_ids'].apply(list)
 
-    with open('database/seeders/recordings2.json', 'w') as f:
+    with open(RECORDINGS_PATH, 'w') as f:
         f.write(df.to_json(orient='records', force_ascii=False, indent=4))
 
 if __name__ == '__main__':
