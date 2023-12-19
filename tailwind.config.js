@@ -11,6 +11,9 @@ export default {
 
     theme: {
         extend: {
+            screens: {
+                'ss': '420px'
+            },
             fontFamily: {
                 sans: ['Lato', ...defaultTheme.fontFamily.sans],
                 'Ubuntu': ['Ubuntu'],
