@@ -3,8 +3,8 @@
 
   <x-user.nav_tabs :user=$user />
 
-  @if ( $user->self_introduction === null )
-    <p class="text-slate-400 dark:text-slate-400 mx-5">このユーザーはまだレビューを投稿していません。</p>
+  @if ( $reviews->count() === 0 )
+    <p class="text-slate-400 dark:text-slate-400 mx-5 mt-4">このユーザーはまだレビューを投稿していません。</p>
   @else
     <div class="flex justify-end mx-5">
       @php

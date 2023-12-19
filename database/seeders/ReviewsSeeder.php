@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use App\Models\Recording;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -18,7 +19,7 @@ class ReviewsSeeder extends Seeder
         $recordings = Recording::all();
 
         foreach ( $recordings as $i_recording ) {
-            $all_user_ids = range(1, 100);
+            $all_user_ids = range(1, User::count());
             shuffle($all_user_ids);
             $chosen_user_ids = array_slice($all_user_ids, 0, 15);
 
