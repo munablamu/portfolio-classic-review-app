@@ -28,8 +28,8 @@ class UsersSeeder extends Seeder
 
         // 採用担当者向けのサンプルアカウント
         DB::table('users')->insert([
-            'name' => 'Hoge',
-            'email' => 'hoge@example.com',
+            'name' => 'Sample',
+            'email' => 'sample@example.com',
             'email_verified_at' => now(),
             'password' => Hash::make('password'),
             'remember_token' => Str::random(10),

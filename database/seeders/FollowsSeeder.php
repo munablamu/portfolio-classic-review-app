@@ -19,7 +19,7 @@ class FollowsSeeder extends Seeder
         foreach ( $users as $i_user ) {
             $followIds = User::where('id', '!=', $i_user->id)
                 ->inRandomOrder()
-                ->take(rand(0, 10))
+                ->take(rand(1, 10))
                 ->pluck('id');
 
             foreach ( $followIds as $j_followId ) {

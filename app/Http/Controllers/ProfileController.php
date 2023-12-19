@@ -61,6 +61,11 @@ class ProfileController extends Controller
 
         $user = $request->user();
 
+        if ( $user->email === 'sample@example.com' ) {
+            return Redirect::route('home.edit_profile')
+                ->with('feedback.warning', 'サンプルアカウントは削除できません。');
+        }
+
         Auth::logout();
 
         $user->delete();

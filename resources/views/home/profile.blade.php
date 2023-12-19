@@ -66,7 +66,11 @@
   </div>
 </x-layout>
 
-<x-common.help message="ユーザーアイコン・自己紹介文を変更できるほか、ユーザー名・メールアドレス・パスワードも変更できます。" />
+@if ( $user->email === 'sample@example.com' )
+  <x-common.help message="ユーザーアイコン・自己紹介文を変更できるほか、ユーザー名・メールアドレス・パスワードも変更できます。サンプルアカウントは削除できないようにしてあります。" />
+@else
+  <x-common.help message="ユーザーアイコン・自己紹介文を変更できるほか、ユーザー名・メールアドレス・パスワードも変更できます。" />
+@endif
 
 <script>
   function showFileName() {
