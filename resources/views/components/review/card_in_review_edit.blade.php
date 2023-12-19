@@ -45,7 +45,7 @@
             <a href="{{ route('review.edit', ['recording' => $review->recording]) }}" class="btn btn-indigo">
               <i class="fa-solid fa-pen-nib mr-1"></i>編集
             </a>
-            <form action="{{ route('review.delete', ['review' => $review]) }}" method="post">
+            <form action="{{ route('review.delete', ['review' => $review]) }}" method="post" onsubmit="return confirm('本当に削除しますか？');">
               @method('DELETE')
               @csrf
               <button type="submit" class="btn btn-rose">
