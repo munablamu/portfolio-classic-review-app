@@ -18,3 +18,5 @@
     @endif
   </div>
 </x-layout>
+
+<x-common.help message="このユーザーがフォローしているユーザーの一覧です。" />

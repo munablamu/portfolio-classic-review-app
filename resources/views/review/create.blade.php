@@ -14,3 +14,5 @@
     'buttonText' => '投稿',
   ])
 </x-layout>
+
+<x-common.help message="このページでは、レビューの投稿ができます。" />

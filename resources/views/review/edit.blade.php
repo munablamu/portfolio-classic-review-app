@@ -17,3 +17,5 @@
     'buttonText' => '編集',
   ])
 </x-layout>
+
+<x-common.help message="このページでは、レビューの編集ができます。" />

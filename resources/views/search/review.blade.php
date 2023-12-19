@@ -1,11 +1,9 @@
 <x-layout :title="'Search by Review'">
-  <h1 class="search_h">Search by Review</h1>
+  <h1 class="search_h mb-4">Search by Review</h1>
 
-  <div class="mx-3">
-    <x-search.bar :q='$q' :oldSearchType=$oldSearchType />
-  </div>
+  <x-search.bar :q='$q' :oldSearchType=$oldSearchType />
 
-  <p class="text-slate-600 dark:text-slate-300 text-sm mx-5">検索結果: {{ $reviews->total() }}件</p>
+  <p class="text-slate-600 dark:text-slate-300 text-sm mx-5 mt-2">検索結果: {{ $reviews->total() }}件</p>
 
   <div class="mt-2">
     @if ( $reviews->count() === 0 )
@@ -24,3 +22,5 @@
     @endif
   </div>
 </x-layout>
+
+<x-common.help message="「<strong class='strong-color-invert'>{{ $q }}</strong>」でレビューを全文検索した結果です。ユーザー名からユーザーページ、録音（CDやアルバム）タイトル・ジャケット画像から録音詳細ページ、レビュータイトル(続きを読む)からレビューの全文を閲覧できるページに移動できます。" />

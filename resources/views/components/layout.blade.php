@@ -31,5 +31,10 @@
       {{ $slot }}
     </div>
     <x-common.footer class="w-full fixed bottom-0" />
+
+    {{-- help --}}
+    <div id="help-open" class="fixed bottom-16 left-4 w-16 h-16 rounded-full bg-slate-600 text-slate-100 dark:bg-slate-100 dark:text-slate-700 flex items-center justify-center shadow-2xl text-3xl z-50 cursor-pointer hidden">
+      <i class="fa-solid fa-seedling"></i>
+    </div>
   </body>
 <html>

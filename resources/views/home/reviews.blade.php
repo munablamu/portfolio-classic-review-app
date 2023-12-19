@@ -19,3 +19,5 @@
   </div>
 </x-layout>
 
+
+<x-common.help message="過去に投稿したレビューの一覧が表示されます。このページからも<strong class='strong-color-invert'>レビューの編集・削除</strong>が可能ですが、各録音（CDやアルバム）の詳細ページでも自分のレビューの編集・削除が可能です。" />

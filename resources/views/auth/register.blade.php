@@ -73,3 +73,5 @@
         </div>
     </div>
 </x-layout>
+
+<x-common.help message="アカウント作成ページです。なお、ログインページからサンプルアカウント（メールアドレス：<strong class='strong-color-invert'>hoge@example.com</strong>、パスワード：<strong class='strong-color-invert'>password</strong>）でもログイン可能です。" />

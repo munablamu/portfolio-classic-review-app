@@ -5,3 +5,5 @@
     <x-search.bar :q=null :oldSearchType=null :fromTopController=$fromTopController />
   </div>
 </x-layout>
+
+<x-common.help message="「<strong class='strong-color-invert'>Classic Music Review App</strong>」へようこそ。まずは、検索バーのプルダウンメニューから「<strong class='strong-color-invert'>Music Title</strong>」を選んで、「<strong class='strong-color-invert'>バッハ</strong>」を検索してみてください。" />

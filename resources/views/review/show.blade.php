@@ -4,3 +4,5 @@
     </div>
     <x-review.card :review=$review :clamp=false />
 </x-layout>
+
+<x-common.help message="このページでは、レビューの閲覧ができます。" />

@@ -6,3 +6,5 @@
         </div>
     </div>
 </x-layout>
+
+<x-common.help message="エラーページです。" />

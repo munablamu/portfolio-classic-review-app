@@ -17,7 +17,7 @@
             <span class="leading-normal">ファイルを選択</span>
             <input type='file' class="hidden" name="user_icon" id="user_icon" onchange="showFileName()" />
           </label>
-          <span id="file-name" class="input flex items-center px-2 h-10 mt-1 ml-1">選択されていません</span>
+          <span id="file-name" class="input flex items-center px-2 h-10 ml-1">選択されていません</span>
         </div>
       </div>
       <div class="flex justify-end">
@@ -66,6 +66,7 @@
   </div>
 </x-layout>
 
+<x-common.help message="ユーザーアイコン・自己紹介文を変更できるほか、ユーザー名・メールアドレス・パスワードも変更できます。" />
 
 <script>
   function showFileName() {

@@ -25,3 +25,5 @@
     {{ $recordings->appends(request()->query())->links('vendor.pagination.original') }}
   </ul>
 </x-layout>
+
+<x-common.help message="作曲家「{{ $music->composer->name }}」が作曲した「{{ $music->title }}」という曲における、当サイトのデータベース上にある録音(CD, アルバムなど)の一覧です。" />

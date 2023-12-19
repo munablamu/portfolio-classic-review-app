@@ -60,3 +60,5 @@
         </div>
     </div>
 </x-layout>
+
+<x-common.help message="ログインページです。サンプルアカウント（メールアドレス：<strong class='strong-color-invert'>hoge@example.com</strong>、パスワード：<strong class='strong-color-invert'>password</strong>）でログインしてみてください。一度の認証でログインできれば元のページに戻れますが、認証に失敗してからログインするとユーザーのHomeページへ移動します。" />

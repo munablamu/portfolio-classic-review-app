@@ -71,3 +71,5 @@
     {{ $reviews->appends(request()->query())->links('vendor.pagination.original') }}
   </div>
 </x-layout>
+
+<x-common.help message="「{{ $recording->artists_string }}」が演奏した「{{ $recording->title }}」というタイトルの録音(CDやアルバム)の詳細ページです。この録音に対する<strong class='strong-color-invert'>レビューの閲覧や投稿</strong>ができます。ログインすると、「<strong class='strong-color-invert'>いいね</strong>」や「<strong class='strong-color-invert'>お気に入り登録</strong>」が可能になります。" />

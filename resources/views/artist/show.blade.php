@@ -48,3 +48,4 @@
   </ul>
 </x-layout>
 
+<x-common.help message="演奏家「{{ $artist->name }}」の詳細ページです。この演奏家の関わった録音の一覧が表示されています。ログイン状態では、この演奏家を「<strong class='strong-color-invert'>お気に入り登録</strong>」することができます。" />

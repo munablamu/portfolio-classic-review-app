@@ -41,3 +41,4 @@
   @endif
 </x-layout>
 
+<x-common.help message="ユーザーが過去に投稿したレビューの一覧です。「<strong class='strong-color-invert'>いいね順</strong>」、「<strong class='strong-color-invert'>高評価順</strong>」、「<strong class='strong-color-invert'>新着投稿順</strong>」で並べ替えが可能です。" />

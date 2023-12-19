@@ -1,14 +1,14 @@
-<form action="{{ route('search.index') }}" method='get' class="flex flex-col sm:flex-row items-center m-2 flex-grow sm:w-auto">
-  <select name="search_type" class="rounded-md sm:rounded-r-none h-10 pl-5 pr-10 w-full capitalize sm:w-auto border border-slate-300 text-slate-600 bg-slate-100 hover:border-slate-400 dark:border-slate-500 dark:text-slate-125 dark:bg-slate-600 dark:hover:border-slate-400 focus:outline-none appearance-none">
-    <option value="music" {{ $oldSearchType === 'music' ? 'selected' : '' }}>music title</option>
-    <option value="artist" {{ $oldSearchType === 'artist' ? 'selected' : '' }}>artist</option>
-    <option value="review" {{ $oldSearchType === 'review' ? 'selected' : '' }}>review</option>
-  </select>
-  <input id='q' type="text" name="q"
-    class="rounded-md sm:rounded-l-none h-10 pl-5 pr-5 w-full sm:w-auto border border-slate-300 text-slate-600 bg-slate-100 hover:border-slate-400 dark:border-slate-500 dark:text-slate-125 dark:bg-slate-600 dark:hover:border-slate-400 focus:outline-none appearance-none"
-    placeholder="Please enter keywords..." value="{{ old('q', $q) }}" {{ (isset($fromTopController) && $fromTopController) ? 'autofocus' : '' }}>
-  {{-- sm:w-20を付けないとtopページで表示がおかしくなる。 --}}
-  <button id="search-button" type="submit" class="btn btn-indigo px-6 ml-2 h-10 w-full sm:w-20 font-bold" disabled>Search</button>
+<form action="{{ route('search.index') }}" method="get" class="mx-5">
+  <div class="flex flex-col sm:flex-row items-center">
+    <select name="search_type" class="w-full sm:w-auto rounded-md sm:rounded-r-none h-10 capitalize pl-4 pr-8 border-slate-300 text-slate-600 bg-slate-100 hover:border-slate-400 dark:border-slate-500 dark:text-slate-125 dark:bg-slate-600 dark:hover:border-slate-400 focus:outline-none appearance-none">
+      <option value="music" {{ $oldSearchType === 'music' ? 'selected' : '' }}>music title</option>
+      <option value="artist" {{ $oldSearchType === 'artist' ? 'selected' : '' }}>artist</option>
+      <option value="review" {{ $oldSearchType === 'review' ? 'selected' : '' }}>review</option>
+    </select>
+    <input id="q" type="text" name="q" placeholder="Please enter keywords..." value="{{ old('q', $q) }}"
+      class="w-full sm:w-96 rounded-md sm:rounded-l-none h-10 pl-4 pr-4 border-slate-300 text-slate-600 bg-slate-100 hover:border-slate-400 dark:border-slate-500 dark:text-slate-125 dark:bg-slate-600 dark:hover:border-slate-400 focus:outline-none appearance-none">
+    <button id="search-button" type="submit" class="btn btn-indigo m-0 mt-1 sm:mt-0 sm:ml-2 px-4 h-10 w-full sm:w-auto font-bold">Search</button>
+  </div>
 </form>
 
 <script>
