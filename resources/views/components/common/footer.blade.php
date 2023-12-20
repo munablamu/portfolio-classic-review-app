@@ -1,16 +1,16 @@
 <footer class="text-slate-300 bg-slate-800 body-font z-10">
-  <div class="container px-5 py-1 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="px-5 py-1 mx-auto flex justify-between items-center sm:flex-row flex-col">
     <p class="text-sm sm:py-2 sm:mt-0 mt-2">© 2023 munablemu —
       <a href="https://github.com/munablamu/portfolio-classic-review-app" class="text-slate-400 hover:text-slate-300 underline ml-1" rel="noopener noreferrer" target="_blank">
       <i class="fa-brands fa-github mr-1"></i>github
       </a>
     </p>
 
-    <a href="{{ route('contact.index') }}" class="sm:ml-10 text-sm text-slate-400 hover:text-slate-300">
+    <a href="{{ route('contact.index') }}" class="text-sm text-slate-400 hover:text-slate-300">
       <i class="fa-solid fa-envelope mr-1"></i>お問い合わせ
     </a>
 
-    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+    {{-- <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
       <!-- Facebook -->
       <a id="facebook" class="text-slate-400 hover:text-slate-300" rel="nofollow noopener" target="_blank">
         <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -36,10 +36,10 @@
           <circle cx="4" cy="4" r="2" stroke="none"></circle>
         </svg>
       </a>
-    </span>
+    </span> --}}
   </div>
 
-  <script>
+  {{-- <script>
     const currentUrl = window.location.href;
     const pageTitle = document.title;
 
@@ -54,9 +54,9 @@
 
     const linkedin = document.getElementById('linkedin');
     linkedin.setAttribute("href", `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`)
-  </script>
+  </script> --}}
   <!-- twitter -->
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  {{-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> --}}
   <!-- linkedin -->
-  <script src="https://platform.linkedin.com/in.js" type="text/javascript"></script>
+  {{-- <script src="https://platform.linkedin.com/in.js" type="text/javascript"></script> --}}
 </footer>

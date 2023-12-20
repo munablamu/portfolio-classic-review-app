@@ -1,5 +1,5 @@
 <x-layout :title="$artist->name">
-  <div class="mx-5 pt-2 mb-5">
+  <div class="mx-5 pt-2 mb-2">
     <h1 class="text-3xl sm:text-6xl font-Ubuntu font-bold tracking-wide text-slate-500 dark:text-slate-400">{{ $artist->name }}</h1>
   </div>
   @auth
