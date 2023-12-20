@@ -16,6 +16,22 @@
     </div>
   </div>
 
+  <div class="flex justify-end mx-5">
+    @php
+      $orderBy = request()->query('orderBy', 'release_date');
+    @endphp
+    <div class="my-4 text-right">
+      <a class="order {{ $orderBy === 'release_date' ? 'order-true' : 'order-false' }}"
+        href="{{ route('music.show', ['music' => $music, 'orderBy' => 'release_date']) }}">
+        <i class="fa-solid fa-calendar-plus mr-1"></i>発売日順
+      </a>
+      <a class="order {{ $orderBy === 'average_rate' ? 'order-true' : 'order-false' }}"
+        href="{{ route('music.show', ['music' => $music, 'orderBy' => 'average_rate']) }}">
+        <i class="fa-solid fa-star mr-1"></i>高評価順
+      </a>
+    </div>
+  </div>
+
   <ul class="mx-5">
     @foreach ( $recordings as $i_recording )
       <li>

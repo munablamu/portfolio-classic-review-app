@@ -25,7 +25,7 @@
 </x-layout>
 
 @if ( $q === 'バッハ' )
-  <x-common.help message="「<strong class='strong-color-invert'>{{ $q }}</strong>」で曲名検索した結果です。検索結果からお好きな曲を選んでください。データベース上には曲名、作曲家名などがすべて英語やドイツ語で登録されています。そのため、曲名や演奏家名で検索するとDeepLのAPIを利用して英語で検索されるようになっています。今回は「バッハ」で検索したので、ピアノ曲の「<strong class='strong-color-invert'>Goldberg Variations</strong>（ゴルドベルグ変奏曲）」を選んでみてください。" />
+  <x-common.help message="「<strong class='strong-color-invert'>{{ $q }}</strong>」で曲名検索した結果です。検索結果からお好きな曲を選んでください。データベース上には曲名、作曲家名、演奏家名などがすべて英語やドイツ語で登録されています。そのため、曲名や演奏家名で検索するとDeepLのAPIで翻訳された英語で検索されるようになっています。今回は「バッハ」で検索したので、ピアノ曲の「<strong class='strong-color-invert'>Goldberg Variations</strong>（ゴルドベルグ変奏曲）」を選んでみてください。" />
 @else
   <x-common.help message="「<strong class='strong-color-invert'>{{ $q }}</strong>」で曲名検索した結果です。検索結果からお好きな曲を選んでください。" />
 @endif

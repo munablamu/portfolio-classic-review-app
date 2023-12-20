@@ -12,9 +12,11 @@ use Exception;
 
 class MusicController extends Controller
 {
-    public function show(Music $music, RecordingService $recordingService)
+    public function show(Request $request, Music $music, RecordingService $recordingService)
     {
-        $recordings = $recordingService->getRecordingsRelatedToMusic($music, 10);
+        $orderBy = $request->query('orderBy', 'release_date');
+
+        $recordings = $recordingService->getRecordingsRelatedToMusic($music, 10, $orderBy);
 
         return view('music.show',
             compact('music', 'recordings'));

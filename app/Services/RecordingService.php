@@ -25,11 +25,17 @@ class RecordingService
         return $recordings;
     }
 
-    public function getRecordingsRelatedToMusic(Music $music, int $num_paginate)
+    public function getRecordingsRelatedToMusic(Music $music, int $num_paginate, ?string $orderBy)
     {
+        $orderBy = match($orderBy) {
+            'release_date' => 'release_date',
+            'average_rate' => 'average_rate',
+            default => 'release_date'
+        };
+
         $recordings = Recording::with('reviews')
             ->where('music_id', $music->id)
-            ->orderBy('average_rate', 'desc')
+            ->orderBy($orderBy, 'desc')
             ->paginate($num_paginate);
 
         return $recordings;
