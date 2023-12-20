@@ -17,7 +17,7 @@
     <p class="">発売日: {{ $recording->release_date_string }}</p>
     <p class="">カタログ番号: {{ $recording->catalogue_no }}</p>
     <div class="flex items-center">
-      <p class="mr-1">レビュー: {{ $recording->average_rate }}</p>
+      <p class="mr-1">レビュー: {{ $recording->average_rate_string }}</p>
       <x-common.rate :rate="$recording->average_rate" />
       <p class="ml-1 text-slate-500 dark:text-slate-400">({{ $recording->reviews->count() }}人の評価)</p>
     </div>

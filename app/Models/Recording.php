@@ -48,6 +48,11 @@ class Recording extends Model
         $this->save();
     }
 
+    public function getAverageRateStringAttribute()
+    {
+        return number_format($this->average_rate, 1);
+    }
+
     public function getArtistsStringAttribute()
     {
         if ( $this->artists !== null && count($this->artists) > 0 ) {
