@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ProfileUpdateRequest;
 use App\Http\Requests\UserIconRequest;
 use App\Http\Requests\SelfIntroductionRequest;
+use App\Modules\ImageUpload\ImageManagerInterface;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,6 +17,10 @@ use Illuminate\Support\Facades\File;
 
 class ProfileController extends Controller
 {
+    public function __construct(private ImageManagerInterface $imageManager)
+    {
+    }
+
     /**
      * Display the user's profile form.
      */
@@ -83,11 +88,12 @@ class ProfileController extends Controller
                 $file = $request->file('user_icon');
 
                 if ( $file->isValid() ) {
-                    do {
+                    /* do {
                         $filename = Str::random(10) . '.' . $file->getClientOriginalExtension();
                     } while ( Storage::exists('public/user_icons/' . $filename) );
 
-                    $file->storeAs('public/user_icons', $filename);
+                    $file->storeAs('public/user_icons', $filename); */
+                    $filename = $this->imageManager->save($file, 'user_icons');
 
                     $user = Auth::user();
                     $oldUserIconFilename = $user->icon_filename;
@@ -95,8 +101,9 @@ class ProfileController extends Controller
 
                     if ( $user->save() ) {
                         // TODO: なぜpublic_pathを挟まないとdeleteできないのか？
-                        $publicPath = public_path('storage/user_icons/' . $oldUserIconFilename);
-                        $deleteSuccess = File::delete($publicPath);
+                        /* $publicPath = public_path('storage/user_icons/' . $oldUserIconFilename);
+                        $deleteSuccess = File::delete($publicPath); */
+                        $this->imageManager->delete('user_icons/' . $oldUserIconFilename);
                     }
                 }
             }
