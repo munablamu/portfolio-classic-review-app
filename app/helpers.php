@@ -15,7 +15,7 @@ if ( !function_exists('logo_url') ) {
         if ( app()->environment('production') ) {
             return (string) app()
                 ->make(\Cloudinary\Cloudinary::class)
-                ->image($userIconDirectory . $filename)
+                ->image($filename)
                 ->secure();
         } else {
             return asset('storage/' . $filename);
