@@ -98,7 +98,7 @@ if ( !function_exists('highlightKeyword') ) {
 }
 
 if ( !function_exists('extractKeywordContext') ) {
-    function extractKeywordContext(?string $str): ?string
+    function extractKeywordContext(string $str): ?string
     {
         preg_match('/(.{0,50})<strong class="strong-color">.*?<\/strong>(.{0,50})/u', $str, $matches);
 

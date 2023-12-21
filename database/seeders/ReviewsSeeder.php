@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use \DateTime;
+use \DateTimeZone;
 use App\Models\User;
 use App\Models\Recording;
 use Illuminate\Database\Seeder;
@@ -17,39 +19,19 @@ class ReviewsSeeder extends Seeder
     {
         $faker = Faker::create('ja_JP');
         $recordings = Recording::all();
+        $reviews = json_decode(file_get_contents('database/seeders/reviews.json'));
 
-        foreach ( $recordings as $i_recording ) {
-            $all_user_ids = range(1, User::count());
-            shuffle($all_user_ids);
-            $chosen_user_ids = array_slice($all_user_ids, 0, 15);
-
-            for ( $i = 0; $i < 5; $i++ ) {
-                $randomDateTime = $faker->dateTimeBetween($startDate='-3 year', $endDate='now');
-                DB::table('reviews')->insert([
-                    'user_id' => $chosen_user_ids[$i],
-                    'recording_id' => $i_recording->id,
-                    'title' => $faker->realText(15),
-                    'content' => $faker->realText(400),
-                    'rate' => rand(1, 5),
-                    'like' => 0,
-                    'created_at' => $randomDateTime,
-                    'updated_at' => $randomDateTime,
-                ]);
-            }
-
-            for ( $i = 0; $i < 10; $i++ ) {
-                $randomDateTime = $faker->dateTimeBetween($startDate='-3 year', $endDate='now');
-                DB::table('reviews')->insert([
-                    'user_id' => $chosen_user_ids[$i+5],
-                    'recording_id' => $i_recording->id,
-                    'title' => null,
-                    'content' => null,
-                    'rate' => rand(1, 5),
-                    'like' => 0,
-                    'created_at' => $randomDateTime,
-                    'updated_at' => $randomDateTime,
-                ]);
-            }
+        foreach ( $reviews as $i_review ) {
+            DB::table('reviews')->insert([
+                'user_id' => $i_review->user_id,
+                'recording_id' => $i_review->recording_id,
+                'title' => $i_review->title,
+                'content' => $i_review->content,
+                'rate' => $i_review->rate,
+                'like' => $i_review->like,
+                'created_at' => new DateTime($i_review->created_at->date, new DateTimeZone($i_review->created_at->timezone)),
+                'updated_at' => new DateTime($i_review->updated_at->date, new DateTimeZone($i_review->updated_at->timezone)),
+            ]);
         }
     }
 }
