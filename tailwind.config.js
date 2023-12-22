@@ -12,7 +12,7 @@ export default {
     theme: {
         extend: {
             screens: {
-                'ss': '420px'
+                'ss': '425px'
             },
             fontFamily: {
                 sans: ['Lato', ...defaultTheme.fontFamily.sans],
