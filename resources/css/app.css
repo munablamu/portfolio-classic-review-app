@@ -94,19 +94,19 @@
 }
 
 .order {
-    @apply py-1 px-2 mx-1 rounded-full border-2 border-slate-500 dark:border-sky-300;
+    @apply py-1 px-2 mx-1 rounded-full border-2 border-slate-500 dark:border-sky-400;
 }
 .order-true {
-    @apply bg-slate-500 text-slate-50 dark:bg-sky-300 dark:text-slate-700;
+    @apply bg-slate-500 text-slate-50 dark:bg-sky-400 dark:text-slate-900;
 }
 .order-false {
-    @apply bg-inherit text-slate-500 dark:bg-inherit dark:text-sky-300;
+    @apply bg-inherit text-slate-500 dark:bg-inherit dark:text-sky-400;
 }
 .strong-color {
-    @apply text-mauve-500 dark:text-sky-300;
+    @apply text-mauve-500 dark:text-sky-400;
 }
 .strong-color-invert {
-    @apply text-sky-300 dark:text-mauve-500;
+    @apply text-sky-400 dark:text-mauve-500;
 }
 .input {
     @apply shadow-sm focus:ring-indigo-500 w-full border border-slate-300 bg-slate-100 dark:border-slate-700 dark:bg-slate-800 rounded-md;
