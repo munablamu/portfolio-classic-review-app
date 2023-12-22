@@ -17,7 +17,7 @@ from scraper import Scraper, Item
 DOWNLOAD_DELAY = 3
 BASE_URL = 'https://www.prestomusic.com/classical/search'
 COMPOSERS_PATH = 'database/seeders/composers.json'
-MUSICS_PATH = 'database/seeders/musics.json'
+MUSICS_PATH = 'database/seeders/musics.json'    # from https://classicalmusiconly.com/list/100-greatest-classical-music-works-f164de5b
 OUTPUT_JL_PATH = 'database/seeders/recordings.jl'
 RECORDINGS_PATH = 'database/seeders/recordings.json'
 ARTISTS_JSON = 'database/seeders/artists.json'
