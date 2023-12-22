@@ -36,7 +36,7 @@ class CloudinaryImageManager implements ImageManagerInterface
                     // 'public_id' => pathinfo($publicId, PATHINFO_FILENAME),
                     'overwrite' => false,
                 ])['public_id'];
-            return ltrim($publicId, "{$dir}/");
+            return pathinfo($publicId, PATHINFO_BASENAME);
         }
     }
 
