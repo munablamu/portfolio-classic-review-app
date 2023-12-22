@@ -12,7 +12,7 @@ class CreateReviewsJson extends Command
      *
      * @var string
      */
-    protected $signature = 'create:reviews-json {--users=100} {--reviews=20}';
+    protected $signature = 'app:create-reviews-json {--users=100} {--reviews=20}';
 
     /**
      * The console command description.
