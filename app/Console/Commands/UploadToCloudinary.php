@@ -35,12 +35,15 @@ class UploadToCloudinary extends Command
         $finder->files()->in('storage/app/public');
 
         foreach ($finder as $file) {
+            echo "*************************************************************\\n";
             $publicId = $file->getRelativePathname();
+            echo $publicId . "\\n";
             $cloudinary->uploadApi()->upload($file, [
                 'folder' => pathinfo($publicId, PATHINFO_DIRNAME),
                 'public_id' => pathinfo($publicId, PATHINFO_FILENAME),
                 'overwrite' => true,
             ]);
+            echo "success\\n";
         }
     }
 }
