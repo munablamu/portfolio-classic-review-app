@@ -31,8 +31,8 @@ class FreshSeed extends Command
         $scout_string = $this->option('scout');
         $scouts = explode(',', $scout_string);
         foreach ( $scouts as $i_scout ) {
-            Artisan::call("scout:flush 'App\\Models\\${i_scout}'");
-            Artisan::call("scout:import 'App\\Models\\${i_scout}'");
+            Artisan::call("scout:flush 'App\\Models\\{$i_scout}'");
+            Artisan::call("scout:import 'App\\Models\\{$i_scout}'");
         }
 
         $cloudinary = $this->option('cloudinary');
