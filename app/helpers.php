@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-use Illuminate\Support\Collection;
+use GuzzleHttp\Client;
 
 if ( !function_exists('logo_url') ) {
     function logo_url(string $extension): string
@@ -122,5 +122,30 @@ if ( !function_exists('extractKeywordContext') ) {
         }
 
         return $result;
+    }
+}
+
+if ( !function_exists('translate') ) {
+    function translate(string $str, string $target_lang='EN'): string
+    {
+        $client = new Client();
+
+        $response = $client->post('https://api-free.deepl.com/v2/translate', [
+            'headers' => [
+                'Authorization' => 'DeepL-Auth-Key ' . config('services.deepl.secret'),
+                'Content-Type' => 'application/json',
+            ],
+            'json' => [
+                'text' => [
+                    $str
+                ],
+                'target_lang' => $target_lang,
+            ],
+        ]);
+
+        $body = $response->getBody()->__toString();
+        $data = json_decode($body);
+
+        return $data->translations[0]->text;
     }
 }
