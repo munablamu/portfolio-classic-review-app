@@ -18,5 +18,5 @@
       </div>
     </div>
   </div>
-  <hr class="border-t border-slate-200 dark:border-slate-600 mt-2 mb-2">
+  <hr class="border-t item-border-color mt-2 mb-2">
 </div>

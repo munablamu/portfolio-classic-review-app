@@ -57,5 +57,5 @@
       <x-common.like :review=$review />
     </div>
   </div>
-  <hr class="border-t border-slate-200 dark:border-slate-600 my-4">
+  <hr class="border-t item-border-color my-4">
 </div>

@@ -49,5 +49,5 @@
       </form>
     </div>
   @endif
-  <hr class="border-t border-slate-200 dark:border-slate-600 mt-4 mb-2">
+  <hr class="border-t item-border-color mt-4 mb-2">
 </div>

@@ -24,5 +24,5 @@
       </div>
     @endif
   </div>
-  <hr class="border-t border-slate-200 dark:border-slate-600">
+  <hr class="border-t item-border-color">
 </div>

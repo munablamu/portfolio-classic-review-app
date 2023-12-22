@@ -109,7 +109,10 @@
     @apply text-sky-300 dark:text-mauve-500;
 }
 .input {
-    @apply shadow-sm focus:ring-indigo-500 w-full border border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md;
+    @apply shadow-sm focus:ring-indigo-500 w-full border border-slate-300 bg-slate-100 dark:border-slate-700 dark:bg-slate-800 rounded-md;
+}
+.item-border-color {
+    @apply border-slate-200 dark:border-slate-800;
 }
 
 .overflow-x {
@@ -133,21 +136,21 @@
   background: theme('colors.slate.200');
 }
 .dark ::-webkit-scrollbar-track {
-  background: theme('colors.slate.600');
+  background: theme('colors.slate.800');
 }
 /* スクロールバーのボタン（上下左右）のスタイル */
 ::-webkit-scrollbar-thumb {
   background: theme('colors.slate.500');
   border-radius: 10px;
 }
-::-webkit-scrollbar-thumb {
-  background: theme('colors.slate.500');
+.dark ::-webkit-scrollbar-thumb {
+  background: theme('colors.slate.700');
 }
 ::-webkit-scrollbar-thumb:hover {
   background: theme('colors.slate.600');
 }
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: theme('colors.slate.400');
+  background: theme('colors.slate.600');
 }
 
 
@@ -160,7 +163,7 @@ input:autofill,
 input:autofill:hover,
 input:autofill:focus,
 input:autofill:active {
-    -webkit-text-fill-color: theme('colors.slate.600') !important;
+    -webkit-text-fill-color: theme('colors.slate.800') !important;
     -webkit-box-shadow: 0 0 0 30px theme('colors.slate.100') inset !important;
 }
 .dark input:-webkit-autofill,
@@ -171,8 +174,8 @@ input:autofill:active {
 .dark input:autofill:hover,
 .dark input:autofill:focus,
 .dark input:autofill:active {
-    -webkit-text-fill-color: theme('colors.slate.150') !important;
-    -webkit-box-shadow: 0 0 0 30px theme('colors.slate.600') inset !important;
+    -webkit-text-fill-color: theme('colors.slate.250') !important;
+    -webkit-box-shadow: 0 0 0 30px theme('colors.slate.800') inset !important;
 }
 
 @tailwind utilities;

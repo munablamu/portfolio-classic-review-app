@@ -1,4 +1,4 @@
-<ul class="overflow-x grid grid-flow-col text-center border-b border-slate-200 text-slate-500 dark:border-slate-600 dark:text-slate-400 mx-5">
+<ul class="overflow-x grid grid-flow-col text-center border-b border-slate-200 text-slate-500 dark:border-slate-800 dark:text-slate-400 mx-5">
   <li class="min-w-[8rem]">
     <a href="{{ route('home') }}" class="{{ Request::routeIs('home') ? 'text-indigo-600 border-indigo-600 dark:text-indigo-400 dark:border-indigo-400 font-bold' : 'hover:text-indigo-600 dark:hover:text-indigo-400 hover:font-bold border-transparent' }} flex justify-center border-b-4 py-4">タイムライン</a>
   </li>
