@@ -40,7 +40,9 @@ class UploadToCloudinary extends Command
             }
 
             $publicId = $file->getRelativePathname();
-            $cloudinary->uploadApi()->upload($file, [
+            echo $file->getRealPath();
+            exit;
+            $cloudinary->uploadApi()->upload($file->getRealPath(), $options = [
                 'folder' => pathinfo($publicId, PATHINFO_DIRNAME),
                 'public_id' => pathinfo($publicId, PATHINFO_FILENAME),
                 'overwrite' => true,
