@@ -1,9 +1,9 @@
 <div class="flex flex-col sm:flex-row m-5">
-  <div class="w-full sm:w-1/3">
-    <img class="object-cover w-full" src="{{ jacket_url($recording->jacket_filename) }}" alt="{{ $recording->title }}">
+  <div class="flex justify-center sm:block sm:w-1/3">
+    <img class="object-cover w-1/2 sm:w-full" src="{{ jacket_url($recording->jacket_filename) }}" alt="{{ $recording->title }}">
   </div>
   <div class="w-full sm:w-2/3 sm:pl-4 flex flex-col">
-    <h1 class="mb-1 text-5xl font-Ubuntu font-bold text-slate-500 dark:text-slate-400">
+    <h1 class="mb-1 text-xl sm:text-3xl font-Ubuntu font-bold text-slate-500 dark:text-slate-400">
       <!-- TODO: ここの処理をHTMLに書かずに済むようにしたい -->
       @if ( $recording->artists !== null )
         @foreach ( $recording->artists as $i_artist )
@@ -13,12 +13,14 @@
         {{ '不明' }}
       @endif
     </h1>
-    <h2 class="text-xl font-bold mb-2 text-mauve-500">{{ $recording->title }}</h2>
+    <h2 class="text-lg ss:text-xl font-bold mb-2 text-mauve-500">{{ $recording->title }}</h2>
     <p class="">発売日: {{ $recording->release_date_string }}</p>
     <p class="">カタログ番号: {{ $recording->catalogue_no }}</p>
-    <div class="flex items-center">
-      <p class="mr-1">レビュー: {{ $recording->average_rate_string }}</p>
-      <x-common.rate :rate="$recording->average_rate" />
+    <div class="ss:flex ss:items-center">
+      <div class="flex items-center">
+        <p class="mr-1">レビュー: {{ $recording->average_rate_string }}</p>
+        <x-common.rate :rate="$recording->average_rate" />
+      </div>
       <p class="ml-1 text-slate-500 dark:text-slate-400">({{ $recording->reviews->count() }}人の評価)</p>
     </div>
 

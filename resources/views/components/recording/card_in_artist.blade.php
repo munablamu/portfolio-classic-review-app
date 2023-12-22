@@ -7,13 +7,15 @@
     </div>
     <div class="w-5/6 pl-4">
       <a href="{{ route('recording.show', ['recording' => $recording]) }}">
-        <h3 class="url text-2xl font-bold">{{ $recording->title }}</h3>
+        <h3 class="url ss:text-2xl font-bold">{{ $recording->title }}</h3>
       </a>
       <p>演奏家: {{ $recording->artists_string }}</p>
       <p>発売日: {{ $recording->release_date_string }}</p>
-      <div class="flex items-center">
-        <p class="mr-1">レビュー: {{ $recording->average_rate_string }}</p>
-        <x-common.rate :rate="$recording->average_rate" />
+      <div class="ss:flex ss:items-center">
+        <div class="flex items-center">
+          <p class="mr-1">レビュー: {{ $recording->average_rate_string }}</p>
+          <x-common.rate :rate="$recording->average_rate" />
+        </div>
         <p class="ml-1 text-slate-500 dark:text-slate-400">({{ $recording->reviews->count() }}人の評価)</p>
       </div>
     </div>

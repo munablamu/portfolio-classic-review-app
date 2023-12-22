@@ -7,7 +7,7 @@
       <h1 class="text-3xl sm:text-6xl font-Ubuntu font-bold tracking-wide text-slate-500 dark:text-slate-400">
         {{ $music->title }}
       </h1>
-      <h2 class="text-xl sm:text-5xl font-Ubuntu font-bold tracking-wide text-right -mt-4 sm:-mt-5 text-sage-500">
+      <h2 class="text-xl sm:text-5xl font-Ubuntu font-bold tracking-wide ss:text-right ss:-mt-4 sm:-mt-5 text-sage-500">
         {{ $music->composer->name }}
       </h2>
     </div>
@@ -20,16 +20,20 @@
     @php
       $orderBy = request()->query('orderBy', 'release_date');
     @endphp
-    <div class="my-4 text-right">
-      <a class="order {{ $orderBy === 'release_date' ? 'order-true' : 'order-false' }}"
-        href="{{ route('music.show', ['music' => $music, 'orderBy' => 'release_date']) }}">
-        <i class="fa-solid fa-calendar-plus mr-1"></i>発売日順
-      </a>
-      <a class="order {{ $orderBy === 'average_rate' ? 'order-true' : 'order-false' }}"
-        href="{{ route('music.show', ['music' => $music, 'orderBy' => 'average_rate']) }}">
-        <i class="fa-solid fa-star mr-1"></i>高評価順
-      </a>
-    </div>
+    <ul class="my-4 py-1 overflow-x flex flex-row ss:justify-end">
+      <li class="whitespace-nowrap">
+        <a class="order {{ $orderBy === 'release_date' ? 'order-true' : 'order-false' }}"
+          href="{{ route('music.show', ['music' => $music, 'orderBy' => 'release_date']) }}">
+          <i class="fa-solid fa-calendar-plus mr-1"></i>発売日順
+        </a>
+      </li>
+      <li class="whitespace-nowrap">
+        <a class="order {{ $orderBy === 'average_rate' ? 'order-true' : 'order-false' }}"
+          href="{{ route('music.show', ['music' => $music, 'orderBy' => 'average_rate']) }}">
+          <i class="fa-solid fa-star mr-1"></i>高評価順
+        </a>
+      </li>
+    </ul>
   </div>
 
   <ul class="mx-5">

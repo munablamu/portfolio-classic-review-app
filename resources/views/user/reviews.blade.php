@@ -10,20 +10,26 @@
       @php
         $orderBy = request()->query('orderBy', 'like');
       @endphp
-      <div class="my-4 text-right">
-        <a class="order {{ $orderBy === 'like' ? 'order-true' : 'order-false' }}"
-          href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'like']) }}">
-          <i class="fa-solid fa-heart mr-1"></i>いいね順
-        </a>
-        <a class="order {{ $orderBy === 'rate' ? 'order-true' : 'order-false' }}"
-          href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'rate']) }}">
-          <i class="fa-solid fa-star mr-1"></i>高評価順
-        </a>
-        <a class="order {{ $orderBy === 'updated_at' ? 'order-true' : 'order-false' }}"
-          href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'updated_at']) }}">
-          <i class="fa-solid fa-calendar-plus mr-1"></i>新着投稿順
-        </a>
-      </div>
+      <ul class="my-4 py-1 overflow-x flex flex-row ss:justify-end">
+        <li class="whitespace-nowrap">
+          <a class="order {{ $orderBy === 'like' ? 'order-true' : 'order-false' }}"
+            href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'like']) }}">
+            <i class="fa-solid fa-heart mr-1"></i>いいね順
+          </a>
+        </li>
+        <li class="whitespace-nowrap">
+          <a class="order {{ $orderBy === 'rate' ? 'order-true' : 'order-false' }}"
+            href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'rate']) }}">
+            <i class="fa-solid fa-star mr-1"></i>高評価順
+          </a>
+        </li>
+        <li class="whitespace-nowrap">
+          <a class="order {{ $orderBy === 'updated_at' ? 'order-true' : 'order-false' }}"
+            href="{{ route('user.reviews', ['user' => $user, 'orderBy' => 'updated_at']) }}">
+            <i class="fa-solid fa-calendar-plus mr-1"></i>新着投稿順
+          </a>
+        </li>
+      </ul>
     </div>
 
     <div class="mx-5 mb-4">
