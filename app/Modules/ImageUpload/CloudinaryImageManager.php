@@ -22,16 +22,18 @@ class CloudinaryImageManager implements ImageManagerInterface
         $publicId = $file->getClientOriginalName();
 
         if ( $dir === null ) {
+            // public_idを明示しないことで、自動でランダムなIDを採番してくれる
             return $this->cloudinary
                 ->uploadApi()->upload($file->getRealPath(), [
-                    'public_id' => pathinfo($publicId, PATHINFO_FILENAME),
+                    // 'public_id' => pathinfo($publicId, PATHINFO_FILENAME),
                     'overwrite' => false,
                 ])['public_id'];
         } else {
+            // public_idを明示しないことで、自動でランダムなIDを採番してくれる
             $publicId =  $this->cloudinary
                 ->uploadApi()->upload($file->getRealPath(), [
                     'folder' => $dir,
-                    'public_id' => pathinfo($publicId, PATHINFO_FILENAME),
+                    // 'public_id' => pathinfo($publicId, PATHINFO_FILENAME),
                     'overwrite' => false,
                 ])['public_id'];
             return ltrim($publicId, "{$dir}/");
