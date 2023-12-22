@@ -23,13 +23,13 @@ class CloudinaryImageManager implements ImageManagerInterface
 
         if ( $dir === null ) {
             return $this->cloudinary
-                ->uploadApi()->upload($file, [
+                ->uploadApi()->upload($file->getRealPath(), [
                     'public_id' => pathinfo($publicId, PATHINFO_FILENAME),
                     'overwrite' => false,
                 ])['public_id'];
         } else {
             return $this->cloudinary
-                ->uploadApi()->upload($file, [
+                ->uploadApi()->upload($file->getRealPath(), [
                     'folder' => $dir,
                     'public_id' => pathinfo($publicId, PATHINFO_FILENAME),
                     'overwrite' => false,
