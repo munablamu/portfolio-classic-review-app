@@ -27,11 +27,13 @@ class SearchController extends Controller
     public function music(Request $request, MusicService $musicService)
     {
         $q = trim($request->query('q')) ?? '';
-        $musics = $musicService->search($q, 10);
+        $translatedQ = translate($q);
+
+        $musics = $musicService->search($translatedQ, 10);
 
         $oldSearchType = $request->query('oldSearchType');
 
-        $keywords = explode(' ', $q);
+        $keywords = explode(' ', $translatedQ);
         foreach ( $musics as $i_music) {
             foreach ( $keywords as $j_keyword ) {
                 $i_music->title = highlightKeyword($i_music->title, $j_keyword);
@@ -41,17 +43,19 @@ class SearchController extends Controller
         }
 
         return view('search.music',
-            compact('q', 'musics', 'oldSearchType'));
+            compact('q','translatedQ', 'musics', 'oldSearchType'));
     }
 
     public function artist(Request $request, ArtistService $artistService)
     {
         $q = trim($request->query('q')) ?? '';
-        $artists = $artistService->search($q, 10);
+        $translatedQ = translate($q);
+
+        $artists = $artistService->search($translatedQ, 10);
 
         $oldSearchType = $request->query('oldSearchType');
 
-        $keywords = explode(' ', $q);
+        $keywords = explode(' ', $translatedQ);
         foreach ( $artists as $i_artist) {
             foreach ( $keywords as $j_keyword ) {
                 $i_artist->name = highlightKeyword($i_artist->name, $j_keyword);
@@ -59,7 +63,7 @@ class SearchController extends Controller
         }
 
         return view('search.artist',
-            compact('q', 'artists', 'oldSearchType'));
+            compact('q', 'translatedQ', 'artists', 'oldSearchType'));
     }
 
     public function review(Request $request, ReviewService $reviewService)
