@@ -17,7 +17,7 @@ class CloudinaryImageManager implements ImageManagerInterface
     /**
      * @throws \Cloudinary\Api\Exception\ApiError
      */
-    public function save(UploadedFile $file, ?string $dir): string
+    public function save(UploadedFile $file, ?string $dir=null): string
     {
         $publicId = $file->getClientOriginalName();
 
@@ -28,12 +28,13 @@ class CloudinaryImageManager implements ImageManagerInterface
                     'overwrite' => false,
                 ])['public_id'];
         } else {
-            return $this->cloudinary
+            $publicId =  $this->cloudinary
                 ->uploadApi()->upload($file->getRealPath(), [
                     'folder' => $dir,
                     'public_id' => pathinfo($publicId, PATHINFO_FILENAME),
                     'overwrite' => false,
                 ])['public_id'];
+            return ltrim($publicId, "{$dir}/");
         }
     }
 
