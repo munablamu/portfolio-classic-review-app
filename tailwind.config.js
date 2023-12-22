@@ -20,7 +20,7 @@ export default {
                 'Lobster': ['Lobster'],
             },
             backgroundImage: theme => ({
-                'top-background': "url('/storage/app/public/top_image.png')",
+                'top-background': "url('/storage/app/public/images/top_image.png')",
             }),
             colors: {
                 'slate': {

@@ -6,6 +6,8 @@ use Illuminate\Support\Collection;
 if ( !function_exists('logo_url') ) {
     function logo_url(string $extension): string
     {
+        $imagesDirectory = 'images/';
+
         if ( $extension === 'ico' ) {
             $filename = 'favicon.ico';
         } else {
@@ -15,10 +17,10 @@ if ( !function_exists('logo_url') ) {
         if ( app()->environment('production') ) {
             return (string) app()
                 ->make(\Cloudinary\Cloudinary::class)
-                ->image($filename)
+                ->image($imagesDirectory . $filename)
                 ->secure();
         } else {
-            return asset('storage/' . $filename);
+            return asset('storage/' . $imagesDirectory . $filename);
         }
     }
 }

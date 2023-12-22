@@ -35,11 +35,14 @@ class UploadToCloudinary extends Command
         $finder->files()->in('storage/app/public');
 
         foreach ($finder as $file) {
-            $relativePathname = $file->getRelativePathname();
-            $publicId = ltrim(pathinfo($relativePathname, PATHINFO_FILENAME), './');
+            if ( $file->getRelativePathname() === '.gitignore' ) {
+                continue;
+            }
+
+            $publicId = $file->getRelativePathname();
             $cloudinary->uploadApi()->upload($file, [
-                'folder' => pathinfo($relativePathname, PATHINFO_DIRNAME),
-                'public_id' => $publicId,
+                'folder' => pathinfo($publicId, PATHINFO_DIRNAME),
+                'public_id' => pathinfo($publicId, PATHINFO_FILENAME),
                 'overwrite' => true,
             ]);
         }
