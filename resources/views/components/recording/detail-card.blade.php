@@ -13,7 +13,7 @@
         {{ '不明' }}
       @endif
     </h1>
-    <h2 class="text-lg ss:text-xl font-bold mb-2 text-mauve-500">{{ $recording->title }}</h2>
+    <h2 class="text-lg ss:text-xl font-bold mb-2 text-mauve-600">{{ $recording->title }}</h2>
     <p class="">発売日: {{ $recording->release_date_string }}</p>
     <p class="">カタログ番号: {{ $recording->catalogue_no }}</p>
     <div class="ss:flex ss:items-center">
