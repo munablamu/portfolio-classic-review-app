@@ -11,7 +11,11 @@ class SearchController extends Controller
 {
     public function index(Request $request)
     {
-        $q = trim($request->get('q'));
+        $q = trim($request->get('q')) ?? '';
+        if ( $q === '' ) {
+            abort(404, 'Invalid parameter');
+        }
+
         $search_type = $request->get('search_type');
 
         $route = match($search_type) {
@@ -26,7 +30,7 @@ class SearchController extends Controller
 
     public function music(Request $request, MusicService $musicService)
     {
-        $q = trim($request->query('q')) ?? '';
+        $q = trim($request->query('q'));
         $translatedQ = translate($q);
 
         $musics = $musicService->search($translatedQ, 10);
@@ -48,7 +52,7 @@ class SearchController extends Controller
 
     public function artist(Request $request, ArtistService $artistService)
     {
-        $q = trim($request->query('q')) ?? '';
+        $q = trim($request->query('q'));
         $translatedQ = translate($q);
 
         $artists = $artistService->search($translatedQ, 10);
@@ -68,7 +72,7 @@ class SearchController extends Controller
 
     public function review(Request $request, ReviewService $reviewService)
     {
-        $q = trim($request->query('q')) ?? '';
+        $q = trim($request->query('q'));
         $reviews = $reviewService->search($q, 10);
 
         $oldSearchType = $request->query('oldSearchType');
