@@ -15,7 +15,11 @@
     @auth
       @empty ( $user_review )
         <div class="mx-5 mb-10">
-          <p>{{ Auth::user()->name }}さんも、レビューを投稿してみましょう。</p>
+          @if ( $reviews->count() !== 0 )
+            <p>{{ Auth::user()->name }}さんも、レビューを投稿してみましょう。</p>
+          @else
+            <p>{{ Auth::user()->name }}さんが最初のレビューを投稿してみませんか？</p>
+          @endif
           <a class="btn btn-indigo font-bold" href="{{ route('review.create', ['recording' => $recording]) }}">
             <i class="fa-solid fa-pen-nib"></i><span class="ml-1">投稿</span>
           </a>
@@ -36,34 +40,34 @@
     @endauth
   @endif
 
-  @php
-    $orderBy = request()->query('orderBy', 'like');
-  @endphp
-  <ul class="my-4 mx-5 py-1 overflow-x flex flex-row ss:justify-end">
-    <li class="whitespace-nowrap">
-      <a class="order {{ $orderBy === 'like' ? 'order-true' : 'order-false' }}"
-        href="{{ route('recording.show', ['recording' => $recording, 'orderBy' => 'like']) }}">
-        <i class="fa-solid fa-heart mr-1"></i>いいね順
-      </a>
-    </li>
-    <li class="whitespace-nowrap">
-      <a class="order {{ $orderBy === 'rate' ? 'order-true' : 'order-false' }}"
-        href="{{ route('recording.show', ['recording' => $recording, 'orderBy' => 'rate']) }}">
-        <i class="fa-solid fa-star mr-1"></i>高評価順
-      </a>
-    </li>
-    <li class="whitespace-nowrap">
-      <a class="order {{ $orderBy === 'updated_at' ? 'order-true' : 'order-false' }}"
-        href="{{ route('recording.show', ['recording' => $recording, 'orderBy' => 'updated_at']) }}">
-        <i class="fa-solid fa-calendar-plus mr-1"></i>新着投稿順
-      </a>
-    </li>
-  </ul>
-
-  <div>
+  <div class="mx-5">
     @if ( $reviews->count() === 0 )
       <p>まだレビューを書いている人がいません。</p>
     @else
+      @php
+        $orderBy = request()->query('orderBy', 'like');
+      @endphp
+      <ul class="my-4 mx-5 py-1 overflow-x flex flex-row ss:justify-end">
+        <li class="whitespace-nowrap">
+          <a class="order {{ $orderBy === 'like' ? 'order-true' : 'order-false' }}"
+            href="{{ route('recording.show', ['recording' => $recording, 'orderBy' => 'like']) }}">
+            <i class="fa-solid fa-heart mr-1"></i>いいね順
+          </a>
+        </li>
+        <li class="whitespace-nowrap">
+          <a class="order {{ $orderBy === 'rate' ? 'order-true' : 'order-false' }}"
+            href="{{ route('recording.show', ['recording' => $recording, 'orderBy' => 'rate']) }}">
+            <i class="fa-solid fa-star mr-1"></i>高評価順
+          </a>
+        </li>
+        <li class="whitespace-nowrap">
+          <a class="order {{ $orderBy === 'updated_at' ? 'order-true' : 'order-false' }}"
+            href="{{ route('recording.show', ['recording' => $recording, 'orderBy' => 'updated_at']) }}">
+            <i class="fa-solid fa-calendar-plus mr-1"></i>新着投稿順
+          </a>
+        </li>
+      </ul>
+
       <ul>
         @foreach ( $reviews as $i_review )
           <li>
