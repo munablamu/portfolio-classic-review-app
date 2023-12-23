@@ -18,7 +18,7 @@
     <!-- secondary nav -->
     <div class="items-center space-x-1 flex flex-row">
       <!-- light / dark theme toggle button -->
-      <button id="theme-toggle" aria-label="Toggle theme" class="btn btn-black h-8 w-8 rounded-lg border-2 border-slate-300 text-slate-300">
+      <button id="theme-toggle" aria-label="Toggle theme" class="btn btn-black h-8 w-8 rounded-lg border-2 border-slate-300">
         <span class="w-full h-full flex items-center justify-center text-2xl" id="dark-icon">
           <i class="fa-solid fa-moon"></i>
         </span>

@@ -72,13 +72,13 @@
     @apply bg-slate-300;
 }
 .btn-black {
-    @apply bg-slate-800 text-slate-300 ring-slate-500;
+    @apply bg-black text-slate-300 ring-slate-500;
 }
 .btn-black:hover {
-    @apply bg-slate-600 text-slate-200;
+    @apply bg-slate-800 text-slate-200;
 }
 .btn-black:active {
-    @apply bg-slate-500 text-slate-100;
+    @apply bg-slate-700 text-slate-100;
 }
 .url {
     @apply text-indigo-500 dark:text-indigo-300 underline;
@@ -94,13 +94,13 @@
 }
 
 .order {
-    @apply py-1 px-2 mx-1 rounded-full border-2 border-slate-500 dark:border-sky-400;
+    @apply py-1 px-2 mx-1 rounded-full border-2 border-slate-700 dark:border-sky-400;
 }
 .order-true {
-    @apply bg-slate-500 text-slate-50 dark:bg-sky-400 dark:text-slate-900;
+    @apply bg-slate-700 text-slate-125 dark:bg-sky-400 dark:text-slate-900;
 }
 .order-false {
-    @apply bg-inherit text-slate-500 dark:bg-inherit dark:text-sky-400;
+    @apply bg-inherit text-slate-700 dark:bg-inherit dark:text-sky-400;
 }
 .strong-color {
     @apply text-mauve-500 dark:text-sky-400;

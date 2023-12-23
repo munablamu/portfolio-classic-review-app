@@ -21,7 +21,7 @@
           <x-common.rate :rate="$review->rate" />
         </div>
         <div class="p-0">
-          <a href="{{ route('recording.show', ['recording' => $review->recording]) }}" class="url font-semibold leading-relaxed">
+          <a href="{{ route('recording.show', ['recording' => $review->recording]) }}" class="url font-bold leading-relaxed">
             {{ $review->recording->title }}
           </a>
         </div>
@@ -31,12 +31,12 @@
           </p>
         </div>
         <div class="p-0">
-          <p class="font-semibold leading-relaxed">
+          <a class="url font-bold leading-relaxed" href="{{ route('review.show', ['review' => $review]) }}">
             {{ $review->title }}
-          </p>
+          </a>
         </div>
         <div class="p-0">
-          <p class="">
+          <p class="line-clamp-5">
             {{ $review->content }}
           </p>
         </div>
