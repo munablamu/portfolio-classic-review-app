@@ -21,7 +21,7 @@ class LikesSeeder extends Seeder
         foreach ( $users as $i_user ) {
             $like_ids = Review::whereNotNull('title')
                 ->inRandomOrder()
-                ->take(rand(0, $reviewsCount))
+                ->take(rand(0, floor($reviewsCount/5)))
                 ->pluck('id');
 
             foreach ( $like_ids as $j_like_id ) {
