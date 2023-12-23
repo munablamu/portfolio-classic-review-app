@@ -40,7 +40,7 @@
     @endauth
   @endif
 
-  <div class="mx-5">
+  <div class="">
     @if ( $reviews->count() === 0 )
       <p>まだレビューを書いている人がいません。</p>
     @else
