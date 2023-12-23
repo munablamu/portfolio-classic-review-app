@@ -2,10 +2,10 @@
   <div class="flex flex-wrap px-5 py-3 flex-row items-center justify-between">
     <!-- logo -->
     <a href="{{ route('top') }}" class="flex title-font font-medium items-center text-slate-100">
-      <div class="w-10 h-10 text-base sm:text-xl flex justify-center items-center">
+      <div class="w-8 h-8 sm:w-10 sm:h-10 text-base sm:text-xl flex justify-center items-center">
         <img src="{{ logo_url('png') }}">
       </div>
-      <span class="ml-3 text-xl font-bold font-Lobster sm:tracking-widest hidden ss:block">Classic Music Review App</span>
+      <span class="ml-3 text-lg sm:text-xl font-bold font-Lobster sm:tracking-widest tracking-tighter">Classic Music Review App</span>
     </a>
     <!-- primary nav -->
     <nav class="hidden md:ml-auto md:mr-auto md:flex md:flex-wrap items-center text-base justify-center">
