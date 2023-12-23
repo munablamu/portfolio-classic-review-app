@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Composer;
 
 class TopController extends Controller
 {
@@ -16,6 +16,9 @@ class TopController extends Controller
 
     public function help()
     {
-        return view('top.help');
+        $composers = Composer::all();
+
+        return view('top.help',
+            compact('composers'));
     }
 }
