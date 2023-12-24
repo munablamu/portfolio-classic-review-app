@@ -24,7 +24,7 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
   </head>
-  <body class="flex flex-col min-h-screen font-sans bg-slate-125 text-slate-800 dark:bg-slate-900 dark:text-slate-250 md:antialiased">
+  <body class="flex flex-col min-h-screen font-sans bg-slate-125 text-slate-800 dark:bg-gray-slate-900 dark:text-slate-250 md:antialiased">
     <x-common.header />
     <x-common.session_feedback />
     <div class="flex-grow pt-16 relative w-full max-w-[60rem] mx-auto">
