@@ -12,7 +12,7 @@
                     <x-input-label for="email" :value="__('Email')" />
                     {{-- <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" /> --}}
                     <input id="email" name="email" type="email"
-                        class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md" required autofocus autocomplete="username"
+                        class="input mt-1" required autofocus autocomplete="username"
                         value="{{ old('email') }}">
                     </input>
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
@@ -27,7 +27,7 @@
                                     name="password"
                                     required autocomplete="current-password" /> --}}
                     <input id="password" name="password" type="password"
-                        class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md" required autocomplete="current-password"
+                        class="input" required autocomplete="current-password"
                     >
                     </input>
 
@@ -37,7 +37,7 @@
                 <!-- Remember Me -->
                 <div class="block mt-4">
                     <label for="remember_me" class="inline-flex items-center">
-                        <input id="remember_me" type="checkbox" class="rounded dark:bg-slate-600 border-slate-300 dark:border-slate-500 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-slate-800" name="remember">
+                        <input id="remember_me" type="checkbox" class="rounded-md dark:bg-slate-800 border-slate-300 dark:border-slate-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-slate-800" name="remember">
                         <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
                     </label>
                 </div>
