@@ -15,7 +15,7 @@
                             name="password"
                             required autocomplete="current-password" /> --}}
             <input id="password" name="password" type="password"
-                class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md" required autocomplete="current-password"
+                class="mt-1 input" required autocomplete="current-password"
             >
             </input>
 

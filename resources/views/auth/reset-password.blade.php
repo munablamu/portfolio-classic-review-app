@@ -12,7 +12,7 @@
                     <x-input-label for="email" :value="__('Email')" />
                     {{-- <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus autocomplete="username" /> --}}
                     <input id="email" name="email" type="email"
-                        class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md" required autofocus autocomplete="username"
+                        class="mt-1 input" required autofocus autocomplete="username"
                         value="{{ old('email', $request->email) }}">
                     </input>
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
