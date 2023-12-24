@@ -5,7 +5,8 @@
       <div class="w-8 h-8 sm:w-10 sm:h-10 text-base sm:text-xl flex justify-center items-center">
         <img src="{{ logo_url('png') }}">
       </div>
-      <span class="ml-3 text-lg sm:text-xl font-bold font-Lobster sm:tracking-widest tracking-tighter">Classic Music Review App</span>
+      <span class="ml-3 text-xl font-bold font-Lobster tracking-widest hidden sm:block">Classic Music Review App</span>
+      <span class="ml-3 text-lg font-bold font-Lobster tracking-wide block sm:hidden">Classic Music Review</span>
     </a>
     <!-- primary nav -->
     <nav class="hidden md:ml-auto md:mr-auto md:flex md:flex-wrap items-center text-base justify-center">
