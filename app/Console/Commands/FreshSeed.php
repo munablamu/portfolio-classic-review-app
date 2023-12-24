@@ -12,7 +12,7 @@ class FreshSeed extends Command
      *
      * @var string
      */
-    protected $signature = 'app:fresh-seed {--scout=} {--cloudinary}';
+    protected $signature = 'app:fresh-seed {--scout=Music,Artist,Review} {--cloudinary}';
 
     /**
      * The console command description.
@@ -32,6 +32,8 @@ class FreshSeed extends Command
         $scouts = explode(',', $scout_string);
         foreach ( $scouts as $i_scout ) {
             Artisan::call("scout:flush 'App\\Models\\{$i_scout}'");
+        }
+        foreach ( $scouts as $i_scout ) {
             Artisan::call("scout:import 'App\\Models\\{$i_scout}'");
         }
 

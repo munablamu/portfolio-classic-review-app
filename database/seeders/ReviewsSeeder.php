@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use \DateTime;
 use \DateTimeZone;
-use App\Models\User;
 use App\Models\Recording;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;

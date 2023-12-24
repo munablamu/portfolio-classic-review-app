@@ -12,7 +12,7 @@ class CreateReviewsJson extends Command
      *
      * @var string
      */
-    protected $signature = 'app:create-reviews-json {--users=100} {--reviews=20}';
+    protected $signature = 'app:create-reviews-json {--users=41} {--reviews=10}';
 
     /**
      * The console command description.
@@ -48,8 +48,8 @@ class CreateReviewsJson extends Command
                 $reviews[] = [
                     'user_id' => $chosen_user_ids[$j],
                     'recording_id' => $i_recording_id,
-                    'title' => $faker->realText(15),
-                    'content' => $faker->realText(400),
+                    'title' => $faker->realText(rand(10, 20)),
+                    'content' => $faker->realText(rand(20, 400)),
                     'rate' => rand(1, 5),
                     'like' => 0,
                     'created_at' => $randomDateTime,
