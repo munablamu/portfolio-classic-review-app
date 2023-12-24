@@ -55,15 +55,15 @@
   </div>
   <div id="hamburger_nav" class="hidden md:hidden text-right mx-auto px-5">
     <nav class="px-2 pt-2 pb-4 flex flex-col p-0">
-      <a href="{{ route('help') }}" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-600 focus:bg-slate-500">
+      <a href="{{ route('help') }}" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-900 focus:bg-slate-800">
         <i class="fa-solid fa-seedling"></i><span class="ml-1">ご採用担当者さまへ</span>
       </a>
       @guest
-        <a href="{{ route('login') }}" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-600 focus:bg-slate-500">Login</a>
+        <a href="{{ route('login') }}" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-900 focus:bg-slate-800">Login</a>
         <a href="{{ route('register') }}" class="block px-2 py-1 rounded-md text-yellow-500 hover:text-yellow-400 focus:text-yellow-300 hover:bg-slate-600 focus:bg-slate-500">Signup</a>
       @endguest
       @auth
-        <a href="{{ route('home') }}" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-600 focus:bg-slate-500">Home</a>
+        <a href="{{ route('home') }}" class="block px-2 py-1 rounded-md hover:text-slate-100 hover:bg-slate-900 focus:bg-slate-800">Home</a>
         <form action="{{ route('logout') }}" method="post">
           @csrf
           <button type="submit" class="w-full text-right block px-2 py-1 rounded-md text-pink-500 hover:text-pink-400 focus:text-pink-300 hover:bg-slate-600 focus:bg-slate-500">Logout</button>

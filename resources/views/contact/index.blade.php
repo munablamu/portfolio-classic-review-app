@@ -1,5 +1,5 @@
 <x-layout :title="'お問い合わせフォーム'">
-    <h1 class="mx-5 my-5 text-xl">お問い合わせフォーム</h1>
+    <h1 class="mx-5 my-5 text-xl font-bold">お問い合わせフォーム</h1>
     <div class="mx-5">
         <form action="{{ route('contact.confirm') }}" method="post">
             @csrf

@@ -75,10 +75,10 @@
     @apply bg-black text-slate-300 ring-slate-500;
 }
 .btn-black:hover {
-    @apply bg-slate-800 text-slate-200;
+    @apply bg-slate-900 text-slate-200;
 }
 .btn-black:active {
-    @apply bg-slate-700 text-slate-100;
+    @apply bg-slate-800 text-slate-100;
 }
 .url {
     @apply text-indigo-500 dark:text-indigo-300 underline;
