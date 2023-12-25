@@ -12,8 +12,8 @@
 
             <p class="inline-block text-sm font-medium mb-1 text-sky-500 dark:text-sky-300">メールアドレス</p>
             <div class="mb-5">
-                {{ $form['email'] }}
-                <input name="email" value="{{ $form['email'] }}" type="hidden">
+                {{ $form['user_email'] }}
+                <input name="user_email" value="{{ $form['user_email'] }}" type="hidden">
             </div>
 
             <p class="inline-block text-sm font-medium mb-1 text-sky-500 dark:text-sky-300">件名</p>

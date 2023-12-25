@@ -14,12 +14,12 @@
                 ></input>
             </div>
 
-            <label for="email" class="inline-block text-sm font-medium mb-1">メールアドレス</label>
-            @error('email')
+            <label for="user_email" class="inline-block text-sm font-medium mb-1">メールアドレス</label>
+            @error('user_email')
                 <span class="validate ml-4">{{ $message }}</span>
             @enderror
             <div class="mb-5">
-                <input id="email" type="email" name="email" class="mt-1 input"
+                <input id="user_email" type="email" name="user_email" class="mt-1 input"
                     placeholder="メールアドレスを入力してください" value="{{ old('email') }}"
                 ></input>
             </div>
