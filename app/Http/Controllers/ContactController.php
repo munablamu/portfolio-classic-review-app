@@ -34,15 +34,16 @@ class ContactController extends Controller
             return redirect()->route('contact.index')->withInput($form);
         }
 
-        $inputs = $form;
-        $inputs['subject'] = 'お問い合わせ内容のご確認';
-        $inputs['view'] = 'email.contact_to_customer';
-        Mail::to($inputs['email'])->send(new ContactMail($inputs));
-
+        // heroku上のmailgunで不特定多数のメールアドレスに送信できないので、MAIL_ADMIN宛に先に送信して、MAIL_ADMINには届くようにする。
         $inputs['email'] = env('MAIL_ADMIN');
         $inputs['subject'] = 'お客さまからのお問い合わせ';
         $inputs['view'] = 'email.contact_to_admin';
         Mail::to($inputs['email'])->send(new ContactMail($inputs));
+
+        // $inputs = $form;
+        // $inputs['subject'] = 'お問い合わせ内容のご確認';
+        // $inputs['view'] = 'email.contact_to_customer';
+        // Mail::to($inputs['email'])->send(new ContactMail($inputs));
 
         return view('contact.thanks');
     }
