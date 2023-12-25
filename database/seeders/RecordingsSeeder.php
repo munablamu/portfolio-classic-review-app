@@ -14,7 +14,7 @@ class RecordingsSeeder extends Seeder
      */
     public function run(): void
     {
-        $recordings = json_decode(file_get_contents('database/seeders/recordings.json'));
+        $recordings = json_decode(file_get_contents('database/seeders/recordings_reduction.json'));
 
         foreach ( $recordings as $i_recording ) {
             DB::table('recordings')->insert([

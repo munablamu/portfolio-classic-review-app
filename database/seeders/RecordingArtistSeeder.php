@@ -13,7 +13,7 @@ class RecordingArtistSeeder extends Seeder
      */
     public function run(): void
     {
-        $recordings = json_decode(file_get_contents('database/seeders/recordings.json'));
+        $recordings = json_decode(file_get_contents('database/seeders/recordings_reduction.json'));
 
         for ( $i = 0; $i < count($recordings); $i++ ) {
             $recording_id = $i + 1;

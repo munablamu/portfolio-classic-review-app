@@ -33,7 +33,7 @@ class CreateReviewsJson extends Command
         $reviews = [];
         $user_ids = range(1, $num_users);
 
-        $json_recordings = file_get_contents('database/seeders/recordings.json');
+        $json_recordings = file_get_contents('database/seeders/recordings_reduction.json');
         $array_recordings = json_decode($json_recordings, true);
         $recording_ids = range(1, count($array_recordings));
 
