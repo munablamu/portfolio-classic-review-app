@@ -29,14 +29,16 @@
             </div>
 
             <div class="flex justify-end mt-6">
-                <button class="btn btn-indigo" type="submit" name="action" value="back">
+                <button class="btn btn-rose" type="submit" name="action" value="back">
                     修正する
                 </button>
 
-                <button class="btn btn-rose ml-2" type="submit" name="action" value="submit">
+                <button class="btn btn-indigo ml-2" type="submit" name="action" value="submit">
                     送信
                 </button>
             </div>
         </form>
     </div>
 </x-layout>
+
+<x-common.help message="ここで送信されたお問い合わせは、実際に私に届くようになっています。" />
