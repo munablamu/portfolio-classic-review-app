@@ -13,7 +13,7 @@
             <h1 class="block text-slate-700 font-bold mb-2 text-xl text-center">お問い合わせ内容</h1>
             <hr class="mb-6">
             <p class="mb-2"><span class="font-bold text-slate-700">名前：</span>{{ $inputs['name'] }}</p>
-            <p class="mb-2"><span class="font-bold text-slate-700">メールアドレス：</span>{{ $inputs['email'] }}</p>
+            <p class="mb-2"><span class="font-bold text-slate-700">メールアドレス：</span>{{ $inputs['user_email'] }}</p>
             <p class="mb-2"><span class="font-bold text-slate-700">件名：</span>{{ $inputs['title'] }}</p>
             <p class="mb-2"><span class="font-bold text-slate-700">メッセージ：</span>{{ $inputs['message'] }}</p>
         </div>
