@@ -6,7 +6,7 @@
       <option value="review" {{ $oldSearchType === 'review' ? 'selected' : '' }}>review</option>
     </select>
     <input id="q" type="text" name="q" placeholder="Please enter keywords..." value="{{ old('q', $q) }}"
-      class="w-full sm:w-96 rounded-md sm:rounded-l-none h-10 pl-4 pr-4 border-slate-300 text-slate-600 bg-slate-100 hover:border-slate-400 dark:border-slate-700 dark:text-slate-125 dark:bg-slate-800 dark:hover:border-slate-600 focus:outline-none appearance-none">
+      class="w-full sm:w-96 rounded-md sm:rounded-l-none h-10 pl-4 pr-4 border-slate-300 text-slate-600 bg-slate-100 hover:border-slate-400 dark:border-slate-700 dark:text-slate-125 dark:bg-slate-800 dark:hover:border-slate-600 focus:outline-none appearance-none" autofocus>
     <button id="search-button" type="submit" class="btn btn-indigo m-0 mt-1 sm:mt-0 sm:ml-2 px-4 h-10 w-full sm:w-auto font-bold opacity-80 cursor-not-allowed" disabled>Search</button>
   </div>
 </form>
