@@ -40,7 +40,7 @@
       <div>
         <label for="self_introduction" class="block text-sm font-medium">自己紹介</label>
         <div class="mt-1">
-          <textarea id="self_introduction" name="self_introduction" rows="10" class="input mt-1"
+          <textarea id="self_introduction" name="self_introduction" rows="10" class="input mt-1 resize-none"
             placeholder="自己紹介文を書いてください">{{ old('self_introduction', $user->self_introduction) }}
           </textarea>
         </div>

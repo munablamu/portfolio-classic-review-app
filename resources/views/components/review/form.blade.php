@@ -33,7 +33,7 @@
     @enderror
     <div class="mb-5">
       <textarea id="content" name="content" rows="10"
-       class="input mt-1"
+       class="input mt-1 resize-none"
        placeholder="レビューを書いてください"
       >{{ old('content', isset($review) ? $review->content : null) }}</textarea>
     </div>
