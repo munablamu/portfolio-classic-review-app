@@ -68,9 +68,9 @@ class Recording extends Model
 
     public function getReleaseDateStringAttribute()
     {
-        $release_date = $this->release_date;
-        if ( $release_date !== null ) {
-            return $release_date->format('Y年m月d日');
+        $releaseDate = $this->release_date;
+        if ( $releaseDate !== null ) {
+            return $releaseDate->format('Y年m月d日');
         } else {
             return '不明';
         }
@@ -78,9 +78,9 @@ class Recording extends Model
 
     public function getReleaseYearAttribute()
     {
-        $release_date = $this->release_date;
-        if ( $release_date !== null ) {
-            return $release_date->format('Y');
+        $releaseDate = $this->release_date;
+        if ( $releaseDate !== null ) {
+            return $releaseDate->format('Y');
         } else {
             return '';
         }

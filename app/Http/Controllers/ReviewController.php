@@ -83,11 +83,11 @@ class ReviewController extends Controller
             ->with('feedback.success', 'レビューの編集に成功しました。');
     }
 
-    public function delete(Request $request, Review $review, ReviewService $reviewService)
+    public function delete(Review $review, ReviewService $reviewService)
     {
         $reviewer_id = $review->user_id;
-        // routingでauth middlewareを使っているからAuth::check()は不要？
-        if ( Auth::check() && $reviewer_id === Auth::id() ) {
+
+        if ( $reviewer_id === Auth::id() ) {
             try {
                 $reviewService->deleteReview($review);
             } catch ( \Throwable $e ) {

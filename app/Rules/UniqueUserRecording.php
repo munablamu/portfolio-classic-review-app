@@ -8,11 +8,11 @@ use Illuminate\Support\Facades\DB;
 
 class UniqueUserRecording implements ValidationRule
 {
-    protected $user_id;
+    protected $userId;
 
-    public function __construct($user_id)
+    public function __construct(int $userId)
     {
-        $this->user_id = $user_id;
+        $this->userId = $userId;
     }
 
     /**
@@ -22,7 +22,7 @@ class UniqueUserRecording implements ValidationRule
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
-        if ( DB::table('reviews')->where('user_id', $this->user_id)
+        if ( DB::table('reviews')->where('user_id', $this->userId)
                                  ->where('recording_id', $value)
                                  ->exists() ) {
             $fail('一人のユーザーが同じ録音に対して複数のレビューを投稿することはできません。');

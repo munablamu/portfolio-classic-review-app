@@ -16,16 +16,16 @@ class SearchController extends Controller
             abort(404, 'Invalid parameter');
         }
 
-        $search_type = $request->get('search_type');
+        $searchType = $request->get('search_type');
 
-        $route = match($search_type) {
+        $route = match($searchType) {
             'music' => 'search.music',
             'artist' => 'search.artist',
             'review' => 'search.review',
             default => 'search.review'
         };
 
-        return redirect()->route($route, ['q' => $q, 'oldSearchType' => $search_type]);
+        return redirect()->route($route, ['q' => $q, 'oldSearchType' => $searchType]);
     }
 
     public function music(Request $request, MusicService $musicService)

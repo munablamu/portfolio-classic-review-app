@@ -28,18 +28,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/music/index', [MusicController::class, 'index'])
-//     ->name('music');
-// Route::get('/music/search', [MusicController::class, 'search'])
-//     ->name('music.search');
-// Route::post('/music/store', [MusicController::class, 'store'])
-//     ->name('music.store');
-// Route::get('/musics/{music}/edit', [MusicController::class, 'edit'])
-//     ->name('music.edit')->where('music', '[0-9]+');
-// Route::put('/musics/{music}/update', [MusicController::class, 'update'])
-//     ->name('music.update')->where('music', '[0-9]+');
-// Route::delete('/musics/{music}/delete', [MusicController::class, 'delete'])
-//     ->name('music.delete')->where('music', '[0-9]+');
 Route::get('/musics/{music}', [MusicController::class, 'show'])
     ->name('music.show');
 
@@ -69,16 +57,18 @@ Route::get('/search/review', [SearchController::class, 'review'])
 
 Route::get('/review/{review}', [ReviewController::class, 'show'])
     ->name('review.show')->where('review', '[0-9]+');
-Route::get('/review/create/{recording}', [ReviewController::class, 'create'])
-    ->name('review.create')->where('recording', '[0-9]+');
-Route::post('/review/store/{recording}', [ReviewController::class, 'store'])
-    ->name('review.store')->where('recording', '[0-9]+');
-Route::get('/review/edit/{recording}', [ReviewController::class, 'edit'])
-    ->name('review.edit')->where('recording', '[0-9]+');
-Route::put('/review/update/{recording}', [ReviewController::class, 'update'])
-    ->name('review.update')->where('recording', '[0-9]+');
-Route::delete('/review/delete/{review}', [ReviewController::class, 'delete'])
-    ->name('review.delete')->where('review', '[0-9]+');
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/review/create/{recording}', [ReviewController::class, 'create'])
+        ->name('review.create')->where('recording', '[0-9]+');
+    Route::post('/review/store/{recording}', [ReviewController::class, 'store'])
+        ->name('review.store')->where('recording', '[0-9]+');
+    Route::get('/review/edit/{recording}', [ReviewController::class, 'edit'])
+        ->name('review.edit')->where('recording', '[0-9]+');
+    Route::put('/review/update/{recording}', [ReviewController::class, 'update'])
+        ->name('review.update')->where('recording', '[0-9]+');
+    Route::delete('/review/delete/{review}', [ReviewController::class, 'delete'])
+        ->name('review.delete')->where('review', '[0-9]+');
+});
 
 Route::get('/users/{user}', [UserController::class, 'show'])
     ->name('user.show')->where('user', '[0-9]+');

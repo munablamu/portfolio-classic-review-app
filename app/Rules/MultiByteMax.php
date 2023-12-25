@@ -10,7 +10,7 @@ class MultiByteMax implements ValidationRule
 {
     protected $max;
 
-    public function __construct($max)
+    public function __construct(int $max)
     {
         $this->max = $max;
     }

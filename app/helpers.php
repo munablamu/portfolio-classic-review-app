@@ -126,7 +126,7 @@ if ( !function_exists('extractKeywordContext') ) {
 }
 
 if ( !function_exists('translate') ) {
-    function translate(string $str, string $target_lang='EN'): string
+    function translate(string $str, string $targetLang='EN'): string
     {
         $client = new Client();
 
@@ -139,7 +139,7 @@ if ( !function_exists('translate') ) {
                 'text' => [
                     $str
                 ],
-                'target_lang' => $target_lang,
+                'target_lang' => $targetLang,
             ],
         ]);
 

@@ -2,14 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Music;
 use App\Models\Recording;
-use App\Models\Review;
-use App\Services\MusicService;
-use App\Services\RecordingService;
 use App\Services\ReviewService;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class RecordingController extends Controller
 {

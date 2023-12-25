@@ -2,18 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Models\Review;
-use App\Models\Follow;
 use App\Services\ReviewService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
+    protected $reviewService;
+    protected $fromHomeController;
+    protected $user;
+    protected $allReviewCount;
+    protected $reviewCount;
+    protected $likeSum;
+
     public function __construct(ReviewService $reviewService)
     {
         $this->reviewService = $reviewService;
@@ -32,7 +33,7 @@ class HomeController extends Controller
     public function index()
     {
         $this->setUserInfo();
-        $following_user_reviews = $this->reviewService->getFollowingUserReviews($this->user, 10);
+        $followingUserReviews = $this->reviewService->getFollowingUserReviews($this->user, 10);
 
         return view('home.index', [
             'user'                   => $this->user,
@@ -40,14 +41,14 @@ class HomeController extends Controller
             'reviewCount'            => $this->reviewCount,
             'likeSum'                => $this->likeSum,
             'fromHomeController'     => $this->fromHomeController,
-            'following_user_reviews' => $following_user_reviews,
+            'following_user_reviews' => $followingUserReviews,
         ]);
     }
 
     public function following_users()
     {
         $this->setUserInfo();
-        $following_users = $this->user->following()->paginate(10);
+        $followingUsers = $this->user->following()->paginate(10);
 
         return view('home.following_users', [
             'user'               => $this->user,
@@ -55,7 +56,7 @@ class HomeController extends Controller
             'reviewCount'        => $this->reviewCount,
             'likeSum'            => $this->likeSum,
             'fromHomeController' => $this->fromHomeController,
-            'following_users'    => $following_users,
+            'following_users'    => $followingUsers,
         ]);
     }
 

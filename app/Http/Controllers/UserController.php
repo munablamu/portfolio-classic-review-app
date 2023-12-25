@@ -9,6 +9,13 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    protected $reviewService;
+    protected $fromUserController;
+    protected $user;
+    protected $allReviewCount;
+    protected $reviewCount;
+    protected $likeSum;
+
     public function __construct(ReviewService $reviewService)
     {
         $this->reviewService = $reviewService;
