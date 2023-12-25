@@ -39,10 +39,10 @@ class ContactController extends Controller
         $inputs['view'] = 'email.contact_to_customer';
         Mail::to($inputs['email'])->send(new ContactMail($inputs));
 
-        $inputs['email'] = 'admin@example.com';
+        $inputs['email'] = env('MAIL_ADMIN');
         $inputs['subject'] = 'お客さまからのお問い合わせ';
         $inputs['view'] = 'email.contact_to_admin';
-        Mail::to($inputs['email'])->send(new ContactMail($inputs)); // TODO: 管理者のメールアドレスを挿入
+        Mail::to($inputs['email'])->send(new ContactMail($inputs));
 
         return view('contact.thanks');
     }

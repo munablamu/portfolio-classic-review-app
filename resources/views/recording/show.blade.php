@@ -27,7 +27,6 @@
       @else
         <div class="relative w-full max-w-[60rem] mx-auto">
           <div>
-            <!-- TODO: これをコントローラー内で行う -->
             @empty ( $user_review->title )
               @php
                 $user_review->content = "レビュー文がありません。"

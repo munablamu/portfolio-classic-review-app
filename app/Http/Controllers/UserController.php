@@ -24,7 +24,7 @@ class UserController extends Controller
 
     protected function setUserInfo(User $user)
     {
-        // TODO: なぜコンストラクタでAuth::user()メソッドを使うとログイン中でもnullを返してしまうのか？
+        // HomeControllerと構造を一致させるのため
         $this->user = $user;
         $this->allReviewCount = $this->reviewService->getAllReviewCount($this->user);
         $this->reviewCount    = $this->reviewService->getReviewCount($this->user);

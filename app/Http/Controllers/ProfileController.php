@@ -100,9 +100,6 @@ class ProfileController extends Controller
                     $user->icon_filename = $filename;
 
                     if ( $user->save() ) {
-                        // TODO: なぜpublic_pathを挟まないとdeleteできないのか？
-                        /* $publicPath = public_path('storage/user_icons/' . $oldUserIconFilename);
-                        $deleteSuccess = File::delete($publicPath); */
                         $this->imageManager->delete('user_icons/' . $oldUserIconFilename);
                     }
                 }

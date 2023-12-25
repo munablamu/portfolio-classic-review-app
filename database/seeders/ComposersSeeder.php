@@ -17,7 +17,6 @@ class ComposersSeeder extends Seeder
         $composers = json_decode(file_get_contents('database/seeders/composers.json'));
 
         foreach ( $composers as $i_composer ) {
-            // TODO 'id' => $i_composer->id ここでこれを指定すると不具合がある？
             DB::table('composers')->insert([
                 'name' => $i_composer->name,
                 'created_at' => now(),

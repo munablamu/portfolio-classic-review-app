@@ -4,7 +4,6 @@
   </div>
   <div class="w-full sm:w-2/3 sm:pl-4 flex flex-col">
     <h1 class="mb-1 text-xl sm:text-3xl font-Ubuntu font-bold text-slate-500 dark:text-slate-400">
-      <!-- TODO: ここの処理をHTMLに書かずに済むようにしたい -->
       @if ( $recording->artists !== null )
         @foreach ( $recording->artists as $i_artist )
           <a href="{{ route('artist.show', ['artist' => $i_artist]) }}" class="underline hover:text-slate-600 dark:hover:text-slate-300">{{ $i_artist->name }}</a><br />

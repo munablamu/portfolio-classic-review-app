@@ -9,8 +9,7 @@
                 <span class="validate ml-4">{{ $message }}</span>
             @enderror
             <div class="mb-5">
-                <input id="name" type="text" name="name"
-                    class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md"
+                <input id="name" type="text" name="name" class="mt-1 input"
                     placeholder="お名前を入力してください" value="{{ old('name') }}" autofocus
                 ></input>
             </div>
@@ -20,8 +19,7 @@
                 <span class="validate ml-4">{{ $message }}</span>
             @enderror
             <div class="mb-5">
-                <input id="email" type="email" name="email"
-                    class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md"
+                <input id="email" type="email" name="email" class="mt-1 input"
                     placeholder="メールアドレスを入力してください" value="{{ old('email') }}"
                 ></input>
             </div>
@@ -31,8 +29,7 @@
                 <span class="validate ml-4">{{ $message }}</span>
             @enderror
             <div class="mb-5">
-                <input id="title" type="text" name="title"
-                    class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md"
+                <input id="title" type="text" name="title" class="mt-1 input"
                     placeholder="件名を入力してください" value="{{ old('title') }}"
                 ></input>
             </div>
@@ -42,8 +39,7 @@
                 <span class="validate ml-4">{{ $message }}</span>
             @enderror
             <div class="mb-5">
-                <textarea id="message" name="message" rows="5"
-                    class="shadow-sm focus:ring-indigo-500 mt-1 w-full border-slate-300 bg-slate-100 dark:border-slate-500 dark:bg-slate-600 rounded-md"
+                <textarea id="message" name="message" rows="8" class="mt-1 input resize-none"
                     placeholder="メッセージを入力してください"
                 >{{ old('message') }}</textarea>
             </div>

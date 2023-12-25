@@ -30,7 +30,9 @@ class ReviewController extends Controller
             compact('recording'));
     }
 
-    // TODO: メソッド内では$recordingは使ってないが、仮引数に書かないとルーティングの関係上ReviewRequestで$this->route('recording')そのものがidの文字列になってしまい他のReviewControllerのメソッドと整合性が取れなくなってしまう。
+    // メソッド内では$recordingは使ってないが、仮引数に書かないとルーティングの関係上
+    // ReviewRequestで$this->route('recording')そのものがidの文字列になってしまい他のReviewController
+    // のメソッドと整合性が取れなくなってしまう。
     public function store(ReviewRequest $request, Recording $recording, ReviewService $reviewService)
     {
         try {

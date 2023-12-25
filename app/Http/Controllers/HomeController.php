@@ -23,7 +23,8 @@ class HomeController extends Controller
 
     protected function setUserInfo()
     {
-        // TODO: なぜコンストラクタでAuth::user()メソッドを使うとログイン中でもnullを返してしまうのか？
+        // 標準的なLaravelの挙動では、コンストラクタが実行される段階ではまだミドルウェア郡が実行されていないため、
+        // コンストラクタ内でAuth::user()を実行するとnullを返してしまうため、個々に記述して各メソッド内で適宜実行することにする。
         $this->user = Auth::user();
         $this->allReviewCount = $this->reviewService->getAllReviewCount($this->user);
         $this->reviewCount    = $this->reviewService->getReviewCount($this->user);

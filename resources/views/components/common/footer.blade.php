@@ -6,7 +6,7 @@
       </a>
     </p>
 
-    <a href="{{ route('contact.index') }}" class="text-sm text-slate-400 hover:text-slate-300">
+    <a href="{{ route('contact.index') }}" class="text-sm text-slate-400 hover:text-slate-300" tabindex="0">
       <i class="fa-solid fa-envelope mr-1"></i>お問い合わせ
     </a>
 

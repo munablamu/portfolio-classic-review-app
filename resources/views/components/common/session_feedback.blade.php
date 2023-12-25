@@ -23,7 +23,7 @@
       this.style.display = 'none';
     });
 
-    // TODO: info, success, error, warningで変数名が違うので注意
+    // info, success, error, warningで変数名が違うので注意
     if ( "{{ session('feedback.info') }}" ) {
       const infoIdValue = "{{ uniqid() }}";
       if ( sessionStorage ) {
@@ -61,7 +61,7 @@
       this.style.display = 'none';
     });
 
-    // TODO: info, success, error, warningで変数名が違うので注意
+    // info, success, error, warningで変数名が違うので注意
     if ( "{{ session('feedback.error') }}" ) {
       const errorIdValue = "{{ uniqid() }}";
       if ( sessionStorage ) {
@@ -99,7 +99,7 @@
       this.style.display = 'none';
     });
 
-    // TODO: info, success, error, warningで変数名が違うので注意
+    // info, success, error, warningで変数名が違うので注意
     if ( "{{ session('feedback.success') }}" ) {
       const successIdValue = "{{ uniqid() }}";
       if ( sessionStorage ) {
@@ -137,7 +137,7 @@
       this.style.display = 'none';
     });
 
-    // TODO: info, success, error, warningで変数名が違うので注意
+    // info, success, error, warningで変数名が違うので注意
     if ( "{{ session('feedback.warning') }}" ) {
       const warningIdValue = "{{ uniqid() }}";
       if ( sessionStorage ) {

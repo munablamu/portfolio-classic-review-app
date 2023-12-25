@@ -1,6 +1,5 @@
   <div class=" my-1 flex justify-end font-medium text-pink-400">
     @if ( Auth::check() && ($review->user->id !==  Auth::id()) )
-      <!-- TODO: 多分ここでチェックするの良くない -->
       @php
         $liked = $review->likes()->where('user_id', Auth::id())->first();
       @endphp
