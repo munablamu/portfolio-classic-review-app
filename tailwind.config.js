@@ -19,9 +19,6 @@ export default {
                 'Ubuntu': ['Ubuntu'],
                 'Lobster': ['Lobster'],
             },
-            backgroundImage: theme => ({
-                'top-background': "url('/storage/app/public/images/top_image.png')",
-            }),
             colors: {
                 'slate': {
                     '125': '#EEF2F7',

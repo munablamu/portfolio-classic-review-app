@@ -25,6 +25,23 @@ if ( !function_exists('logo_url') ) {
     }
 }
 
+if ( !function_exists('top_background_url') ) {
+    function top_background_url(): string
+    {
+        $imagesDirectory = 'images/';
+        $filename = 'top_image.png';
+
+        if ( app()->environment('production') ) {
+            return (string) app()
+                ->make(\Cloudinary\Cloudinary::class)
+                ->image($imagesDirectory . $filename)
+                ->secure();
+        } else {
+            return asset('storage/' . $imagesDirectory . $filename);
+        }
+    }
+}
+
 if ( !function_exists('jacket_url') ) {
     function jacket_url(?string $filename): string
     {
