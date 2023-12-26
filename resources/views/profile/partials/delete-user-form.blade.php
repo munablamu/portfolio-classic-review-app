@@ -51,11 +51,11 @@
             </div>
 
             <div class="mt-6 flex justify-end">
-                <button class="btn btn-indigo" x-on:click="$dispatch('close')">
+                <button type="button" class="btn btn-indigo" x-on:click="$dispatch('close')">
                     {{ __('Cancel') }}
                 </button>
 
-                <button class="btn btn-rose ml-3">
+                <button type="submit" class="btn btn-rose ml-3">
                     {{ __('Delete Account') }}
                 </button>
             </div>
