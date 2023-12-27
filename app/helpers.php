@@ -166,3 +166,11 @@ if ( !function_exists('translate') ) {
         return $data->translations[0]->text;
     }
 }
+
+
+if ( !function_exists('isJapanese') ) {
+    function isJapanese(string $str): bool
+    {
+        return preg_match('/[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}ーａ-ｚＡ-Ｚ０-９々〆〤]/u', $str) > 0;
+    }
+}

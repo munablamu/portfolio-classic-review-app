@@ -31,7 +31,14 @@ class SearchController extends Controller
     public function music(Request $request, MusicService $musicService)
     {
         $q = trim($request->query('q'));
-        $translatedQ = translate($q);
+
+        if ( isJapanese($q) ) {
+            $translatedQ = translate($q);
+            $isTranslated = true;
+        } else {
+            $translatedQ = $q;
+            $isTranslated = false;
+        }
 
         $musics = $musicService->search($translatedQ, 10);
 
@@ -47,13 +54,20 @@ class SearchController extends Controller
         }
 
         return view('search.music',
-            compact('q','translatedQ', 'musics', 'oldSearchType'));
+            compact('q','translatedQ', 'isTranslated', 'musics', 'oldSearchType'));
     }
 
     public function artist(Request $request, ArtistService $artistService)
     {
         $q = trim($request->query('q'));
-        $translatedQ = translate($q);
+
+        if ( isJapanese($q) ) {
+            $translatedQ = translate($q);
+            $isTranslated = true;
+        } else {
+            $translatedQ = $q;
+            $isTranslated = false;
+        }
 
         $artists = $artistService->search($translatedQ, 10);
 
@@ -67,7 +81,7 @@ class SearchController extends Controller
         }
 
         return view('search.artist',
-            compact('q', 'translatedQ', 'artists', 'oldSearchType'));
+            compact('q', 'translatedQ', 'isTranslated', 'artists', 'oldSearchType'));
     }
 
     public function review(Request $request, ReviewService $reviewService)
