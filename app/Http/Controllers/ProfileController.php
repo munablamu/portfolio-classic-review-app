@@ -11,9 +11,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\File;
 
 class ProfileController extends Controller
 {
@@ -88,11 +85,6 @@ class ProfileController extends Controller
                 $file = $request->file('user_icon');
 
                 if ( $file->isValid() ) {
-                    /* do {
-                        $filename = Str::random(10) . '.' . $file->getClientOriginalExtension();
-                    } while ( Storage::exists('public/user_icons/' . $filename) );
-
-                    $file->storeAs('public/user_icons', $filename); */
                     $filename = $this->imageManager->save($file, 'user_icons');
 
                     $user = Auth::user();

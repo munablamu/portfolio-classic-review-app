@@ -3,21 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artist;
-use App\Models\Recording;
-use App\Services\ArtistService;
 use App\Services\RecordingService;
 use Illuminate\Http\Request;
 
 class ArtistController extends Controller
 {
-    // public function index(ArtistService $artistService)
-    // {
-    //     $artists = $artistService->getArtists();
-
-    //     return view('artist.index',
-    //         compact('artists'));
-    // }
-
     public function show(Request $request, Artist $artist, RecordingService $recordingService)
     {
         $orderBy = $request->query('orderBy', 'release_date');

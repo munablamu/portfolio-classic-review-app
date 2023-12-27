@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Services\UserService;
 use App\Services\ReviewService;
 use Illuminate\Http\Request;
 
